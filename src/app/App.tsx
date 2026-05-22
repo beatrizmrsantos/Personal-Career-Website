@@ -70,16 +70,19 @@ function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector
 
 // ─── Globe 3D ─────────────────────────────────────────────────────────────────
 
-function Globe3D({ markers, onMarkerClick, onMarkerHover }: {
+function Globe3D({ markers, onMarkerClick, onMarkerHover, isPaused = false }: {
   markers: GlobeMarker[];
   onMarkerClick: (m: GlobeMarker) => void;
   onMarkerHover: (m: GlobeMarker | null) => void;
+  isPaused?: boolean;
 }) {
   const mountRef = useRef<HTMLDivElement>(null);
   const clickRef = useRef(onMarkerClick);
   const hoverRef = useRef(onMarkerHover);
+  const isPausedRef = useRef(isPaused);
   useEffect(() => { clickRef.current = onMarkerClick; }, [onMarkerClick]);
   useEffect(() => { hoverRef.current = onMarkerHover; }, [onMarkerHover]);
+  useEffect(() => { isPausedRef.current = isPaused; }, [isPaused]);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -267,10 +270,19 @@ function Globe3D({ markers, onMarkerClick, onMarkerHover }: {
       const hits = raycaster.intersectObjects(markerMeshes.map((e) => e.hitMesh));
       if (hits.length > 0) {
         const found = markerMeshes.find((e) => e.hitMesh === hits[0].object);
-        if (found && hoveredId !== mId(found.marker)) { hoveredId = mId(found.marker); hoverRef.current(found.marker); }
+        if (found && hoveredId !== mId(found.marker)) {
+          hoveredId = mId(found.marker);
+          hoverRef.current(found.marker);
+          autoRotate = false;
+          clearTimeout(autoRotateTimer);
+        }
         mount.style.cursor = "pointer";
       } else {
-        if (hoveredId !== null) { hoveredId = null; hoverRef.current(null); }
+        if (hoveredId !== null) {
+          hoveredId = null;
+          hoverRef.current(null);
+          autoRotateTimer = setTimeout(() => { autoRotate = true; }, 800);
+        }
         mount.style.cursor = isDragging ? "grabbing" : "grab";
       }
     };
@@ -322,7 +334,7 @@ function Globe3D({ markers, onMarkerClick, onMarkerHover }: {
     const animate = () => {
       animId = requestAnimationFrame(animate);
       time += 0.016;
-      if (autoRotate && !isDragging) globeGroup.rotation.y += 0.0018;
+      if (autoRotate && !isDragging && !isPausedRef.current) globeGroup.rotation.y += 0.0018;
 
       markerMeshes.forEach(({ ringMesh, glowMesh, dotMesh, marker }, i) => {
         const isHov = hoveredId === mId(marker);
@@ -964,7 +976,7 @@ export default function App() {
 
         {/* Globe canvas */}
         <div className="w-full max-w-2xl lg:max-w-3xl aspect-square max-h-[78vh]">
-          <Globe3D markers={globeMarkers} onMarkerClick={setSelected} onMarkerHover={setHovered} />
+          <Globe3D markers={globeMarkers} onMarkerClick={setSelected} onMarkerHover={setHovered} isPaused={selected !== null} />
         </div>
 
         {/* Hover tooltip */}
