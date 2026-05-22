@@ -25,6 +25,35 @@ const TYPE_ICONS = {
 
 const CONTACT_ICON_MAP = { Mail, Github, Linkedin } as const;
 
+// ─── Globe Marker ─────────────────────────────────────────────────────────────
+
+type GlobeMarker =
+  | { kind: "single"; point: CareerPoint }
+  | { kind: "group"; city: string; lat: number; lng: number; points: CareerPoint[] };
+
+function mLat(m: GlobeMarker) { return m.kind === "single" ? m.point.lat : m.lat; }
+function mLng(m: GlobeMarker) { return m.kind === "single" ? m.point.lng : m.lng; }
+function mColor(m: GlobeMarker) { return m.kind === "single" ? TYPE_COLORS[m.point.type] : "#8888a0"; }
+function mId(m: GlobeMarker): string { return m.kind === "single" ? String(m.point.id) : m.city; }
+
+const globeMarkers: GlobeMarker[] = (() => {
+  const map = new Map<string, CareerPoint[]>();
+  careerPoints.forEach((p) => {
+    const list = map.get(p.city) ?? [];
+    list.push(p);
+    map.set(p.city, list);
+  });
+  const result: GlobeMarker[] = [];
+  map.forEach((pts, city) => {
+    if (pts.length === 1) {
+      result.push({ kind: "single", point: pts[0] });
+    } else {
+      result.push({ kind: "group", city, lat: pts[0].lat, lng: pts[0].lng, points: pts });
+    }
+  });
+  return result;
+})();
+
 // ─── Globe Utils ──────────────────────────────────────────────────────────────
 
 const GLOBE_RADIUS = 2;
@@ -41,16 +70,16 @@ function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector
 
 // ─── Globe 3D ─────────────────────────────────────────────────────────────────
 
-function Globe3D({ points, onPointClick, onPointHover }: {
-  points: CareerPoint[];
-  onPointClick: (p: CareerPoint) => void;
-  onPointHover: (p: CareerPoint | null) => void;
+function Globe3D({ markers, onMarkerClick, onMarkerHover }: {
+  markers: GlobeMarker[];
+  onMarkerClick: (m: GlobeMarker) => void;
+  onMarkerHover: (m: GlobeMarker | null) => void;
 }) {
   const mountRef = useRef<HTMLDivElement>(null);
-  const clickRef = useRef(onPointClick);
-  const hoverRef = useRef(onPointHover);
-  useEffect(() => { clickRef.current = onPointClick; }, [onPointClick]);
-  useEffect(() => { hoverRef.current = onPointHover; }, [onPointHover]);
+  const clickRef = useRef(onMarkerClick);
+  const hoverRef = useRef(onMarkerHover);
+  useEffect(() => { clickRef.current = onMarkerClick; }, [onMarkerClick]);
+  useEffect(() => { hoverRef.current = onMarkerHover; }, [onMarkerHover]);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -166,14 +195,15 @@ function Globe3D({ points, onPointClick, onPointHover }: {
     scene.add(lavLight);
 
     // ── Career markers ──
-    type MarkerEntry = { hitMesh: THREE.Mesh; dotMesh: THREE.Mesh; ringMesh: THREE.Mesh; glowMesh: THREE.Mesh; point: CareerPoint };
-    const markers: MarkerEntry[] = [];
+    type MarkerEntry = { hitMesh: THREE.Mesh; dotMesh: THREE.Mesh; ringMesh: THREE.Mesh; glowMesh: THREE.Mesh; marker: GlobeMarker };
+    const markerMeshes: MarkerEntry[] = [];
 
-    points.forEach((pt) => {
-      const pos = latLngToVector3(pt.lat, pt.lng, GLOBE_RADIUS + 0.06);
-      const col = new THREE.Color(pt.color);
+    markers.forEach((m) => {
+      const pos = latLngToVector3(mLat(m), mLng(m), GLOBE_RADIUS + 0.06);
+      const col = new THREE.Color(mColor(m));
       const normal = pos.clone().normalize();
       const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), normal);
+      const isGroup = m.kind === "group";
 
       const hitMesh = new THREE.Mesh(
         new THREE.SphereGeometry(0.15, 8, 8),
@@ -183,14 +213,14 @@ function Globe3D({ points, onPointClick, onPointHover }: {
       globeGroup.add(hitMesh);
 
       const dotMesh = new THREE.Mesh(
-        new THREE.SphereGeometry(0.04, 8, 8),
+        new THREE.SphereGeometry(isGroup ? 0.06 : 0.04, 8, 8),
         new THREE.MeshBasicMaterial({ color: col }),
       );
       dotMesh.position.copy(pos);
       globeGroup.add(dotMesh);
 
       const ringMesh = new THREE.Mesh(
-        new THREE.RingGeometry(0.07, 0.1, 20),
+        new THREE.RingGeometry(isGroup ? 0.09 : 0.07, isGroup ? 0.13 : 0.1, 20),
         new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.55, side: THREE.DoubleSide }),
       );
       ringMesh.position.copy(pos);
@@ -198,14 +228,14 @@ function Globe3D({ points, onPointClick, onPointHover }: {
       globeGroup.add(ringMesh);
 
       const glowMesh = new THREE.Mesh(
-        new THREE.RingGeometry(0.11, 0.14, 20),
+        new THREE.RingGeometry(isGroup ? 0.14 : 0.11, isGroup ? 0.18 : 0.14, 20),
         new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.18, side: THREE.DoubleSide }),
       );
       glowMesh.position.copy(pos);
       glowMesh.quaternion.copy(q);
       globeGroup.add(glowMesh);
 
-      markers.push({ hitMesh, dotMesh, ringMesh, glowMesh, point: pt });
+      markerMeshes.push({ hitMesh, dotMesh, ringMesh, glowMesh, marker: m });
     });
 
     // ── Mouse & touch interaction ──
@@ -215,7 +245,7 @@ function Globe3D({ points, onPointClick, onPointHover }: {
     let prevPos = { x: 0, y: 0 };
     let dragDist = 0;
     let autoRotate = true;
-    let hoveredId: number | null = null;
+    let hoveredId: string | null = null;
     let autoRotateTimer: ReturnType<typeof setTimeout>;
 
     const onMouseDown = (e: MouseEvent) => {
@@ -234,10 +264,10 @@ function Globe3D({ points, onPointClick, onPointHover }: {
       mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
       raycaster.setFromCamera(mouse, camera);
-      const hits = raycaster.intersectObjects(markers.map((m) => m.hitMesh));
+      const hits = raycaster.intersectObjects(markerMeshes.map((e) => e.hitMesh));
       if (hits.length > 0) {
-        const found = markers.find((m) => m.hitMesh === hits[0].object);
-        if (found && hoveredId !== found.point.id) { hoveredId = found.point.id; hoverRef.current(found.point); }
+        const found = markerMeshes.find((e) => e.hitMesh === hits[0].object);
+        if (found && hoveredId !== mId(found.marker)) { hoveredId = mId(found.marker); hoverRef.current(found.marker); }
         mount.style.cursor = "pointer";
       } else {
         if (hoveredId !== null) { hoveredId = null; hoverRef.current(null); }
@@ -250,8 +280,8 @@ function Globe3D({ points, onPointClick, onPointHover }: {
         mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
         mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
         raycaster.setFromCamera(mouse, camera);
-        const hits = raycaster.intersectObjects(markers.map((m) => m.hitMesh));
-        if (hits.length > 0) { const f = markers.find((m) => m.hitMesh === hits[0].object); if (f) clickRef.current(f.point); }
+        const hits = raycaster.intersectObjects(markerMeshes.map((e) => e.hitMesh));
+        if (hits.length > 0) { const f = markerMeshes.find((e) => e.hitMesh === hits[0].object); if (f) clickRef.current(f.marker); }
       }
       isDragging = false;
       autoRotateTimer = setTimeout(() => { autoRotate = true; }, 3000);
@@ -278,8 +308,8 @@ function Globe3D({ points, onPointClick, onPointHover }: {
         mouse.x = ((t.clientX - rect.left) / rect.width) * 2 - 1;
         mouse.y = -((t.clientY - rect.top) / rect.height) * 2 + 1;
         raycaster.setFromCamera(mouse, camera);
-        const hits = raycaster.intersectObjects(markers.map((m) => m.hitMesh));
-        if (hits.length > 0) { const f = markers.find((m) => m.hitMesh === hits[0].object); if (f) clickRef.current(f.point); }
+        const hits = raycaster.intersectObjects(markerMeshes.map((e) => e.hitMesh));
+        if (hits.length > 0) { const f = markerMeshes.find((e) => e.hitMesh === hits[0].object); if (f) clickRef.current(f.marker); }
       }
       autoRotateTimer = setTimeout(() => { autoRotate = true; }, 3000);
     };
@@ -294,8 +324,9 @@ function Globe3D({ points, onPointClick, onPointHover }: {
       time += 0.016;
       if (autoRotate && !isDragging) globeGroup.rotation.y += 0.0018;
 
-      markers.forEach(({ ringMesh, glowMesh, dotMesh, point }, i) => {
-        const isHov = hoveredId === point.id;
+      markerMeshes.forEach(({ ringMesh, glowMesh, dotMesh, marker }, i) => {
+        const isHov = hoveredId === mId(marker);
+        const col = mColor(marker);
         const pulse = Math.sin(time * 1.8 + i * 1.4);
         const rMat = ringMesh.material as THREE.MeshBasicMaterial;
         rMat.opacity = isHov ? 0.9 : 0.3 + 0.28 * pulse;
@@ -304,7 +335,7 @@ function Globe3D({ points, onPointClick, onPointHover }: {
         gMat.opacity = isHov ? 0.35 : 0.08 + 0.12 * Math.max(0, pulse);
         glowMesh.scale.setScalar(isHov ? 1.8 : 1 + 0.2 * Math.max(0, pulse));
         const dMat = dotMesh.material as THREE.MeshBasicMaterial;
-        dMat.color.set(isHov ? new THREE.Color(point.color).multiplyScalar(1.6) : new THREE.Color(point.color));
+        dMat.color.set(isHov ? new THREE.Color(col).multiplyScalar(1.6) : new THREE.Color(col));
       });
 
       renderer.render(scene, camera);
@@ -330,7 +361,7 @@ function Globe3D({ points, onPointClick, onPointHover }: {
       renderer.dispose();
       if (mount.contains(renderer.domElement)) mount.removeChild(renderer.domElement);
     };
-  }, [points]);
+  }, [markers]);
 
   return <div ref={mountRef} className="w-full h-full" />;
 }
@@ -359,15 +390,15 @@ function PointModal({ point, onClose }: { point: CareerPoint; onClose: () => voi
         onClick={(e) => e.stopPropagation()}
       >
         <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ background: "linear-gradient(145deg, #1e1b2e 0%, #16131e 100%)" }}>
-          <div className="h-1.5" style={{ backgroundColor: point.color }} />
+          <div className="h-1.5" style={{ backgroundColor: TYPE_COLORS[point.type] }} />
           <div className="p-6 pb-3 flex items-start justify-between">
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl"
-                style={{ backgroundColor: point.color + "20", border: `1px solid ${point.color}40` }}>
+                style={{ backgroundColor: TYPE_COLORS[point.type] + "20", border: `1px solid ${TYPE_COLORS[point.type]}40` }}>
                 {point.icon}
               </div>
               <div>
-                <div className="text-xs font-mono uppercase tracking-widest" style={{ color: point.color }}>{TYPE_LABELS[point.type]}</div>
+                <div className="text-xs font-mono uppercase tracking-widest" style={{ color: TYPE_COLORS[point.type] }}>{TYPE_LABELS[point.type]}</div>
                 <div className="text-xs text-foreground/50 flex items-center gap-1 mt-0.5"><MapPin className="w-3 h-3" />{point.city}</div>
               </div>
             </div>
@@ -375,13 +406,13 @@ function PointModal({ point, onClose }: { point: CareerPoint; onClose: () => voi
               <X className="w-4 h-4" />
             </button>
           </div>
-          <div className="mx-6 border-t border-dashed" style={{ borderColor: point.color + "25" }} />
+          <div className="mx-6 border-t border-dashed" style={{ borderColor: TYPE_COLORS[point.type] + "25" }} />
           <div className="p-6 pt-4">
             <div className="flex items-center gap-2 mb-1">
-              <TypeIcon className="w-4 h-4" style={{ color: point.color }} />
+              <TypeIcon className="w-4 h-4" style={{ color: TYPE_COLORS[point.type] }} />
               <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>{point.title}</h2>
             </div>
-            <p className="text-sm font-semibold mb-4 ml-6" style={{ color: point.color }}>{point.company}</p>
+            <p className="text-sm font-semibold mb-4 ml-6" style={{ color: TYPE_COLORS[point.type] }}>{point.company}</p>
             <div className="flex items-center gap-2 mb-4">
               <CalendarDays className="w-4 h-4 text-foreground/40" />
               <span className="text-sm font-mono text-foreground/50">{point.period}</span>
@@ -390,7 +421,7 @@ function PointModal({ point, onClose }: { point: CareerPoint; onClose: () => voi
             <div className="flex flex-wrap gap-1.5">
               {point.tags.map((tag) => (
                 <span key={tag} className="text-xs px-2.5 py-1 rounded-full font-mono"
-                  style={{ backgroundColor: point.color + "18", color: point.color, border: `1px solid ${point.color}30` }}>
+                  style={{ backgroundColor: TYPE_COLORS[point.type] + "18", color: TYPE_COLORS[point.type], border: `1px solid ${TYPE_COLORS[point.type]}30` }}>
                   {tag}
                 </span>
               ))}
@@ -408,6 +439,87 @@ function PointModal({ point, onClose }: { point: CareerPoint; onClose: () => voi
   );
 }
 
+// ─── City Group Modal ─────────────────────────────────────────────────────────
+
+function CityGroupModal({ city, points, onClose }: { city: string; points: CareerPoint[]; onClose: () => void }) {
+  useEffect(() => {
+    const fn = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", fn);
+    return () => window.removeEventListener("keydown", fn);
+  }, [onClose]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-md" />
+      <motion.div
+        className="relative w-full max-w-lg z-10 flex flex-col"
+        style={{ maxHeight: "85vh" }}
+        initial={{ scale: 0.85, y: 28 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.85, y: 28 }}
+        transition={{ type: "spring", damping: 22, stiffness: 280 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="rounded-2xl shadow-2xl flex flex-col overflow-hidden" style={{ background: "linear-gradient(145deg, #1e1b2e 0%, #16131e 100%)" }}>
+          <div className="p-5 flex items-center justify-between shrink-0" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#8888a018", border: "1px solid #8888a030" }}>
+                <MapPin className="w-5 h-5" style={{ color: "#8888a0" }} />
+              </div>
+              <div>
+                <p className="text-xs font-mono uppercase tracking-widest text-foreground/35">{points.length} events</p>
+                <h2 className="text-lg font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>{city}</h2>
+              </div>
+            </div>
+            <button onClick={onClose} className="w-8 h-8 rounded-full flex items-center justify-center text-foreground/40 hover:text-foreground/80 hover:bg-white/5 transition-all">
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+          <div className="overflow-y-auto p-4 space-y-3">
+            {points.map((point) => {
+              const color = TYPE_COLORS[point.type];
+              const TypeIcon = TYPE_ICONS[point.type];
+              return (
+                <div key={point.id} className="rounded-xl overflow-hidden border" style={{ borderColor: color + "30", backgroundColor: "#13111d" }}>
+                  <div className="h-0.5" style={{ backgroundColor: color }} />
+                  <div className="p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg shrink-0" style={{ backgroundColor: color + "18" }}>
+                        {point.icon}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                          <div className="flex items-center gap-1.5">
+                            <TypeIcon className="w-3 h-3" style={{ color }} />
+                            <span className="text-xs font-mono uppercase tracking-widest" style={{ color }}>{TYPE_LABELS[point.type]}</span>
+                          </div>
+                          <span className="text-xs font-mono text-foreground/30">{point.period}</span>
+                        </div>
+                        <h3 className="text-sm font-bold text-foreground mb-0.5" style={{ fontFamily: "'Playfair Display', serif" }}>{point.title}</h3>
+                        <p className="text-xs font-semibold mb-2" style={{ color }}>{point.company}</p>
+                        <p className="text-xs text-foreground/55 leading-relaxed mb-2">{point.description}</p>
+                        <div className="flex flex-wrap gap-1">
+                          {point.tags.map((tag) => (
+                            <span key={tag} className="text-xs px-2 py-0.5 rounded font-mono" style={{ backgroundColor: color + "15", color, border: `1px solid ${color}25` }}>
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 // ─── Flight Path Divider ──────────────────────────────────────────────────────
 
 function FlightPath({ segment }: { segment: typeof flightSegments[0] }) {
@@ -417,6 +529,13 @@ function FlightPath({ segment }: { segment: typeof flightSegments[0] }) {
   const d = `M 0,${endY} C 400,${arcY} 1200,${arcY} 1600,${endY}`;
   // Slower animation: base 12 s, scales slightly with arc height variation
   const dur = `${12 + Math.abs(segment.curve - 20) * 0.3}s`;
+  // Approximate peak y of the symmetric cubic bezier at t=0.5:
+  // y(0.5) = 0.25 * endY + 0.75 * arcY
+  const arcPeakY = Math.round(0.25 * endY + 0.75 * arcY);
+  // All text sits a fixed 20 px above the arc peak — consistent across all paths
+  const labelY  = Math.max(arcPeakY - 20, 8);
+  const detailY = Math.max(arcPeakY - 5,  20);
+  const lineTopY = Math.max(labelY - 8,   4);
 
   return (
     <div className="w-full overflow-hidden mt-10" style={{ lineHeight: 0 }}>
@@ -441,27 +560,27 @@ function FlightPath({ segment }: { segment: typeof flightSegments[0] }) {
         />
 
         <circle cx="0" cy={endY} r="6" fill="#c4708a" opacity="0.7" />
-        <line x1="0" y1={endY - 6} x2="0" y2="24" stroke="#c4708a" strokeWidth="1" opacity="0.3" strokeDasharray="3 3" />
-        <text x="18" y="20" fontSize="14" fill="rgba(196,112,138,0.8)" fontFamily="'JetBrains Mono',monospace" fontWeight="700">
+        <line x1="0" y1={endY - 6} x2="0" y2={lineTopY} stroke="#c4708a" strokeWidth="1" opacity="0.3" strokeDasharray="3 3" />
+        <text x="18" y={labelY} fontSize="14" fill="rgba(196,112,138,0.8)" fontFamily="'JetBrains Mono',monospace" fontWeight="700">
           {segment.from}
         </text>
-        <text x="18" y="36" fontSize="10" fill="rgba(240,238,247,0.3)" fontFamily="'JetBrains Mono',monospace">
+        <text x="18" y={detailY} fontSize="10" fill="rgba(240,238,247,0.3)" fontFamily="'JetBrains Mono',monospace">
           {segment.fromCity}
         </text>
 
         <circle cx="1600" cy={endY} r="6" fill="#c4708a" opacity="0.7" />
-        <line x1="1600" y1={endY - 6} x2="1600" y2="24" stroke="#c4708a" strokeWidth="1" opacity="0.3" strokeDasharray="3 3" />
-        <text x="1582" y="20" fontSize="14" fill="rgba(196,112,138,0.8)" fontFamily="'JetBrains Mono',monospace" fontWeight="700" textAnchor="end">
+        <line x1="1600" y1={endY - 6} x2="1600" y2={lineTopY} stroke="#c4708a" strokeWidth="1" opacity="0.3" strokeDasharray="3 3" />
+        <text x="1582" y={labelY} fontSize="14" fill="rgba(196,112,138,0.8)" fontFamily="'JetBrains Mono',monospace" fontWeight="700" textAnchor="end">
           {segment.to}
         </text>
-        <text x="1582" y="36" fontSize="10" fill="rgba(240,238,247,0.3)" fontFamily="'JetBrains Mono',monospace" textAnchor="end">
+        <text x="1582" y={detailY} fontSize="10" fill="rgba(240,238,247,0.3)" fontFamily="'JetBrains Mono',monospace" textAnchor="end">
           {segment.toCity}
         </text>
 
-        <text x="800" y="20" textAnchor="middle" fontSize="11" fill="rgba(196,112,138,0.5)" fontFamily="'JetBrains Mono',monospace" letterSpacing="4">
+        <text x="800" y={labelY} textAnchor="middle" fontSize="11" fill="rgba(196,112,138,0.5)" fontFamily="'JetBrains Mono',monospace" letterSpacing="4">
           {segment.label.toUpperCase()}
         </text>
-        <text x="800" y="36" textAnchor="middle" fontSize="9" fill="rgba(240,238,247,0.2)" fontFamily="'JetBrains Mono',monospace">
+        <text x="800" y={detailY} textAnchor="middle" fontSize="9" fill="rgba(240,238,247,0.2)" fontFamily="'JetBrains Mono',monospace">
           {segment.flightNum} · {segment.distance} · {segment.duration}
         </text>
 
@@ -508,12 +627,12 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
         {jobs.map((job, i) => (
           <motion.div key={job.id}
             initial={{ opacity: 0, x: -40, y: 10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} whileHover={{ y: -5 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.12 }}
-            className="rounded-2xl overflow-hidden shadow-xl border" style={{ backgroundColor: "#1e1b2e", borderColor: job.color + "20" }}>
+            className="rounded-2xl overflow-hidden shadow-xl border" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[job.type] + "20" }}>
             <div className="flex">
               <div className="flex-1 p-6">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-widest" style={{ color: job.color }}>{job.company}</span>
+                    <span className="text-xs font-mono uppercase tracking-widest" style={{ color: TYPE_COLORS[job.type] }}>{job.company}</span>
                     <h3 className="text-lg font-bold text-foreground mt-1" style={{ fontFamily: "'Playfair Display', serif" }}>{job.title}</h3>
                   </div>
                   <span className="text-xs font-mono text-foreground/35 shrink-0 ml-4 mt-1 bg-white/5 px-2 py-0.5 rounded">{job.period}</span>
@@ -524,12 +643,12 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
                 <p className="text-sm text-foreground/65 leading-relaxed mb-4">{job.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {job.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2.5 py-0.5 rounded font-mono" style={{ backgroundColor: job.color + "15", color: job.color }}>{tag}</span>
+                    <span key={tag} className="text-xs px-2.5 py-0.5 rounded font-mono" style={{ backgroundColor: TYPE_COLORS[job.type] + "15", color: TYPE_COLORS[job.type] }}>{tag}</span>
                   ))}
                 </div>
               </div>
               <div className="w-16 md:w-20 shrink-0 flex flex-col items-center justify-center border-l-2 border-dashed gap-3 py-4 px-2"
-                style={{ borderColor: job.color + "35", backgroundColor: job.color + "07" }}>
+                style={{ borderColor: TYPE_COLORS[job.type] + "35", backgroundColor: TYPE_COLORS[job.type] + "07" }}>
                 <span className="text-2xl">{job.icon}</span>
                 <span className="text-xs font-mono text-foreground/25 leading-tight"
                   style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", letterSpacing: "0.12em" }}>
@@ -537,7 +656,7 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
                 </span>
               </div>
             </div>
-            <div className="h-0.5" style={{ background: `linear-gradient(to right, ${job.color}, transparent)` }} />
+            <div className="h-0.5" style={{ background: `linear-gradient(to right, ${TYPE_COLORS[job.type]}, transparent)` }} />
           </motion.div>
         ))}
       </div>
@@ -555,11 +674,11 @@ function EducationSection({ items }: { items: CareerPoint[] }) {
         {items.map((item, i) => (
           <motion.div key={item.id}
             initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -6, scale: 1.01 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.12 }}
-            className="rounded-2xl p-6 border relative overflow-hidden" style={{ backgroundColor: "#1e1b2e", borderColor: item.color + "25" }}>
-            <div className="absolute top-0 right-0 w-28 h-28 rounded-bl-full opacity-5" style={{ backgroundColor: item.color }} />
+            className="rounded-2xl p-6 border relative overflow-hidden" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[item.type] + "25" }}>
+            <div className="absolute top-0 right-0 w-28 h-28 rounded-bl-full opacity-5" style={{ backgroundColor: TYPE_COLORS[item.type] }} />
             <div className="text-3xl mb-4">{item.icon}</div>
             <h3 className="text-lg font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-            <p className="text-sm font-semibold mb-2" style={{ color: item.color }}>{item.company}</p>
+            <p className="text-sm font-semibold mb-2" style={{ color: TYPE_COLORS[item.type] }}>{item.company}</p>
             <p className="text-xs font-mono text-foreground/35 mb-3 flex items-center gap-1.5"><MapPin className="w-3 h-3" />{item.city} · {item.period}</p>
             <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
           </motion.div>
@@ -581,10 +700,10 @@ function CertificationsSection({ items }: { items: CareerPoint[] }) {
             initial={{ opacity: 0, scale: 0.6, rotate: -12, y: 20 }} whileInView={{ opacity: 1, scale: 1, rotate: 0, y: 0 }}
             whileHover={{ scale: 1.09, rotate: 4, y: -6 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 20, stiffness: 200, delay: i * 0.14 }}
             className="w-44 h-44 rounded-full flex flex-col items-center justify-center p-5 border-2 border-dashed text-center cursor-default"
-            style={{ borderColor: item.color + "70", backgroundColor: item.color + "0b" }}>
+            style={{ borderColor: TYPE_COLORS[item.type] + "70", backgroundColor: TYPE_COLORS[item.type] + "0b" }}>
             <div className="text-3xl mb-2">{item.icon}</div>
             <div className="text-xs font-bold text-foreground/85 leading-tight mb-1">{item.title}</div>
-            <div className="text-xs font-mono mt-0.5" style={{ color: item.color }}>{item.company}</div>
+            <div className="text-xs font-mono mt-0.5" style={{ color: TYPE_COLORS[item.type] }}>{item.company}</div>
             <div className="text-xs font-mono text-foreground/30 mt-0.5">{item.period}</div>
           </motion.div>
         ))}
@@ -603,12 +722,12 @@ function EventsSection({ items }: { items: CareerPoint[] }) {
         {items.map((item, i) => (
           <motion.div key={item.id}
             initial={{ opacity: 0, x: i % 2 === 0 ? -36 : 36, y: 12 }} whileInView={{ opacity: 1, x: 0, y: 0 }} whileHover={{ y: -6 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.1 }}
-            className="rounded-2xl border overflow-hidden" style={{ backgroundColor: "#1e1b2e", borderColor: item.color + "20" }}>
-            <div className="h-0.5" style={{ background: `linear-gradient(to right, ${item.color}, ${item.color}35)` }} />
+            className="rounded-2xl border overflow-hidden" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[item.type] + "20" }}>
+            <div className="h-0.5" style={{ background: `linear-gradient(to right, ${TYPE_COLORS[item.type]}, ${TYPE_COLORS[item.type]}35)` }} />
             <div className="p-5">
               <div className="flex items-start justify-between mb-3">
                 <span className="text-2xl">{item.icon}</span>
-                <span className="text-xs font-mono px-2 py-1 rounded-full" style={{ backgroundColor: item.color + "18", color: item.color }}>{item.period}</span>
+                <span className="text-xs font-mono px-2 py-1 rounded-full" style={{ backgroundColor: TYPE_COLORS[item.type] + "18", color: TYPE_COLORS[item.type] }}>{item.period}</span>
               </div>
               <h3 className="text-base font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
               <p className="text-xs text-foreground/38 mb-3 flex items-center gap-1.5 font-mono"><MapPin className="w-3 h-3" />{item.city} · {item.company}</p>
@@ -631,14 +750,14 @@ function VolunteeringSection({ items }: { items: CareerPoint[] }) {
         {items.map((item, i) => (
           <motion.div key={item.id}
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -5, scale: 1.02 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 200, delay: i * 0.1 }}
-            className="rounded-2xl p-5 border relative" style={{ backgroundColor: "#1e1b2e", borderColor: item.color + "25" }}>
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl mb-4" style={{ backgroundColor: item.color + "18" }}>{item.icon}</div>
+            className="rounded-2xl p-5 border relative" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[item.type] + "25" }}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl mb-4" style={{ backgroundColor: TYPE_COLORS[item.type] + "18" }}>{item.icon}</div>
             <h3 className="text-sm font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-            <p className="text-xs font-semibold mb-2" style={{ color: item.color }}>{item.company}</p>
+            <p className="text-xs font-semibold mb-2" style={{ color: TYPE_COLORS[item.type] }}>{item.company}</p>
             <p className="text-xs text-foreground/35 font-mono mb-3">{item.city} · {item.period}</p>
             <p className="text-xs text-foreground/60 leading-relaxed">{item.description}</p>
-            <div className="absolute top-4 right-4 w-6 h-6 rounded-full border flex items-center justify-center" style={{ borderColor: item.color + "40" }}>
-              <Heart className="w-3 h-3" style={{ color: item.color }} />
+            <div className="absolute top-4 right-4 w-6 h-6 rounded-full border flex items-center justify-center" style={{ borderColor: TYPE_COLORS[item.type] + "40" }}>
+              <Heart className="w-3 h-3" style={{ color: TYPE_COLORS[item.type] }} />
             </div>
           </motion.div>
         ))}
@@ -791,8 +910,8 @@ function Nav({ onNav }: { onNav: (id: string) => void }) {
 // ─── App ───────────────────────────────────────────────────────────────────────
 
 export default function App() {
-  const [selected, setSelected] = useState<CareerPoint | null>(null);
-  const [hovered, setHovered] = useState<CareerPoint | null>(null);
+  const [selected, setSelected] = useState<GlobeMarker | null>(null);
+  const [hovered, setHovered] = useState<GlobeMarker | null>(null);
 
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
@@ -845,20 +964,20 @@ export default function App() {
 
         {/* Globe canvas */}
         <div className="w-full max-w-2xl lg:max-w-3xl aspect-square max-h-[78vh]">
-          <Globe3D points={careerPoints} onPointClick={setSelected} onPointHover={setHovered} />
+          <Globe3D markers={globeMarkers} onMarkerClick={setSelected} onMarkerHover={setHovered} />
         </div>
 
         {/* Hover tooltip */}
         <AnimatePresence>
           {hovered && (
-            <motion.div key={hovered.id}
+            <motion.div key={mId(hovered)}
               className="absolute bottom-20 left-1/2 -translate-x-1/2 px-4 py-2.5 rounded-full text-xs font-mono z-20 pointer-events-none whitespace-nowrap flex items-center gap-2 border"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} transition={{ duration: 0.18 }}
-              style={{ backgroundColor: "#1e1b2eee", borderColor: hovered.color + "45", backdropFilter: "blur(8px)" }}>
-              <MapPin className="w-3 h-3" style={{ color: hovered.color }} />
-              <span className="text-foreground/65">{hovered.city}</span>
+              style={{ backgroundColor: "#1e1b2eee", borderColor: mColor(hovered) + "45", backdropFilter: "blur(8px)" }}>
+              <MapPin className="w-3 h-3" style={{ color: mColor(hovered) }} />
+              <span className="text-foreground/65">{hovered.kind === "single" ? hovered.point.city : hovered.city}</span>
               <span className="text-foreground/25">—</span>
-              <span style={{ color: hovered.color }}>{hovered.title}</span>
+              <span style={{ color: mColor(hovered) }}>{hovered.kind === "single" ? hovered.point.title : `${hovered.points.length} events`}</span>
             </motion.div>
           )}
         </AnimatePresence>
@@ -905,7 +1024,12 @@ export default function App() {
       </footer>
 
       <AnimatePresence>
-        {selected && <PointModal point={selected} onClose={() => setSelected(null)} />}
+        {selected && selected.kind === "single" && (
+          <PointModal point={selected.point} onClose={() => setSelected(null)} />
+        )}
+        {selected && selected.kind === "group" && (
+          <CityGroupModal city={selected.city} points={selected.points} onClose={() => setSelected(null)} />
+        )}
       </AnimatePresence>
     </div>
   );

@@ -36,7 +36,7 @@ export const sections = {
   experience:     { title: "Experience",       subtitle: "Building Real-World Software"     },
   education:      { title: "Education",        subtitle: "Academic Background"              },
   certifications: { title: "Certifications",   subtitle: "Continuous Learning"              },
-  events:         { title: "Events",           subtitle: "Hackathons and Conferences"       },
+  events:         { title: "Events",           subtitle: "Conferences & Workshops"       },
   volunteering:   { title: "Volunteering",        subtitle: "Community and Social Impact"                  },
   skills:         { title: "Skills",           subtitle: "Technologies and Tools"           },
   contact:        { title: "Let's Connect",     subtitle: "Get In Touch"                    },
