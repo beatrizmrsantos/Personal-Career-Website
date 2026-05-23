@@ -23,11 +23,11 @@ export const hero = {
 export const navLinks = [
   "about",
   "experience",
+  "projects",
+  "skills",
   "education",
   "certifications",
   "events",
-  "projects",
-  "skills",
   "contact",
 ] as const;
 

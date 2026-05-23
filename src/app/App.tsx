@@ -1129,6 +1129,10 @@ export default function App() {
       <AboutSection />
       <FlightPath segment={flightSegments[0]} />
       <ExperienceSection jobs={jobs} />
+      <FlightPath segment={flightSegments[5]} />
+      <ProjectsSection items={projects} />
+      <FlightPath segment={flightSegments[6]} />
+      <SkillsSection />
       <FlightPath segment={flightSegments[1]} />
       <EducationSection items={education} />
       <FlightPath segment={flightSegments[2]} />
@@ -1137,10 +1141,6 @@ export default function App() {
       <EventsSection items={events} />
       <FlightPath segment={flightSegments[4]} />
       <VolunteeringSection items={volunteers} />
-      <FlightPath segment={flightSegments[5]} />
-      <ProjectsSection items={projects} />
-      <FlightPath segment={flightSegments[6]} />
-      <SkillsSection />
       <FlightPath segment={flightSegments[7]} />
       <ContactSection />
 
