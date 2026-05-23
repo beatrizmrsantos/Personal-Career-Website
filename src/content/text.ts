@@ -26,6 +26,7 @@ export const navLinks = [
   "education",
   "certifications",
   "events",
+  "projects",
   "skills",
   "contact",
 ] as const;
@@ -38,6 +39,7 @@ export const sections = {
   certifications: { title: "Certifications",   subtitle: "Continuous Learning"              },
   events:         { title: "Events",           subtitle: "Conferences & Workshops"       },
   volunteering:   { title: "Volunteering",        subtitle: "Community and Social Impact"                  },
+  projects:       { title: "Projects",          subtitle: "Things I've Built"                },
   skills:         { title: "Skills",           subtitle: "Technologies and Tools"           },
   contact:        { title: "Let's Connect",     subtitle: "Get In Touch"                    },
 };
@@ -57,7 +59,7 @@ export const about = {
   stats: [
     { value: "18M+",  label: "Users Served",          icon: "🌍" },
     { value: "2",    label: "Years Exp.",        icon: "⚡" },
-    { value: "5",  label: "Certs & Courses", icon: "🏆" },
+    { value: "4",  label: "Certs & Courses", icon: "🏆" },
     { value: "8",   label: "Production Projects",   icon: "🛠️" },
   ],
 };

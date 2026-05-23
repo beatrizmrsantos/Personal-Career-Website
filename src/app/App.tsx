@@ -8,9 +8,10 @@ import {
   X, MapPin, ChevronDown, Github, Linkedin, Mail,
   Award, Briefcase, GraduationCap, Heart, CalendarDays,
   Globe, Code2, ExternalLink, Send,
+  Server, Layers, Cloud, Database, ShieldCheck, Settings2,
 } from "lucide-react";
-import { TYPE_COLORS, TYPE_LABELS, careerPoints, skills, flightSegments } from "@/content/career";
-import type { PointType, CareerPoint } from "@/content/career";
+import { TYPE_COLORS, TYPE_LABELS, careerPoints, skills, flightSegments, projects } from "@/content/career";
+import type { PointType, CareerPoint, Project } from "@/content/career";
 import { profile, hero as heroText, navLinks, sections, about, contact as contactText, footer } from "@/content/text";
 
 // ─── Icon Maps ────────────────────────────────────────────────────────────────
@@ -702,16 +703,17 @@ function EducationSection({ items }: { items: CareerPoint[] }) {
 
 // ─── Certifications Section ────────────────────────────────────────────────────
 
-function CertificationsSection({ items }: { items: CareerPoint[] }) {
+function CertificationsSection({ items, onSelect }: { items: CareerPoint[]; onSelect: (p: CareerPoint) => void }) {
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto" id="certifications">
       <SectionHeading title={sections.certifications.title} subtitle={sections.certifications.subtitle} />
       <div className="flex flex-wrap justify-center gap-10">
         {items.map((item, i) => (
           <motion.div key={item.id}
+            onClick={() => onSelect(item)}
             initial={{ opacity: 0, scale: 0.6, rotate: -12, y: 20 }} whileInView={{ opacity: 1, scale: 1, rotate: 0, y: 0 }}
             whileHover={{ scale: 1.09, rotate: 4, y: -6 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 20, stiffness: 200, delay: i * 0.14 }}
-            className="w-44 h-44 rounded-full flex flex-col items-center justify-center p-5 border-2 border-dashed text-center cursor-default"
+            className="w-44 h-44 rounded-full flex flex-col items-center justify-center p-5 border-2 border-dashed text-center cursor-pointer"
             style={{ borderColor: TYPE_COLORS[item.type] + "70", backgroundColor: TYPE_COLORS[item.type] + "0b" }}>
             <div className="text-3xl mb-2">{item.icon}</div>
             <div className="text-xs font-bold text-foreground/85 leading-tight mb-1">{item.title}</div>
@@ -778,32 +780,141 @@ function VolunteeringSection({ items }: { items: CareerPoint[] }) {
   );
 }
 
-// ─── Skills Section ────────────────────────────────────────────────────────────
+// ─── Projects Section ─────────────────────────────────────────────────────────
 
-function SkillsSection() {
+function ProjectsSection({ items }: { items: Project[] }) {
   return (
-    <section className="py-16 px-6 max-w-5xl mx-auto" id="skills">
-      <SectionHeading title={sections.skills.title} subtitle={sections.skills.subtitle} />
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
-        {skills.map((group, i) => (
-          <motion.div key={group.group}
-            initial={{ opacity: 0, y: 30, scale: 0.96 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} whileHover={{ y: -6, scale: 1.03 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 200, delay: i * 0.09 }}
-            className="rounded-2xl p-5 border" style={{ backgroundColor: "#1e1b2e", borderColor: "rgba(196,112,138,0.12)" }}>
-            <div className="flex items-center gap-2 mb-4">
-              <Code2 className="w-3.5 h-3.5" style={{ color: "#c4708a" }} />
-              <span className="text-xs font-mono uppercase tracking-widest text-foreground/45">{group.group}</span>
-            </div>
-            <div className="flex flex-col gap-2.5">
-              {group.items.map((skill) => (
-                <div key={skill} className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full shrink-0" style={{ backgroundColor: "#c4708a" }} />
-                  <span className="text-sm text-foreground/78">{skill}</span>
+    <section className="py-16 px-6 max-w-5xl mx-auto" id="projects">
+      <SectionHeading title={sections.projects.title} subtitle={sections.projects.subtitle} />
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {items.map((project, i) => (
+          <motion.div key={project.id}
+            initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -6, scale: 1.02 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.1 }}
+            className="rounded-2xl overflow-hidden border flex flex-col"
+            style={{ backgroundColor: "#1e1b2e", borderColor: "rgba(196,112,138,0.18)" }}>
+            <div className="h-0.5" style={{ background: "linear-gradient(to right, #c4708a, #9b7fc4)" }} />
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-start justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
+                  style={{ backgroundColor: "#c4708a18" }}>
+                  {project.icon}
                 </div>
-              ))}
+                <span className="text-xs font-mono text-foreground/35 bg-white/5 px-2 py-0.5 rounded">{project.period}</span>
+              </div>
+              <h3 className="text-base font-bold text-foreground mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{project.title}</h3>
+              <p className="text-sm text-foreground/60 leading-relaxed mb-4 flex-1">{project.description}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="text-xs px-2 py-0.5 rounded font-mono"
+                    style={{ backgroundColor: "#c4708a15", color: "#c4708a", border: "1px solid #c4708a25" }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
+            {(project.github || project.live) && (
+              <div className="px-5 pb-4 flex gap-4 border-t" style={{ borderColor: "rgba(196,112,138,0.1)" }}>
+                <div className="flex gap-4 pt-3">
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs font-mono text-foreground/40 hover:text-foreground/75 transition-colors">
+                      <Github className="w-3.5 h-3.5" /> GitHub
+                    </a>
+                  )}
+                  {project.live && (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs font-mono text-foreground/40 hover:text-foreground/75 transition-colors">
+                      <ExternalLink className="w-3.5 h-3.5" /> Live
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
           </motion.div>
         ))}
       </div>
+    </section>
+  );
+}
+
+// ─── Skills Section ────────────────────────────────────────────────────────────
+
+const SKILL_META: Record<string, {
+  color: string; label: string; flavor: string; symbol: string;
+  Icon: React.ComponentType<{ className?: string }>;
+}> = {
+  "Languages":             { color: "#c4708a", label: "Languages",    flavor: "THE TONGUES I SPEAK WITH MACHINES",  symbol: "</>", Icon: Code2        },
+  "Backend Engineering":   { color: "#9b7fc4", label: "Backend",      flavor: "THE ENGINES UNDER THE HOOD",          symbol: "{}",  Icon: Server       },
+  "Frontend & Mobile":     { color: "#7fc4c0", label: "Frontend",     flavor: "WHAT USERS SEE AND TOUCH",            symbol: "[]",  Icon: Layers       },
+  "Cloud & DevOps":        { color: "#c4a87f", label: "Cloud & Infra",flavor: "INFRASTRUCTURE AND PIPELINES",        symbol: "∞",   Icon: Cloud        },
+  "Databases":             { color: "#7fc488", label: "Databases",    flavor: "WHERE DATA LIVES AND BREATHES",       symbol: "DB",  Icon: Database     },
+  "Quality & Testing":     { color: "#c4b07f", label: "Quality",      flavor: "SHIPPING WITH CONFIDENCE",            symbol: "✓",   Icon: ShieldCheck  },
+  "Engineering Practices": { color: "#8888a0", label: "Practices",    flavor: "THE WAY I BUILD",                     symbol: "⚙",   Icon: Settings2    },
+};
+
+function SkillsSection() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const group = skills[activeIdx];
+  const meta = SKILL_META[group.group] ?? Object.values(SKILL_META)[0];
+
+  return (
+    <section className="py-16 px-6 max-w-5xl mx-auto" id="skills">
+      <SectionHeading title={sections.skills.title} subtitle={sections.skills.subtitle} />
+
+      {/* Tab bar */}
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        {skills.map((g, i) => {
+          const m = SKILL_META[g.group] ?? Object.values(SKILL_META)[0];
+          const isActive = i === activeIdx;
+          const TabIcon = m.Icon;
+          return (
+            <button key={g.group} onClick={() => setActiveIdx(i)}
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono transition-all"
+              style={{
+                backgroundColor: isActive ? m.color + "18" : "transparent",
+                border: `1px solid ${isActive ? m.color + "70" : "rgba(255,255,255,0.07)"}`,
+                color: isActive ? m.color : "rgba(240,238,247,0.35)",
+              }}>
+              <TabIcon className="w-3.5 h-3.5" />
+              {m.label}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Content panel */}
+      <AnimatePresence mode="wait">
+        <motion.div key={activeIdx}
+          initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
+          transition={{ type: "spring", damping: 28, stiffness: 260 }}
+          className="relative rounded-2xl p-8 border overflow-hidden"
+          style={{ backgroundColor: "#1e1b2e", borderColor: meta.color + "25", minHeight: "160px" }}>
+
+          {/* Decorative background symbol */}
+          <span className="absolute right-8 top-1/2 -translate-y-1/2 select-none pointer-events-none font-black leading-none"
+            style={{ fontSize: "clamp(80px,12vw,140px)", color: meta.color, opacity: 0.06, fontFamily: "monospace" }}>
+            {meta.symbol}
+          </span>
+
+          <p className="text-xs font-mono uppercase tracking-[0.25em] mb-6" style={{ color: meta.color + "60" }}>
+            {meta.flavor}
+          </p>
+
+          <div className="flex flex-wrap gap-2.5">
+            {group.items.map((skill, i) => (
+              <motion.span key={skill}
+                initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.045, type: "spring", damping: 20, stiffness: 300 }}
+                className="px-4 py-2 rounded-full text-sm font-mono font-medium"
+                style={{ backgroundColor: meta.color + "18", color: meta.color, border: `1px solid ${meta.color}35` }}>
+                {skill}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 }
@@ -1021,14 +1132,16 @@ export default function App() {
       <FlightPath segment={flightSegments[1]} />
       <EducationSection items={education} />
       <FlightPath segment={flightSegments[2]} />
-      <CertificationsSection items={certs} />
+      <CertificationsSection items={certs} onSelect={(p) => setSelected({ kind: "single", point: p })} />
       <FlightPath segment={flightSegments[3]} />
       <EventsSection items={events} />
       <FlightPath segment={flightSegments[4]} />
       <VolunteeringSection items={volunteers} />
       <FlightPath segment={flightSegments[5]} />
-      <SkillsSection />
+      <ProjectsSection items={projects} />
       <FlightPath segment={flightSegments[6]} />
+      <SkillsSection />
+      <FlightPath segment={flightSegments[7]} />
       <ContactSection />
 
       <footer className="py-10 text-center border-t" style={{ borderColor: "rgba(196,112,138,0.08)" }}>

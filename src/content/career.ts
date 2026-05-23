@@ -279,15 +279,167 @@ export const skills = [
   { group: "Engineering Practices", items: ["Agile/Scrum", "SDLC", "Software Architecture", "Secure Development", "Performance Optimization", "Production Support"] }
 ];
 
+// ─── Projects ────────────────────────────────────────────────────────────────
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  period: string;
+  icon: string;
+  github?: string;
+  live?: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "Personal Career Website",
+    description:
+      "Interactive personal website with a 3D globe showcasing career milestones, animated flight paths and scroll-triggered animations built with React and Three.js.",
+    tags: ["React", "TypeScript", "Three.js", "Tailwind CSS", "Framer Motion"],
+    period: "2025",
+    icon: "🌍",
+  },
+
+  {
+    id: 2,
+    title: "Secure Government Authentication Platform",
+    description:
+      "Secure cross-platform authentication platform supporting citizen identity verification, digital signatures, biometric validation, encrypted communications and real-time video conferencing for government digital services.",
+    tags: ["Flutter", "Dart", "Java", "Spring Boot", "WebRTC", "SQL"],
+    period: "2023 – 2024",
+    icon: "🔐",
+  },
+
+  {
+    id: 3,
+    title: "Embassy of Cape Verde Digital Services Platforms",
+    description:
+      "Web and mobile digital-service platforms for the Embassy of Cape Verde, featuring multilingual document-processing workflows using Azure cloud services, OCR technologies and machine-translation APIs.",
+    tags: ["React", "React Native", "Java", "Spring Boot", "Azure", "Docker"],
+    period: "2024 – 2025",
+    icon: "🌍",
+  },
+
+  {
+    id: 4,
+    title: "Tax Benefit Management Platform",
+    description:
+      "Enterprise-scale public-sector tax management platform with secure workflows, automation services, administrative interfaces and scalable backend APIs for government digital operations.",
+    tags: ["Java", "Spring Boot", "React", "SQL", "REST APIs"],
+    period: "2024 – 2025",
+    icon: "🏛️",
+  },
+
+  {
+    id: 5,
+    title: "Thirst Project Portugal Mobile App",
+    description:
+      "Mobile application supporting the coordination of 1000+ volunteers for water-access initiatives across African communities, including product planning and cross-platform mobile development.",
+    tags: ["React Native", "Mobile Development", "Product Planning", "Volunteering"],
+    period: "2023",
+    icon: "💧",
+  },
+];
+
 // ─── Flight Segments ──────────────────────────────────────────────────────────
-// Narrative: Porto → HKG (job) → LIS (study) → LHR (cert) → SFO (event) → NRT (volunteer) → AMS (volunteer) → BCN (event)
 
 export const flightSegments = [
-  { label: "Experience",     from: "OPO", to: "HKG", fromCity: "Porto",         toCity: "Hong Kong",     flightNum: "FX 001", distance: "9,700 km", duration: "12h 30m", curve: 12 },
-  { label: "Education",      from: "HKG", to: "LIS", fromCity: "Hong Kong",     toCity: "Lisbon",        flightNum: "TP 020", distance: "9,600 km", duration: "12h 10m", curve: 55 },
-  { label: "Certifications", from: "LIS", to: "LHR", fromCity: "Lisbon",        toCity: "London",        flightNum: "TP 120", distance: "1,741 km", duration: "2h 20m",  curve: 22 },
-  { label: "Events",         from: "LHR", to: "SFO", fromCity: "London",        toCity: "San Francisco", flightNum: "BA 285", distance: "8,625 km", duration: "10h 45m", curve: 8  },
-  { label: "Volunteering",   from: "SFO", to: "NRT", fromCity: "San Francisco", toCity: "Tokyo",         flightNum: "JL 002", distance: "8,256 km", duration: "10h 30m", curve: 65 },
-  { label: "Skills",         from: "NRT", to: "AMS", fromCity: "Tokyo",         toCity: "Amsterdam",     flightNum: "KL 862", distance: "9,350 km", duration: "12h 00m", curve: 18 },
-  { label: "Contact",        from: "AMS", to: "BCN", fromCity: "Amsterdam",     toCity: "Barcelona",     flightNum: "VY 834", distance: "1,457 km", duration: "2h 05m",  curve: 42 },
+  {
+    label: "Experience",
+    from: "LIS",
+    to: "BRU",
+    fromCity: "Lisbon",
+    toCity: "Brussels",
+    flightNum: "OP 2025",
+    distance: "1,713 km",
+    duration: "2h 40m",
+    curve: 18,
+  },
+
+  {
+    label: "Education",
+    from: "LIS",
+    to: "DRS",
+    fromCity: "Lisbon",
+    toCity: "Dresden",
+    flightNum: "ER 2023",
+    distance: "2,300 km",
+    duration: "3h 30m",
+    curve: 42,
+  },
+
+  {
+    label: "Certifications",
+    from: "LIS",
+    to: "BRU",
+    fromCity: "Lisbon",
+    toCity: "Brussels",
+    flightNum: "EU 2024",
+    distance: "1,713 km",
+    duration: "2h 40m",
+    curve: 28,
+  },
+
+  {
+    label: "Events",
+    from: "LIS",
+    to: "PAR",
+    fromCity: "Lisbon",
+    toCity: "Paris",
+    flightNum: "JR 2025",
+    distance: "1,453 km",
+    duration: "2h 25m",
+    curve: 55,
+  },
+
+  {
+    label: "Volunteering",
+    from: "FAO",
+    to: "CPT",
+    fromCity: "Faro",
+    toCity: "Africa",
+    flightNum: "TP 2023",
+    distance: "7,200 km",
+    duration: "8h 50m",
+    curve: 65,
+  },
+
+  {
+    label: "Projects",
+    from: "LIS",
+    to: "RAI",
+    fromCity: "Lisbon",
+    toCity: "Digital Platforms",
+    flightNum: "PR 2025",
+    distance: "∞",
+    duration: "Always Building",
+    curve: 35,
+  },
+
+  {
+    label: "Skills",
+    from: "LIS",
+    to: "SFO",
+    fromCity: "Lisbon",
+    toCity: "Global Tech",
+    flightNum: "FS 001",
+    distance: "Unlimited",
+    duration: "Continuous Learning",
+    curve: 22,
+  },
+
+  {
+    label: "Contact",
+    from: "FAO",
+    to: "LIS",
+    fromCity: "Faro",
+    toCity: "Lisbon",
+    flightNum: "CT 101",
+    distance: "278 km",
+    duration: "45m",
+    curve: 12,
+  },
 ];
