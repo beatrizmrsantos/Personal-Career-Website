@@ -69,7 +69,7 @@ export const contact = {
   intro: "Whether you want to collaborate on a project, discuss engineering challenges, or just share a travel story — I would love to hear from you.",
   links: [
     { icon: "Mail",     label: "beatrizmrsantos@gmail.com",         href: "mailto:beatrizmrsantos@gmail.com" },
-    { icon: "Github",   label: "github.com/beatrizmrsantoss",      href: "https://github.com/beatrizmrsantoss" },
+    { icon: "Github",   label: "github.com/beatrizmrsantos",      href: "https://github.com/beatrizmrsantos" },
     { icon: "Linkedin", label: "linkedin.com/in/-beatriz-santos", href: "https://www.linkedin.com/in/-beatriz-santos/" },
   ],
   form: {
