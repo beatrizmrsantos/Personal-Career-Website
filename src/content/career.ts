@@ -218,7 +218,7 @@ export const careerPoints: CareerPoint[] = [
     company: "Technische Universität Dresden",
     period: "2023",
     description:
-      "International exchange program focused on computer science. Strengthened adaptability and technical foundations in an international academic environment.GPA: 17/20.",
+      "International exchange program focused on computer science. Strengthened adaptability and technical foundations in an international academic environment.",
     tags: ["Computer Science", "International", "Systems"],
     gpa: "17/20",
   },
@@ -306,6 +306,7 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "Java", "Spring Boot", "WebRTC", "WebSockets", "SQL"],
     period: "2023 – 2024",
     icon: "🔐",
+    // link: "",
   },
 
   {
@@ -316,16 +317,18 @@ export const projects: Project[] = [
     tags: ["React", "React Native", "Java", "Spring Boot", "Azure", "Docker"],
     period: "2024 – 2025",
     icon: "🌍",
+    link: "https://www.gov.cv/",
   },
 
   {
     id: 3,
     title: "Tax Benefit Management Platform",
     description:
-      "Developed new features for the Tax Benefit Management Platform within the Portuguese Tax and Customs Authority, building both employee-facing (10K+ users) and citizen-facing (18.3M+ users) interfaces with distinct workflows and functionalities. Led the migration from a legacy system to a modern architecture using React and Spring Boot, improving maintainability, scalability, and system performance. Contributed to workflow automation, case management, and API-driven services supporting large-scale government operations.",
+      "Developed new features for the Tax Benefit Management Platform, a internal platform within the Portuguese Tax and Customs Authority, building both employee-facing (10K+ users) and citizen-facing (18.3M+ users) interfaces with distinct workflows and functionalities. Led the migration from a legacy system to a modern architecture using React and Spring Boot, improving maintainability, scalability, and system performance. Contributed to workflow automation, case management, and API-driven services supporting large-scale government operations.",
     tags: ["Java", "Spring Boot", "React", "SQL", "REST APIs"],
     period: "2024 – 2025",
     icon: "🏛️",
+    // link: "",
   },
 
   {
@@ -336,6 +339,7 @@ export const projects: Project[] = [
     tags: ["React", "React Native", "Mobile Development", "Product Planning", "Volunteering"],
     period: "2023",
     icon: "💧",
+    link: "https://thirstproject.pt/",
   },
 ];
 

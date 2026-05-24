@@ -679,31 +679,116 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
 
 // ─── Education Section ─────────────────────────────────────────────────────────
 
+function EducationCard({ item, index, side }: { item: CareerPoint; index: number; side: "left" | "right" }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: side === "left" ? -32 : 32 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      whileHover={{ y: -4 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ type: "spring", damping: 22, stiffness: 180, delay: index * 0.1 }}
+      className="relative overflow-hidden rounded-2xl border"
+      style={{ backgroundColor: "#1e1b2e", borderColor: "#9b7fc428" }}
+    >
+      <div className="h-0.5" style={{ background: "linear-gradient(to right, #9b7fc4, transparent)" }} />
+      <div className="p-6">
+        <div className="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <p className="text-xs font-mono uppercase tracking-widest mb-1" style={{ color: "#9b7fc4" }}>{item.company}</p>
+            <h3 className="text-lg font-bold text-foreground leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+          </div>
+          <span className="text-xs font-mono text-foreground/35 shrink-0 bg-white/5 px-2 py-0.5 rounded mt-1">{item.period}</span>
+        </div>
+
+        <div className="flex flex-col gap-1.5 mb-4">
+          <span className="text-xs font-mono text-foreground/40 flex items-center gap-1.5"><MapPin className="w-3 h-3" />{item.city}</span>
+          {item.gpa && (
+            <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full w-fit"
+              style={{ backgroundColor: "#9b7fc420", color: "#9b7fc4", border: "1px solid #9b7fc445" }}>
+              GPA {item.gpa}
+            </span>
+          )}
+        </div>
+
+        <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
+      </div>
+
+      <div className="absolute top-0 right-0 w-28 h-28 rounded-bl-full pointer-events-none" style={{ backgroundColor: "#9b7fc4", opacity: 0.04 }} />
+    </motion.div>
+  );
+}
+
 function EducationSection({ items }: { items: CareerPoint[] }) {
+  const sorted = [...items].sort((a, b) => {
+    const endA = parseInt(a.period.match(/\d{4}/g)?.slice(-1)[0] ?? "0");
+    const endB = parseInt(b.period.match(/\d{4}/g)?.slice(-1)[0] ?? "0");
+    return endB - endA;
+  });
+
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto" id="education">
       <SectionHeading title={sections.education.title} subtitle={sections.education.subtitle} />
-      <div className="grid md:grid-cols-2 gap-6">
-        {items.map((item, i) => (
-          <motion.div key={item.id}
-            initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -6, scale: 1.01 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.12 }}
-            className="rounded-2xl p-6 border relative overflow-hidden" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[item.type] + "25" }}>
-            <div className="absolute top-0 right-0 w-28 h-28 rounded-bl-full opacity-5" style={{ backgroundColor: TYPE_COLORS[item.type] }} />
-            <div className="text-3xl mb-4">{item.icon}</div>
-            <h3 className="text-lg font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-            <p className="text-sm font-semibold mb-2" style={{ color: TYPE_COLORS[item.type] }}>{item.company}</p>
-            <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-              <p className="text-xs font-mono text-foreground/35 flex items-center gap-1.5"><MapPin className="w-3 h-3" />{item.city} · {item.period}</p>
-              {item.gpa && (
-                <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full"
-                  style={{ backgroundColor: TYPE_COLORS[item.type] + "20", color: TYPE_COLORS[item.type], border: `1px solid ${TYPE_COLORS[item.type]}40` }}>
-                  GPA {item.gpa}
-                </span>
-              )}
-            </div>
-            <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
-          </motion.div>
-        ))}
+
+      <div className="relative">
+        {/* Vertical dashed flight path — desktop only */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px hidden md:block pointer-events-none"
+          style={{ backgroundImage: "repeating-linear-gradient(to bottom, rgba(155,127,196,0.45) 0px, rgba(155,127,196,0.45) 9px, transparent 9px, transparent 20px)" }}
+        />
+
+        <div className="flex flex-col gap-10 md:gap-14">
+          {sorted.map((item, i) => {
+            const isLeft = i % 2 === 0;
+            const year = item.period.match(/\d{4}/g)?.slice(-1)[0] ?? item.period;
+
+            return (
+              <div key={item.id} className="relative">
+                {/* Desktop layout */}
+                <div className="hidden md:flex items-center">
+                  {/* Left card area */}
+                  <div className="flex-1 flex items-center justify-end">
+                    {isLeft ? (
+                      <>
+                        <EducationCard item={item} index={i} side="left" />
+                        <div className="w-10 shrink-0 h-px" style={{ background: "linear-gradient(to right, rgba(155,127,196,0.3), rgba(155,127,196,0))" }} />
+                      </>
+                    ) : <div className="flex-1" />}
+                  </div>
+
+                  {/* Center waypoint */}
+                  <motion.div
+                    className="shrink-0 flex flex-col items-center gap-1 z-10"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ type: "spring", damping: 18, stiffness: 220, delay: i * 0.1 + 0.05 }}
+                  >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl border-2"
+                      style={{ backgroundColor: "#1a1728", borderColor: "#9b7fc4", boxShadow: "0 0 22px rgba(155,127,196,0.35), inset 0 0 10px rgba(155,127,196,0.07)" }}>
+                      {item.icon}
+                    </div>
+                    <span className="text-xs font-mono font-bold" style={{ color: "#9b7fc4" }}>{year}</span>
+                  </motion.div>
+
+                  {/* Right card area */}
+                  <div className="flex-1 flex items-center justify-start">
+                    {!isLeft ? (
+                      <>
+                        <div className="w-10 shrink-0 h-px" style={{ background: "linear-gradient(to left, rgba(155,127,196,0.3), rgba(155,127,196,0))" }} />
+                        <EducationCard item={item} index={i} side="right" />
+                      </>
+                    ) : <div className="flex-1" />}
+                  </div>
+                </div>
+
+                {/* Mobile layout */}
+                <div className="md:hidden">
+                  <EducationCard item={item} index={i} side="left" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -790,63 +875,91 @@ function VolunteeringSection({ items }: { items: CareerPoint[] }) {
 
 // ─── Projects Section ─────────────────────────────────────────────────────────
 
+const PROJECT_PALETTE = ["#c4708a", "#9b7fc4", "#7fc4c0", "#c4a87f", "#7fc488"];
+
 function ProjectsSection({ items }: { items: Project[] }) {
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto" id="projects">
       <SectionHeading title={sections.projects.title} subtitle={sections.projects.subtitle} />
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {items.map((project, i) => (
-          <motion.div key={project.id}
-            initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -6, scale: 1.02 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.1 }}
-            className="rounded-2xl overflow-hidden border flex flex-col"
-            style={{ backgroundColor: "#1e1b2e", borderColor: "rgba(196,112,138,0.18)" }}>
-            <div className="h-0.5" style={{ background: "linear-gradient(to right, #c4708a, #9b7fc4)" }} />
-            <div className="p-5 flex-1 flex flex-col">
-              <div className="flex items-start justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
-                  style={{ backgroundColor: "#c4708a18" }}>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((project, i) => {
+          const color = PROJECT_PALETTE[i % PROJECT_PALETTE.length];
+          const href = project.link ?? project.live ?? project.github;
+          return (
+            <motion.div key={project.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ type: "spring", damping: 20, stiffness: 200, delay: i * 0.08 }}
+              className="group rounded-2xl overflow-hidden border flex flex-col relative"
+              style={{ backgroundColor: "#1a1728", borderColor: color + "30", boxShadow: "0 4px 28px rgba(0,0,0,0.35)" }}>
+
+              {/* ── Hero area ── */}
+              <div className="relative h-24 overflow-hidden flex items-end justify-between px-5 pb-4"
+                style={{ background: `linear-gradient(135deg, ${color}25 0%, ${color}08 100%)` }}>
+
+                {/* Dot grid texture */}
+                <div className="absolute inset-0 pointer-events-none"
+                  style={{ backgroundImage: `radial-gradient(circle, ${color}18 1px, transparent 1px)`, backgroundSize: "18px 18px" }} />
+
+                {/* Icon */}
+                <motion.div
+                  whileHover={{ scale: 1.14, rotate: -5 }}
+                  transition={{ type: "spring", stiffness: 380, damping: 18 }}
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl relative z-10"
+                  style={{ backgroundColor: color + "20", border: `1.5px solid ${color}45`, boxShadow: `0 0 28px ${color}35` }}>
                   {project.icon}
+                </motion.div>
+
+                {/* Period badge */}
+                <span className="text-xs font-mono relative z-10 px-2.5 py-1 rounded-full"
+                  style={{ backgroundColor: color + "18", color, border: `1px solid ${color}30` }}>
+                  {project.period}
+                </span>
+
+                {/* Bottom fade into card body */}
+                <div className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none"
+                  style={{ background: "linear-gradient(to bottom, transparent, #1a1728)" }} />
+              </div>
+
+              {/* ── Content ── */}
+              <div className="flex-1 flex flex-col px-5 pt-3 pb-5">
+                <h3 className="text-base font-bold text-foreground mb-2 leading-snug"
+                  style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {project.title}
+                </h3>
+
+                <p className="text-sm text-foreground/55 leading-relaxed mb-4 flex-1">{project.description}</p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="text-xs px-2 py-0.5 rounded-full font-mono"
+                      style={{ backgroundColor: color + "12", color, border: `1px solid ${color}28` }}>
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-                <span className="text-xs font-mono text-foreground/35 bg-white/5 px-2 py-0.5 rounded">{project.period}</span>
-              </div>
-              <h3 className="text-base font-bold text-foreground mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{project.title}</h3>
-              <p className="text-sm text-foreground/60 leading-relaxed mb-4 flex-1">{project.description}</p>
-              <div className="flex flex-wrap gap-1.5">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="text-xs px-2 py-0.5 rounded font-mono"
-                    style={{ backgroundColor: "#c4708a15", color: "#c4708a", border: "1px solid #c4708a25" }}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="px-5 pb-4 pt-3 border-t flex items-center gap-3" style={{ borderColor: "rgba(196,112,138,0.1)" }}>
-              {(() => {
-                const href = project.link ?? project.live ?? project.github;
-                return href ? (
+
+                {/* View Project button — only rendered when a link exists */}
+                {href && (
                   <a href={href} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full transition-all hover:opacity-80"
-                    style={{ backgroundColor: "#c4708a18", color: "#c4708a", border: "1px solid #c4708a35" }}>
-                    <ExternalLink className="w-3 h-3" /> View Project
+                    className="flex items-center justify-center gap-2 text-xs font-mono font-semibold py-2.5 rounded-xl transition-all"
+                    style={{ backgroundColor: color + "18", color, border: `1px solid ${color}38` }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = color + "30"; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = color + "18"; }}>
+                    <ExternalLink className="w-3.5 h-3.5" /> View Project
                   </a>
-                ) : (
-                  <span className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full cursor-not-allowed select-none"
-                    style={{ backgroundColor: "rgba(255,255,255,0.03)", color: "rgba(240,238,247,0.2)", border: "1px solid rgba(255,255,255,0.06)" }}>
-                    <ExternalLink className="w-3 h-3" /> View Project
-                  </span>
-                );
-              })()}
-              {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs font-mono text-foreground/30 hover:text-foreground/60 transition-colors">
-                  <Github className="w-3.5 h-3.5" /> GitHub
-                </a>
-              )}
-            </div>
-          </motion.div>
-        ))}
+                )}
+              </div>
+
+              {/* Hover glow border overlay */}
+              <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ boxShadow: `inset 0 0 0 1px ${color}55, 0 16px 48px ${color}14` }} />
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
