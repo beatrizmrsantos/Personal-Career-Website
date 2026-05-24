@@ -1,5 +1,4 @@
 // ─── Perfil ───────────────────────────────────────────────────────────────────
-// Muda aqui o teu nome e cargo — aparecem no nav, hero e footer.
 
 export const profile = {
   name: "Beatriz Santos",
@@ -57,7 +56,7 @@ export const about = {
     "Outside of tech, I’m usually exploring a new country. Traveling continuously shapes the way I approach software: with curiosity, adaptability, and an openness to different perspectives.",
   ],
   stats: [
-    { value: "18M+",  label: "Users Served",          icon: "🌍" },
+    { value: "18.3M+",  label: "Users Served",          icon: "🌍" },
     { value: "2",    label: "Years Exp.",        icon: "⚡" },
     { value: "4",  label: "Certs & Courses", icon: "🏆" },
     { value: "8",   label: "Production Projects",   icon: "🛠️" },
@@ -65,10 +64,9 @@ export const about = {
 };
 
 // ─── Contacto ─────────────────────────────────────────────────────────────────
-// Muda o email, github e linkedin aqui.
 
 export const contact = {
-  intro: "Whether you want to collaborate on a project, discuss engineering challenges, or just share a travel story — I would love to hear from you.",
+  intro: "Whether you want to collaborate on a project, discuss engineering challenges, explore potential job opportunities, or just share a travel story — I would love to hear from you.",
   links: [
     { icon: "Mail",     label: "beatrizmrsantos@gmail.com",         href: "mailto:beatrizmrsantos@gmail.com" },
     { icon: "Github",   label: "github.com/beatrizmrsantos",      href: "https://github.com/beatrizmrsantos" },

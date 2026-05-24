@@ -692,7 +692,15 @@ function EducationSection({ items }: { items: CareerPoint[] }) {
             <div className="text-3xl mb-4">{item.icon}</div>
             <h3 className="text-lg font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
             <p className="text-sm font-semibold mb-2" style={{ color: TYPE_COLORS[item.type] }}>{item.company}</p>
-            <p className="text-xs font-mono text-foreground/35 mb-3 flex items-center gap-1.5"><MapPin className="w-3 h-3" />{item.city} · {item.period}</p>
+            <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+              <p className="text-xs font-mono text-foreground/35 flex items-center gap-1.5"><MapPin className="w-3 h-3" />{item.city} · {item.period}</p>
+              {item.gpa && (
+                <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full"
+                  style={{ backgroundColor: TYPE_COLORS[item.type] + "20", color: TYPE_COLORS[item.type], border: `1px solid ${TYPE_COLORS[item.type]}40` }}>
+                  GPA {item.gpa}
+                </span>
+              )}
+            </div>
             <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
           </motion.div>
         ))}
@@ -814,24 +822,29 @@ function ProjectsSection({ items }: { items: Project[] }) {
                 ))}
               </div>
             </div>
-            {(project.github || project.live) && (
-              <div className="px-5 pb-4 flex gap-4 border-t" style={{ borderColor: "rgba(196,112,138,0.1)" }}>
-                <div className="flex gap-4 pt-3">
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-mono text-foreground/40 hover:text-foreground/75 transition-colors">
-                      <Github className="w-3.5 h-3.5" /> GitHub
-                    </a>
-                  )}
-                  {project.live && (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-mono text-foreground/40 hover:text-foreground/75 transition-colors">
-                      <ExternalLink className="w-3.5 h-3.5" /> Live
-                    </a>
-                  )}
-                </div>
-              </div>
-            )}
+            <div className="px-5 pb-4 pt-3 border-t flex items-center gap-3" style={{ borderColor: "rgba(196,112,138,0.1)" }}>
+              {(() => {
+                const href = project.link ?? project.live ?? project.github;
+                return href ? (
+                  <a href={href} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full transition-all hover:opacity-80"
+                    style={{ backgroundColor: "#c4708a18", color: "#c4708a", border: "1px solid #c4708a35" }}>
+                    <ExternalLink className="w-3 h-3" /> View Project
+                  </a>
+                ) : (
+                  <span className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full cursor-not-allowed select-none"
+                    style={{ backgroundColor: "rgba(255,255,255,0.03)", color: "rgba(240,238,247,0.2)", border: "1px solid rgba(255,255,255,0.06)" }}>
+                    <ExternalLink className="w-3 h-3" /> View Project
+                  </span>
+                );
+              })()}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs font-mono text-foreground/30 hover:text-foreground/60 transition-colors">
+                  <Github className="w-3.5 h-3.5" /> GitHub
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>
