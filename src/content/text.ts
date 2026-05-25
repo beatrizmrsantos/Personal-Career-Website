@@ -58,7 +58,7 @@ export const about = {
   stats: [
     { value: "18.3M+",  label: "Users Served",          icon: "🌍" },
     { value: "2",    label: "Years Exp.",        icon: "⚡" },
-    { value: "4",  label: "Certs & Courses", icon: "🏆" },
+    { value: "1",  label: "Certs & Courses", icon: "🏆" },
     { value: "8",   label: "Production Projects",   icon: "🛠️" },
   ],
 };

@@ -39,42 +39,10 @@ export const TYPE_LABELS: Record<PointType, string> = {
 
 export const careerPoints: CareerPoint[] = [
   // =========================
-  // EVENTS
-  // =========================
-  {
-    id: 1,
-    lat: 38.7369,
-    lng: -9.1387,
-    city: "Lisbon, Portugal",
-    type: "event",
-    icon: "🎤",
-    title: "Guest Speaker at JORTEC 2025",
-    company: "NOVA School of Science and Technology & Opensoft",
-    period: "March 2025",
-    description:
-      "Invited speaker at JORTEC 2025, a technology and career event organized by NOVA School of Science and Technology (FCT NOVA). Represented Opensoft by presenting the company’s mission, culture, and public sector digital solutions, while sharing my journey from student intern to full-time Software Engineer to inspire students entering the tech industry.",
-    tags: ["Public Speaking", "Software Engineering", "Networking"],
-  },
-  {
-    id: 2,
-    lat: 48.8566,
-    lng: 2.3522,
-    city: "Paris, France",
-    type: "event",
-    icon: "🌐",
-    title: "We and the Internet",
-    company: "Missions Publiques",
-    period: "Oct 2020",
-    description:
-      "Global dialogue initiative focused on internet governance, communication and collaborative decision-making across cultures.",
-    tags: ["Communication", "Critical Thinking", "Teamwork"],
-  },
-
-  // =========================
   // JOBS
   // =========================
   {
-    id: 3,
+    id: 1,
     lat: 38.716,
     lng: -9.139,
     city: "Lisbon, Portugal",
@@ -88,7 +56,7 @@ export const careerPoints: CareerPoint[] = [
     tags: ["Java", "Spring Boot", "APIs", "React", "React Native", "Azure", "SQL", "Docker", "Kubernetes"],
   },
   {
-    id: 5,
+    id: 2,
     lat: 38.716,
     lng: -9.139,
     city: "Lisbon, Portugal",
@@ -98,11 +66,11 @@ export const careerPoints: CareerPoint[] = [
     company: "Opensoft",
     period: "2021 – 2022 & 2023 – 2024",
     description:
-      "Independently developed a secure cross-platform citizen authentication platform as part of a Master’s Thesis, covering the full SDLC from system design to deployment. Built biometric authentication, digital signatures, identity management, real-time communication as videoconferencing, and document verification systems. Developed enterprise integration systems for the Portuguese Tax and Customs Authority, including EFAPI and EORI platforms serving 250K+ users. Worked on secure APIs, authentication flows, and SQL-based systems, and improved software quality through testing, debugging, and CI/CD pipelines.",
+      "Independently developed a secure cross-platform citizen authentication platform as part of a Master’s Thesis, covering the full SDLC from system design to deployment. Built biometric authentication, digital signatures, identity management, real-time communication through video conferencing, and document verification and manegment systems. Developed enterprise integration systems for the Portuguese Tax and Customs Authority, including EFAPI and EORI platforms serving 250K+ users. Worked on secure APIs, authentication flows, and SQL-based systems, and improved software quality through testing, debugging, and CI/CD pipelines.",
     tags: ["Flutter", "Dart", "Java", "Spring Boot", "WebSockets", "WebRTC", "SQL"],
   },
   {
-    id: 4,
+    id: 3,
     lat: 38.716,
     lng: -9.139,
     city: "Lisbon, Portugal",
@@ -116,7 +84,7 @@ export const careerPoints: CareerPoint[] = [
     tags: ["React", "React Native", "Node.js", "Java", "Docker", "Kubernetes", "GCP"],
   },
   {
-    id: 6,
+    id: 4,
     lat: 38.716,
     lng: -9.139,
     city: "Lisbon, Portugal",
@@ -134,7 +102,7 @@ export const careerPoints: CareerPoint[] = [
   // CERTIFICATIONS
   // =========================
   {
-    id: 7,
+    id: 5,
     lat: 50.8503,
     lng: 4.3517,
     city: "Brussels, Belgium",
@@ -144,15 +112,33 @@ export const careerPoints: CareerPoint[] = [
     company: "European Parliament",
     period: "June 2024",
     description: 
-      "Provided IT support for election systems, staff training, and system validation during deployment of digital electoral registers in Portugal.",
+      "Provided IT support for the digital election system, staff training, and system validation during the first use of digital electoral registers in Portugal.",
     tags: ["IT Support", "Systems", "Operations", "Communication"],
   },
+
+  // =========================
+  // EVENTS
+  // =========================
   {
-    id: 8,
+    id: 6,
+    lat: 38.7369,
+    lng: -9.1387,
+    city: "Lisbon, Portugal",
+    type: "event",
+    icon: "🎤",
+    title: "Guest Speaker at JORTEC 2025",
+    company: "NOVA School of Science and Technology & Opensoft",
+    period: "March 2025",
+    description:
+      "Invited speaker at JORTEC 2025, a technology and career event organized by NOVA School of Science and Technology (FCT NOVA). Represented Opensoft by presenting the company’s mission, culture, and public sector digital solutions, while sharing my journey from student intern to full-time Software Engineer to inspire students entering the tech industry.",
+    tags: ["Public Speaking", "Software Engineering", "Networking"],
+  },
+  {
+    id: 7,
     lat: 38.716,
     lng: -9.139,
     city: "Lisbon, Portugal",
-    type: "cert",
+    type: "event",
     icon: "🚀",
     title: "Spring Hackathon 23/24",
     company: "NOVA School of Science and Technology",
@@ -162,11 +148,11 @@ export const careerPoints: CareerPoint[] = [
     tags: ["Hackathon", "React", "UI/UX Design", "Innovation"],
   },
   {
-    id: 9,
+    id: 8,
     lat: 38.7369,
     lng: -9.1387,
     city: "Lisbon, Portugal",
-    type: "cert",
+    type: "event",
     icon: "🎤",
     title: "EUGAIN Final Conference",
     company: "Order of the Engineers of Portugal & EUGAIN",
@@ -176,11 +162,11 @@ export const careerPoints: CareerPoint[] = [
     tags: ["Communication", "Critical Thinking", "Adaptation"],
   },
   {
-    id: 10,
+    id: 9,
     lat: 38.7369,
     lng: -9.1387,
     city: "Lisbon, Portugal",
-    type: "cert",
+    type: "event",
     icon: "💡",
     title: "Innovation Week",
     company: "In-Nova (NOVA FCT Junior Enterprise)",
@@ -189,6 +175,21 @@ export const careerPoints: CareerPoint[] = [
       "Supported IT operations and mobile app development for a 3-day innovation event. Contributed to the development of a mobile application for event management, including features for scheduling, notifications, and attendee engagement.",
     tags: ["Communication", "Project Planning", "React", "Node.js", "Java", "SQL"],
   },
+  {
+    id: 10,
+    lat: 48.8566,
+    lng: 2.3522,
+    city: "Paris, France",
+    type: "event",
+    icon: "🌐",
+    title: "We and the Internet",
+    company: "Missions Publiques",
+    period: "Oct 2020",
+    description:
+      "Global dialogue initiative focused on internet governance, communication and collaborative decision-making across cultures.",
+    tags: ["Communication", "Critical Thinking", "Teamwork"],
+  },
+
   // =========================
   // EDUCATION
   // =========================
@@ -324,7 +325,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Tax Benefit Management Platform",
     description:
-      "Developed new features for the Tax Benefit Management Platform, a internal platform within the Portuguese Tax and Customs Authority, building both employee-facing (10K+ users) and citizen-facing (18.3M+ users) interfaces with distinct workflows and functionalities. Led the migration from a legacy system to a modern architecture using React and Spring Boot, improving maintainability, scalability, and system performance. Contributed to workflow automation, case management, and API-driven services supporting large-scale government operations.",
+      "Developed new features for the Tax Benefit Management Platform, a internal platform within the Portuguese Tax and Customs Authority web application, building both employee-facing (10K+ users) and citizen-facing (18.3M+ users) interfaces with distinct workflows and functionalities. Led the migration from a legacy system to a modern architecture using React and Spring Boot, improving maintainability, scalability, and system performance. Contributed to workflow automation, case management, and API-driven services supporting large-scale government operations.",
     tags: ["Java", "Spring Boot", "React", "SQL", "REST APIs"],
     period: "2024 – 2025",
     icon: "🏛️",
