@@ -316,7 +316,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Secure Government Authentication Mobile App",
     description:
-      "Built a secure cross-platform authentication mobile application supporting citizen identity verification, biometric authentication, encrypted digital signatures, secure document management, and real-time video communication for government digital services.",
+      "Built a secure cross-platform mobile authentication application for my master’s thesis, enabling citizen identity verification, biometric authentication, encrypted digital signatures, secure document management, and real-time video communication for government digital services.",
     tags: ["Flutter", "Dart", "Java", "Spring Boot", "WebRTC", "WebSockets", "SQL"],
     period: "2023 – 2024",
     icon: "🔐",
