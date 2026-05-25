@@ -101,7 +101,7 @@ function Globe3D({ markers, onMarkerClick, onMarkerHover, isPaused = false }: {
 
     const globeGroup = new THREE.Group();
     scene.add(globeGroup);
-    globeGroup.rotation.y = -1.7;
+    globeGroup.rotation.y = -2.5;
     globeGroup.rotation.x = 0.3;
 
     // ── Main sphere ──
