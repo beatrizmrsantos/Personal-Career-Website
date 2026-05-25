@@ -1197,6 +1197,23 @@ function AboutSection() {
 
 function ContactSection() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    setError(false);
+    try {
+      const res = await fetch("https://formspree.io/f/mgoqljyb", {
+        method: "POST",
+        body: new FormData(e.currentTarget),
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) { setSent(true); } else { setError(true); }
+    } catch { setError(true); }
+    setSending(false);
+  };
   return (
     <section className="py-20 px-6 max-w-5xl mx-auto" id="contact">
       <SectionHeading title={sections.contact.title} subtitle={sections.contact.subtitle} />
@@ -1227,7 +1244,7 @@ function ContactSection() {
               <p className="text-sm text-foreground/50">{contactText.success.body}</p>
             </div>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-3">
+            <form onSubmit={handleSubmit} className="space-y-3">
               {contactText.form.fields.map(({ name, placeholder, type }) => (
                 <input key={name} type={type} name={name} placeholder={placeholder} required
                   className="w-full px-4 py-3 rounded-xl text-sm text-foreground placeholder-foreground/25 border outline-none focus:border-primary/60 transition-colors"
@@ -1236,10 +1253,15 @@ function ContactSection() {
               <textarea name="message" rows={4} placeholder={contactText.form.messagePlaceholder} required
                 className="w-full px-4 py-3 rounded-xl text-sm text-foreground placeholder-foreground/25 border outline-none focus:border-primary/60 transition-colors resize-none"
                 style={{ backgroundColor: "#1e1b2e", borderColor: "rgba(196,112,138,0.2)", fontFamily: "'DM Sans', sans-serif" }} />
-              <button type="submit"
-                className="w-full py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all hover:opacity-90"
+              {error && (
+                <p className="text-xs font-mono text-center" style={{ color: "#c4708a" }}>
+                  Something went wrong — please try again or email me directly.
+                </p>
+              )}
+              <button type="submit" disabled={sending}
+                className="w-full py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-50"
                 style={{ backgroundColor: "#c4708a", color: "#13111d", fontFamily: "'DM Sans', sans-serif" }}>
-                <Send className="w-4 h-4" /> {contactText.form.submit}
+                <Send className="w-4 h-4" /> {sending ? "Sending…" : contactText.form.submit}
               </button>
             </form>
           )}
