@@ -78,7 +78,7 @@ export const careerPoints: CareerPoint[] = [
     lng: -9.139,
     city: "Lisbon, Portugal",
     type: "job",
-    icon: "💼",
+    icon: "👩🏽‍💻",
     title: "Software Project Member",
     company: "In-Nova (NOVA FCT Junior Enterprise)",
     period: "2023 – 2024",
