@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { mesh } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import worldAtlas from "world-atlas/countries-110m.json";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import {
   X, MapPin, ChevronDown, Github, Linkedin, Mail,
   Award, Briefcase, GraduationCap, Heart, CalendarDays,
@@ -101,6 +101,8 @@ function Globe3D({ markers, onMarkerClick, onMarkerHover, isPaused = false }: {
 
     const globeGroup = new THREE.Group();
     scene.add(globeGroup);
+    globeGroup.rotation.y = -2.5;
+    globeGroup.rotation.x = 0.3;
 
     // ── Main sphere ──
     globeGroup.add(new THREE.Mesh(
@@ -617,6 +619,23 @@ function FlightPath({ segment }: { segment: typeof flightSegments[0] }) {
   );
 }
 
+// ─── Plane SVG ────────────────────────────────────────────────────────────────
+
+function PlaneSVG({ color }: { color: string }) {
+  return (
+    <svg width="26" height="26" viewBox="-12 -12 24 24" fill="none">
+      <ellipse cx="0" cy="0" rx="11" ry="3" fill={color} />
+      <polygon points="11,0 7.5,-1.5 7.5,1.5" fill={color} opacity={0.6} />
+      <polygon points="2,0 -2,-11 -7,0" fill={color} opacity={0.92} />
+      <polygon points="2,0 -2,11 -7,0" fill={color} opacity={0.92} />
+      <polygon points="-7,0 -11,-5.5 -9,-0.5" fill={color} opacity={0.75} />
+      <polygon points="-7,0 -11,5.5 -9,0.5" fill={color} opacity={0.75} />
+      <circle cx="-2" cy="-8" r="1.5" fill="white" opacity={0.55} />
+      <circle cx="-2" cy="8" r="1.5" fill="white" opacity={0.55} />
+    </svg>
+  );
+}
+
 // ─── Section Heading ───────────────────────────────────────────────────────────
 
 function SectionHeading({ title, subtitle }: { title: string; subtitle?: string }) {
@@ -633,14 +652,26 @@ function SectionHeading({ title, subtitle }: { title: string; subtitle?: string 
 // ─── Experience Section ────────────────────────────────────────────────────────
 
 function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
+  const planeY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto" id="experience">
       <SectionHeading title={sections.experience.title} subtitle={sections.experience.subtitle} />
 
-      <div className="relative">
+      <div ref={containerRef} className="relative">
         {/* Vertical dashed path along the right — desktop only */}
         <div className="absolute right-[44px] top-6 bottom-6 w-px hidden md:block pointer-events-none"
           style={{ backgroundImage: "repeating-linear-gradient(to bottom, rgba(196,112,138,0.45) 0px, rgba(196,112,138,0.45) 9px, transparent 9px, transparent 20px)" }} />
+
+        {/* Airplane traveling along the path on scroll — desktop only */}
+        <motion.div
+          className="absolute hidden md:block pointer-events-none"
+          style={{ right: "32px", top: planeY, translateY: "-50%", rotate: 90, filter: "drop-shadow(0 0 8px rgba(196,112,138,0.8))", zIndex: 5 }}
+        >
+          <PlaneSVG color="#c4708a" />
+        </motion.div>
 
         <div className="flex flex-col gap-6">
           {jobs.map((job, i) => {
@@ -743,6 +774,10 @@ function EducationCard({ item, index, side }: { item: CareerPoint; index: number
 }
 
 function EducationSection({ items }: { items: CareerPoint[] }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
+  const planeY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   const sorted = [...items].sort((a, b) => {
     const endA = parseInt(a.period.match(/\d{4}/g)?.slice(-1)[0] ?? "0");
     const endB = parseInt(b.period.match(/\d{4}/g)?.slice(-1)[0] ?? "0");
@@ -753,12 +788,20 @@ function EducationSection({ items }: { items: CareerPoint[] }) {
     <section className="py-16 px-6 max-w-5xl mx-auto" id="education">
       <SectionHeading title={sections.education.title} subtitle={sections.education.subtitle} />
 
-      <div className="relative">
+      <div ref={containerRef} className="relative">
         {/* Vertical dashed flight path — desktop only */}
         <div
           className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px hidden md:block pointer-events-none"
           style={{ backgroundImage: "repeating-linear-gradient(to bottom, rgba(155,127,196,0.45) 0px, rgba(155,127,196,0.45) 9px, transparent 9px, transparent 20px)" }}
         />
+
+        {/* Airplane traveling along the path on scroll — desktop only */}
+        <motion.div
+          className="absolute hidden md:block pointer-events-none"
+          style={{ left: "50%", top: planeY, translateX: "-50%", translateY: "-50%", rotate: 90, filter: "drop-shadow(0 0 8px rgba(155,127,196,0.8))", zIndex: 5 }}
+        >
+          <PlaneSVG color="#9b7fc4" />
+        </motion.div>
 
         <div className="flex flex-col gap-10 md:gap-14">
           {sorted.map((item, i) => {
