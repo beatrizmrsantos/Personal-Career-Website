@@ -636,42 +636,66 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto" id="experience">
       <SectionHeading title={sections.experience.title} subtitle={sections.experience.subtitle} />
-      <div className="space-y-5">
-        {jobs.map((job, i) => (
-          <motion.div key={job.id}
-            initial={{ opacity: 0, x: -40, y: 10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} whileHover={{ y: -5 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.12 }}
-            className="rounded-2xl overflow-hidden shadow-xl border" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[job.type] + "20" }}>
-            <div className="flex">
-              <div className="flex-1 p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <span className="text-xs font-mono uppercase tracking-widest" style={{ color: TYPE_COLORS[job.type] }}>{job.company}</span>
-                    <h3 className="text-lg font-bold text-foreground mt-1" style={{ fontFamily: "'Playfair Display', serif" }}>{job.title}</h3>
+
+      <div className="relative">
+        {/* Vertical dashed path along the right — desktop only */}
+        <div className="absolute right-[44px] top-6 bottom-6 w-px hidden md:block pointer-events-none"
+          style={{ backgroundImage: "repeating-linear-gradient(to bottom, rgba(196,112,138,0.45) 0px, rgba(196,112,138,0.45) 9px, transparent 9px, transparent 20px)" }} />
+
+        <div className="flex flex-col gap-6">
+          {jobs.map((job, i) => {
+            const col = TYPE_COLORS[job.type];
+            return (
+              <div key={job.id} className="flex items-center">
+                {/* Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: -32 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  whileHover={{ y: -4 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.1 }}
+                  className="flex-1 rounded-2xl border overflow-hidden"
+                  style={{ backgroundColor: "#1e1b2e", borderColor: col + "22" }}>
+                  <div className="h-0.5" style={{ background: `linear-gradient(to right, ${col}, transparent)` }} />
+                  <div className="p-6">
+                    <span className="text-xs font-mono uppercase tracking-widest" style={{ color: col }}>{job.company}</span>
+                    <h3 className="text-lg font-bold text-foreground mt-1 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{job.title}</h3>
+                    <div className="flex items-center gap-1.5 text-xs text-foreground/40 mb-3 font-mono">
+                      <MapPin className="w-3 h-3" />{job.city}
+                    </div>
+                    <p className="text-sm text-foreground/65 leading-relaxed mb-4">{job.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {job.tags.map((tag) => (
+                        <span key={tag} className="text-xs px-2.5 py-0.5 rounded font-mono"
+                          style={{ backgroundColor: col + "15", color: col }}>{tag}</span>
+                      ))}
+                    </div>
                   </div>
-                  <span className="text-xs font-mono text-foreground/35 shrink-0 ml-4 mt-1 bg-white/5 px-2 py-0.5 rounded">{job.period}</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs text-foreground/40 mb-3 font-mono">
-                  <MapPin className="w-3 h-3" />{job.city}
-                </div>
-                <p className="text-sm text-foreground/65 leading-relaxed mb-4">{job.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {job.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2.5 py-0.5 rounded font-mono" style={{ backgroundColor: TYPE_COLORS[job.type] + "15", color: TYPE_COLORS[job.type] }}>{tag}</span>
-                  ))}
+                </motion.div>
+
+                {/* Connector + Waypoint — desktop only */}
+                <div className="hidden md:flex items-center shrink-0">
+                  <div className="w-4 h-px" style={{ background: `linear-gradient(to right, ${col}00, ${col}45)` }} />
+                  <motion.div
+                    className="flex flex-col items-center gap-1.5 z-10 w-[88px]"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ type: "spring", damping: 18, stiffness: 220, delay: i * 0.1 + 0.05 }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg border-2"
+                      style={{ backgroundColor: "#1a1728", borderColor: col, boxShadow: `0 0 20px ${col}30` }}>
+                      {job.icon}
+                    </div>
+                    <span className="text-center leading-tight font-mono font-semibold"
+                      style={{ color: col, fontSize: "10px" }}>
+                      {job.period}
+                    </span>
+                  </motion.div>
                 </div>
               </div>
-              <div className="w-16 md:w-20 shrink-0 flex flex-col items-center justify-center border-l-2 border-dashed gap-3 py-4 px-2"
-                style={{ borderColor: TYPE_COLORS[job.type] + "35", backgroundColor: TYPE_COLORS[job.type] + "07" }}>
-                <span className="text-2xl">{job.icon}</span>
-                <span className="text-xs font-mono text-foreground/25 leading-tight"
-                  style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", letterSpacing: "0.12em" }}>
-                  {job.city.split(",")[0].toUpperCase()}
-                </span>
-              </div>
-            </div>
-            <div className="h-0.5" style={{ background: `linear-gradient(to right, ${TYPE_COLORS[job.type]}, transparent)` }} />
-          </motion.div>
-        ))}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -821,27 +845,120 @@ function CertificationsSection({ items, onSelect }: { items: CareerPoint[]; onSe
 
 // ─── Events Section ────────────────────────────────────────────────────────────
 
+const CATEGORY_COLORS: Record<string, string> = {
+  Speaker:    "#9b7fc4",
+  Hackathon:  "#7fc4c0",
+  Conference: "#c4a87f",
+  Volunteer:  "#7fc488",
+  "Job Fest": "#c4708a",
+};
+
 function EventsSection({ items }: { items: CareerPoint[] }) {
+  const [featured, ...rest] = items;
+
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto" id="events">
       <SectionHeading title={sections.events.title} subtitle={sections.events.subtitle} />
-      <div className="grid md:grid-cols-2 gap-5">
-        {items.map((item, i) => (
-          <motion.div key={item.id}
-            initial={{ opacity: 0, x: i % 2 === 0 ? -36 : 36, y: 12 }} whileInView={{ opacity: 1, x: 0, y: 0 }} whileHover={{ y: -6 }} viewport={{ once: true, margin: "-60px" }} transition={{ type: "spring", damping: 22, stiffness: 180, delay: i * 0.1 }}
-            className="rounded-2xl border overflow-hidden" style={{ backgroundColor: "#1e1b2e", borderColor: TYPE_COLORS[item.type] + "20" }}>
-            <div className="h-0.5" style={{ background: `linear-gradient(to right, ${TYPE_COLORS[item.type]}, ${TYPE_COLORS[item.type]}35)` }} />
-            <div className="p-5">
-              <div className="flex items-start justify-between mb-3">
-                <span className="text-2xl">{item.icon}</span>
-                <span className="text-xs font-mono px-2 py-1 rounded-full" style={{ backgroundColor: TYPE_COLORS[item.type] + "18", color: TYPE_COLORS[item.type] }}>{item.period}</span>
+      <div className="space-y-4">
+
+        {/* ── Featured card ── */}
+        {featured && (() => {
+          const col = CATEGORY_COLORS[featured.category ?? ""] ?? "#c4a87f";
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -4 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ type: "spring", damping: 22, stiffness: 180 }}
+              className="rounded-2xl overflow-hidden border flex"
+              style={{ backgroundColor: "#1a1728", borderColor: col + "30" }}>
+
+              {/* Left accent bar */}
+              <div className="w-1 shrink-0" style={{ backgroundColor: col }} />
+
+              <div className="flex-1 flex flex-col md:flex-row">
+                {/* Main content */}
+                <div className="flex-1 p-7">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">{featured.icon}</span>
+                    <span className="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-full font-bold"
+                      style={{ backgroundColor: col + "20", color: col, border: `1px solid ${col}40` }}>
+                      {featured.category ?? "Event"}
+                    </span>
+                    <span className="ml-auto text-xs font-mono text-foreground/35">{featured.period}</span>
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2 leading-tight"
+                    style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {featured.title}
+                  </h3>
+                  <p className="text-xs font-mono text-foreground/38 mb-5 flex items-center gap-1.5">
+                    <MapPin className="w-3 h-3" />{featured.city} · {featured.company}
+                  </p>
+                  <p className="text-sm text-foreground/62 leading-relaxed">{featured.description}</p>
+                </div>
+
+                {/* Right panel */}
+                <div className="md:w-72 shrink-0 border-t md:border-t-0 md:border-l p-7 flex flex-col justify-center gap-5"
+                  style={{ borderColor: col + "20" }}>
+                  {featured.quote && (
+                    <p className="text-base italic leading-relaxed text-foreground/70"
+                      style={{ fontFamily: "'Playfair Display', serif" }}>
+                      "{featured.quote}"
+                    </p>
+                  )}
+                  {featured.highlights && (
+                    <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${featured.highlights.length}, 1fr)` }}>
+                      {featured.highlights.map((h) => (
+                        <div key={h.label} className="rounded-xl p-3 text-center border"
+                          style={{ backgroundColor: col + "0a", borderColor: col + "25" }}>
+                          <p className="text-sm font-bold text-foreground leading-tight mb-0.5"
+                            style={{ overflowWrap: "break-word", hyphens: "auto" }}>{h.value}</p>
+                          <p className="text-xs font-mono text-foreground/35"
+                            style={{ overflowWrap: "break-word", hyphens: "auto" }}>{h.label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-              <h3 className="text-base font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-              <p className="text-xs text-foreground/38 mb-3 flex items-center gap-1.5 font-mono"><MapPin className="w-3 h-3" />{item.city} · {item.company}</p>
-              <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })()}
+
+        {/* ── Smaller cards grid ── */}
+        <div className="grid sm:grid-cols-2 gap-4">
+          {rest.map((item, i) => {
+            const col = CATEGORY_COLORS[item.category ?? ""] ?? TYPE_COLORS[item.type];
+            return (
+              <motion.div key={item.id}
+                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -4 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ type: "spring", damping: 22, stiffness: 200, delay: i * 0.07 }}
+                className="rounded-2xl border overflow-hidden"
+                style={{ backgroundColor: "#1a1728", borderColor: col + "25" }}>
+                <div className="h-0.5" style={{ background: `linear-gradient(to right, ${col}, ${col}20)` }} />
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-xl">{item.icon}</span>
+                    <span className="text-xs font-mono uppercase tracking-widest px-2.5 py-1 rounded-full font-bold"
+                      style={{ backgroundColor: col + "18", color: col, border: `1px solid ${col}35` }}>
+                      {item.category ?? "Event"}
+                    </span>
+                    <span className="ml-auto text-xs font-mono text-foreground/35">{item.period}</span>
+                  </div>
+                  <h3 className="text-base font-bold text-foreground mb-1 leading-snug"
+                    style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-xs font-mono text-foreground/38 mb-3 flex items-center gap-1.5">
+                    <MapPin className="w-3 h-3" />{item.city} · {item.company}
+                  </p>
+                  <p className="text-sm text-foreground/60 leading-relaxed">{item.description}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

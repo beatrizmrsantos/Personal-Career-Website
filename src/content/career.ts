@@ -15,6 +15,9 @@ export interface CareerPoint {
   description: string;
   tags: string[];
   gpa?: string;
+  quote?: string;
+  category?: string;
+  highlights?: { value: string; label: string }[];
 }
 
 // ─── Type Mappings ────────────────────────────────────────────────────────────
@@ -132,6 +135,12 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Invited speaker at JORTEC 2025, a technology and career event organized by NOVA School of Science and Technology (FCT NOVA). Represented Opensoft by presenting the company’s mission, culture, and public sector digital solutions, while sharing my journey from student intern to full-time Software Engineer to inspire students entering the tech industry.",
     tags: ["Public Speaking", "Software Engineering", "Networking"],
+    category: "Speaker",
+    quote: "From student intern to full-time Software Engineer — sharing the journey that led me here.",
+    highlights: [
+      { value: "FCT NOVA", label: "Host University" },
+      { value: "Opensoft", label: "Represented" },
+    ],
   },
   {
     id: 7,
@@ -146,6 +155,7 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Designed, built, and presented a software prototype in a 48-hour hackathon, delivering a working solution in a fast-paced team environment under strict time constraints.",
     tags: ["Hackathon", "React", "UI/UX Design", "Innovation"],
+    category: "Hackathon",
   },
   {
     id: 8,
@@ -153,13 +163,14 @@ export const careerPoints: CareerPoint[] = [
     lng: -9.1387,
     city: "Lisbon, Portugal",
     type: "event",
-    icon: "🎤",
+    icon: "🏛️",
     title: "EUGAIN Final Conference",
     company: "Order of the Engineers of Portugal & EUGAIN",
     period: "Apr 2024",
     description:
       "Volunteered at an international ICT conference focused on gender balance in engineering, bringing together researchers, industry professionals, and policymakers from across Europe.",
     tags: ["Communication", "Critical Thinking", "Adaptation"],
+    category: "Conference",
   },
   {
     id: 9,
@@ -174,6 +185,7 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Supported IT operations and mobile app development for a 3-day innovation event. Contributed to the development of a mobile application for event management, including features for scheduling, notifications, and attendee engagement.",
     tags: ["Communication", "Project Planning", "React", "Node.js", "Java", "SQL"],
+    category: "Job Fest",
   },
   {
     id: 10,
@@ -188,6 +200,7 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Global dialogue initiative focused on internet governance, communication and collaborative decision-making across cultures.",
     tags: ["Communication", "Critical Thinking", "Teamwork"],
+    category: "Conference",
   },
 
   // =========================
