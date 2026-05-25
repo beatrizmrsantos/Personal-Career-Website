@@ -667,8 +667,8 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
 
         {/* Airplane traveling along the path on scroll — desktop only */}
         <motion.div
-          className="absolute hidden md:block pointer-events-none z-20"
-          style={{ right: "32px", top: planeY, translateY: "-50%", rotate: 90, filter: "drop-shadow(0 0 8px rgba(196,112,138,0.8))" }}
+          className="absolute hidden md:block pointer-events-none"
+          style={{ right: "32px", top: planeY, translateY: "-50%", rotate: 90, filter: "drop-shadow(0 0 8px rgba(196,112,138,0.8))", zIndex: 5 }}
         >
           <PlaneSVG color="#c4708a" />
         </motion.div>
@@ -797,8 +797,8 @@ function EducationSection({ items }: { items: CareerPoint[] }) {
 
         {/* Airplane traveling along the path on scroll — desktop only */}
         <motion.div
-          className="absolute hidden md:block pointer-events-none z-20"
-          style={{ left: "50%", top: planeY, translateX: "-50%", translateY: "-50%", rotate: 90, filter: "drop-shadow(0 0 8px rgba(155,127,196,0.8))" }}
+          className="absolute hidden md:block pointer-events-none"
+          style={{ left: "50%", top: planeY, translateX: "-50%", translateY: "-50%", rotate: 90, filter: "drop-shadow(0 0 8px rgba(155,127,196,0.8))", zIndex: 5 }}
         >
           <PlaneSVG color="#9b7fc4" />
         </motion.div>
