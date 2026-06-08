@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
 import * as THREE from "three";
 import { mesh } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
@@ -1324,7 +1325,7 @@ function Nav({ onNav }: { onNav: (id: string) => void }) {
         <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#c4708a" }}>
           <Globe className="w-3.5 h-3.5 text-white" />
         </div>
-        <span className="text-sm font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>{profile.name}</span>
+        <Link to="/me" className="text-sm font-bold text-foreground hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>{profile.name}</Link>
       </div>
       <div className="hidden md:flex items-center gap-6">
         {navLinks.map((id) => (
