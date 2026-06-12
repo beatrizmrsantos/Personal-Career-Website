@@ -1325,7 +1325,7 @@ function Nav({ onNav }: { onNav: (id: string) => void }) {
         <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#c4708a" }}>
           <Globe className="w-3.5 h-3.5 text-white" />
         </div>
-        <Link to="/me" className="text-sm font-bold text-foreground hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>{profile.name}</Link>
+        <span className="text-sm font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>{profile.name}</span>
       </div>
       <div className="hidden md:flex items-center gap-6">
         {navLinks.map((id) => (
@@ -1377,12 +1377,17 @@ export default function App() {
           <p className="text-sm text-foreground/45 leading-relaxed">
             {heroText.taglineLines[0]}<br />{heroText.taglineLines[1]}
           </p>
-          <motion.button onClick={() => scrollTo("about")}
-            className="mt-6 px-5 py-2.5 rounded-full text-sm font-semibold border transition-all"
-            style={{ borderColor: "#c4708a50", color: "#c4708a", backgroundColor: "#c4708a12" }}
-            whileHover={{ backgroundColor: "#c4708a28", scale: 1.03 }}>
-            {heroText.cta}
-          </motion.button>
+          <div className="mt-6">
+            <Link to="/blog">
+              <motion.div
+                className="px-5 py-2.5 rounded-full text-sm font-semibold border transition-all inline-block"
+                style={{ borderColor: "#9b7fc450", color: "#9b7fc4", backgroundColor: "#9b7fc412" }}
+                whileHover={{ backgroundColor: "#9b7fc428", scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}>
+                Read the Blog
+              </motion.div>
+            </Link>
+          </div>
         </motion.div>
 
         {/* Mobile header */}

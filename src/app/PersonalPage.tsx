@@ -815,6 +815,12 @@ function PersonalNav() {
             </span>
           </motion.button>
         ))}
+        <Link
+          to="/blog"
+          className="text-xs font-mono uppercase tracking-widest text-foreground/35 hover:text-foreground/75 transition-colors"
+        >
+          Blog
+        </Link>
       </div>
     </nav>
   );
