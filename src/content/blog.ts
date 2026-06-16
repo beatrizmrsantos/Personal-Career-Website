@@ -54,162 +54,199 @@ const ph = (seed: string, w: number, h: number) =>
 
 export const POSTS: BlogPost[] = [
   {
-    id: 1,
-    slug: "building-a-portfolio-that-feels-like-me",
-    title: "Building a Portfolio That Feels Like Me",
-    subtitle: "On choosing craft over templates",
-    date: "2025-05-20",
-    category: "tech",
-    tags: ["React", "Design", "Portfolio"],
-    coverImage: ph("portfolio-code-desk", 1280, 720),
-    excerpt:
-      "Most developer portfolios look the same — dark mode, hero text, project grid, contact form. I wanted something that told a story. Here is how I built mine from scratch.",
-    readTime: "6 min",
-    featured: true,
-    body: [
-      { type: "p", text: "The first version of my portfolio was exactly what you'd expect: a hero with my name and title, a list of skills, a project grid, and a contact form. It was functional, professional, and completely forgettable." },
-      { type: "h2", text: "The problem with templates" },
-      { type: "p", text: "Templates are seductive. They promise a polished result in minutes and they deliver — but at the cost of your personality. When every engineer's portfolio looks the same, the work has to do all the talking. I wanted the medium to be part of the message." },
-      { type: "quote", text: "The goal wasn't to build something impressive. It was to build something honest." },
-      { type: "h2", text: "Starting from a blank canvas" },
-      { type: "p", text: "I started with React, Vite, and Tailwind CSS v4. No UI component library, no template. Just a design system I built from scratch — a color palette of rose, lavender, and teal on a deep purple background. Colors chosen to feel like a late night with a good book." },
-      { type: "img", url: ph("portfolio-color-palette", 800, 450), caption: "The color palette — rose, lavender, teal on #13111d" },
-      { type: "h2", text: "The personal page: life outside the terminal" },
-      { type: "p", text: "The most interesting decision was adding a /me page. A separate route dedicated entirely to who I am beyond the code — travel adventures with interactive route maps, a photography gallery, a travel film section. These aren't resume items. They're the things that make me, me." },
-      { type: "p", text: "If you're building a portfolio and fighting the urge to add personality, stop fighting it. The work you care about most will attract the people worth working with." },
-    ],
+  id: 1,
+  slug: "building-a-portfolio-that-feels-like-me",
+  title: "Building a Portfolio That Feels Like Me",
+  subtitle: "On choosing creativity, interaction, and personality over templates",
+  date: "2026-06-15",
+  category: "tech",
+  tags: ["React", "Design", "Portfolio", "Frontend"],
+  coverImage: ph("portfolio-code-desk", 1280, 720),
+  excerpt:
+    "Most developer portfolios follow a predictable formula. I wanted mine to feel intentional — something that reflects not only what I build and my professional carreer, but also my personality.",
+  readTime: "10 min",
+  featured: true,
+  body: [
+    {
+      type: "p",
+      text:
+        "The first version of my portfolio looked exactly like most others: a hero section with my name and role, a skills overview, a project grid, and a contact form. It was clean, functional, and technically complete — but it didn’t feel like me."
+    },
+    { type: "h2", text: "The problem with templates" },
+    {
+      type: "p",
+      text:
+        "Templates are efficient and often well-designed, but they tend to produce similar outcomes. When every developer portfolio follows the same structure, individuality gets lost in consistency. I wanted my portfolio to communicate more than just experience — I wanted it to express me."
+    },
+    {
+      type: "quote",
+      text:
+        "The goal was never to impress through complexity, but to communicate through creativity and interaction."
+    },
+    { type: "h2", text: "Starting from a blank canvas" },
+    {
+      type: "p",
+      text:
+        "I rebuilt everything using React, Vite, and Tailwind CSS v4, intentionally avoiding UI libraries and pre-made templates. Instead, I focused on designing a small, cohesive design system from scratch, including a custom color palette built around rose, lavender, and purple tones on a deep dark background. This reflects both my feminine side and my computer science mindset, bringing together two seemingly opposite parts of my identity into a unified visual expression."
+    },
+    {
+      type: "img",
+      url: ph("portfolio-color-palette", 800, 450),
+      caption: "Custom design system — rose, lavender, and purple on a deep black background"
+    },
+    { type: "h2", text: "The beginner of the ideia" },
+    {
+      type: "p",
+      text:
+        "One of the core ideas behind this portfolio was, from the very beginning, travel. Traveling is one of my biggest passions, and I wanted that to be immediately visible in the way the site is experienced. This is where the concept of an interactive globe came from — a space where users can explore my journey on their own, discovering experiences I’ve had across different locations in the exact places where they happened. Instead of presenting a static timeline, I wanted to create something exploratory and spatial, closer to how I actually experience the world."
+    },
+    {
+      type: "p",
+      text:
+        "Under the hood, the globe is built entirely from scratch using Three.js — a WebGL-based 3D graphics library — with no pre-made globe component. The sphere itself uses a SphereGeometry with 64 subdivisions rendered with MeshPhongMaterial to simulate depth and light realistically. A latitude/longitude grid is drawn on top as LineSegments, and continent and country outlines are decoded at runtime from real TopoJSON world data, then projected onto the sphere surface by converting geographic coordinates to 3D Cartesian vectors. Each career marker is a composite of four Three.js objects: an invisible hit sphere for raycasting, a coloured dot, a flat ring, and a soft outer glow — all positioned by converting real-world latitude/longitude into their exact point on the sphere. Mouse and touch interaction is handled by a Raycaster that runs on every animation frame, and globe rotation responds to drag velocity tracked directly from pointer events. The entire scene — globe, atmosphere glow, star field, and markers — runs in a requestAnimationFrame loop rendered to a transparent WebGL canvas mounted inside the React component tree."
+    },
+    {
+      type: "p",
+      text:
+        "From there, the rest of the homepage evolved around my professional journey. Each section was designed with the same intent: to communicate experience in a simple, interactive, and dynamic way, while consistently tying everything back to the travel theme. Subtle details, like an airplane moving along my educational path, were added to reinforce this narrative and make the experience feel cohesive rather than purely informational. The goal of this first page was to present my professional background clearly, while also reflecting my personality and my ambition to build an international career."
+    },
+    { type: "h2", text: "Continuing the Idea" },
+    {
+      type: "p",
+      text:
+        "Later, I created the Beyond Code page — a space without constraints, focused entirely on personal expression. Here, I wanted to showcase not only my favorite hobbies, such as photography and videography, but also my most meaningful travel experiences. Instead of simply listing destinations or routes, I aimed to immerse the user in each journey through visual storytelling, combining curated photos with an interactive exploration of each place."
+    },
+    {
+      type: "p",
+      text:
+        "Finally, the blog was created as a way to express what visuals alone cannot fully capture. This space allows me to go deeper into my thoughts — to articulate aspirations, reflections, and ideas that sit between technology, creativity, and personal growth. It is where I write about the technical side of engineering, but also about curiosity, ambition, and the evolving relationship I have with the things I build and the direction I want my career to take. It became the most honest layer of the portfolio — a place where design and interactivity give way to narrative and introspection."
+    },
+    { type: "h2", text: "Conclusion" },
+    {
+      type: "p",
+      text:
+        "If you're building a portfolio and hesitate to include personality, consider this: the most interesting opportunities rarely come from perfect presentations — they come from authentic ones."
+    }
+  ]
   },
   {
-    id: 2,
-    slug: "japan-in-16-days",
-    title: "Japan in 16 Days: The Trip That Changed How I See Light",
-    subtitle: "Cherry blossoms, bullet trains, and a camera always at hand",
-    date: "2024-04-18",
-    category: "travel",
-    tags: ["Japan", "Travel", "Photography"],
-    coverImage: ph("japan-cherry-blossom-path", 1280, 720),
-    excerpt:
-      "I went to Japan expecting temples and sushi. What I didn't expect was how the light there would permanently change how I look at everything I photograph.",
-    readTime: "8 min",
-    body: [
-      { type: "p", text: "Sixteen days. Five cities. One camera. More than a thousand photographs, of which maybe thirty are actually good. That's the mathematics of travel photography in Japan — a country so relentlessly beautiful that even mediocre shots look cinematic." },
-      { type: "h2", text: "Tokyo: controlled chaos" },
-      { type: "p", text: "The first thing that hits you about Tokyo is the scale. Not just the buildings, but the density of detail — every alley has something worth photographing. Shibuya crossing at 7pm is exactly as overwhelming as everyone says, and you want to shoot it anyway." },
-      { type: "img", url: ph("tokyo-shibuya-night-crossing", 800, 533), caption: "Shibuya crossing at rush hour — 500 people, one frame" },
-      { type: "h2", text: "Kyoto: the light is different here" },
-      { type: "p", text: "Kyoto rewired something in me. The light between the torii gates at Fushimi Inari at 6am — before the crowds, before the heat — is a specific quality of orange that I've been trying to recreate in every shoot since." },
-      { type: "quote", text: "The best photographs I've ever taken were in places where I had no phone signal and no agenda." },
-      { type: "h2", text: "The lesson" },
-      { type: "p", text: "Japan taught me to slow down. Not just as a photographer — as a person. To sit with a bowl of ramen for twenty minutes without looking at my phone. To wait for the right light instead of shooting the available light. Patience is a creative skill." },
-    ],
-  },
-  {
-    id: 3,
-    slug: "shooting-streets-of-lisbon",
-    title: "What I Learned Shooting the Streets of Lisbon",
-    subtitle: "My home city through a camera lens",
-    date: "2024-01-10",
-    category: "photography",
-    tags: ["Photography", "Lisbon", "Street"],
-    coverImage: ph("lisbon-tram-street-morning", 1280, 720),
-    excerpt:
-      "There's something strange about photographing the city you grew up in. You stop seeing it as a local and start seeing it as a traveller. And that changes everything.",
-    readTime: "5 min",
-    body: [
-      { type: "p", text: "I've lived in Lisbon for most of my life. I know which tram makes the best sound, which miradouro is less crowded at sunset, which pastéis de nata are actually worth the queue. And for years, I barely photographed any of it." },
-      { type: "h2", text: "The familiarity problem" },
-      { type: "p", text: "Familiarity is the enemy of seeing. When you know a place too well, you stop noticing it. The Alfama light at 5pm is extraordinary — I walked past it for years before I ever stopped to photograph it." },
-      { type: "img", url: ph("lisbon-alfama-golden-rooftop", 800, 533), caption: "Alfama, 5:30pm, February — the light I had been ignoring for years" },
-      { type: "quote", text: "Pretend you're a tourist. Give yourself the permission to be obvious." },
-      { type: "h2", text: "What changed" },
-      { type: "p", text: "The shift happened when I started treating Lisbon the way I'd treat a foreign city: with intention, with a route, with curiosity about what's around the next corner even though I already know what's there. That deliberateness made the photographs better. It also made me a better traveller everywhere else." },
-    ],
-  },
-  {
-    id: 4,
-    slug: "from-student-to-engineer",
-    title: "From Engineering Student to Software Engineer: The Gap No One Prepares You For",
-    subtitle: "What university doesn't teach you",
-    date: "2024-11-03",
-    category: "tech",
-    tags: ["Career", "Engineering", "Learning"],
-    coverImage: ph("graduation-lecture-hall-campus", 1280, 720),
-    excerpt:
-      "University teaches you to think like an engineer. Your first job teaches you to work like one. The gap between those two things is wider than anyone admits.",
-    readTime: "7 min",
-    body: [
-      { type: "p", text: "I graduated with a Master's in Computer Science and Engineering with a 17/20. I could implement graph algorithms from memory, reason about distributed systems, and write clean proofs. None of that prepared me for my first production incident." },
-      { type: "h2", text: "The things they don't teach" },
-      { type: "ul", items: ["How to read a codebase you didn't write", "How to say 'I don't know' without losing credibility", "How to estimate work without perfect information", "How to write a pull request that gets merged quickly", "How to disagree with a senior engineer respectfully"] },
-      { type: "h2", text: "What actually helped" },
-      { type: "p", text: "The transition that helped me most wasn't a course or a book — it was my internship. Not because of the work itself, but because I was surrounded by engineers who'd been doing this for years and were willing to explain why, not just what." },
-      { type: "quote", text: "Find the person on the team who asks the most questions in meetings. Sit next to them." },
-      { type: "h2", text: "Two years in" },
-      { type: "p", text: "Two years after joining as a junior, I spoke at my university's tech career event about the journey from student to engineer. Standing on the other side of that gap, the advice I'd give is simple: the discomfort you feel in the first year isn't a sign you're in the wrong field. It's a sign you're in the right one." },
-    ],
-  },
-  {
-    id: 5,
-    slug: "bali-lombok-slow-down",
-    title: "Bali, Lombok, and Learning to Slow Down",
-    subtitle: "28 days in Southeast Asia without a fixed plan",
-    date: "2023-02-14",
-    category: "travel",
-    tags: ["Bali", "Indonesia", "Travel"],
-    coverImage: ph("bali-rice-terraces-dawn-mist", 1280, 720),
-    excerpt:
-      "I booked the first flight and the last hotel. Everything in between was up to chance. It was the best travel decision I've ever made.",
-    readTime: "6 min",
-    body: [
-      { type: "p", text: "I'm a planner by nature. I make spreadsheets on holidays. I read every review. Southeast Asia in winter 2022 was the first time I deliberately did none of that — and it produced my best travel memories by a significant margin." },
-      { type: "h2", text: "Bali: surrender to the pace" },
-      { type: "p", text: "Bali moves at its own pace and resists being rushed. The rice terraces in Tegallalang are extraordinary at sunrise but require waking up at 4:30am and driving in the dark. The effort is exactly the point." },
-      { type: "img", url: ph("bali-tegallalang-sunrise-fog", 800, 533), caption: "Tegallalang rice terraces, 6am — worth every minute of the 4:30am alarm" },
-      { type: "h2", text: "Lombok: fewer crowds, same magic" },
-      { type: "p", text: "Lombok is Bali ten years ago — less curated, less Instagrammed, more honest. The beaches on the south coast are as beautiful as anything I've seen, and I shared most of them with fewer than twenty people." },
-      { type: "quote", text: "The places that are hardest to get to are the ones you'll remember most clearly." },
-    ],
-  },
-  {
-    id: 6,
-    slug: "digital-detox-when-travelling",
-    title: "Why I Do a Digital Detox Every Time I Travel",
-    subtitle: "On being present in a hyper-connected world",
-    date: "2024-09-07",
-    category: "life",
-    tags: ["Life", "Travel", "Mindfulness"],
-    coverImage: ph("beach-sunset-phone-off", 1280, 720),
-    excerpt:
-      "I still bring my phone. I still use it for maps. But there are rules — and keeping them has made me a better traveller, a better photographer, and probably a better engineer.",
-    readTime: "4 min",
-    body: [
-      { type: "p", text: "The rules are simple: no social media during the day, no emails after 7pm, no phone at dinner, no screen as the last thing I look at before sleep. I've kept these rules on every trip for the past three years." },
-      { type: "h2", text: "What changes" },
-      { type: "p", text: "The first thing that changes is how long time feels. A day in Japan without Instagram felt like three days — not because it was boring but because everything was registered, processed, remembered instead of scrolled past." },
-      { type: "quote", text: "You can't be present in a moment and documenting it for an audience at the same time. Choose." },
-      { type: "h2", text: "On photography vs. content creation" },
-      { type: "p", text: "I bring a camera on every trip. I take hundreds of photographs. There is no contradiction here — photography is a form of paying attention. Doomscrolling is the opposite. The line isn't whether you're using a device; it's whether the device is using you." },
-    ],
-  },
-  {
-    id: 7,
-    slug: "five-settings-travel-photography",
-    title: "Five Camera Settings That Changed My Travel Photography",
-    subtitle: "Technical notes from three years of shooting on the road",
-    date: "2024-07-22",
-    category: "photography",
-    tags: ["Photography", "Camera", "Tips"],
-    coverImage: ph("camera-lens-golden-hour-field", 1280, 720),
-    excerpt:
-      "I'm not a professional photographer. But after three years and a dozen countries, I've found a handful of settings that consistently produce the images I'm after.",
-    readTime: "5 min",
-    body: [
-      { type: "p", text: "Most travel photography advice focuses on gear. Go mirrorless. Buy the 35mm prime. Upgrade to full frame. But the photographs that changed my work most weren't the result of new equipment — they were the result of understanding what I already had." },
-      { type: "h2", text: "The five settings" },
-      { type: "ul", items: ["Shoot in RAW — always, without exception", "Manual white balance set to Kelvin: 5500K for golden hour, 3200K for artificial light", "Back-button focus, AF tracking on moving subjects", "Exposure compensation: slightly underexpose, recover in post", "High-speed burst for street and movement — delete aggressively afterwards"] },
-      { type: "h2", text: "The one that matters most" },
-      { type: "p", text: "If I had to choose one: shoot RAW. JPEG locks in the camera's decisions about colour, contrast, and sharpness. RAW is the conversation — you make those decisions yourself, after the fact, with the luxury of time. That's where photographs become photographs." },
-      { type: "quote", text: "Great photographs aren't captured. They're built — a collaboration between the moment and the edit." },
-    ],
-  },
+  id: 2,
+  slug: "six-months-across-asia-reflection",
+  title: "Six Months Across Asia",
+  subtitle: "On perspective, culture, and learning there is more than one way to live",
+  date: "2026-05-10",
+  category: "life",
+  tags: ["Travel", "Reflection", "Growth", "Culture"],
+  coverImage: ph("asia-travel-map", 1280, 720),
+  excerpt:
+    "What started as a six-month trip across Asia became one of the most transformative experiences of my life, changing the way I think about success, happiness, relationships, and the future I want to build.",
+  readTime: "10 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Six months ago, I decided to step away from my routine and travel across Asia. What started as a childhood dream of visiting ten countries became something much bigger than travel itself. It became an opportunity to disconnect from daily life, challenge my assumptions, and gain a new perspective on both my personal and professional future."
+    },
+
+    { type: "h2", text: "An eye-opening experience" },
+
+    {
+      type: "p",
+      text:
+        "The biggest impact of this journey was not the places I visited, but the way it changed how I see the world. For the first time, I was constantly surrounded by cultures, traditions, and ways of thinking completely different from my own. Every day became an opportunity to learn, question, and reflect."
+    },
+
+    {
+      type: "p",
+      text:
+        "Of course, there were the obvious cultural differences. The food was often much simpler than I expected, yet incredibly flavourful and almost (or always) spicy. And then there was durian — a fruit I had heard about countless times but was still completely unprepared for. Its smell alone deserves its own story. The languages, clothing, architecture, and daily routines all reminded me that there is no single way to live."
+    },
+
+    { type: "h2", text: "Different views on life" },
+
+    {
+      type: "p",
+      text:
+        "What fascinated me most, however, were the differences that are not immediately visible. The way people think about work, family, friendship, success, and happiness often felt very different from what I was used to. In many places, I met people who owned very little by Western standards yet seemed genuinely fulfilled. Having enough food to eat, somewhere safe to sleep, and people they loved around them was often considered enough."
+    },
+
+    {
+      type: "p",
+      text:
+        "It made me question the mindset many of us grow up with — the constant pressure to achieve more, earn more, own more, and always look towards the next milestone. For the first time, I started to consider that sometimes what we already have may be enough. What struck me most was that many of the people I met had significantly less than what most of us in the West take for granted, yet often seemed happier and more content with their lives. It made me reflect on how easily we fall into the habit of comparing ourselves to those who have more, focusing on what we lack rather than appreciating what we already have. In many ways, we have more opportunities, comfort, and security than ever before, yet we often feel dissatisfied because our definition of “enough” keeps moving further away."
+    },
+
+    {
+      type: "p",
+      text:
+        "I also met people with dreams they knew they might never be able to achieve because of financial limitations or restrictions imposed by the governments of their countries. Many of them worked incredibly hard, often spending twelve hours a day working simply to earn enough to support themselves and their families. Despite this, they remained optimistic, grateful, and hopeful. I spoke to people whose dream was simply to travel, to see Europe, or to experience places they had only ever seen online, knowing that such opportunities might realistically remain out of reach. Their resilience, humility, and ability to find joy despite circumstances that many of us would consider difficult left a lasting impression on me and made me appreciate just how fortunate I am."
+    },
+
+    { type: "h2", text: "Faith, spirituality, and meaning" },
+
+    {
+      type: "p",
+      text:
+        "Another aspect that deeply influenced me was religion and spirituality. Growing up in Europe, I was familiar with a particular way of understanding faith. Throughout Asia, I encountered beliefs and philosophies that often focused more on mindfulness, kindness, inner peace, family, and the positive impact individuals can have on the world around them."
+    },
+
+    {
+      type: "p",
+      text:
+        "I was fascinated by how present spirituality felt in everyday life. Ideas such as karma, balance, respect for nature, gratitude, and the connection between past and present generations appeared repeatedly across different cultures and religions."
+    },
+
+    {
+      type: "p",
+      text:
+        "One concept that particularly stayed with me was the relationship many families maintain with their ancestors. In several countries, family members who have passed away continue to play an important role in traditions, celebrations, and even major family decisions. It was a beautiful reminder that our relationships do not necessarily end when life does."
+    },
+
+    {
+    type: "p",
+    text:
+      "Another idea that fascinated me was the presence of spirits in everyday life. In many places, spirits were not seen as distant or abstract concepts, but as beings that coexist alongside us and remain connected to the physical world. Small shrines could be found outside homes, businesses, and even skyscrapers, with offerings made to bring protection, harmony, and good fortune. Whether or not one shares these beliefs, it was remarkable to see how naturally they were woven into daily life. It made me reflect on the different ways cultures seek meaning, connection, and comfort in things that cannot always be explained."
+    },
+    
+    { type: "h2", text: "Beauty through a different lens" },
+
+    {
+      type: "p",
+      text:
+        "Even beauty standards challenged many assumptions I had unconsciously accepted. In countries such as China, South Korea and Japan, ideals often centred around fair skin, youthful features, and a delicate appearance. Avoiding sun exposure was taken seriously, with umbrellas, masks, and long-sleeved clothing being common even on extremely hot days."
+    },
+
+    {
+      type: "p",
+      text:
+        "Makeup was often used very differently from what I was accustomed to seeing in the West. Rather than dramatically changing someone's appearance, it was frequently applied to subtly enhance features such as bright skin, larger-looking eyes, soft blush tones, and an overall youthful look. It was a reminder that beauty standards are deeply cultural and far less universal than we often assume."
+    },
+
+    { type: "h2", text: "Returning home"},
+
+    {
+      type: "p",
+      text:
+        "As the journey came to an end, I realised that what I was bringing home was far more valuable than photographs, souvenirs, or passport stamps. I returned with a renewed appreciation for my family, my friends, my routine, and the comfort of having a place to call home."
+    },
+
+    {
+      type: "p",
+      text:
+        "At the same time, I returned with a clearer understanding of the future I want to build. Traveling through ten countries made me more adaptable, independent, resilient, and open-minded. It strengthened my communication skills, my ability to navigate uncertainty, and my confidence in unfamiliar situations."
+    },
+
+    {
+      type: "p",
+      text:
+        "Most importantly, it taught me that there is no single definition of success, happiness, or fulfilment. We are all shaped by different cultures, beliefs, experiences, and circumstances. Seeing that diversity firsthand was one of the greatest gifts this journey gave me."
+    },
+
+    {
+      type: "quote",
+      text:
+        "The greatest thing travel gave me was not memories, but perspective."
+    }
+  ]
+  }
 ];
