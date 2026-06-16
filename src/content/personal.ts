@@ -37,10 +37,7 @@ export interface FilmEntry {
   thumbnailUrl: string;
 }
 
-// ─── Placeholder helper (replace URLs with your own photos) ──────────────────
-
-const ph = (seed: string, w: number, h: number) =>
-  `https://picsum.photos/seed/${seed}/${w}/${h}`;
+import { img as ph } from "@/content/cloudinary";
 
 // ─── Travel Adventures ────────────────────────────────────────────────────────
 

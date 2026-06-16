@@ -45,10 +45,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   events:      "Events",
 };
 
-// ─── Placeholder helper ───────────────────────────────────────────────────────
-
-const ph = (seed: string, w: number, h: number) =>
-  `https://picsum.photos/seed/${seed}/${w}/${h}`;
+import { img as ph } from "@/content/cloudinary";
 
 // ─── Posts ────────────────────────────────────────────────────────────────────
 
@@ -61,7 +58,7 @@ export const POSTS: BlogPost[] = [
   date: "2026-06-15",
   category: "tech",
   tags: ["React", "Design", "Portfolio", "Frontend"],
-  coverImage: ph("portfolio-code-desk", 1280, 720),
+  coverImage: ph("website_wovdv7", 1280, 720),
   excerpt:
     "Most developer portfolios follow a predictable formula. I wanted mine to feel intentional — something that reflects not only what I build and my professional carreer, but also my personality.",
   readTime: "10 min",
@@ -87,12 +84,12 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "I rebuilt everything using React, Vite, and Tailwind CSS v4, intentionally avoiding UI libraries and pre-made templates. Instead, I focused on designing a small, cohesive design system from scratch, including a custom color palette built around rose, lavender, and purple tones on a deep dark background. This reflects both my feminine side and my computer science mindset, bringing together two seemingly opposite parts of my identity into a unified visual expression."
+        "I rebuilt everything using React, Vite, and Tailwind CSS v4, intentionally avoiding UI libraries and pre-made templates. Instead, I focused on designing a small, cohesive design system from scratch, including a custom color palette built around rose and lavender on a dark purple background. This reflects both my feminine side and my computer science mindset, bringing together two seemingly opposite parts of my identity into a unified visual expression."
     },
     {
       type: "img",
-      url: ph("portfolio-color-palette", 800, 450),
-      caption: "Custom design system — rose, lavender, and purple on a deep black background"
+      url: ph("colorPallet_nnw4qo", 1280, 720),
+      caption: "Custom design system — rose, and lavender on a dark purple background"
     },
     { type: "h2", text: "The beginner of the ideia" },
     {
@@ -159,7 +156,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "Of course, there were the obvious cultural differences. The food was often much simpler than I expected, yet incredibly flavourful and almost (or always) spicy. And then there was durian — a fruit I had heard about countless times but was still completely unprepared for. Its smell alone deserves its own story. The languages, clothing, architecture, and daily routines all reminded me that there is no single way to live."
+        "Of course, there were the obvious cultural differences. Food was often much simpler than I expected, yet incredibly flavourful and almost always spicy, with some unexpected surprises along the way — like durian, a fruit I had heard about countless times but was still completely unprepared for. Even its smell felt like an experience on its own. Beyond food, the languages, clothing, architecture, and daily routines all reinforced the same idea: there is no single way to live."
     },
 
     { type: "h2", text: "Different views on life" },
