@@ -33,7 +33,7 @@ export const CATEGORY_COLORS: Record<Category, string> = {
   photography: "#7fc4c0",
   life:        "#c4a87f",
   work:        "#7fc488",
-  events:      "#c4b87f",
+  events:      "#7f9ec4",
 };
 
 export const CATEGORY_LABELS: Record<Category, string> = {
@@ -132,7 +132,7 @@ export const POSTS: BlogPost[] = [
   title: "Six Months Across Asia",
   subtitle: "On perspective, culture, and learning there is more than one way to live",
   date: "2026-05-10",
-  category: "life",
+  category: "travel",
   tags: ["Travel", "Reflection", "Growth", "Culture"],
   coverImage: ph("asia-travel-map", 1280, 720),
   excerpt:
@@ -245,5 +245,1530 @@ export const POSTS: BlogPost[] = [
         "The greatest thing travel gave me was not memories, but perspective."
     }
   ]
-  }
+  },
+  {
+  id: 3,
+  slug: "returning-to-fct-nova-as-a-speaker",
+  title: "Returning to FCT NOVA as a Speaker",
+  subtitle: "From student to software engineer — and the responsibility of giving back",
+  date: "2025-03-12",
+  category: "events",
+  tags: ["Career", "Speaker","Software Engineering", "Opensoft", "FCT NOVA", "Growth"],
+  coverImage: ph("opensoftTalk_b6cmka", 1280, 720),
+  excerpt:
+    "Returning to my former university as a speaker at JORTEC 2025 was a deeply meaningful moment — sharing my journey, reflecting on my growth, and hopefully helping students who are now where I once was.",
+  readTime: "7 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "I had the pleasure — and honestly, the honour — of returning to my former university, NOVA School of Science and Technology (FCT NOVA), this time not as a student, but as a speaker representing Opensoft at JORTEC 2025."
+    },
+    {
+      type: "p",
+      text:
+        "JORTEC is a dynamic 3-day event organized by the university, where students get the opportunity to connect with companies, explore different career paths, and experience the tech industry from a more practical perspective."
+    },
+
+    { type: "h2", text: "A deeply personal full-circle moment" },
+
+    {
+      type: "p",
+      text:
+        "Being back on that campus brought back a flood of memories. It honestly felt surreal to stand there, not as someone attending the talks, but as someone sharing their own journey. Just a short time ago, I was in their exact position — sitting in those same rooms, listening, taking notes, and trying to understand what my future in tech could look like."
+    },
+    {
+      type: "p",
+      text:
+        "Sharing my path — from student to intern, and now full-time Software Engineer — made me reflect on how much can change in such a short period of time. It reminded me that progress often feels invisible while you’re in it, but becomes clear when you look back."
+    },
+
+    { type: "h2", text: "Giving back what I once needed" },
+
+    {
+      type: "p",
+      text:
+        "One of the most meaningful parts of this experience was the opportunity to speak directly with students who are now going through the same uncertainty I once had. I remember clearly how many questions I had at that stage — about internships, first jobs, how to prepare, what really matters, and what doesn’t."
+    },
+    {
+      type: "p",
+      text:
+        "Being able to answer those same questions from a different perspective felt incredibly rewarding. In a way, it felt like I was closing a loop — offering clarity, reassurance, and honesty to people who are just starting their journey."
+    },
+    {
+      type: "p",
+      text:
+        "I truly hope I was able to help at least a few students feel a bit more confident about their next steps, or simply less alone in their doubts. Sometimes, just hearing that someone else went through the same uncertainty can make a real difference."
+    },
+
+    { type: "h2", text: "Gratitude and responsibility" },
+
+    {
+      type: "p",
+      text:
+        "I felt genuinely honoured to have been invited back in this role. Opportunities like this carry a certain weight — not just to represent a company, but to represent a path that others are still trying to figure out."
+    },
+    {
+      type: "p",
+      text:
+        "I’m very grateful to FCT NOVA and the organizers of JORTEC for the invitation, and to Opensoft for trusting me to represent them in such a meaningful context."
+    },
+
+    {
+      type: "p",
+      text:
+        "More than anything, this experience reinforced something I’ve been feeling for a while: that sharing your journey is not just about storytelling — it’s about connection. And if even one student left feeling more certain, more inspired, or more reassured, then it was already worth it."
+    }
+  ]
+},
+{
+  id: 4,
+  slug: "48-hours-building-connections",
+  title: "48 Hours Building Connections",
+  subtitle: "What a hackathon taught me about innovation, teamwork, and solving real human problems",
+  date: "2024-05-13",
+  category: "events",
+  tags: ["Hackathon", "Mobile Development", "AI", "Teamwork", "Innovation"],
+  coverImage: ph("hackathon_lmryi9", 1280, 720),
+  excerpt:
+    "A 48-hour hackathon challenged us to transform an idea into a working product. What started as a competition became a lesson in teamwork, creativity, and building technology that brings people together.",
+  readTime: "9 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Recently, I had the opportunity to participate in the Spring Hackathon hosted by NINF at NOVA School of Science and Technology, with the support of Deloitte, Sky, and Crossjoin. For 48 intense hours, my team and I immersed ourselves in one of the most challenging and rewarding experiences of our academic journey."
+    },
+
+    {
+      type: "p",
+      text:
+        "Hackathons are often described as coding competitions, but this experience felt like much more than that. It was a unique opportunity to transform an idea into a tangible product under extreme time constraints, while collaborating closely with talented people who shared the same passion for technology and innovation."
+    },
+
+    { type: "h2", text: "Finding a Real Problem Worth Solving" },
+
+    {
+      type: "p",
+      text:
+        "Rather than building something purely technical, we wanted to tackle a problem that many of us had personally experienced. Despite living in a world that is more connected than ever, meeting new people and building meaningful friendships can be surprisingly difficult, especially in adulthood or when moving to a new city."
+    },
+
+    {
+      type: "p",
+      text:
+        "Large cities are full of opportunities, events, and communities, yet discovering them often feels fragmented. Information is scattered across countless websites, social media platforms, and local groups. Even when interesting events exist, finding the right ones and connecting with people who share similar interests can be challenging."
+    },
+
+    {
+      type: "p",
+      text:
+        "As university students ourselves, we had experienced this problem firsthand. We often felt that amazing events, communities, and opportunities existed around us, but finding them required significant effort. At the same time, meeting new people outside our existing circles became increasingly difficult as we grew older. We believed technology could help bridge that gap."
+    },
+
+    { type: "h2", text: "The Idea: A Social Network Built Around Experiences" },
+
+    {
+      type: "p",
+      text:
+        "Together with two teammates, we developed a mobile application designed to help people and companies connect through events and shared interests."
+    },
+
+    {
+      type: "p",
+      text:
+        "We often described it as 'Tinder for friendships and experiences rather than dating'. Instead of matching people based on romantic compatibility, our platform focused on bringing together individuals through activities, hobbies, networking opportunities, and events."
+    },
+
+    {
+      type: "p",
+      text:
+        "Users could create or join events, whether they were organized by individuals, communities, or companies. Before deciding to participate, they could see which friends had already attended previous editions or were planning to attend upcoming events, creating a stronger sense of trust and community."
+    },
+
+    {
+      type: "p",
+      text:
+        "To make discovery more personalized, we incorporated an AI-powered recommendation system. By analyzing profile attributes, interests, previous event participation, and engagement patterns, the platform could suggest events that were likely to be genuinely relevant to each user."
+    },
+
+    {
+      type: "p",
+      text:
+        "We also introduced reviews, ratings, comments, and photo galleries from past events. This allowed users to make more informed decisions while helping organizers build credibility and showcase the quality of their experiences."
+    },
+
+    {
+      type: "p",
+      text:
+        "Our goal was not simply to help people find events, but to help them find connections. We wanted to create a platform where someone moving to a new city, starting university, or simply looking to meet people with similar interests could discover experiences that felt relevant and welcoming."
+    },
+
+    { type: "h2", text: "48 Hours of Learning" },
+
+    {
+      type: "p",
+      text:
+        "Building an application from scratch in just two days required much more than technical skills. Every decision had to be deliberate. We constantly balanced ambition with feasibility, deciding which features would create the most value while remaining achievable within the limited timeframe."
+    },
+
+    {
+      type: "p",
+      text:
+        "There were moments of excitement when features finally worked, moments of frustration when unexpected problems appeared, and moments where creativity became just as important as programming. More than anything, the experience taught me how quickly a motivated team can move when everyone is aligned around a shared goal."
+    },
+
+    {
+      type: "p",
+      text:
+        "One aspect of this experience that I am particularly proud of is that we did not stop at the idea itself. Beyond identifying the problem, validating the concept, and defining how the platform would work, we also managed to implement most of the mobile application's frontend within the 48-hour timeframe."
+    },
+
+    {
+      type: "p",
+      text:
+        "At the time, AI coding assistants were not yet available to accelerate development, which meant that every screen, interaction, user flow, and design decision was created entirely by us. Looking back, it is easy to underestimate how much work that required. We were simultaneously acting as product managers, designers, developers, and presenters, all while racing against the clock."
+    },
+
+    {
+      type: "p",
+      text:
+        "Having a functional and visually engaging prototype made our final demonstration significantly more dynamic. Rather than asking the judges to imagine how the platform would work, we could actually show them. Seeing an idea evolve from sketches and discussions into a real product in such a short amount of time remains one of the accomplishments I am most proud of from my university years."
+    },
+
+    { type: "h2", text: "The Final Pitch" },
+
+    {
+      type: "p",
+      text:
+        "After 48 hours of development, brainstorming, testing, and refining, we had the opportunity to present our project to a panel of judges from Deloitte, Sky, and Crossjoin."
+    },
+
+    {
+      type: "p",
+      text:
+        "Standing in front of industry professionals and explaining not only what we built, but why we built it, was one of the most rewarding parts of the experience. We weren't simply presenting features or technical decisions; we were presenting a solution to a problem we genuinely believed existed."
+    },
+
+    {
+      type: "p",
+      text:
+        "The experience also strengthened my confidence as both an engineer and a communicator. Developing a product under pressure is one challenge; presenting it clearly, defending design decisions, and conveying the vision behind it is another entirely."
+    },
+
+    { type: "h2", text: "What I Took Away" },
+
+    {
+      type: "p",
+      text:
+        "Looking back, what I value most is not the application itself, but everything that happened along the way. The experience strengthened my ability to work under pressure, communicate ideas clearly, collaborate effectively, and transform abstract concepts into tangible solutions."
+    },
+
+    {
+      type: "p",
+      text:
+        "It also reminded me why I enjoy building software in the first place. Technology is at its best when it helps people. Whether through improving public services, enabling new opportunities, or simply helping someone find a community where they belong, the most meaningful products often solve deeply human problems."
+    },
+
+    {
+      type: "p",
+      text:
+        "Most importantly, the hackathon taught me that innovation is not only about technology. It is about understanding people, identifying real frustrations, and having the determination to build something that can make a difference. Those 48 hours were exhausting, intense, and occasionally chaotic — but they were also some of the most exciting and fulfilling hours of my academic journey."
+    },
+
+    {
+      type: "quote",
+      text:
+        "The greatest achievement of those 48 hours wasn't building an app. It was proving that with the right team, a meaningful idea can become reality far faster than you think."
+    }
+  ]
+},
+{
+  id: 5,
+  slug: "building-the-app-behind-innovation-week",
+  title: "Building the App Behind Innovation Week",
+  subtitle: "What it feels like to build software for a community you are part of",
+  date: "2024-03-20",
+  category: "events",
+  tags: ["React", "Mobile Development", "Innovation Week", "Frontend", "Teamwork"],
+  coverImage: ph("innovationWeek_g7tqjk", 1280, 720),
+  excerpt:
+    "Contributing to the mobile application behind Innovation Week 2024 was more than a development project. It was the experience of building something real for a community I was part of and seeing it used by hundreds of students throughout the event.",
+  readTime: "8 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "One of the most rewarding projects I had the opportunity to work on during university was the mobile application developed for Innovation Week 2024, organized by In-Nova. As a member of the IT team, I had the privilege of contributing to the frontend development of the application and helping bring an important part of the event experience to life."
+    },
+
+    {
+      type: "p",
+      text:
+        "Innovation Week is one of the largest innovation and networking events at NOVA School of Science and Technology, bringing together students, companies, entrepreneurs, and industry professionals for several days of talks, workshops, competitions, networking opportunities, and discussions about technology and innovation."
+    },
+
+    { type: "h2", text: "Building a Product for a Real Event" },
+
+    {
+      type: "p",
+      text:
+        "Unlike many university projects that remain inside a classroom, this application had a real audience and a real purpose. Students, speakers, organizers, and company representatives would rely on it throughout the event, making every design and development decision feel significantly more meaningful."
+    },
+
+    {
+      type: "p",
+      text:
+        "Using React, I contributed to the development of the application's frontend, helping create an intuitive and engaging experience for participants. The goal was to centralize all event information in a single platform and make navigating the event as seamless as possible."
+    },
+
+    {
+      type: "p",
+      text:
+        "Through the application, participants could explore the complete event schedule, view upcoming talks, workshops, and activities, learn more about the companies attending the event, and discover information about the speakers and organizers involved in each session."
+    },
+
+    {
+      type: "p",
+      text:
+        "One of the features I found particularly interesting was the check-in system. Participants could check into workshops, talks, and activities directly through the application. Beyond helping organizers monitor participation, these check-ins contributed to a gamified experience where attendees could earn rewards and prizes based on their engagement throughout the event."
+    },
+
+    { type: "h2", text: "More Than Just Code" },
+
+    {
+      type: "p",
+      text:
+        "What made this project special was that it wasn't simply about writing code. It was about creating a tool that would improve the experience of hundreds of people attending the event. Every screen, component, and interaction we built would eventually be used by real users navigating a real event."
+    },
+
+    {
+      type: "p",
+      text:
+        "As developers, we often spend hours building features without immediately seeing their impact. This project was different. We knew exactly who our users were, what problems they faced, and how the application could help solve them."
+    },
+
+    { type: "h2", text: "Seeing It Come to Life" },
+
+    {
+      type: "p",
+      text:
+        "The most memorable part of the experience came during Innovation Week itself. After weeks of development, testing, and preparation, I finally had the opportunity to see people actively using something we had built."
+    },
+
+    {
+      type: "p",
+      text:
+        "Walking around the event and seeing fellow students checking schedules, exploring company profiles, registering for activities, and using the features we had developed was incredibly satisfying. What had started as lines of code on a screen had become a product that was genuinely helping people navigate the event."
+    },
+
+    {
+      type: "p",
+      text:
+        "There is a unique feeling that comes from seeing your work move beyond development and into the hands of real users. It transforms software from a technical exercise into something tangible. Every successful check-in, every student finding the right room for a talk, and every interaction with the application became a reminder that the effort invested behind the scenes had a real impact."
+    },
+
+    { type: "h2", text: "A Proud Moment" },
+
+    {
+      type: "p",
+      text:
+        "Looking back, I feel incredibly proud not only of the final product but also of the collaboration that made it possible. Working alongside the talented team at In-Nova taught me valuable lessons about teamwork, communication, and developing software for real-world users and constraints."
+    },
+
+    {
+      type: "p",
+      text:
+        "The success of the application showed me something important: software becomes most meaningful when it solves problems for a community you genuinely care about. As both a developer and a participant in the university ecosystem, being able to contribute to an event that helps students connect with opportunities made the experience even more rewarding."
+    },
+
+    {
+      type: "p",
+      text:
+        "Most importantly, this project gave me one of my first opportunities to experience the full lifecycle of a product: from development and testing to deployment and real-world adoption. Seeing hundreds of students use the application during the event reinforced my passion for creating digital products and reminded me why I chose software engineering in the first place."
+    },
+
+    {
+      type: "quote",
+      text:
+        "Few moments are more rewarding than seeing something you built become part of other people's experience."
+    }
+  ]
+},
+{
+  id: 6,
+  slug: "supporting-portugals-first-digital-election",
+  title: "Supporting Portugal's First Digital Election",
+  subtitle: "A reminder that technology can strengthen democracy when people trust it",
+  date: "2024-06-10",
+  category: "work",
+  tags: ["IT Support", "European Parliament", "Elections", "Public Service", "Technology"],
+  coverImage: ph("eleicoes_europeias_dbxvjl", 1280, 720),
+  excerpt:
+    "Participating in the first deployment of digital electoral registers in Portugal during the European Parliament Elections was one of the most meaningful experiences of my career, combining technology, public service, and civic responsibility.",
+  readTime: "7 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Throughout my academic and professional journey, I have worked on many projects that challenged me technically. However, few experiences felt as meaningful as participating in the European Parliament Elections of 2024 as an IT Support Technician during the first deployment of digital electoral registers in Portugal."
+    },
+
+    {
+      type: "p",
+      text:
+        "Unlike many technology projects where the impact can feel distant or abstract, this was an opportunity to contribute directly to an event that affects millions of citizens and plays a fundamental role in democracy itself."
+    },
+
+    { type: "h2", text: "Being Part of a Historic Moment" },
+
+    {
+      type: "p",
+      text:
+        "When I first learned that I would be participating in the deployment of Portugal's new digital electoral registration system, I immediately understood the significance of the responsibility. This was not simply another software platform or another IT project. It was part of a historic modernization effort that would influence how citizens interacted with the electoral process."
+    },
+
+    {
+      type: "p",
+      text:
+        "I felt genuinely honoured to contribute, even in a small way, to such an important milestone. Being involved in the country's first digital election infrastructure deployment gave me the feeling of witnessing a moment of transformation, where technology was being used to improve accessibility, efficiency, and reliability in a process that is central to democratic participation."
+    },
+
+    { type: "h2", text: "Preparing for the Responsibility" },
+
+    {
+      type: "p",
+      text:
+        "One aspect that made the experience even more meaningful was the preparation that preceded it. Before election day, I received extensive training provided through the European Union's electoral support framework, covering not only the technical aspects of the systems but also the procedures, protocols, and responsibilities involved."
+    },
+
+    {
+      type: "p",
+      text:
+        "The training reinforced something that became increasingly clear throughout the experience: technology alone is never enough. For critical systems to work successfully, people need to understand them, trust them, and know how to use them effectively."
+    },
+
+    {
+      type: "p",
+      text:
+        "That understanding shaped much of my role. Beyond validating systems and ensuring everything functioned correctly, a significant part of my work involved supporting and training election staff, helping them feel confident using the new tools and addressing any questions or concerns they might have."
+    },
+
+    { type: "h2", text: "Helping People Through Technology" },
+
+    {
+      type: "p",
+      text:
+        "What I remember most vividly is not the technology itself, but the people. Throughout the process, I had the opportunity to assist election workers, answer questions, solve technical issues, and provide reassurance whenever uncertainties arose."
+    },
+
+    {
+      type: "p",
+      text:
+        "There is something uniquely rewarding about using technical knowledge to help others accomplish something important. In many engineering roles, the end users remain invisible. Here, I could see firsthand the people benefiting from the support being provided."
+    },
+
+    {
+      type: "p",
+      text:
+        "Every issue resolved, every question answered, and every successful validation contributed to a much larger objective: ensuring that citizens could exercise one of their most fundamental democratic rights smoothly and confidently."
+    },
+
+    { type: "h2", text: "Technology in Service of Society" },
+
+    {
+      type: "p",
+      text:
+        "The experience also changed the way I think about the role of technology in society. As software engineers and IT professionals, we often focus on innovation, efficiency, and technical complexity. Yet some of the most impactful systems are not necessarily the most sophisticated ones. They are the ones that support essential public services and improve people's lives in meaningful ways."
+    },
+
+    {
+      type: "p",
+      text:
+        "For the first time, I felt that my technical skills were contributing directly to something larger than a product, a company, or a project. They were contributing to a process that helps uphold democratic participation and civic engagement."
+    },
+
+    { type: "h2", text: "A Lasting Memory" },
+
+    {
+      type: "p",
+      text:
+        "Looking back, what stays with me most is a sense of gratitude. Gratitude for the trust placed in me, for the training I received, and for the opportunity to contribute to such an important initiative at a relatively early stage of my career."
+    },
+
+    {
+      type: "p",
+      text:
+        "It reminded me that technology can be much more than a profession. At its best, it becomes a tool for enabling opportunities, supporting communities, and strengthening the systems that society relies upon every day."
+    },
+
+    {
+      type: "p",
+      text:
+        "Being part of Portugal's first deployment of digital electoral registers was not only a valuable professional experience. It was a powerful reminder that even small individual contributions can play a role in something much bigger than ourselves."
+    },
+
+    {
+      type: "quote",
+      text:
+        "Some projects teach you technical skills. Others remind you why those skills matter in the first place."
+    }
+  ]
+},
+{
+  id: 7,
+  slug: "why-gender-balance-in-tech-matters",
+  title: "Why Gender Balance in Tech Matters",
+  subtitle: "Reflections from volunteering at the EUGAIN Final Conference",
+  date: "2024-04-15",
+  category: "events",
+  tags: ["Women in Tech", "Diversity", "EUGAIN", "Informatics", "Personal Growth"],
+  coverImage: ph("EUGAIN_hvefbx", 1280, 720),
+  excerpt:
+    "Volunteering at the EUGAIN Final Conference gave me the opportunity to engage with researchers, policymakers, and industry leaders working to improve gender balance in informatics. As a woman in software engineering, it was an experience that felt both personal and inspiring.",
+  readTime: "10 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "In April 2024, I had the opportunity to volunteer at the EUGAIN Final Conference, organized by EUGAIN and the Order of the Engineers of Portugal. The conference brought together researchers, policymakers, educators, and industry representatives from across Europe with a shared objective: understanding and addressing the gender imbalance that continues to exist in informatics and engineering."
+    },
+
+    {
+      type: "p",
+      text:
+        "While I initially joined as a volunteer, I quickly realized that the experience would leave a much deeper impact on me than I had anticipated. As a woman pursuing a career in software engineering, the themes discussed throughout the conference were not abstract concepts or statistics. They were realities that I had personally experienced."
+    },
+
+    { type: "h2", text: "A Topic That Feels Personal" },
+
+    {
+      type: "p",
+      text:
+        "Throughout my academic journey and early professional experiences, there have been moments where I felt that being a woman influenced how others perceived my technical abilities. Sometimes it was subtle. Sometimes it was more direct."
+    },
+
+    {
+      type: "p",
+      text:
+        "There were occasions when I felt people assumed I would not be as technically capable as my male colleagues before they had even seen my work. There were comments from people who seemed genuinely surprised that I enjoyed programming, engineering, or technology. Others questioned whether I would be successful in such a technical field, as if it were somehow unexpected for a woman to pursue it."
+    },
+
+    {
+      type: "p",
+      text:
+        "Even today, it is not unusual to find myself as the only woman in a meeting, technical event, or room full of engineers. While these situations rarely prevent women from succeeding, they can create a feeling of constantly having to prove that you belong. Fortunately, I have also met incredible mentors, colleagues, professors, and friends who judged me solely on my abilities and supported me throughout my journey. However, the fact that these experiences still happen demonstrates that there is work left to do."
+    },
+
+    { type: "h2", text: "Looking Beyond the Symptoms" },
+
+    {
+      type: "p",
+      text:
+        "What impressed me most about the conference was that the discussions did not focus only on the visible outcomes of the problem, such as representation numbers or salary differences. Instead, many participants were focused on understanding the root causes behind these disparities."
+    },
+
+    {
+      type: "p",
+      text:
+        "The more I listened, the more I realized how early many of these influences begin. From childhood, boys and girls are often encouraged in different directions. Boys are more frequently given toys that promote construction, experimentation, problem-solving, and engineering-oriented thinking, such as building blocks, science kits, and technical games."
+    },
+
+    {
+      type: "p",
+      text:
+        "Girls, on the other hand, are often encouraged towards activities that emphasize appearance, caregiving, or social roles. Even the compliments children receive can differ. Girls are frequently told they are beautiful, elegant, or delicate. Boys are often praised for being strong, clever, adventurous, or intelligent."
+    },
+
+    {
+      type: "p",
+      text:
+        "None of these individual interactions seem significant on their own. However, when repeated thousands of times throughout childhood, they can quietly influence how young people see themselves, what they believe they are capable of achieving, and which careers they consider to be 'for people like them'."
+    },
+
+    {
+      type: "p",
+      text:
+        "Another factor that resonated strongly with me was the discussion around role models. When young girls grow up, they rarely see women represented as software engineers, computer scientists, startup founders, or technology leaders to the same extent that they see men. It is difficult to imagine yourself in a role when you rarely see people who look like you occupying it."
+    },
+
+    {
+      type: "p",
+      text:
+        "Representation alone does not solve the problem, but it plays a powerful role in shaping aspirations. Seeing women succeed in technology sends an important message: you belong here too. It challenges the idea that engineering is somehow a 'male profession' and helps normalize the presence of women in technical leadership and innovation."
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, I realize how valuable it would have been to see more female engineers while I was growing up. Not because I lacked interest in technology, but because role models help transform possibility into reality. They provide evidence that a path exists and that success is achievable. For many young girls, seeing women building software, leading engineering teams, conducting research, or creating innovative companies can be the difference between considering a career in technology and never exploring it at all."
+    },
+
+    {
+      type: "p",
+      text:
+        "This is why visibility matters. Every woman who enters the field, speaks at a conference, mentors students, teaches, or simply shares her experience contributes to breaking the perception that engineering is a space primarily reserved for men. The more diverse the people we see succeeding, the easier it becomes for future generations to believe that they can succeed too."
+    },
+
+    { type: "h2", text: "Real Change Requires Understanding" },
+
+    {
+      type: "p",
+      text:
+        "One of the most fascinating aspects of the conference was seeing the amount of research and analysis being conducted to understand these challenges. The people involved were not looking for simplistic solutions. They were studying educational systems, cultural norms, economic conditions, workplace structures, and social expectations across different countries."
+    },
+
+    {
+      type: "p",
+      text:
+        "Through workshops and collaborative sessions, participants worked on country-specific action plans designed to address the unique factors contributing to gender imbalance in each region. It was inspiring to see how much effort was being invested in understanding the complexity of the problem before proposing solutions."
+    },
+
+    {
+      type: "p",
+      text:
+        "The discussions also highlighted challenges that extend beyond education. For example, many countries continue to face significant gender pay gaps, often influenced by societal expectations around caregiving and family responsibilities. Women are still more likely to interrupt their careers, reduce working hours, or be perceived as less career-focused because of expectations surrounding parenthood and childcare."
+    },
+
+    {
+      type: "p",
+      text:
+        "What impressed me was that the people leading these initiatives were not simply trying to increase participation numbers. They were examining how culture, education, economics, workplace policies, and social expectations interact to create these outcomes. Meaningful change requires understanding the entire system, not just treating its symptoms."
+    },
+
+    {
+      type: "p",
+      text:
+        "Seeing experts, researchers, educators, and policymakers actively working to challenge these assumptions and design better systems gave me hope that meaningful progress is possible."
+    },
+
+    { type: "h2", text: "Why It Matters" },
+
+    {
+      type: "p",
+      text:
+        "For me, this conference was about much more than gender statistics in engineering. It was about fairness, opportunity, and ensuring that talent is not lost because of assumptions made long before someone enters a classroom or applies for a job."
+    },
+
+    {
+      type: "p",
+      text:
+        "I firmly believe that technology benefits from diverse perspectives. Different experiences lead to different ideas, different ways of solving problems, and ultimately better products for everyone. When talented people feel excluded from a field because they do not fit traditional expectations, everyone loses."
+    },
+
+    {
+      type: "p",
+      text:
+        "Volunteering at EUGAIN reminded me that progress does not happen by accident. It happens because people dedicate years of research, advocacy, education, and policy work to creating a more inclusive future."
+    },
+
+    { type: "h2", text: "Looking Forward" },
+
+    {
+      type: "p",
+      text:
+        "I left the conference feeling inspired, but also motivated. Inspired by the incredible people dedicating their careers to addressing these challenges, and motivated to contribute in my own way throughout my career."
+    },
+
+    {
+      type: "p",
+      text:
+        "I do not want future generations of girls to question whether they belong in engineering, computer science, or technology. I want them to see these paths as naturally available to them as any other. I want them to grow up seeing women building products, leading companies, conducting research, and shaping the future of technology."
+    },
+
+    {
+      type: "p",
+      text:
+        "If my career can contribute, even in a small way, to making that future a reality—whether through mentoring, speaking, building visible projects, or simply being another example that women belong in this field—then I will consider it one of my most meaningful achievements."
+    },
+
+    {
+      type: "quote",
+      text:
+        "The goal is not to encourage more women into technology because they are women. The goal is to ensure that talent, curiosity, and ambition are never limited by expectations."
+    }
+  ]
+},
+{
+  id: 8,
+  slug: "building-a-digital-government-platform",
+  title: "Building a Digital Government Platform",
+  subtitle: "My Master's Thesis on bringing public services into the digital age",
+  date: "2025-09-20",
+  category: "tech",
+  tags: [
+    "Flutter",
+    "Master Thesis",
+    "Mobile Development",
+    "Public Services",
+    "Authentication",
+    "WebRTC",
+    "Software Engineering"
+  ],
+  coverImage: ph("tese_h3n76z", 1280, 720),
+  excerpt:
+    "As part of my Master's Thesis and internship at Opensoft, I independently designed and developed a cross-platform mobile platform that aimed to bring secure government identification services into the digital world.",
+  readTime: "15 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Some software projects teach you new technologies. Others challenge your problem-solving abilities. A few rare projects do both while also giving you the feeling that what you are building could genuinely improve people's lives."
+    },
+
+    {
+      type: "p",
+      text:
+        "My Master's Thesis was one of those projects."
+    },
+
+    {
+      type: "p",
+      text:
+        "Developed during my internship at Opensoft, the project focused on a question that many of us have asked ourselves at some point: why do so many public services still require citizens to travel long distances, wait in queues, work around limited opening hours, and physically appear at government offices for procedures that could potentially be handled digitally?"
+    },
+
+    { type: "h2", text: "A Problem Worth Solving" },
+
+    {
+    type: "p",
+    text:
+      "Many important life events still require citizens to physically visit government offices. Applying for a passport or identification card, updating official records, signing legal documents, completing property transactions, or handling other administrative procedures often involve travelling to public institutions, working around limited opening hours, and spending long periods waiting in queues. While these requirements are largely driven by security and identity verification concerns, they can create significant barriers for citizens and reduce the accessibility of essential public services."
+  },
+
+    {
+      type: "p",
+      text:
+        "For people living far from administrative centers, individuals with reduced mobility, citizens facing financial constraints, or simply people with demanding work schedules, these processes can become unnecessarily difficult and time-consuming."
+    },
+
+    {
+      type: "p",
+      text:
+        "I have personally experienced the frustration of spending hours traveling, waiting in queues, and reorganizing my day around administrative appointments. The more I researched the problem, the more I realized that millions of people face the same challenges every year."
+    },
+
+    {
+      type: "p",
+      text:
+        "The question became simple: could technology make these services more accessible while maintaining the same level of trust, security, and legal validity?"
+    },
+
+    { type: "h2", text: "Designing the Solution" },
+
+    {
+      type: "p",
+      text:
+        "The objective was ambitious: create a mobile platform that would allow citizens to complete highly sensitive government procedures remotely, directly from their smartphones, while preserving the security guarantees traditionally associated with physical appointments."
+    },
+
+    {
+      type: "p",
+      text:
+        "Through the application, citizens could participate in secure video appointments with government officials, perform identity verification, submit biometric information, sign official documents, manage administrative processes, and access services that previously required physical presence."
+    },
+
+    {
+      type: "p",
+      text:
+        "Unlike many academic projects that remain theoretical, this was designed as a real product for a real business need. From the beginning, I knew that every architectural decision would have consequences for usability, security, scalability, and maintainability."
+    },
+
+    { type: "h2", text: "Choosing Flutter" },
+
+    {
+      type: "p",
+      text:
+        "One of the first challenges was selecting the technology stack. I conducted an extensive study of the available cross-platform frameworks, evaluating their performance, ecosystem maturity, maintainability, development speed, and long-term viability."
+    },
+
+    {
+      type: "p",
+      text:
+        "After comparing several alternatives, I ultimately chose Flutter. It aligned with Opensoft's technical interests and experience, but more importantly, it offered excellent performance, a highly productive development experience, strong community support, and the flexibility required for a project of this complexity."
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, it was one of the best decisions of the project. Flutter allowed me to deliver a consistent experience across Android and iOS while maintaining a single codebase."
+    },
+
+    { type: "h2", text: "Designing for Everyone" },
+
+    {
+      type: "p",
+      text:
+        "One responsibility that I took particularly seriously was usability. This application was not intended for a specific demographic or technical audience. Its users could be young or elderly, highly technical or completely unfamiliar with digital systems."
+    },
+
+    {
+      type: "p",
+      text:
+        "It also needed to feel natural on both Android and iOS despite the different design conventions of each platform. I designed the interface myself, constantly balancing familiarity, accessibility, simplicity, and consistency."
+    },
+
+    {
+      type: "p",
+      text:
+        "For perhaps the first time, I was not designing for developers or technology enthusiasts. I was designing for an entire country's population. That realization changed the way I approached every screen and interaction."
+    },
+
+    { type: "h2", text: "Building the Platform" },
+
+    {
+      type: "p",
+      text:
+        "The development phase was easily the most technically demanding part of the project. I independently implemented both the mobile frontend and the backend services responsible for business logic, authentication, data management, and communication with the database."
+    },
+
+    {
+      type: "p",
+      text:
+        "One of the most challenging and rewarding features was the video conferencing system. Rather than relying on third-party video APIs, I built the solution myself using WebRTC and WebSockets."
+    },
+
+    {
+      type: "p",
+      text:
+        "This involved managing real-time communication, appointment scheduling, call orchestration, participant management, signaling, and data exchange between citizens and government officials."
+    },
+
+    {
+      type: "p",
+      text:
+        "However, the platform was far more than a video call application. The video sessions served as secure administrative appointments where officials could collect biometric information, verify identities, request additional information, validate documents, and guide citizens through official procedures."
+    },
+
+    {
+      type: "p",
+      text:
+        "The system supported the collection of photographs, fingerprints, signatures, identity verification questionnaires, and other information required for official processes such as identification documents and passports."
+    },
+
+    { type: "h2", text: "Security Above Everything" },
+
+    {
+      type: "p",
+      text:
+        "Security became one of the central themes of the entire project. If citizens were expected to trust the platform with sensitive personal information, security could never be an afterthought."
+    },
+
+    {
+      type: "p",
+      text:
+        "I integrated biometric authentication using native device capabilities, allowing users to authenticate using fingerprint recognition or facial recognition already configured on their smartphones."
+    },
+
+    {
+      type: "p",
+      text:
+        "Document management introduced another interesting challenge. Users could review, sign, and manage official documents directly from the application. Signatures could be placed anywhere on the document through touch interaction, supporting multi-page documents and flexible placement."
+    },
+
+    {
+      type: "p",
+      text:
+        "The signing workflow became particularly complex when multiple participants were involved. The platform had to coordinate the signing process between several individuals, ensuring that each participant signed in the correct order while government officials maintained oversight and approval capabilities throughout the process."
+    },
+
+    {
+      type: "p",
+      text:
+        "Officials could validate signatures, reject invalid submissions, request new signatures when necessary, and control the progression of the signing workflow to guarantee procedural integrity."
+    },
+
+    { type: "h2", text: "Two Applications in One" },
+
+    {
+      type: "p",
+      text:
+        "Another architectural challenge involved supporting two fundamentally different user groups. Citizens and government officials interacted with the same platform but required very different permissions, workflows, and interfaces."
+    },
+
+    {
+      type: "p",
+      text:
+        "This effectively meant designing and developing two applications within a single product: one focused on accessibility and simplicity for citizens, and another focused on administration, validation, and process management for officials."
+    },
+
+    { type: "h2", text: "Testing and Deployment" },
+
+    {
+      type: "p",
+      text:
+        "Before completion, the platform achieved approximately 80% automated test coverage, helping ensure reliability across critical workflows and reducing the risk of regressions."
+    },
+
+    {
+      type: "p",
+      text:
+        "The project was ultimately deployed to both the Apple App Store and Google Play Store. Seeing an application that had started as research notes, sketches, and architectural diagrams become a fully deployed mobile product remains one of the proudest moments of my academic career."
+    },
+
+    { type: "h2", text: "More Than a Thesis" },
+
+    {
+      type: "p",
+      text:
+        "When people ask me what I gained from my Master's Thesis, I usually talk about Flutter, WebRTC, security, system architecture, backend development, testing, and deployment."
+    },
+
+    {
+      type: "p",
+      text:
+        "But the truth is that the most valuable lesson was something else entirely."
+    },
+
+    {
+      type: "p",
+      text:
+        "For the first time, I experienced what it feels like to build technology that could genuinely improve how citizens interact with public institutions. Technology is often associated with innovation, convenience, or business value. This project reminded me that it can also increase accessibility, reduce inequalities, and make essential services available to people who might otherwise struggle to access them."
+    },
+
+    {
+      type: "p",
+      text:
+        "That realization gave every challenge, every bug, every late night, and every design decision a deeper sense of purpose."
+    },
+
+    {
+      type: "quote",
+      text:
+        "The most meaningful software isn't always the most complex. Sometimes it's the software that removes a barrier between people and the services they depend on."
+    }
+  ]
+},
+{
+  id: 9,
+  slug: "five-years-at-nova-fct",
+  title: "Five Years at NOVA FCT",
+  subtitle: "Five years of growth, challenges, friendships, and discovering who I wanted to become",
+  date: "2024-09-22",
+  category: "life",
+  tags: [
+    "University",
+    "Computer Science",
+    "NOVA FCT",
+    "Personal Growth",
+    "Engineering",
+    "Student Life"
+  ],
+  coverImage: ph("fct_mk0be6", 1280, 720),
+  excerpt:
+    "Five years, hundreds of exams, countless sleepless nights, lifelong friendships, and one global pandemic. Looking back on my time at NOVA FCT and the journey that shaped me both personally and professionally.",
+  readTime: "14 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Five years ago, I was just a girl from Faro with a suitcase, a high university entrance grade, and absolutely no certainty about what I wanted to do with the rest of my life."
+    },
+
+    {
+      type: "p",
+      text:
+        "I knew I wanted to leave home and move to Lisbon. I knew I loved mathematics and physics. I knew I wanted to study engineering. Beyond that, everything felt uncertain."
+    },
+
+    {
+      type: "p",
+      text:
+        "Choosing a degree felt like choosing an entire future. At eighteen years old, that responsibility seemed enormous."
+    },
+
+    { type: "h2", text: "Why Computer Science?" },
+
+    {
+      type: "p",
+      text:
+        "Computer Science and Engineering wasn't an obvious choice at first. There were many engineering fields that interested me. What ultimately attracted me to computer science was the combination of creativity, technical depth, and international opportunity."
+    },
+
+    {
+      type: "p",
+      text:
+        "Unlike many professions, software engineering speaks a universal language. Whether in Portugal, Germany, Japan, Switzerland, Singapore, or the United States, the language of technology is largely English. The possibility of building a career anywhere in the world immediately appealed to me."
+    },
+
+    {
+      type: "p",
+      text:
+        "I was also drawn to the idea of creating things from scratch. Software starts with nothing more than an idea. Then comes the design, planning, implementation, testing, deployment, and finally seeing people use something that once existed only in your imagination."
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, I realize this is remarkably similar to my favorite hobby: videography. Every video begins as an idea. You imagine the story, research how to tell it, plan the shots, record the footage, edit everything together, and finally share it with others. Software development follows a surprisingly similar process. In both cases, you start with a blank canvas and gradually transform an idea into reality."
+    },
+
+    { type: "h2", text: "Arriving at NOVA FCT" },
+
+    {
+      type: "p",
+      text:
+        "Walking onto the NOVA School of Science and Technology campus for the first time felt exciting, intimidating, and surreal all at once. It was the beginning of a completely new chapter."
+    },
+
+    {
+      type: "p",
+      text:
+        "Suddenly I was surrounded by thousands of students from different backgrounds, all pursuing ambitious goals and trying to figure out their own paths. For the first time, I felt fully responsible for my future."
+    },
+
+    {
+      type: "p",
+      text:
+        "The first semester was everything I had imagined university would be. Long days on campus, meeting new people, joining social activities, attending events, experiencing academic traditions, and discovering a level of independence I had never had before."
+    },
+
+    { type: "h2", text: "Then COVID Happened" },
+
+    {
+      type: "p",
+      text:
+        "Halfway through my first year, everything changed."
+    },
+
+    {
+      type: "p",
+      text:
+        "COVID arrived and, almost overnight, the university experience I had imagined disappeared. Classes moved online. The campus became empty. Students returned home. Social events stopped. Friendships that were only beginning to form suddenly became much harder to maintain."
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, I still feel a sense of sadness about that period. University is often described as one of the most social experiences of a person's life, and I experienced only a small fraction of that before lockdown began."
+    },
+
+    {
+      type: "p",
+      text:
+        "When classes eventually returned to campus, things never fully felt the same. The atmosphere had changed. People had changed. A year of isolation affected habits, relationships, and social dynamics. Many traditions became less active, spontaneous gatherings became less frequent, and the sense of community that existed before COVID seemed harder to recreate."
+    },
+
+    {
+      type: "p",
+      text:
+        "I often wonder about the friendships that might have developed differently or the experiences that might have happened under normal circumstances. While there is no way to know, I am certain that the pandemic shaped my university experience in ways that will always remain unique to my generation."
+    },
+
+    { type: "h2", text: "The Academic Rollercoaster" },
+
+    {
+      type: "p",
+      text:
+        "If there is one thing engineering students learn quickly, it is humility."
+    },
+
+    {
+      type: "p",
+      text:
+        "There were exams I left feeling incredibly proud of myself and others where I questioned whether I had understood anything at all. There were assignments that seemed impossible when they were announced and somehow got finished hours before the deadline."
+    },
+
+    {
+      type: "p",
+      text:
+        "There were sleepless nights debugging code, preparing presentations, writing reports, studying for exams, and wondering how it was physically possible to fit so much work into so little time."
+    },
+
+    {
+      type: "p",
+      text:
+        "I experienced the frustration of receiving grades that did not reflect the effort I felt I had invested. I experienced the joy of unexpectedly good results. I experienced presentations where I was so nervous I could barely focus and others where I felt completely confident."
+    },
+
+    {
+      type: "p",
+      text:
+        "Over time, I learned that university is not simply about achieving good grades. It is about developing resilience, discipline, adaptability, and the ability to keep moving forward despite setbacks."
+    },
+
+    { type: "h2", text: "Life Outside the Classroom" },
+
+    {
+      type: "p",
+      text:
+        "Some of my favorite memories have very little to do with lectures or exams."
+    },
+
+    {
+      type: "p",
+      text:
+        "They happened during long study sessions with friends before exams, trying to understand concepts together and convincing ourselves that everything would somehow work out."
+    },
+
+    {
+      type: "p",
+      text:
+        "They happened during lunch breaks at the campus cafeteria, conversations between classes, late afternoons sitting outside enjoying the sun, and endless debates about assignments that often turned into discussions about life."
+    },
+
+    {
+      type: "p",
+      text:
+        "They happened in the university library, which somehow always seemed to be completely full despite its size. Finding a free seat during exam season often felt harder than passing some of the exams themselves."
+    },
+
+    {
+      type: "p",
+      text:
+        "They happened during dinners at friends' apartments, student parties, music festivals, academic celebrations, spontaneous trips, nights out in Lisbon, and all the small moments in between that ultimately become the memories people carry long after graduation."
+    },
+
+    { type: "h2", text: "The Professors You Never Forget" },
+
+    {
+      type: "p",
+      text:
+        "Every student leaves university remembering certain professors."
+    },
+
+    {
+      type: "p",
+      text:
+        "Some remain in our memories because they inspired us. They made difficult concepts fascinating, challenged us to think differently, and genuinely cared about helping students learn and grow."
+    },
+
+    {
+      type: "p",
+      text:
+        "Others remain memorable for very different reasons. Difficult exams, confusing explanations, impossible deadlines, and moments of frustration are also part of the university experience."
+    },
+
+    {
+      type: "p",
+      text:
+        "In a strange way, both groups contribute to our development. Some teach us through inspiration. Others teach us resilience."
+    },
+
+    { type: "h2", text: "What I Learned" },
+
+    {
+      type: "p",
+      text:
+        "From a technical perspective, NOVA FCT provided me with an incredibly strong foundation. Throughout five years, I was exposed to software engineering, algorithms, databases, distributed systems, artificial intelligence, cybersecurity, networking, operating systems, mathematics, and countless other topics."
+    },
+
+    {
+      type: "p",
+      text:
+        "More importantly, the university taught me how to learn independently. Technology changes constantly. The specific tools I use today may be completely different in ten years. The ability to adapt, learn, and solve unfamiliar problems is ultimately more valuable than any individual technology."
+    },
+
+    {
+      type: "p",
+      text:
+        "University also taught me time management, self-discipline, critical thinking, communication, teamwork, and perhaps the most important skill of all: how to figure things out when no one has the answer."
+    },
+
+    {
+      type: "p",
+      text:
+        "Engineering often feels less about knowing solutions and more about being comfortable searching for them. That mindset has proven invaluable far beyond the classroom."
+    },
+
+    { type: "h2", text: "Looking Back" },
+
+    {
+      type: "p",
+      text:
+        "Today, when I think about NOVA FCT, I do not immediately remember specific grades, assignments, or exams. What I remember are the people, the challenges, the growth, and the countless moments that gradually transformed me."
+    },
+
+    {
+      type: "p",
+      text:
+        "I arrived as an uncertain eighteen-year-old trying to choose a future. I left as a software engineer with the confidence to build one."
+    },
+
+    {
+      type: "quote",
+      text:
+        "University didn't just teach me computer science. It taught me how to learn, how to adapt, and how to become the person I wanted to be."
+    }
+  ]
+},
+{
+  id: 10,
+  slug: "building-software-with-in-nova",
+  title: "Building Software with In-Nova",
+  subtitle: "What it feels like to build real products with friends, for real clients, while still being a student",
+  date: "2024-09-02",
+  category: "work",
+  tags: [
+    "React",
+    "React Native",
+    "Node.js",
+    "Agile",
+    "Junior Enterprise",
+    "Teamwork",
+    "Software Engineering"
+  ],
+  coverImage: ph("innova_kggygw", 1280, 720),
+  excerpt:
+    "My experience as a Software Project Member at In-Nova, where I worked on real client projects, learned through collaboration with peers, and discovered what it means to build software in a fast-paced junior enterprise environment.",
+  readTime: "10 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Being part of In-Nova, the junior enterprise at NOVA School of Science and Technology, was one of the most formative experiences of my university years. It was the first time I worked in an environment that closely resembled a real software company, while still being surrounded by colleagues who were also my classmates and friends."
+    },
+
+    {
+      type: "p",
+      text:
+        "As a Software Project Member, I had the opportunity to contribute to multiple client-facing projects, including two mobile applications and one web platform. These were not academic exercises. They were real products built for real clients, with real expectations and real deadlines."
+    },
+
+    { type: "h2", text: "Learning by Doing" },
+
+    {
+      type: "p",
+      text:
+        "One of the most valuable aspects of In-Nova was how much I learned by doing. Instead of following structured lectures or predefined exercises, we were constantly challenged to figure things out ourselves."
+    },
+
+    {
+      type: "p",
+      text:
+        "We worked with technologies such as React, React Native, Node.js, JavaScript, Java, Docker, Kubernetes, SQL, Firebase, and Google Cloud Platform, often selecting and learning them based on the needs of each project."
+    },
+
+    {
+      type: "p",
+      text:
+        "Most of the time, no one had all the answers. We had to research, experiment, debug, and teach each other. That independence shaped the way I approach engineering today. It taught me that being a software engineer is less about knowing everything and more about knowing how to learn quickly and effectively."
+    },
+
+    { type: "h2", text: "Building With Friends" },
+
+    {
+      type: "p",
+      text:
+        "What made In-Nova truly special was the people. We were not just colleagues — we were classmates, friends, and peers navigating the same stage of life together."
+    },
+
+    {
+      type: "p",
+      text:
+        "We would spend long hours after lectures working on projects, debating architecture decisions, choosing between technologies, and trying to convince each other of the best technical approach."
+    },
+
+    {
+      type: "p",
+      text:
+        "Those discussions were often intense, but always constructive. Whether it was deciding between backend frameworks, structuring a mobile app, or designing a database schema, every opinion mattered."
+    },
+
+    {
+      type: "p",
+      text:
+        "And after those long working sessions, we would often switch off from engineering mode and simply enjoy being students together — sharing dinners, going out in Lisbon, or celebrating small milestones after releasing a feature or finishing a sprint."
+    },
+
+    { type: "h2", text: "Real Impact, Real Responsibility" },
+
+    {
+      type: "p",
+      text:
+        "Because In-Nova is a small and fast-moving organization, every contribution had a visible impact. You could directly see how your work affected project outcomes, client satisfaction, and the company’s overall progress."
+    },
+
+    {
+      type: "p",
+      text:
+        "At the end of the year, seeing not only financial goals but also operational and learning objectives being met and exceeded created a strong sense of collective achievement. It was proof that consistent effort from a small team can create meaningful results."
+    },
+
+    {
+      type: "p",
+      text:
+        "That sense of ownership was incredibly motivating. It made every feature, every fix, and every deployment feel important."
+    },
+
+    { type: "h2", text: "The Thirst Project Experience" },
+
+    {
+      type: "p",
+      text:
+        "One of the most meaningful projects I worked on during my time at In-Nova was the Thirst Project Portugal mobile application."
+    },
+
+    {
+      type: "p",
+      text:
+        "This project stood out not only because of its technical challenges, but because of its mission. The application supported the coordination of over 1000 volunteers from the Thirst Project, a non-profit organization focused on fighting water scarcity in Africa by raising funds through students to build wells in communities in need. The platform helped improve organization, communication, and engagement within this large-scale volunteer network."
+    },
+
+    {
+      type: "p",
+      text:
+        "I contributed to the frontend architecture using React Native, as well as design decisions and communication with stakeholders. Being part of a project with such a strong social impact made the experience especially meaningful to me."
+    },
+
+    {
+      type: "p",
+      text:
+        "It reminded me that software is not only about efficiency or performance — it can also be a tool for coordination, community building, and real-world change."
+    },
+
+    {
+      type: "img",
+      url: ph("thirstProject_vrf4dn", 1280, 720),
+      caption:
+        "Thirst Project Portugal website — https://thirstproject.pt/"
+    },
+
+    { type: "h2", text: "Growing as an Engineer" },
+
+    {
+      type: "p",
+      text:
+        "Looking back, In-Nova was where I truly started to grow into a more independent software engineer. It was where I learned how to work in Agile teams, how to deliver under pressure, how to communicate technical decisions, and how to take responsibility for my work."
+    },
+
+    {
+      type: "p",
+      text:
+        "It was also where I learned that engineering is deeply collaborative. No matter how strong your individual skills are, building real products always requires teamwork, trust, and shared commitment."
+    },
+
+    {
+      type: "p",
+      text:
+        "Most importantly, it was where I experienced the transition from student projects to real-world software development. That shift changed the way I see technology and my role within it."
+    },
+
+    {
+      type: "quote",
+      text:
+        "Some of the best lessons in engineering do not come from lectures — they come from building things with people who are learning alongside you."
+    }
+  ]
+},
+{
+  id: 11,
+  slug: "working-as-software-engineer-at-opensoft",
+  title: "Working as a Software Engineer at Opensoft",
+  subtitle: "My first real industry experience building systems used by thousands of citizens and public institutions",
+  date: "2025-10-18",
+  category: "work",
+  tags: [
+    "Opensoft",
+    "Software Engineering",
+    "Java",
+    "Spring Boot",
+    "React",
+    "Flutter",
+    "Azure",
+    "Public Sector",
+    "CI/CD"
+  ],
+  coverImage: ph("opensoft_uphmvp", 1280, 720),
+  excerpt:
+    "My experience as a Software Engineer at Opensoft, where I worked on large-scale government systems used by millions of citizens, learned production-grade development, and grew from student to professional engineer.",
+  readTime: "16 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Joining Opensoft was my first real experience working as a Software Engineer in industry. Until then, everything I had built lived in the context of university projects, hackathons, or student initiatives. Suddenly, I was working on systems used by real citizens, real institutions, and real government agencies."
+    },
+
+    {
+      type: "p",
+      text:
+        "It was both exciting and intimidating. I quickly realized that while university had given me a strong foundation, the real world of software engineering required a much deeper level of precision, responsibility, and understanding of how systems behave in production."
+    },
+
+    {
+      type: "p",
+      text:
+        "In many ways, this was where I truly became a Software Engineer."
+    },
+
+    { type: "h2", text: "Learning the Reality of Production Systems" },
+
+    {
+      type: "p",
+      text:
+        "One of the biggest differences from university was the scale and complexity of the systems I was working on. Every decision had consequences — for performance, security, maintainability, and user experience."
+    },
+
+    {
+      type: "p",
+      text:
+        "I learned that writing code is only a small part of the job. Understanding architecture, legacy systems, deployment pipelines, testing strategies, and stakeholder requirements is just as important."
+    },
+
+    {
+      type: "p",
+      text:
+        "I also learned that clean code is not just about style — it is about collaboration, long-term maintainability, and making systems understandable for entire teams, not just individuals."
+    },
+
+    { type: "h2", text: "Starting With Challenges" },
+
+    {
+      type: "p",
+      text:
+        "The beginning was not easy. University prepares you with strong theoretical knowledge, but working in a production environment is different. The technologies are more complex, the workflows are stricter, and the expectations are much higher."
+    },
+
+    {
+      type: "p",
+      text:
+        "I often felt that I was learning a completely new way of thinking about software engineering. Concepts like CI/CD pipelines, production monitoring, legacy system migration, and enterprise-level architecture were things I had only briefly encountered before."
+    },
+
+    {
+      type: "p",
+      text:
+        "I am deeply grateful to my colleagues at Opensoft, who were always patient and generous with their time. They explained concepts, reviewed my work, and helped me understand not only how things worked, but why they were done in a certain way."
+    },
+
+    { type: "h2", text: "Project: Embassy of Cape Verde Digital Services" },
+
+    {
+      type: "p",
+      text:
+        "One of my first major projects was developing the web and mobile platforms for the Embassy of the Government of Cape Verde."
+    },
+
+    {
+      type: "p",
+      text:
+        "This system enabled secure citizen-facing digital services used by over 50,000 users. It was my introduction to building production-grade applications with real-world impact."
+    },
+
+    {
+      type: "p",
+      text:
+        "Throughout the project, I worked across both frontend and backend systems, developing user interfaces, integrating REST APIs, implementing business logic, and ensuring secure communication between different services. It exposed me to the challenges of building applications that handle sensitive citizen data and reinforced the importance of security, reliability, and maintainability in government systems."
+    },
+
+    {
+      type: "p",
+      text:
+        "One of the most technically challenging and rewarding features I worked on was an AI-powered document translation pipeline. The goal was to allow citizens to translate official documents, such as birth certificates, into another language while preserving their legal structure and validity. To achieve this, I built a workflow that extracted text from uploaded documents using OCR, translated the content into the user's selected language, and then generated a new document matching the official format of the destination country."
+    },
+
+    {
+      type: "p",
+      text:
+        "What made this particularly complex was that official documents vary significantly between countries. A birth certificate from one country can have a completely different structure, layout, terminology, and required fields compared to another. This meant that a simple text extraction and translation process was not enough. I had to train and configure AI models using Azure AI Services to recognize different document templates, correctly identify the relevant information, and map it into the corresponding format of the target country's official document."
+    },
+
+    {
+      type: "p",
+      text:
+        "I found this challenge especially fascinating because it combined several areas of technology that I had never worked with simultaneously before: artificial intelligence, OCR, document processing, workflow automation, and internationalization. It required much more than simply writing code; it involved understanding how legal documents are structured, how machine learning models interpret information, and how to ensure the final output remained accurate and trustworthy."
+    },
+
+    {
+      type: "p",
+      text:
+        "Emotionally, it was incredibly rewarding to know that something I helped build was being used by real citizens for essential administrative processes. Knowing that the platform could simplify interactions between citizens and public institutions, while making important services more accessible, gave a deeper purpose to the work beyond the technical challenges themselves."
+    },
+
+    { type: "h2", text: "Project: Portuguese Tax and Customs Authority — Tax Benefit Platform" },
+
+    {
+      type: "p",
+      text:
+        "Another major project was the Tax Benefit Management Platform for the Portuguese Tax and Customs Authority, serving both internal employees and millions of citizens."
+    },
+
+    {
+      type: "p",
+      text:
+        "This project involved migrating parts of a legacy system into a modern architecture using React and Spring Boot, while maintaining system stability and ensuring continuity of service."
+    },
+
+    {
+      type: "p",
+      text:
+        "Working on both employee-facing systems (around 10K+ users) and citizen-facing interfaces (18M+ users) gave me a strong sense of responsibility and scale that I had never experienced before."
+    },
+
+    {
+      type: "p",
+      text:
+        "This project taught me how to work with large, complex systems where every change must be carefully considered, tested, and validated."
+    },
+
+    { type: "h2", text: "Project: EFAPI and EORI Systems" },
+
+    {
+      type: "p",
+      text:
+        "I also contributed to EFAPI and EORI enterprise platforms, again for the Portuguese Tax and Customs Authority, supporting secure APIs, backend integrations, and SQL-driven systems used by over 250,000 users."
+    },
+
+    {
+      type: "p",
+      text:
+        "What made this project particularly interesting was the complexity of the business domain. Unlike many applications where the challenge is primarily technical, these platforms required a deep understanding of regulations, administrative processes, and the needs of different stakeholders. It taught me how important it is to understand the problem behind the software, not just the software itself."
+    },
+
+    { type: "h2", text: "DevOps, Testing, and Production Thinking" },
+
+    {
+      type: "p",
+      text:
+        "Beyond feature development, I worked with CI/CD pipelines, automated testing frameworks like JUnit and Mockito, and static code analysis tools such as SonarQube."
+    },
+
+    {
+      type: "p",
+      text:
+        "I learned how important testing is in preventing regressions and ensuring system stability. I also learned how deployment pipelines and containerization with Docker on Microsoft Azure make modern software delivery possible at scale."
+    },
+
+    { type: "h2", text: "Technical and Personal Growth" },
+
+    {
+      type: "p",
+      text:
+        "Across all projects, my technical skills grew significantly. I gained hands-on experience with Java, Spring Boot, React, Flutter, Kotlin, Swift, SQL, Azure, Docker, CI/CD pipelines, and API design."
+    },
+
+    {
+      type: "p",
+      text:
+        "But beyond technical skills, I developed something even more important: professional maturity. I learned how to communicate in teams, how to handle production pressure, how to ask better questions, and how to take responsibility for my work."
+    },
+
+    {
+      type: "p",
+      text:
+        "I also learned how important it is to stay humble in this field. There is always more to learn, and every system has complexities that only become visible when you are responsible for maintaining it in production."
+    },
+
+    { type: "h2", text: "Looking Back" },
+
+    {
+      type: "p",
+      text:
+        "Looking back, Opensoft was the place where theory became reality for me. It was where I transitioned from building projects for learning purposes to building systems that support real institutions and real citizens."
+    },
+
+    {
+      type: "p",
+      text:
+        "It was not always easy, but it was deeply transformative. I left with stronger technical skills, a much deeper understanding of software engineering, and a clear sense of what it means to build systems that matter."
+    },
+
+    {
+      type: "quote",
+      text:
+        "University gave me the foundation. Opensoft taught me how to build real software for real people."
+    }
+  ]
+}
 ];

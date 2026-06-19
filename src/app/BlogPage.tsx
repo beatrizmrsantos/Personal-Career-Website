@@ -186,11 +186,12 @@ export default function BlogPage() {
     };
   }, []);
 
-  const featuredPost = POSTS.find((p) => p.featured);
+  const sorted = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
+  const featuredPost = sorted.find((p) => p.featured);
   const gridPosts =
     activeCategory === "all"
-      ? POSTS.filter((p) => !p.featured)
-      : POSTS.filter((p) => p.category === activeCategory);
+      ? sorted.filter((p) => !p.featured)
+      : sorted.filter((p) => p.category === activeCategory);
 
   const countFor = (cat: Filter) =>
     cat === "all" ? POSTS.length : POSTS.filter((p) => p.category === cat).length;
