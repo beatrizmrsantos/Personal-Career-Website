@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router";
-import { motion } from "motion/react";
-import { ArrowLeft, Clock, Calendar, Tag } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { ArrowLeft, Clock, Calendar, Tag, X } from "lucide-react";
 import {
   POSTS, CATEGORY_COLORS, CATEGORY_LABELS,
-  type ContentBlock,
+  type ContentBlock, type GalleryItem,
 } from "@/content/blog";
 import { profile } from "@/content/text";
 
@@ -11,6 +12,176 @@ import { profile } from "@/content/text";
 
 function formatDate(d: string) {
   return new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+}
+
+// Replace c_fill crop with c_limit so the full original aspect ratio is shown
+function toOriginalUrl(url: string) {
+  return url.replace(/w_\d+,h_\d+,c_fill/, "w_1920,h_1920,c_limit");
+}
+
+// ─── Editorial photo grid (3 or 5 photos, asymmetric layout) ─────────────────
+
+function GalleryBlock({ photos }: { photos: GalleryItem[] }) {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const n = photos.length;
+
+  // 3-photo: 3 equal columns, single row
+  // 4-photo: 3 verticals on top row + 1 horizontal full-width below
+  // 5-photo: [0] large left spans 2 rows · [1][2] top right · [3][4] bottom right
+  const positions3 = [
+    { gridColumn: "1", gridRow: "1" },
+    { gridColumn: "2", gridRow: "1" },
+    { gridColumn: "3", gridRow: "1" },
+  ];
+  const positions4 = [
+    { gridColumn: "1", gridRow: "1" },
+    { gridColumn: "2", gridRow: "1" },
+    { gridColumn: "3", gridRow: "1" },
+    { gridColumn: "4", gridRow: "1" },
+  ];
+  const positions5 = [
+    { gridColumn: "1", gridRow: "1 / 3" },
+    { gridColumn: "2", gridRow: "1" },
+    { gridColumn: "3", gridRow: "1" },
+    { gridColumn: "2", gridRow: "2" },
+    { gridColumn: "3", gridRow: "2" },
+  ];
+  const positions = n === 3 ? positions3 : n === 4 ? positions4 : positions5;
+  const gridCols = n === 4 ? "1fr 1fr 1fr 1fr" : "1fr 1fr 1fr";
+  const gridRows = n === 3 ? "320px" : n === 4 ? "280px" : "200px 200px";
+
+  function PhotoItem({ photo, i, height, width }: { photo: GalleryItem; i: number; height?: string; width?: string }) {
+    return (
+      <motion.div
+        key={i}
+        style={{ overflow: "hidden", cursor: "zoom-in", height, width, borderRadius: "10px" }}
+        onClick={() => setLightbox(i)}
+        className="relative group"
+      >
+        <motion.img
+          src={photo.url}
+          alt={photo.caption}
+          className="w-full h-full object-cover"
+          whileHover={{ scale: 1.04 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        />
+        {photo.caption && (
+          <div
+            className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{ background: "linear-gradient(to top, rgba(13,11,22,0.82) 0%, transparent 55%)" }}
+          >
+            <p className="px-3 pb-2.5 text-[10px] font-mono text-white/70 leading-tight">
+              {photo.caption}
+            </p>
+          </div>
+        )}
+      </motion.div>
+    );
+  }
+
+  return (
+    <>
+      <figure className="my-10">
+        {/* 1 photo — centred */}
+        {n === 1 && (
+          <div className="flex justify-center">
+            <div style={{ width: "65%", height: "340px" }}>
+              <PhotoItem photo={photos[0]} i={0} height="340px" width="100%" />
+            </div>
+          </div>
+        )}
+
+        {/* 2 photos — side by side, centred */}
+        {n === 2 && (
+          <div className="flex justify-center gap-[5px]">
+            {photos.map((photo, i) => (
+              <div key={i} style={{ width: "48%", height: "320px" }}>
+                <PhotoItem photo={photo} i={i} height="320px" width="100%" />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* 3, 4, 5 photos — grid */}
+        {n >= 3 && (
+          <div
+            className="-mx-6 md:-mx-16"
+            style={{
+              display: "grid",
+              gridTemplateColumns: gridCols,
+              gridTemplateRows: gridRows,
+              gap: "5px",
+            }}
+          >
+            {photos.slice(0, 5).map((photo, i) => (
+              <motion.div
+                key={i}
+                style={{ ...positions[i], overflow: "hidden", cursor: "zoom-in" }}
+                onClick={() => setLightbox(i)}
+                className="relative group"
+              >
+                <motion.img
+                  src={photo.url}
+                  alt={photo.caption}
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.04 }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
+                />
+                {photo.caption && (
+                  <div
+                    className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: "linear-gradient(to top, rgba(13,11,22,0.82) 0%, transparent 55%)" }}
+                  >
+                    <p className="px-3 pb-2.5 text-[10px] font-mono text-white/70 leading-tight">
+                      {photo.caption}
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </figure>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightbox !== null && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center"
+            style={{ backgroundColor: "rgba(13,11,22,0.94)" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightbox(null)}
+          >
+            <button
+              className="absolute top-5 right-5 text-white/50 hover:text-white transition-colors"
+              onClick={() => setLightbox(null)}
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <motion.img
+              key={lightbox}
+              src={toOriginalUrl(photos[lightbox].url)}
+              alt={photos[lightbox].caption}
+              className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl"
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+            {photos[lightbox].caption && (
+              <p className="absolute bottom-6 left-0 right-0 text-center text-xs font-mono text-white/40">
+                {photos[lightbox].caption}
+              </p>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 }
 
 // ─── Content block renderer ───────────────────────────────────────────────────
@@ -83,6 +254,8 @@ function Block({ block, accentColor }: { block: ContentBlock; accentColor: strin
           ))}
         </ul>
       );
+    case "gallery":
+      return block.photos?.length ? <GalleryBlock photos={block.photos} /> : null;
     default:
       return null;
   }

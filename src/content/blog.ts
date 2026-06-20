@@ -2,12 +2,18 @@
 
 export type Category = "tech" | "travel" | "photography" | "life" | "work" | "events";
 
+export interface GalleryItem {
+  url: string;
+  caption?: string;
+}
+
 export interface ContentBlock {
-  type: "p" | "h2" | "h3" | "quote" | "img" | "ul";
+  type: "p" | "h2" | "h3" | "quote" | "img" | "ul" | "gallery";
   text?: string;
   items?: string[];
   url?: string;
   caption?: string;
+  photos?: GalleryItem[];
 }
 
 export interface BlogPost {
@@ -134,7 +140,7 @@ export const POSTS: BlogPost[] = [
   date: "2026-05-10",
   category: "travel",
   tags: ["Travel", "Reflection", "Growth", "Culture"],
-  coverImage: ph("asia-travel-map", 1280, 720),
+  coverImage: ph("plain_gzst5i", 1280, 720),
   excerpt:
     "What started as a six-month trip across Asia became one of the most transformative experiences of my life, changing the way I think about success, happiness, relationships, and the future I want to build.",
   readTime: "10 min",
@@ -145,7 +151,7 @@ export const POSTS: BlogPost[] = [
         "Six months ago, I decided to step away from my routine and travel across Asia. What started as a childhood dream of visiting ten countries became something much bigger than travel itself. It became an opportunity to disconnect from daily life, challenge my assumptions, and gain a new perspective on both my personal and professional future."
     },
 
-    { type: "h2", text: "An eye-opening experience" },
+   { type: "h2", text: "An eye-opening experience" },
 
     {
       type: "p",
@@ -156,7 +162,237 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "Of course, there were the obvious cultural differences. Food was often much simpler than I expected, yet incredibly flavourful and almost always spicy, with some unexpected surprises along the way — like durian, a fruit I had heard about countless times but was still completely unprepared for. Even its smell felt like an experience on its own. Beyond food, the languages, clothing, architecture, and daily routines all reinforced the same idea: there is no single way to live."
+        "Every country introduced me to new ways of living, eating, communicating, celebrating, and understanding the world. The languages, clothing, architecture, religions, social norms, and everyday routines were often completely different from what I had grown up with. Yet despite those differences, there was something remarkably familiar about people everywhere: the importance of family, community, friendship, and finding meaning in daily life."
+    },
+
+    {
+      type: "p",
+      text:
+        "What fascinated me most was how deeply culture could influence things I had always considered universal. Even simple activities such as sharing a meal, greeting someone, expressing gratitude, or spending free time could look completely different depending on where I was. The more countries I visited, the more I realized there is no single 'correct' way to live."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("neckVillage_umpbuo", 900, 600), caption: "Long Neck Karen Weaver - Northern Thailand" },
+        { url: ph("floatingVillage_fkvrh0", 600, 400), caption: "Floating Market - Thailand" },
+        { url: ph("musicJapan_jdeyxq", 600, 400), caption: "Bamboo Grove Musician - Japan" },
+        { url: ph("northVietnameDressing_hlhybq", 1200, 600), caption: "Traditional Dress - Northern Vietnam" },
+      ],
+    },
+
+    { type: "h2", text: "A Journey Through Food" },
+
+    {
+      type: "p",
+      text:
+        "If there was one thing that immersed me in local cultures faster than anything else, it was food. Every destination introduced me to new ingredients, flavours, cooking techniques, and traditions. Some meals felt comfortingly familiar, while others challenged every expectation I had."
+    },
+
+    {
+      type: "p",
+      text:
+        "One of the most memorable discoveries was durian. Before arriving in Southeast Asia, I had heard countless stories about the fruit famous for its incredibly strong smell. What I did not realize was how important it is culturally throughout the region. In countries such as Thailand, and Vietnam, durian is often referred to as the 'King of Fruits' and is celebrated almost as a national treasure. It appeared everywhere: in markets, street stalls, desserts, ice creams, cakes, candies, and even coffee. People would travel specifically to try famous varieties, discuss their favourites with surprising passion, and proudly introduce visitors to their country's best durian."
+    },
+
+    {
+      type: "p",
+      text:
+        "The smell was every bit as powerful as people claim. In fact, many hotels, public transport systems, and indoor spaces explicitly ban bringing durian inside. Yet once I managed to overcome the initial shock, I understood why so many people loved it. Its flavour was unlike anything I had ever tasted before: sweet, creamy, complex, and impossible to compare to any fruit I knew."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("durian_cfwijd", 900, 600), caption: "Durian, the 'King of Fruits' of Southeast Asia" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Southeast Asia also introduced me to foods I had never imagined seeing outside of documentaries. Night markets frequently displayed trays filled with fried crickets, grasshoppers, larvae, silkworm pupae, scorpions, and even snakes. In some regions, crocodile and rat were also considered normal sources of protein. What initially felt shocking quickly became another reminder of how strongly food is shaped by geography, history, and available resources. The experience taught me that many of our ideas about what is 'normal' to eat are simply the result of where and how we grow up."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("scorpians_qnzsvk", 600, 400), caption: "Insect & Scorpion Skewers - Thailand Night Market" },
+        { url: ph("crocodiles_of8ol7", 600, 400), caption: "Crocodile BBQ Stand - Thailand Night Market" },
+        { url: ph("insetcs_gmu9yh", 600, 400), caption: "Fried Insect Market Stall - Thailand" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Beyond the unusual ingredients, I quickly learned that spicy food in Asia operates on a completely different scale. Nowhere was this more obvious than in China and South Korea. Many dishes that locals considered only mildly spicy were already beyond my limits. There were moments when I genuinely felt unable to try what seemed like 95% of the menu."
+    },
+
+    {
+      type: "p",
+      text:
+        "In some Sichuan restaurants, I could smell the chilli and peppercorns before even entering the building. Walking past food stalls was enough to feel the spice in the air. While I gradually built some tolerance, I never quite reached local standards."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("koreanMarket_xcqg99", 600, 400), caption: "Korean Street Food Stall" },
+        { url: ph("spicy_ai7sbb", 600, 400), caption: "Sichuan Spice Market - China" },
+        { url: ph("koreanSpice_urgq3h", 600, 400), caption: "Myeongdong Tteokbokki Street Cart - South Korea" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "What surprised me most was the incredible diversity of flavours. Southeast Asian cuisine often felt simple yet remarkably fresh. Meals frequently revolved around rice, vegetables, herbs, grilled meats, seafood, and ingredients sourced locally. Despite using relatively few components, the resulting flavours were often vibrant and memorable."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("baliFood_thhs4f", 600, 400), caption: "Indonesian Warung Lunch - Bali" },
+        { url: ph("vietnameErbs_cwfjzu", 600, 400), caption: "Vietnamese Noodle Soup Feast" },
+        { url: ph("vietnameFood_aqjo7o", 600, 400), caption: "Vietnamese Street Lunch" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "As I travelled further north, particularly through Japan, South Korea, and China, I encountered increasingly complex culinary traditions. Dishes often involved intricate preparation methods, carefully balanced flavours, countless seasonings, and centuries of refinement. It felt less like eating and more like experiencing a craft that had been perfected over generations."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("bowls_yirwp7", 600, 400), caption: "Sichuan Noodle Bowls - China" },
+        { url: ph("koreanBarbecue_ahss70", 600, 400), caption: "Korean Barbecue - South Korea" },
+        { url: ph("curry_rcf4zk", 600, 400), caption: "Tonkatsu Curry Rice - Japan" },
+        { url: ph("ramen_wj8bjj", 600, 400), caption: "Tonkotsu Ramen - Japan" },
+        { url: ph("chineseDish_kpxhia", 600, 400), caption: "Chinese Restaurant Set Meal" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "And then there was rice. Rice was everywhere. Breakfast, lunch, dinner, snacks, desserts — it seemed impossible to escape. Whenever rice was absent, noodles usually took its place. Noodle soups appeared at every hour of the day, including breakfast. Seeing people happily eating steaming bowls of noodles and broth at 8 a.m. in temperatures above 30°C initially seemed bizarre to me, but eventually it became part of the rhythm of daily life."
+    },
+
+    {
+      type: "p",
+      text:
+        "The fruit was equally unforgettable. Markets overflowed with mangoes, dragon fruit, mangosteen, lychees, rambutan, jackfruit, papaya, and countless varieties I had never seen before. Everything tasted fresher, sweeter, and more vibrant than what I was accustomed to finding in Europe."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("fruit_f6nfsa", 600, 400), caption: "Tropical Fruit Plate & Mango Smoothie" },
+        { url: ph("chineseFruit_jgfitq", 600, 400), caption: "Fruit Vendor - China" },
+        { url: ph("coconut_qoz0du", 600, 400), caption: "Fresh Coconut" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, food became far more than something I ate during my travels. It became one of the most direct ways of understanding local culture. Every ingredient, flavour, cooking method, and dining custom told a story about geography, history, climate, trade, family traditions, and the people who called those places home."
+    },
+
+    { type: "h2", text: "The Adventures I'll Never Forget" },
+
+    {
+      type: "p",
+      text:
+        "While the cultural lessons and personal reflections became the most meaningful part of the journey, it would be impossible to talk about six months across Asia without mentioning the incredible experiences that filled those months. There were moments that felt almost unreal — the kind of memories that remain vivid long after the details of everyday life fade away."
+    },
+
+    {
+      type: "p",
+      text:
+        "One of the moments that left me speechless was snorkeling in Indonesia. I had seen photographs of coral reefs before, but nothing prepared me for seeing them with my own eyes. Beneath the surface was an entirely different world: vibrant corals, countless colourful fish, sea turtles gliding effortlessly through the water, and giant rays moving gracefully beneath me. Swimming around the famous Nest underwater statues in the Gili Islands felt almost surreal, as if I had entered another planet."
+    },
+
+    {
+      type: "p",
+      text:
+        "Equally unforgettable was the Ha Giang Loop in northern Vietnam. For four days, I travelled through some of the most spectacular mountain landscapes I have ever seen, riding along winding roads surrounded by towering peaks, deep valleys, rice terraces, and remote villages. Beyond the scenery, what made the experience special were the people. Sharing meals with local families, trying traditional dishes, and experiencing everyday life in places rarely visited by outsiders gave me a completely different perspective on Vietnam."
+    },
+
+    {
+      type: "p",
+      text:
+        "Laos surprised me in ways I never expected. Watching the landscape from a hot-air balloon at sunrise and later soaring above it while paramotoring gave me a completely different appreciation for the country's beauty. Looking down at rivers, villages, mountains, and endless greenery from above created a feeling of freedom that is difficult to describe."
+    },
+
+    {
+      type: "p",
+      text:
+        "One of the most peaceful experiences of the entire journey was travelling by slow boat along the Mekong River from Thailand to Luang Prabang. For three days, we drifted through northern Laos, surrounded by silence, jungle-covered mountains, and small riverside communities. We watched fishermen casting their nets, children playing in the water, and elephants wandering along the riverbanks. It felt like stepping into a completely different pace of life."
+    },
+
+    {
+      type: "p",
+      text:
+        "Thailand provided some of the most beautiful natural landscapes I encountered. The towering limestone cliffs rising from turquoise waters, the jungle-covered islands, and the crystal-clear beaches often looked too perfect to be real. Khao Sok National Park was a particular highlight. Exploring the lake, snorkeling in the middle of the rainforest, and joining an early morning safari surrounded by mist-covered mountains made me feel completely immersed in nature."
+    },
+
+    {
+      type: "p",
+      text:
+        "Few places impressed me as much as Angkor Wat in Cambodia. Watching the sun rise behind one of the most iconic temples ever built is one of those experiences that photographs simply cannot capture. Seeing an entire ancient city emerge from the darkness as the sky slowly changed colours was a powerful reminder of humanity's ability to create extraordinary things."
+    },
+
+    {
+      type: "p",
+      text:
+        "Another deeply memorable experience was spending time with rescued elephants in Thailand. Being able to observe these animals up close, watching their intelligence, social behaviour, and gentle nature, gave me a newfound appreciation for them and for the conservation efforts protecting them."
+    },
+
+    {
+      type: "p",
+      text:
+        "Indonesia also gave me some of the most dramatic sunrises I have ever witnessed. Standing before multiple volcanoes emerging from the clouds at dawn felt almost otherworldly. Later, hiking an active volcano and seeing its raw power firsthand was both humbling and awe-inspiring."
+    },
+
+    {
+      type: "p",
+      text:
+        "As a lifelong fan of Avatar, visiting Zhangjiajie National Forest Park in China was particularly special. The towering sandstone pillars that inspired the floating mountains of Pandora looked even more spectacular in reality than in the film. Walking through those landscapes genuinely felt like entering a fantasy world."
+    },
+
+    {
+      type: "p",
+      text:
+        "China also allowed me to visit one of the Seven Wonders of the World: the Great Wall. Standing on a structure that stretches across mountains for thousands of kilometres was a reminder of how small we are compared to the scale of human history."
+    },
+
+    {
+      type: "p",
+      text:
+        "Japan gave me a different kind of wonder. Seeing Mount Fuji completely free of clouds is considered surprisingly rare, and I was fortunate enough to experience it in perfect conditions. Watching its symmetrical silhouette dominate the landscape felt almost unreal."
+    },
+
+    {
+      type: "p",
+      text:
+        "Some of the most meaningful memories came from simple moments. Releasing a lantern into the sky during New Year celebrations in Thailand, floating lanterns along the rivers of Vietnam, wandering through endless temples, visiting floating villages in Cambodia, exploring floating markets in Thailand, wearing traditional Korean clothing inside royal palaces, and learning local crafts during workshops all helped me connect more deeply with the cultures I was experiencing."
+    },
+
+    {
+      type: "p",
+      text:
+        "There were also countless smaller moments that together made the journey unforgettable: riding motorbikes through remote countryside roads, standing on breathtaking viewpoints after difficult hikes, exploring giant cave systems, discovering hidden waterfalls in Indonesia, seeing endless rice fields stretching across entire valleys, drifting through rivers surrounded by limestone mountains, spotting wildlife ranging from monkeys and elephants to turtles, rays, pandas, deer, dogs, and cats, and simply getting lost in some of the world's most vibrant cities."
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, what made these experiences so special was not only their beauty, but the feeling they created. Again and again, I found myself standing somewhere thinking, 'I can't believe I'm actually here.' Those moments of wonder, gratitude, and curiosity became some of the most valuable memories of the entire journey."
     },
 
     { type: "h2", text: "Different views on life" },
@@ -168,15 +404,43 @@ export const POSTS: BlogPost[] = [
     },
 
     {
+      type: "gallery",
+      photos: [
+        { url: ph("cambojaVillage_atlp7s",   600, 400),  caption: "Camboja Village" },
+        { url: ph("laosHouse_bqc25s",  900, 600),  caption: "Laos House" },
+        { url: ph("cambojaKids_iglm6s",  600, 400),  caption: "Camboja School" },
+      ],
+    },
+
+    {
       type: "p",
       text:
         "It made me question the mindset many of us grow up with — the constant pressure to achieve more, earn more, own more, and always look towards the next milestone. For the first time, I started to consider that sometimes what we already have may be enough. What struck me most was that many of the people I met had significantly less than what most of us in the West take for granted, yet often seemed happier and more content with their lives. It made me reflect on how easily we fall into the habit of comparing ourselves to those who have more, focusing on what we lack rather than appreciating what we already have. In many ways, we have more opportunities, comfort, and security than ever before, yet we often feel dissatisfied because our definition of “enough” keeps moving further away."
     },
 
     {
+      type: "gallery",
+      photos: [
+        { url: ph("workingLady_bbwl8y",   600, 400),  caption: "Village Road - Laos" },
+        { url: ph("thailandWeaver_pq3vgs",  900, 600),  caption: "Traditional Backstrap Weaving - Northern Thailand" },
+        { url: ph("vietnameKids_mnpsf9",  600, 400),  caption: "Hmong Girls with Flower Baskets - Northern Vietnam" },
+        { url: ph("vietnameWorkerd_fy5moc",  600, 400),  caption: "Street Vendor in Hanoi's Old Quarter" },
+      ],
+    },
+    
+    {
       type: "p",
       text:
         "I also met people with dreams they knew they might never be able to achieve because of financial limitations or restrictions imposed by the governments of their countries. Many of them worked incredibly hard, often spending twelve hours a day working simply to earn enough to support themselves and their families. Despite this, they remained optimistic, grateful, and hopeful. I spoke to people whose dream was simply to travel, to see Europe, or to experience places they had only ever seen online, knowing that such opportunities might realistically remain out of reach. Their resilience, humility, and ability to find joy despite circumstances that many of us would consider difficult left a lasting impression on me and made me appreciate just how fortunate I am."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("mama_m5djhb",   600, 400),  caption: "Local Vietnamese Grandmother" },
+        { url: ph("cambojaLady_sgakm4",  900, 600),  caption: "Boat Rider - Cambodia" },
+        { url: ph("thailandMan_csadsp",  600, 400),  caption: "Floating Market Vendor - Thailand" },
+      ],
     },
 
     { type: "h2", text: "Faith, spirituality, and meaning" },
@@ -185,6 +449,17 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "Another aspect that deeply influenced me was religion and spirituality. Growing up in Europe, I was familiar with a particular way of understanding faith. Throughout Asia, I encountered beliefs and philosophies that often focused more on mindfulness, kindness, inner peace, family, and the positive impact individuals can have on the world around them."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("monksCamboja_x0criz",   900, 600),  caption: "Monks on the Royal Palace - Cambodia" },
+        { url: ph("templeDourado_blxxei",  600, 400),  caption: "Wat Pho Temple Complex - Thailand" },
+        { url: ph("camboja_pdufsr",  600, 400),  caption: "Ta Prohm Temple - Angkor, Cambodia" },
+        { url: ph("templeThailand_ld9tae",  600, 400),  caption: "Wat Chiang Man - Thailand)" },
+        { url: ph("buda_wutjnz",  600, 400),  caption: "Golden Buddha Shrine - China" },
+      ],
     },
 
     {
@@ -200,11 +475,20 @@ export const POSTS: BlogPost[] = [
     },
 
     {
-    type: "p",
-    text:
-      "Another idea that fascinated me was the presence of spirits in everyday life. In many places, spirits were not seen as distant or abstract concepts, but as beings that coexist alongside us and remain connected to the physical world. Small shrines could be found outside homes, businesses, and even skyscrapers, with offerings made to bring protection, harmony, and good fortune. Whether or not one shares these beliefs, it was remarkable to see how naturally they were woven into daily life. It made me reflect on the different ways cultures seek meaning, connection, and comfort in things that cannot always be explained."
+      type: "p",
+      text:
+        "Another idea that fascinated me was the presence of spirits in everyday life. In many places, spirits were not seen as distant or abstract concepts, but as beings that coexist alongside us and remain connected to the physical world. Small shrines could be found outside homes, businesses, and even skyscrapers, with offerings made to bring protection, harmony, and good fortune. Whether or not one shares these beliefs, it was remarkable to see how naturally they were woven into daily life. It made me reflect on the different ways cultures seek meaning, connection, and comfort in things that cannot always be explained."
     },
-    
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("monks_fm5skz",   900, 600),  caption: "Monks in Prayer - Laos" },
+        { url: ph("japanPray_tbsskz",  600, 400),  caption: "Jizo Statues Shrine - Japan" },
+        { url: ph("chinaPray_k2tqif",  600, 400),  caption: " Incense Offering at a Buddhist Temple - China" },
+      ],
+    },
+
     { type: "h2", text: "Beauty through a different lens" },
 
     {
@@ -214,9 +498,24 @@ export const POSTS: BlogPost[] = [
     },
 
     {
+      type: "gallery",
+      photos: [
+        { url: ph("mask_l21vs5",    900, 600),  caption: "Chinese woman shielding her face from the sun" },
+      ],
+    },
+
+    {
       type: "p",
       text:
         "Makeup was often used very differently from what I was accustomed to seeing in the West. Rather than dramatically changing someone's appearance, it was frequently applied to subtly enhance features such as bright skin, larger-looking eyes, soft blush tones, and an overall youthful look. It was a reminder that beauty standards are deeply cultural and far less universal than we often assume."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("makeup_xx9hze",    900, 600),  caption: "Chinese makeup application" },
+        { url: ph("chineseGirls_oust6a",    900, 600),  caption: "Chinese girls wearing traditional clothing" },
+      ],
     },
 
     { type: "h2", text: "Returning home"},
@@ -243,7 +542,14 @@ export const POSTS: BlogPost[] = [
       type: "quote",
       text:
         "The greatest thing travel gave me was not memories, but perspective."
-    }
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("backpacking_j1brib",    900, 600),  caption: "Returning home" },
+      ],
+    },
   ]
   },
   {
