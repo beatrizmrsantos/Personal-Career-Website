@@ -1372,18 +1372,79 @@ function ContactSection() {
   );
 }
 
+// ─── Nav page links (add more here when ready) ───────────────────────────────
+
+const NAV_PAGES = [
+  { label: "Blog", to: "/blog", color: "#9b7fc4" },
+  // { label: "Beyond Code", to: "/me", color: "#c4708a" },
+];
+
 // ─── Navigation ────────────────────────────────────────────────────────────────
 
 function Nav({ onNav }: { onNav: (id: string) => void }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 px-6 py-4 flex items-center justify-between"
       style={{ background: "linear-gradient(to bottom, rgba(19,17,29,0.95), rgba(19,17,29,0))" }}>
-      <div className="flex items-center gap-2.5">
-        <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#c4708a" }}>
-          <Globe className="w-3.5 h-3.5 text-white" />
-        </div>
-        <span className="text-sm font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>{profile.name}</span>
+
+      {/* Left side — toggles between logo and page links */}
+      <div className="flex items-center gap-4" style={{ minWidth: 0 }}>
+        <AnimatePresence mode="wait" initial={false}>
+          {!expanded ? (
+            <motion.button
+              key="logo"
+              onClick={() => setExpanded(true)}
+              className="flex items-center gap-2.5 group cursor-pointer"
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -8 }}
+              transition={{ duration: 0.18 }}
+            >
+              <div className="w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+                style={{ backgroundColor: "#c4708a" }}>
+                <Globe className="w-3.5 h-3.5 text-white" />
+              </div>
+              <span className="text-sm font-bold text-foreground/80 group-hover:text-foreground transition-colors"
+                style={{ fontFamily: "'Playfair Display', serif" }}>
+                {profile.name}
+              </span>
+            </motion.button>
+          ) : (
+            <motion.div
+              key="pages"
+              className="flex items-center gap-1"
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -8 }}
+              transition={{ duration: 0.18 }}
+            >
+              {/* Close / back to logo */}
+              <button
+                onClick={() => setExpanded(false)}
+                className="w-7 h-7 rounded-full flex items-center justify-center text-foreground/40 hover:text-foreground/80 hover:bg-white/5 transition-all mr-1"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+
+              {NAV_PAGES.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setExpanded(false)}
+                  className="px-3.5 py-1.5 rounded-full text-sm font-bold transition-all"
+                  style={{ fontFamily: "'Playfair Display', serif", color: item.color, backgroundColor: item.color + "15", border: `1px solid ${item.color}30` }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = item.color + "28")}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = item.color + "15")}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+
       <div className="hidden md:flex items-center gap-6">
         {navLinks.map((id) => (
           <button key={id} onClick={() => onNav(id)}
