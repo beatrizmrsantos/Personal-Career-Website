@@ -148,7 +148,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "Six months ago, I decided to step away from my routine and travel across Asia. What started as a childhood dream of visiting ten countries became something much bigger than travel itself. It became an opportunity to disconnect from daily life, challenge my assumptions, and gain a new perspective on both my personal and professional future."
+        "Six months ago, I decided to step away from my routine and travel across Asia. Over the following 6 months, I explored Thailand, Japan, Indonesia, South Korea, China, Vietnam, Cambodia, Laos, Singapore, and Hong Kong. What started as a childhood dream of exploring Asia became something much bigger than travel itself. It became an opportunity to disconnect from daily life, challenge my assumptions, and gain a new perspective on both my personal and professional future."
     },
 
    { type: "h2", text: "An eye-opening experience" },
@@ -314,142 +314,68 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "One of the most incredible experiences was snorkeling in Indonesia, particularly around the Gili Islands. The water was so clear that it often felt as though I was floating through an aquarium. I swam alongside sea turtles, rays, and thousands of colourful fish, surrounded by coral reefs unlike anything I had ever seen before. One of the highlights was visiting the famous Nest underwater statues, where art and nature seemed to blend into a single surreal landscape."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("turtle_snorkeling", 600, 400), caption: "Sea Turtle - Gili Islands, Indonesia" },
-        { url: ph("nest_statues", 600, 400), caption: "Nest Underwater Statues - Indonesia" },
-        { url: ph("manta_ray", 600, 400), caption: "Manta Ray Encounter - Indonesia" },
-        { url: ph("coral_reef", 600, 400), caption: "Coral Reefs - Indonesia" },
-      ],
+        "Some of the most magical experiences happened in nature. In Indonesia, I snorkelled through crystal-clear waters surrounded by vibrant coral reefs that looked like underwater gardens. I swam alongside sea turtles, watched rays glide effortlessly beneath me, and explored the famous underwater Nest statues in the Gili Islands. It felt like entering a completely different world, one that was peaceful, colourful, and full of life. Indonesia also gifted me countless waterfalls hidden deep within jungles, each one seemingly more spectacular than the last."
     },
 
     {
       type: "p",
       text:
-        "Another unforgettable adventure was completing the Ha Giang Loop in northern Vietnam. For four days I travelled by motorbike through some of the most spectacular landscapes I have ever seen. Endless mountain ranges, winding roads, deep valleys, and viewpoints that seemed to stretch forever. Yet what made the experience truly special were the people. Sharing meals with local families, staying in homestays, learning about traditions, and seeing daily life in remote villages gave me a much deeper understanding of the region than simply passing through as a tourist."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("hagiang_viewpoint", 600, 400), caption: "Ha Giang Loop - Vietnam" },
-        { url: ph("hagiang_local_food", 600, 400), caption: "Local Food - Northern Vietnam" },
-        { url: ph("hagiang_family", 600, 400), caption: "Meeting Local Families - Vietnam" },
-        { url: ph("hagiang_motorbike", 600, 400), caption: "Riding Through Ha Giang" },
-      ],
+        "One of the highlights of the entire journey was the Ha Giang Loop in northern Vietnam. For four days, I travelled through some of the most stunning mountain landscapes I have ever seen, riding along winding roads surrounded by towering peaks, deep valleys, and endless rice terraces. Beyond the scenery, what made the experience special were the interactions with local communities, sharing meals, learning about their traditions, and witnessing daily life in villages far removed from the modern world."
     },
 
     {
       type: "p",
       text:
-        "Laos gave me some of my most peaceful memories. Floating above mountains at sunrise in a hot air balloon felt almost dreamlike, while paramotoring offered a completely different perspective of the country. Seeing rivers, rice fields, villages, and mountains from the sky reminded me how small we are compared to the landscapes around us."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("laos_balloon", 600, 400), caption: "Hot Air Balloon - Laos" },
-        { url: ph("laos_paramotor", 600, 400), caption: "Paramotoring - Laos" },
-      ],
+        "In Laos, adventure took a completely different form. Floating high above Vang Vieng in a hot air balloon at sunrise allowed me to see rivers, mountains, and forests stretching endlessly towards the horizon. Later, paramotoring above the countryside offered an entirely new perspective on the landscape below. Yet one of my favourite memories in Laos was much slower. During a three-day boat journey along the Mekong River from Thailand to Luang Prabang, life seemed to pause. We travelled through silence, passing remote villages, fishermen casting their nets, children playing in the river, elephants wandering along the banks, and landscapes that felt untouched by time."
     },
 
     {
       type: "p",
       text:
-        "Some places felt almost too beautiful to be real. Khao Sok National Park in Thailand was one of them. Surrounded by towering limestone cliffs rising from emerald-green water, I spent my days kayaking, snorkeling, and exploring the jungle. A sunrise wildlife safari revealed monkeys, exotic birds, and other animals hidden within the forest, making me feel as though I had stepped into a nature documentary."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("khao_sok_lake", 600, 400), caption: "Khao Sok National Park - Thailand" },
-        { url: ph("khao_sok_safari", 600, 400), caption: "Morning Wildlife Safari" },
-      ],
+        "Thailand delivered some of the most iconic scenery of the trip. The beaches, with their turquoise waters and dramatic limestone mountains rising from the sea, were every bit as beautiful as the photographs suggest. In Khao Sok National Park, I explored one of the oldest rainforests in the world, snorkelled in emerald waters, and joined an early-morning wildlife safari surrounded by mist-covered mountains. Another unforgettable experience was spending time with rescued elephants and observing these incredible animals up close in an ethical environment. On New Year's Eve, releasing a lantern into the night sky became one of those simple yet powerful moments that symbolised hope, gratitude, and the excitement of everything still to come."
     },
 
     {
       type: "p",
       text:
-        "Watching the sunrise over Angkor Wat in Cambodia was one of the most emotional moments of the trip. Seeing the silhouette of one of the world's greatest archaeological sites slowly emerge from the darkness felt almost spiritual. Walking through the temples afterwards, surrounded by centuries of history, made me appreciate the incredible achievements of past civilizations."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("angkor_sunrise", 600, 400), caption: "Sunrise at Angkor Wat" },
-        { url: ph("angkor_temple", 600, 400), caption: "Angkor Temple Complex" },
-      ],
+        "Cambodia offered one of the most breathtaking sunrises I have ever witnessed. Watching the first light of day illuminate Angkor Wat was a moment I had dreamed about for years, and somehow reality exceeded expectations. Exploring the ancient temples afterwards felt like stepping into another era. The country also introduced me to floating villages, where entire communities live, work, and attend school on the water, providing a glimpse into a way of life unlike anything I had seen before."
     },
 
     {
       type: "p",
       text:
-        "In Thailand, I also spent time with rescued elephants. Feeding them, walking alongside them, and learning about their stories was both humbling and heartwarming. Seeing such powerful animals up close gave me a deep appreciation for wildlife conservation and the importance of ethical tourism."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("elephants_thailand", 600, 400), caption: "Elephant Sanctuary - Thailand" },
-      ],
+        "Indonesia was also home to some of the most extraordinary sunrises of the journey. Standing above volcanoes before dawn and watching the landscape slowly emerge from darkness was unforgettable. On one occasion, I even climbed an active volcano, witnessing the raw power of nature up close. Those early mornings, surrounded by clouds, mountains, and volcanic landscapes, felt almost surreal."
     },
 
     {
       type: "p",
       text:
-        "Indonesia offered some of the most dramatic landscapes of the entire journey. Waking up before dawn to watch the sunrise over three volcanoes before climbing an active volcano was physically demanding but absolutely unforgettable. Standing at the edge of a crater, surrounded by smoke and volcanic rock, felt like standing on another planet."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("volcano_sunrise", 600, 400), caption: "Volcano Sunrise - Indonesia" },
-        { url: ph("active_volcano", 600, 400), caption: "Active Volcano Crater - Indonesia" },
-      ],
+        "China brought several lifelong dreams to reality. Walking along the Great Wall of China, one of the Seven Wonders of the World, was a powerful reminder of what human beings can achieve across generations. Visiting Zhangjiajie National Forest Park, the inspiration behind the floating mountains in Avatar, was equally special. As Avatar has always been one of my favourite films, seeing those towering stone pillars rising through the mist felt like stepping directly into the movie itself. China also impressed me with its vibrant cities, spectacular performances, immense cave systems, dramatic viewpoints, and the incredible contrast between ancient traditions and futuristic skylines."
     },
 
     {
       type: "p",
       text:
-        "Some places carried a special personal meaning. Visiting Zhangjiajie National Forest Park in China, the inspiration behind the floating mountains in Avatar — my favourite film — felt surreal. It was one of those rare moments where reality exceeds expectations. The same was true of standing on the Great Wall of China, one of the Seven Wonders of the World, and seeing Mount Fuji completely free of clouds, a surprisingly rare sight that many visitors never get to experience."
-    },
-
-    {
-      type: "gallery",
-      photos: [
-        { url: ph("avatar_mountains", 600, 400), caption: "Zhangjiajie National Forest Park - China" },
-        { url: ph("great_wall", 600, 400), caption: "The Great Wall of China" },
-        { url: ph("mount_fuji", 600, 400), caption: "Mount Fuji - Japan" },
-      ],
+        "Japan offered many of the most personal moments of the trip. Seeing Mount Fuji completely free of clouds is something even many locals never experience, making the moment feel particularly special. Walking through snowy forests to observe the famous snow monkeys bathing in hot springs created one of the most unique wildlife encounters of my life. At the same time, Japan allowed me to embrace my inner child through visits to both Disney parks and Universal Studios, countless claw machines, photo booths, and more shopping than I care to admit. The country balanced natural beauty, tradition, and modern entertainment in a way unlike anywhere else."
     },
 
     {
       type: "p",
       text:
-        "Beyond the major highlights, countless smaller moments made the journey unforgettable. Watching thousands of lanterns rise into the night sky during New Year celebrations in Thailand. Floating lanterns along the river in Hanoi. Exploring remote villages in Laos accessible only by river. Riding motorbikes through islands in Thailand and the Vietnamese countryside. Discovering enormous caves filled with underground rivers and bats. Visiting floating villages in Cambodia and floating markets in Thailand. Walking through endless rice terraces, chasing waterfalls in Indonesia, and stopping at breathtaking viewpoints almost every day."
+        "South Korea allowed me to experience history firsthand by wearing traditional hanbok clothing while exploring the royal palaces of Seoul. Throughout the trip, I also participated in local workshops, visited countless temples, explored caves large enough to contain entire rivers, and discovered viewpoints that seemed to stretch endlessly across mountains, coastlines, forests, and cities."
     },
 
     {
       type: "p",
       text:
-        "I encountered an incredible variety of wildlife along the way: monkeys of every kind, elephants, turtles, rays, deer, pandas, ducks that somehow adopted me as their temporary leader, and countless dogs and cats. Every country seemed to introduce a new animal, landscape, or natural wonder."
+        "The wildlife encounters alone could fill an entire article. Across different countries, I saw countless species of monkeys, elephants, turtles, rays, pandas, deer, dogs, cats, and even became the unexpected leader of a group of ducks in Vietnam. Whether I was drifting through rivers in Tam Coc, navigating basket boats through Vietnamese waterways, riding scooters across Thai islands and Vietnamese countryside, or simply watching local life unfold in remote villages, every day seemed to offer something completely new."
     },
 
     {
       type: "p",
       text:
-        "There were also experiences that reflected the unique character of each country. Dressing in traditional Korean clothing at Gyeongbokgung Palace. Visiting both Disney parks and Universal Studios in Japan. Spending far too much money in Japanese shops. Playing claw machines, taking photobooth pictures with friends, attending spectacular performances in China, participating in local craft workshops, and wandering through hundreds of temples across the continent."
-    },
-
-    {
-      type: "p",
-      text:
-        "Looking back, these adventures were about much more than ticking destinations off a list. They taught me courage, curiosity, adaptability, and gratitude. They reminded me that the world is far bigger and more diverse than I could ever have imagined, and that some of life's most meaningful moments happen when we step into the unknown."
-    },
+        "Looking back, what made these experiences so meaningful was not only their beauty, but how they made me feel. Many of them filled me with awe. Others taught me courage, patience, gratitude, or humility. Together, they reminded me how much of the world exists beyond our routines and how rewarding it can be to embrace uncertainty. Long after specific details fade, I know I will remember the feeling of standing somewhere extraordinary and realising just how incredible our planet truly is."
+      },
 
     { type: "h2", text: "Different views on life" },
 

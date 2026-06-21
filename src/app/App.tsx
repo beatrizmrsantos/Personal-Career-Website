@@ -8,7 +8,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import {
   X, MapPin, ChevronDown, Github, Linkedin, Mail,
   Award, Briefcase, GraduationCap, Heart, CalendarDays,
-  Globe, Code2, ExternalLink, Send,
+  Globe, Code2, ExternalLink, Send, ArrowRight,
   Server, Layers, Cloud, Database, ShieldCheck, Settings2,
 } from "lucide-react";
 import { TYPE_COLORS, TYPE_LABELS, careerPoints, skills, flightSegments, projects } from "@/content/career";
@@ -443,11 +443,21 @@ function PointModal({ point, onClose }: { point: CareerPoint; onClose: () => voi
               ))}
             </div>
           </div>
-          <div className="px-6 pb-5">
+          <div className="px-6 pb-5 flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs text-foreground/22 font-mono">
               <Globe className="w-3 h-3" />
               {Math.abs(point.lat).toFixed(4)}° {point.lat > 0 ? "N" : "S"} · {Math.abs(point.lng).toFixed(4)}° {point.lng > 0 ? "E" : "W"}
             </div>
+            {point.blogSlug && (
+              <Link
+                to={`/blog/${point.blogSlug}`}
+                className="flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                style={{ color: TYPE_COLORS[point.type] }}
+                onClick={onClose}
+              >
+                Read the post <ArrowRight className="w-3 h-3" />
+              </Link>
+            )}
           </div>
         </div>
       </motion.div>
@@ -516,13 +526,23 @@ function CityGroupModal({ city, points, onClose }: { city: string; points: Caree
                         <h3 className="text-sm font-bold text-foreground mb-0.5" style={{ fontFamily: "'Playfair Display', serif" }}>{point.title}</h3>
                         <p className="text-xs font-semibold mb-2" style={{ color }}>{point.company}</p>
                         <p className="text-xs text-foreground/55 leading-relaxed mb-2">{point.description}</p>
-                        <div className="flex flex-wrap gap-1">
+                        <div className="flex flex-wrap gap-1 mb-3">
                           {point.tags.map((tag) => (
                             <span key={tag} className="text-xs px-2 py-0.5 rounded font-mono" style={{ backgroundColor: color + "15", color, border: `1px solid ${color}25` }}>
                               {tag}
                             </span>
                           ))}
                         </div>
+                        {point.blogSlug && (
+                          <Link
+                            to={`/blog/${point.blogSlug}`}
+                            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                            style={{ color }}
+                            onClick={onClose}
+                          >
+                            Read the full story <ArrowRight className="w-3 h-3" />
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -696,12 +716,21 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
                       <MapPin className="w-3 h-3" />{job.city}
                     </div>
                     <p className="text-sm text-foreground/65 leading-relaxed mb-4">{job.description}</p>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-1.5 mb-4">
                       {job.tags.map((tag) => (
                         <span key={tag} className="text-xs px-2.5 py-0.5 rounded font-mono"
                           style={{ backgroundColor: col + "15", color: col }}>{tag}</span>
                       ))}
                     </div>
+                    {job.blogSlug && (
+                      <Link
+                        to={`/blog/${job.blogSlug}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                        style={{ color: col }}
+                      >
+                        Read the full story <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
 
@@ -766,7 +795,16 @@ function EducationCard({ item, index, side }: { item: CareerPoint; index: number
           )}
         </div>
 
-        <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
+        <p className="text-sm text-foreground/65 leading-relaxed mb-4">{item.description}</p>
+        {item.blogSlug && (
+          <Link
+            to={`/blog/${item.blogSlug}`}
+            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+            style={{ color: "#9b7fc4" }}
+          >
+            Read the full story <ArrowRight className="w-3 h-3" />
+          </Link>
+        )}
       </div>
 
       <div className="absolute top-0 right-0 w-28 h-28 rounded-bl-full pointer-events-none" style={{ backgroundColor: "#9b7fc4", opacity: 0.04 }} />
@@ -895,6 +933,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Conference: "#c4a87f",
   Volunteer:  "#7fc488",
   "Job Fest": "#c4708a",
+  Travel:     "#c4708a",
 };
 
 function EventsSection({ items }: { items: CareerPoint[] }) {
@@ -938,7 +977,16 @@ function EventsSection({ items }: { items: CareerPoint[] }) {
                   <p className="text-xs font-mono text-foreground/38 mb-5 flex items-center gap-1.5">
                     <MapPin className="w-3 h-3" />{featured.city} · {featured.company}
                   </p>
-                  <p className="text-sm text-foreground/62 leading-relaxed">{featured.description}</p>
+                  <p className="text-sm text-foreground/62 leading-relaxed mb-5">{featured.description}</p>
+                  {featured.blogSlug && (
+                    <Link
+                      to={`/blog/${featured.blogSlug}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                      style={{ color: col }}
+                    >
+                      Read the full story <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  )}
                 </div>
 
                 {/* Right panel */}
@@ -997,7 +1045,16 @@ function EventsSection({ items }: { items: CareerPoint[] }) {
                   <p className="text-xs font-mono text-foreground/38 mb-3 flex items-center gap-1.5">
                     <MapPin className="w-3 h-3" />{item.city} · {item.company}
                   </p>
-                  <p className="text-sm text-foreground/60 leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-foreground/60 leading-relaxed mb-4">{item.description}</p>
+                  {item.blogSlug && (
+                    <Link
+                      to={`/blog/${item.blogSlug}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                      style={{ color: col }}
+                    >
+                      Read the full story <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  )}
                 </div>
               </motion.div>
             );

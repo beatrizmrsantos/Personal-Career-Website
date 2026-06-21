@@ -18,6 +18,7 @@ export interface CareerPoint {
   quote?: string;
   category?: string;
   highlights?: { value: string; label: string }[];
+  blogSlug?: string;
 }
 
 // ─── Type Mappings ────────────────────────────────────────────────────────────
@@ -51,12 +52,13 @@ export const careerPoints: CareerPoint[] = [
     city: "Lisbon, Portugal",
     type: "job",
     icon: "💼",
-    title: "Junior Software Engineer",
+    title: "Software Engineer",
     company: "Opensoft",
     period: "2024 – 2025",
     description:
       "Delivered production-grade web and mobile government systems for the Embassy of the Government of Cape Verde, enabling secure citizen-facing digital services used by 50K+ users. Developed and maintained internal employee-facing systems (10K+ users) and citizen-facing tax benefit services for the Portuguese Tax and Customs Authority (18.3M+ users). Built full-stack features including authentication systems, APIs, workflow automation, and cloud-integrated services. Improved system reliability through CI/CD pipelines, automated testing, and production support, while collaborating in Agile teams with architects, QA engineers, and stakeholders.",
     tags: ["Java", "Spring Boot", "APIs", "React", "React Native", "Azure", "SQL", "Docker", "Kubernetes"],
+    blogSlug: "working-as-software-engineer-at-opensoft",
   },
   {
     id: 2,
@@ -71,6 +73,7 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Independently developed a secure cross-platform citizen authentication platform as part of a Master’s Thesis, covering the full SDLC from system design to deployment. Built biometric authentication, digital signatures, identity management, real-time communication through video conferencing, and document verification and manegment systems. Developed enterprise integration systems for the Portuguese Tax and Customs Authority, including EFAPI and EORI platforms serving 250K+ users. Worked on secure APIs, authentication flows, and SQL-based systems, and improved software quality through testing, debugging, and CI/CD pipelines.",
     tags: ["Flutter", "Dart", "Java", "Spring Boot", "WebSockets", "WebRTC", "SQL"],
+    blogSlug: "building-a-digital-government-platform",
   },
   {
     id: 3,
@@ -85,6 +88,7 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Delivered multiple web and mobile software projects for external clients, covering full-stack development and end-to-end delivery. Built scalable applications with a focus on backend and frontend integration, system architecture, and cloud-based deployment. Participated in Agile workflows including sprint planning, development, and client delivery, contributing to production-ready software solutions.",
     tags: ["React", "React Native", "Node.js", "Java", "Docker", "Kubernetes", "GCP"],
+    blogSlug: "building-software-with-in-nova",
   },
   {
     id: 4,
@@ -117,6 +121,7 @@ export const careerPoints: CareerPoint[] = [
     description: 
       "Provided IT support for the digital election system, staff training, and system validation during the first use of digital electoral registers in Portugal.",
     tags: ["IT Support", "Systems", "Operations", "Communication"],
+    blogSlug: "supporting-portugals-first-digital-election",
   },
 
   // =========================
@@ -141,6 +146,7 @@ export const careerPoints: CareerPoint[] = [
       { value: "FCT NOVA", label: "Host University" },
       { value: "Opensoft", label: "Represented" },
     ],
+    blogSlug: "returning-to-fct-nova-as-a-speaker",
   },
   {
     id: 7,
@@ -156,6 +162,7 @@ export const careerPoints: CareerPoint[] = [
       "Designed, built, and presented a software prototype in a 48-hour hackathon, delivering a working solution in a fast-paced team environment under strict time constraints.",
     tags: ["Hackathon", "React", "UI/UX Design", "Innovation"],
     category: "Hackathon",
+    blogSlug: "48-hours-building-connections",
   },
   {
     id: 8,
@@ -171,6 +178,7 @@ export const careerPoints: CareerPoint[] = [
       "Volunteered at an international ICT conference focused on gender balance in engineering, bringing together researchers, industry professionals, and policymakers from across Europe.",
     tags: ["Communication", "Critical Thinking", "Adaptation"],
     category: "Conference",
+    blogSlug: "why-gender-balance-in-tech-matters",
   },
   {
     id: 9,
@@ -186,6 +194,7 @@ export const careerPoints: CareerPoint[] = [
       "Supported IT operations and mobile app development for a 3-day innovation event. Contributed to the development of a mobile application for event management, including features for scheduling, notifications, and attendee engagement.",
     tags: ["Communication", "Project Planning", "React", "Node.js", "Java", "SQL"],
     category: "Job Fest",
+    blogSlug: "building-the-app-behind-innovation-week",
   },
   {
     id: 10,
@@ -220,6 +229,7 @@ export const careerPoints: CareerPoint[] = [
       "Master's degree in Computer Science and Engineering. Focus on software engineering, distributed systems and full-stack development.",
     tags: ["Software Engineering", "Systems", "Algorithms", "Distributed Systems"],
     gpa: "17/20",
+    blogSlug: "five-years-at-nova-fct",
   },
   {
     id: 12,
@@ -281,6 +291,26 @@ export const careerPoints: CareerPoint[] = [
     description:
       "Volunteered in entertainment activities for children at Faro Hospital’s pediatrics ward, the Aboim Ascensão orphanage, and the Santa Casa da Misericórdia kindergarten in Portugal, a non-governmental organization dedicated to providing care and support to individuals facing adversity.",
     tags: ["Volunteering", "Communication", "Teamwork"],
+  },
+
+  // =========================
+  // TRAVEL
+  // =========================
+  {
+    id: 16,
+    lat: 13.7563,
+    lng: 100.5018,
+    city: "Southeast & East Asia",
+    type: "event",
+    icon: "🌏",
+    title: "Six Months Across Asia",
+    company: "Backpacking · 10 Countries",
+    period: "Nov 2025 – May 2026",
+    description:
+      "A six-month solo journey across ten Asian countries — Thailand, Japan, Indonesia, South Korea, China, Vietnam, Cambodia, Laos, Hong Kong, and Singapore. What began as a personal ambition became a transformative experience that reshaped how I see the world, success, and the future I want to build. Immersed in different cultures, philosophies, and ways of life, I returned with a deeper sense of self, a renewed appreciation for diversity, and a stronger drive to build a meaningful international career.",
+    tags: ["Solo Travel", "Cultural Immersion", "Self-Discovery", "Asia", "Photography"],
+    category: "Travel",
+    blogSlug: "six-months-across-asia-reflection",
   },
 ];
 

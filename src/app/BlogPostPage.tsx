@@ -14,6 +14,10 @@ function formatDate(d: string) {
   return new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 }
 
+function slugify(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 // Replace c_fill crop with c_limit so the full original aspect ratio is shown
 function toOriginalUrl(url: string) {
   return url.replace(/w_\d+,h_\d+,c_fill/, "w_1920,h_1920,c_limit");
@@ -184,6 +188,42 @@ function GalleryBlock({ photos }: { photos: GalleryItem[] }) {
   );
 }
 
+// ─── Table of contents ────────────────────────────────────────────────────────
+
+function TableOfContents({ body, color }: { body: ContentBlock[]; color: string }) {
+  const headings = body.filter((b) => b.type === "h2" && b.text);
+  if (headings.length < 2) return null;
+
+  return (
+    <nav
+      className="mb-10 p-5 rounded-xl"
+      style={{ backgroundColor: "rgba(255,255,255,0.03)", borderLeft: `2px solid ${color}40` }}
+    >
+      <p
+        className="text-[10px] font-mono uppercase tracking-[0.3em] mb-4"
+        style={{ color }}
+      >
+        In this article
+      </p>
+      <ol className="space-y-2.5">
+        {headings.map((h, i) => (
+          <li key={i}>
+            <a
+              href={`#${slugify(h.text ?? "")}`}
+              className="flex items-start gap-3 text-sm text-white/40 hover:text-white/80 transition-colors"
+            >
+              <span className="text-[11px] font-mono mt-[3px] shrink-0" style={{ color }}>
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="leading-snug">{h.text}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+}
+
 // ─── Content block renderer ───────────────────────────────────────────────────
 
 function Block({ block, accentColor }: { block: ContentBlock; accentColor: string }) {
@@ -195,8 +235,9 @@ function Block({ block, accentColor }: { block: ContentBlock; accentColor: strin
     case "h2":
       return (
         <h2
+          id={slugify(block.text ?? "")}
           className="text-2xl font-bold mt-12 mb-4 text-white/90"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          style={{ fontFamily: "'Playfair Display', serif", scrollMarginTop: "96px" }}
         >
           {block.text}
         </h2>
@@ -372,6 +413,9 @@ export default function BlogPostPage() {
           {/* Divider */}
           <div className="w-12 h-[2px] mb-10 rounded-full" style={{ backgroundColor: color }} />
         </motion.header>
+
+        {/* Table of contents */}
+        <TableOfContents body={post.body} color={color} />
 
         {/* Body */}
         <motion.div
