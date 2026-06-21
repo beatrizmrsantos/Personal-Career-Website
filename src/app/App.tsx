@@ -23,6 +23,7 @@ const TYPE_ICONS = {
   cert: Award,
   event: CalendarDays,
   volunteer: Heart,
+  travel: MapPin,
 } as const;
 
 const CONTACT_ICON_MAP = { Mail, Github, Linkedin } as const;
@@ -1463,11 +1464,28 @@ export default function App() {
   const [selected, setSelected] = useState<GlobeMarker | null>(null);
   const [hovered, setHovered] = useState<GlobeMarker | null>(null);
 
+  // Restore scroll when returning from a blog post; keep position always current in sessionStorage
+  useEffect(() => {
+    const saved = sessionStorage.getItem("home-scroll");
+    sessionStorage.removeItem("home-scroll");
+    if (saved) {
+      const y = parseInt(saved, 10);
+      setTimeout(() => window.scrollTo({ top: y, behavior: "instant" }), 0);
+    }
+
+    const onScroll = () =>
+      sessionStorage.setItem("home-scroll", String(Math.round(window.scrollY)));
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   const jobs = careerPoints.filter((p) => p.type === "job");
   const education = careerPoints.filter((p) => p.type === "education");
-  const certs = careerPoints.filter((p) => p.type === "cert");
+  const certs = careerPoints
+    .filter((p) => p.type === "cert")
+    .sort((a, b) => new Date(b.period).getTime() - new Date(a.period).getTime());
   const events = careerPoints.filter((p) => p.type === "event");
   const volunteers = careerPoints.filter((p) => p.type === "volunteer");
 

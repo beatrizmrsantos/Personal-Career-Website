@@ -1,6 +1,6 @@
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-export type PointType = "job" | "education" | "cert" | "event" | "volunteer";
+export type PointType = "job" | "education" | "cert" | "event" | "volunteer" | "travel";
 
 export interface CareerPoint {
   id: number;
@@ -29,6 +29,7 @@ export const TYPE_COLORS: Record<PointType, string> = {
   cert: "#7fc4c0",
   event: "#c4a87f",
   volunteer: "#7fc488",
+  travel: "#7f9ec4",
 };
 
 export const TYPE_LABELS: Record<PointType, string> = {
@@ -37,6 +38,7 @@ export const TYPE_LABELS: Record<PointType, string> = {
   cert: "Certification",
   event: "Events",
   volunteer: "Volunteering",
+  travel: "Travel",
 };
 
 // // ─── Career Points ────────────────────────────────────────────────────────────
@@ -122,6 +124,20 @@ export const careerPoints: CareerPoint[] = [
       "Provided IT support for the digital election system, staff training, and system validation during the first use of digital electoral registers in Portugal.",
     tags: ["IT Support", "Systems", "Operations", "Communication"],
     blogSlug: "supporting-portugals-first-digital-election",
+  },
+  {
+    id: 17,
+    lat: 38.716,
+    lng: -9.139,
+    city: "Lisbon, Portugal",
+    type: "cert",
+    icon: "🍃",
+    title: "MongoDB Java Developer Path",
+    company: "MongoDB",
+    period: "May 2026",
+    description:
+      "Completed official MongoDB certification covering document-oriented data modeling, CRUD operations using the MongoDB Java Driver, indexing and query optimization, aggregation pipelines, and Java application development with MongoDB Atlas.",
+    tags: ["MongoDB", "Java", "NoSQL", "Aggregation", "Atlas", "Indexing"],
   },
 
   // =========================
@@ -211,6 +227,22 @@ export const careerPoints: CareerPoint[] = [
     tags: ["Communication", "Critical Thinking", "Teamwork"],
     category: "Conference",
   },
+  {
+    id: 16,
+    lat: 13.7563,
+    lng: 100.5018,
+    city: "Southeast & East Asia",
+    type: "travel",
+    icon: "🌏",
+    title: "Six Months Across Asia",
+    company: "Backpacking · 10 Countries",
+    period: "Nov 2025 – May 2026",
+    description:
+      "A six-month solo journey across ten Asian countries — Thailand, Japan, Indonesia, South Korea, China, Vietnam, Cambodia, Laos, Hong Kong, and Singapore. What began as a personal ambition became a transformative experience that reshaped how I see the world, success, and the future I want to build. Immersed in different cultures, philosophies, and ways of life, I returned with a deeper sense of self, a renewed appreciation for diversity, and a stronger drive to build a meaningful international career.",
+    tags: ["Solo Travel", "Cultural Immersion", "Self-Discovery", "Asia", "Photography"],
+    category: "Travel",
+    blogSlug: "six-months-across-asia-reflection",
+  },
 
   // =========================
   // EDUCATION
@@ -292,26 +324,7 @@ export const careerPoints: CareerPoint[] = [
       "Volunteered in entertainment activities for children at Faro Hospital’s pediatrics ward, the Aboim Ascensão orphanage, and the Santa Casa da Misericórdia kindergarten in Portugal, a non-governmental organization dedicated to providing care and support to individuals facing adversity.",
     tags: ["Volunteering", "Communication", "Teamwork"],
   },
-
-  // =========================
-  // TRAVEL
-  // =========================
-  {
-    id: 16,
-    lat: 13.7563,
-    lng: 100.5018,
-    city: "Southeast & East Asia",
-    type: "event",
-    icon: "🌏",
-    title: "Six Months Across Asia",
-    company: "Backpacking · 10 Countries",
-    period: "Nov 2025 – May 2026",
-    description:
-      "A six-month solo journey across ten Asian countries — Thailand, Japan, Indonesia, South Korea, China, Vietnam, Cambodia, Laos, Hong Kong, and Singapore. What began as a personal ambition became a transformative experience that reshaped how I see the world, success, and the future I want to build. Immersed in different cultures, philosophies, and ways of life, I returned with a deeper sense of self, a renewed appreciation for diversity, and a stronger drive to build a meaningful international career.",
-    tags: ["Solo Travel", "Cultural Immersion", "Self-Discovery", "Asia", "Photography"],
-    category: "Travel",
-    blogSlug: "six-months-across-asia-reflection",
-  },
+  
 ];
 
 

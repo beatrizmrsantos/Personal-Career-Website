@@ -19,8 +19,11 @@ function ScrollToTop() {
   useEffect(() => {
     const from = prev.current;
     prev.current = pathname;
-    // Skip when returning from a post to the listing — BlogPage restores its own position
-    if (pathname === "/blog" && from.startsWith("/blog/")) return;
+    if (pathname === "/blog") {
+      if (from.startsWith("/blog/")) return; // returning from post — let BlogPage restore
+      sessionStorage.removeItem("blog-scroll"); // navigating fresh — always start at top
+    }
+    if (pathname === "/" && from.startsWith("/blog/")) return;
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;

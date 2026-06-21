@@ -171,19 +171,19 @@ function PostCard({ post, index }: { post: BlogPost; index: number }) {
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState<Filter>("all");
 
-  // Save scroll position when leaving; restore it when returning from a post
+  // Restore scroll when returning from a post; keep position always current in sessionStorage
   useEffect(() => {
     const saved = sessionStorage.getItem("blog-scroll");
     sessionStorage.removeItem("blog-scroll");
     if (saved) {
       const y = parseInt(saved, 10);
-      // setTimeout 0 runs after React has painted the DOM, avoiding rAF race conditions
-      const tid = setTimeout(() => window.scrollTo({ top: y, behavior: "instant" }), 0);
-      return () => clearTimeout(tid);
+      setTimeout(() => window.scrollTo({ top: y, behavior: "instant" }), 0);
     }
-    return () => {
+
+    const onScroll = () =>
       sessionStorage.setItem("blog-scroll", String(Math.round(window.scrollY)));
-    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const sorted = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
