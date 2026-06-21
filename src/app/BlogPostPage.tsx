@@ -107,8 +107,8 @@ function GalleryBlock({ photos }: { photos: GalleryItem[] }) {
           </div>
         )}
 
-        {/* 3, 4, 5 photos — grid */}
-        {n >= 3 && (
+        {/* 3–5 photos — explicit asymmetric grid */}
+        {n >= 3 && n <= 5 && (
           <div
             className="-mx-6 md:-mx-16"
             style={{
@@ -122,6 +122,46 @@ function GalleryBlock({ photos }: { photos: GalleryItem[] }) {
               <motion.div
                 key={i}
                 style={{ ...positions[i], overflow: "hidden", cursor: "zoom-in" }}
+                onClick={() => setLightbox(i)}
+                className="relative group"
+              >
+                <motion.img
+                  src={photo.url}
+                  alt={photo.caption}
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.04 }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
+                />
+                {photo.caption && (
+                  <div
+                    className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: "linear-gradient(to top, rgba(13,11,22,0.82) 0%, transparent 55%)" }}
+                  >
+                    <p className="px-3 pb-2.5 text-[10px] font-mono text-white/70 leading-tight">
+                      {photo.caption}
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        )}
+
+        {/* 6+ photos — 3-col flowing grid */}
+        {n >= 6 && (
+          <div
+            className="-mx-6 md:-mx-16"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gridAutoRows: "200px",
+              gap: "5px",
+            }}
+          >
+            {photos.map((photo, i) => (
+              <motion.div
+                key={i}
+                style={{ overflow: "hidden", cursor: "zoom-in" }}
                 onClick={() => setLightbox(i)}
                 className="relative group"
               >

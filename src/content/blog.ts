@@ -314,7 +314,35 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "Some of the most magical experiences happened in nature. In Indonesia, I snorkelled through crystal-clear waters surrounded by vibrant coral reefs that looked like underwater gardens. I swam alongside sea turtles, watched rays glide effortlessly beneath me, and explored the famous underwater Nest statues in the Gili Islands. It felt like entering a completely different world, one that was peaceful, colourful, and full of life. Indonesia also gifted me countless waterfalls hidden deep within jungles, each one seemingly more spectacular than the last."
+        "Some of the most magical experiences happened in nature. In Indonesia, I snorkelled through crystal-clear waters surrounded by vibrant coral reefs that looked like underwater gardens. I swam alongside sea turtles, watched rays glide effortlessly beneath me, and explored the famous underwater Nest statues in the Gili Islands. It felt like entering a completely different world, one that was peaceful, colourful, and full of life."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("jonyTurtle_obcquh", 900, 600), caption: "Snorkelling with turtles" },
+        { url: ph("coral1_yg608e", 600, 400), caption: "Coral Reef - Gili Air" },
+        { url: ph("turtle_ikb5tt", 600, 400), caption: "Turtle" },
+        { url: ph("coral2_bukcue", 1200, 600), caption: "Coral Reef - Gili Air" },
+        { url: ph("manta_vmixsz", 1200, 600), caption: "Manta Rays - Nusa Penida" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Indonesia was also home to the most spectacular waterfalls I encountered during my six months across Asia. Hidden deep within lush jungles and surrounded by dramatic landscapes, each one felt more impressive than the last. Some required trekking through dense forests, crossing rivers, and descending steep paths, but the reward was always worth the effort. Standing beneath towering cascades, feeling the cool mist in the air, and listening to the thunderous sound of water crashing into emerald pools created moments that were impossible to forget. These waterfalls became some of my favourite experiences in Indonesia and a reminder of how extraordinary nature can be when you venture beyond the usual tourist trail."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("cascata9_pl1mgy", 1200, 600), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata6_pnsti0", 900, 600), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata5_nmndr9", 600, 400), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata4_szmhh9", 600, 400), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata1_ghub84", 1200, 600), caption: "Waterfall - Indonesia" },
+      ],
     },
 
     {
@@ -324,27 +352,112 @@ export const POSTS: BlogPost[] = [
     },
 
     {
+      type: "gallery",
+      photos: [
+        { url: ph("mountains_oq6gjn", 1200, 600), caption: "Karst Mountain Valley - Ha Giang, Vietnam" },
+        { url: ph("road_zkkn4m", 900, 600), caption: "Motorbiking the Ha Giang Loop - Vietnam" },
+        { url: ph("village_nskicv", 600, 400), caption: "Mountain Village Pit Stop - Ha Giang, Vietnam" },
+        { url: ph("vietnamiteBoy_gvcvs5", 600, 400), caption: "Young Khèn Player - Vietnam" },
+        { url: ph("drinking_ekvinq", 1200, 600), caption: "Dinner - Vietnam" },
+      ],
+    },
+
+    {
       type: "p",
       text:
         "In Laos, adventure took a completely different form. Floating high above Vang Vieng in a hot air balloon at sunrise allowed me to see rivers, mountains, and forests stretching endlessly towards the horizon. Later, paramotoring above the countryside offered an entirely new perspective on the landscape below. Yet one of my favourite memories in Laos was much slower. During a three-day boat journey along the Mekong River from Thailand to Luang Prabang, life seemed to pause. We travelled through silence, passing remote villages, fishermen casting their nets, children playing in the river, elephants wandering along the banks, and landscapes that felt untouched by time."
     },
 
     {
-      type: "p",
-      text:
-        "Thailand delivered some of the most iconic scenery of the trip. The beaches, with their turquoise waters and dramatic limestone mountains rising from the sea, were every bit as beautiful as the photographs suggest. In Khao Sok National Park, I explored one of the oldest rainforests in the world, snorkelled in emerald waters, and joined an early-morning wildlife safari surrounded by mist-covered mountains. Another unforgettable experience was spending time with rescued elephants and observing these incredible animals up close in an ethical environment. On New Year's Eve, releasing a lantern into the night sky became one of those simple yet powerful moments that symbolised hope, gratitude, and the excitement of everything still to come."
+      type: "gallery",
+      photos: [
+        { url: ph("barcoLaos_z5lkcx", 600, 400), caption: "Mekong River Cruise - Laos" },
+        { url: ph("paramoturingLaos_vjd7cd", 900, 600), caption: "Paramotoring Over Vang Vieng - Laos" },
+        { url: ph("baloesArQuente_zemncn", 1200, 600), caption: "Hot Air Balloons Over Vang Vieng - Laos" },
+        { url: ph("laosRiver_vccnmk", 600, 400), caption: "Mekong River - Laos" },
+        { url: ph("laosPeople_ngy6t1", 1200, 600), caption: "Local People by the Mekong - Laos" },
+      ],
     },
 
     {
       type: "p",
       text:
-        "Cambodia offered one of the most breathtaking sunrises I have ever witnessed. Watching the first light of day illuminate Angkor Wat was a moment I had dreamed about for years, and somehow reality exceeded expectations. Exploring the ancient temples afterwards felt like stepping into another era. The country also introduced me to floating villages, where entire communities live, work, and attend school on the water, providing a glimpse into a way of life unlike anything I had seen before."
+        "Thailand was home to some of the most beautiful islands and beaches I visited during the journey. Crystal-clear turquoise waters, colourful tropical fish, and dramatic limestone mountains covered in lush rainforest created landscapes that often felt unreal. Whether snorkelling among vibrant marine life or simply taking in the views from the shore, the natural beauty of southern Thailand constantly exceeded expectations."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("krabi_mbpx2l", 600, 400), caption: "Railay Beach Longtail Boats - Krabi, Thailand" },
+        { url: ph("blueWaters_aiq7sw", 900, 600), caption: "Crystal Waters - Thailand" },
+        { url: ph("Island_dqdu84", 1200, 600), caption: "Koh Tao Coastline - Thailand" },
+      ],
     },
 
     {
       type: "p",
       text:
-        "Indonesia was also home to some of the most extraordinary sunrises of the journey. Standing above volcanoes before dawn and watching the landscape slowly emerge from darkness was unforgettable. On one occasion, I even climbed an active volcano, witnessing the raw power of nature up close. Those early mornings, surrounded by clouds, mountains, and volcanic landscapes, felt almost surreal."
+        "One of the highlights of the country was Khao Sok National Park. Surrounded by towering limestone cliffs and emerald waters, I spent nights in floating bungalows on the lake, waking up to mist drifting across the mountains. I explored the area by boat, weaving between spectacular rock formations, paddled along peaceful rivers by canoe, and joined sunrise wildlife safaris where the jungle slowly came to life as the first light appeared over the landscape."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("khaoSok_ltolk8", 600, 400), caption: "Khao Sok National Park - Thailand" },
+        { url: ph("boat_xzfbal", 900, 600), caption: "Cheow Lan Lake - Khao Sok, Thailand" },
+        { url: ph("kaiaque_ffsnn9", 1200, 600), caption: "Kayaking Cheow Lan Lake - Khao Sok, Thailand" },
+        { url: ph("bangalow_jsqv2w", 600, 400), caption: "Floating Bungalow - Khao Sok, Thailand" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Another unforgettable experience was spending time with rescued elephants, helping feed them and even joining them in the water for a bath. Thailand was also where I celebrated New Year's Eve on a beach island surrounded by travellers from all over the world. As midnight approached, thousands of lanterns carrying wishes and hopes floated into the night sky while fireworks exploded continuously along the entire shoreline, often just metres away from us. It was chaotic, loud, and unforgettable — one of those moments that perfectly captured the energy and spontaneity of long-term travel."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("elephant_cipuzo", 900, 600), caption: "Elephant Sanctuary Encounter - Thailand" },
+        { url: ph("elephants_o5lv3a", 600, 400), caption: "Elephant Family - Thailand" },
+        { url: ph("newYear_rju6tp", 1200, 600), caption: "New Year's Fireworks on the Beach - Thailand" },
+        { url: ph("lantern_kw5ktm", 600, 400), caption: "Releasing a Sky Lantern in New Year's - Thailand" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Cambodia offered some of the most remarkable historical and cultural experiences of the entire journey. Visiting Angkor Wat and the surrounding temple complex was unforgettable, not only because of its beauty but because of its immense scale and the sense of history that seemed to surround every stone. Walking through these vast structures, it was impossible not to be amazed by the sophistication, wealth, and ambition of the civilisation that built them centuries ago. What made the experience even more special was seeing how nature had slowly reclaimed many of the temples. Deep within the jungle, enormous tree roots and towering trunks grew through ancient walls and rooftops, creating scenes that felt almost surreal. Some temples appeared to be slowly disappearing back into the forest, offering a striking contrast between human achievement and the power of nature. Cambodia also introduced me to floating villages, where entire communities spend much of the year living directly on the water. Families build their own wooden houses using highly durable timber from the surrounding flooded forests, creating homes, schools, and businesses that rise and fall with the changing water levels. One of the most unique experiences was taking a small wooden boat through a flooded forest, gliding between partially submerged trees while surrounded by water in every direction. Being in the middle of what felt like an underwater woodland was unlike anything I had ever seen before and offered a fascinating glimpse into a way of life shaped entirely by the natural environment."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("AnkorWatSunrise_iweqlp", 900, 600), caption: "Sunrise Silhouette at Angkor Wat - Cambodia" },
+        { url: ph("AnkorWat_vbauyk", 600, 400), caption: "Ta Prohm Temple Towers - Angkor, Cambodia" },
+        { url: ph("ankorWatNature_o75mvs", 1200, 600), caption: "Tree Roots Engulfing Ta Prohm - Cambodia" },
+        { url: ph("floatingVillage_oipmyv", 600, 400), caption: "Stilted Houses on Tonle Sap Floating Village - Cambodia" },
+        { url: ph("riverCamboja_mwklis", 600, 400), caption: "Boat Ride Through the Flooded Forest - Cambodia" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Indonesia was also home to one of the most beautiful and unique sunrises of the entire journey. Before dawn, I stood overlooking a landscape of active volcanoes as the first light slowly illuminated the mountains and valleys below. Watching smoke rise from their craters while the sky changed colour created a scene unlike anything I had ever seen. Afterwards, I crossed a vast volcanic desert by jeep, driving across black sand and dunes formed by centuries of eruptions. The adventure culminated with a climb to the rim of an active crater, where I was able to look directly into the volcano and watch smoke emerge from deep within the earth. Standing on the edge of a living volcano, surrounded by dramatic volcanic landscapes stretching to the horizon, was one of the most extraordinary experiences of the entire trip."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("vulcanos_isgjfo", 900, 600), caption: "Sunrise Over Mount Bromo's Volcanic Range - Indonesia" },
+        { url: ph("vulcano_oszmqc", 600, 400), caption: "Gazing Over the Crater - Mount Bromo, Indonesia" },
+        { url: ph("vulcanoEruption_z3x2hu", 1200, 600), caption: "Smoking Crater - Mount Bromo, Indonesia" },
+        { url: ph("JeepRide_mx3sra", 600, 400), caption: "Jeep Convoy Across the Sea of Sand - Bromo, Indonesia" },
+        { url: ph("Jeep_o5cr9a", 600, 400), caption: "Jeep Adventure - Mount Bromo Indonesia" },
+      ],
     },
 
     {
