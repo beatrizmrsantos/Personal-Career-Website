@@ -2285,5 +2285,5 @@ export const POSTS: BlogPost[] = [
         "University gave me the foundation. Opensoft taught me how to build real software for real people."
     }
   ]
-}
+  }
 ];
