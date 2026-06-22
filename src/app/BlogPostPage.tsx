@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, Clock, Calendar, Tag, X } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, Tag, X, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   POSTS, CATEGORY_COLORS, CATEGORY_LABELS,
   type ContentBlock, type GalleryItem,
@@ -21,6 +21,101 @@ function slugify(text: string) {
 // Replace c_fill crop with c_limit so the full original aspect ratio is shown
 function toOriginalUrl(url: string) {
   return url.replace(/w_\d+,h_\d+,c_fill/, "w_1920,h_1920,c_limit");
+}
+
+// ─── Lightbox overlay with prev/next navigation ───────────────────────────────
+
+function LightboxOverlay({ photos, index, onChange, onClose }: {
+  photos: GalleryItem[];
+  index: number;
+  onChange: (i: number) => void;
+  onClose: () => void;
+}) {
+  const n = photos.length;
+  const prev = () => onChange((index - 1 + n) % n);
+  const next = () => onChange((index + 1) % n);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => { setLoading(true); }, [index]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [index]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center"
+      style={{ backgroundColor: "rgba(13,11,22,0.94)" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      {/* Close */}
+      <button
+        className="absolute top-5 right-5 text-white/50 hover:text-white transition-colors z-10"
+        onClick={onClose}
+      >
+        <X className="w-6 h-6" />
+      </button>
+
+      {/* Spinner — shown while image loads */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-8 h-8 rounded-full border-2 border-white/10 border-t-white/50 animate-spin" />
+        </div>
+      )}
+
+      {/* Image + arrows */}
+      <div className="relative flex items-center min-w-[60vw] justify-center" onClick={(e) => e.stopPropagation()}>
+        {n > 1 && (
+          <button
+            className="absolute -left-7 w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-10"
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+        )}
+
+        <motion.img
+          key={index}
+          src={toOriginalUrl(photos[index].url)}
+          alt={photos[index].caption}
+          className="max-w-[80vw] max-h-[85vh] object-contain rounded-xl"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: loading ? 0 : 1, x: 0 }}
+          exit={{ opacity: 0, x: -30 }}
+          transition={{ duration: 0.2 }}
+          onLoad={() => setLoading(false)}
+        />
+
+        {n > 1 && (
+          <button
+            className="absolute -right-7 w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-10"
+            onClick={(e) => { e.stopPropagation(); next(); }}
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        )}
+      </div>
+
+      {/* Caption + counter */}
+      <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-1.5">
+        {photos[index].caption && (
+          <p className="text-xs font-mono text-white/40">{photos[index].caption}</p>
+        )}
+        {n > 1 && (
+          <p className="text-[10px] font-mono text-white/20">{index + 1} / {n}</p>
+        )}
+      </div>
+    </motion.div>
+  );
 }
 
 // ─── Editorial photo grid (3 or 5 photos, asymmetric layout) ─────────────────
@@ -191,37 +286,12 @@ function GalleryBlock({ photos }: { photos: GalleryItem[] }) {
       {/* Lightbox */}
       <AnimatePresence>
         {lightbox !== null && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center"
-            style={{ backgroundColor: "rgba(13,11,22,0.94)" }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setLightbox(null)}
-          >
-            <button
-              className="absolute top-5 right-5 text-white/50 hover:text-white transition-colors"
-              onClick={() => setLightbox(null)}
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <motion.img
-              key={lightbox}
-              src={toOriginalUrl(photos[lightbox].url)}
-              alt={photos[lightbox].caption}
-              className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl"
-              initial={{ scale: 0.92, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.92, opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              onClick={(e) => e.stopPropagation()}
-            />
-            {photos[lightbox].caption && (
-              <p className="absolute bottom-6 left-0 right-0 text-center text-xs font-mono text-white/40">
-                {photos[lightbox].caption}
-              </p>
-            )}
-          </motion.div>
+          <LightboxOverlay
+            photos={photos}
+            index={lightbox}
+            onChange={setLightbox}
+            onClose={() => setLightbox(null)}
+          />
         )}
       </AnimatePresence>
     </>
