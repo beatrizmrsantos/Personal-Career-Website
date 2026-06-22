@@ -714,7 +714,7 @@ export const POSTS: BlogPost[] = [
       ],
     },
 
-    { type: "h2", text: "Returning home"},
+    { type: "h2", text: "Returning home" },
 
     {
       type: "p",
@@ -732,6 +732,12 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "Most importantly, it taught me that there is no single definition of success, happiness, or fulfilment. We are all shaped by different cultures, beliefs, experiences, and circumstances. Seeing that diversity firsthand was one of the greatest gifts this journey gave me."
+    },
+
+    {
+      type: "p",
+      text:
+        "Beyond that, the sheer scale of nature, the diversity of religions and traditions, the variety of animals, and the richness of local cuisines completely reshaped my perspective. These experiences offered a kind of richness that cannot be measured in money, as they changed the way I see the world and what I value in life. What I gained was a deeper sense of perspective, connection, and appreciation for the incredible complexity of life across different places and cultures."
     },
 
     {
