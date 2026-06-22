@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
 import * as THREE from "three";
 import { mesh } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
@@ -7,7 +8,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import {
   X, MapPin, ChevronDown, Github, Linkedin, Mail,
   Award, Briefcase, GraduationCap, Heart, CalendarDays,
-  Globe, Code2, ExternalLink, Send,
+  Globe, Code2, ExternalLink, Send, ArrowRight,
   Server, Layers, Cloud, Database, ShieldCheck, Settings2,
 } from "lucide-react";
 import { TYPE_COLORS, TYPE_LABELS, careerPoints, skills, flightSegments, projects } from "@/content/career";
@@ -22,6 +23,7 @@ const TYPE_ICONS = {
   cert: Award,
   event: CalendarDays,
   volunteer: Heart,
+  travel: MapPin,
 } as const;
 
 const CONTACT_ICON_MAP = { Mail, Github, Linkedin } as const;
@@ -442,11 +444,21 @@ function PointModal({ point, onClose }: { point: CareerPoint; onClose: () => voi
               ))}
             </div>
           </div>
-          <div className="px-6 pb-5">
+          <div className="px-6 pb-5 flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs text-foreground/22 font-mono">
               <Globe className="w-3 h-3" />
               {Math.abs(point.lat).toFixed(4)}° {point.lat > 0 ? "N" : "S"} · {Math.abs(point.lng).toFixed(4)}° {point.lng > 0 ? "E" : "W"}
             </div>
+            {point.blogSlug && (
+              <Link
+                to={`/blog/${point.blogSlug}`}
+                className="flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                style={{ color: TYPE_COLORS[point.type] }}
+                onClick={onClose}
+              >
+                Read the post <ArrowRight className="w-3 h-3" />
+              </Link>
+            )}
           </div>
         </div>
       </motion.div>
@@ -515,13 +527,23 @@ function CityGroupModal({ city, points, onClose }: { city: string; points: Caree
                         <h3 className="text-sm font-bold text-foreground mb-0.5" style={{ fontFamily: "'Playfair Display', serif" }}>{point.title}</h3>
                         <p className="text-xs font-semibold mb-2" style={{ color }}>{point.company}</p>
                         <p className="text-xs text-foreground/55 leading-relaxed mb-2">{point.description}</p>
-                        <div className="flex flex-wrap gap-1">
+                        <div className="flex flex-wrap gap-1 mb-3">
                           {point.tags.map((tag) => (
                             <span key={tag} className="text-xs px-2 py-0.5 rounded font-mono" style={{ backgroundColor: color + "15", color, border: `1px solid ${color}25` }}>
                               {tag}
                             </span>
                           ))}
                         </div>
+                        {point.blogSlug && (
+                          <Link
+                            to={`/blog/${point.blogSlug}`}
+                            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                            style={{ color }}
+                            onClick={onClose}
+                          >
+                            Read the full story <ArrowRight className="w-3 h-3" />
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -695,12 +717,21 @@ function ExperienceSection({ jobs }: { jobs: CareerPoint[] }) {
                       <MapPin className="w-3 h-3" />{job.city}
                     </div>
                     <p className="text-sm text-foreground/65 leading-relaxed mb-4">{job.description}</p>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-1.5 mb-4">
                       {job.tags.map((tag) => (
                         <span key={tag} className="text-xs px-2.5 py-0.5 rounded font-mono"
                           style={{ backgroundColor: col + "15", color: col }}>{tag}</span>
                       ))}
                     </div>
+                    {job.blogSlug && (
+                      <Link
+                        to={`/blog/${job.blogSlug}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                        style={{ color: col }}
+                      >
+                        Read the full story <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
 
@@ -765,7 +796,16 @@ function EducationCard({ item, index, side }: { item: CareerPoint; index: number
           )}
         </div>
 
-        <p className="text-sm text-foreground/65 leading-relaxed">{item.description}</p>
+        <p className="text-sm text-foreground/65 leading-relaxed mb-4">{item.description}</p>
+        {item.blogSlug && (
+          <Link
+            to={`/blog/${item.blogSlug}`}
+            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+            style={{ color: "#9b7fc4" }}
+          >
+            Read the full story <ArrowRight className="w-3 h-3" />
+          </Link>
+        )}
       </div>
 
       <div className="absolute top-0 right-0 w-28 h-28 rounded-bl-full pointer-events-none" style={{ backgroundColor: "#9b7fc4", opacity: 0.04 }} />
@@ -894,6 +934,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Conference: "#c4a87f",
   Volunteer:  "#7fc488",
   "Job Fest": "#c4708a",
+  Travel:     "#c4708a",
 };
 
 function EventsSection({ items }: { items: CareerPoint[] }) {
@@ -937,7 +978,16 @@ function EventsSection({ items }: { items: CareerPoint[] }) {
                   <p className="text-xs font-mono text-foreground/38 mb-5 flex items-center gap-1.5">
                     <MapPin className="w-3 h-3" />{featured.city} · {featured.company}
                   </p>
-                  <p className="text-sm text-foreground/62 leading-relaxed">{featured.description}</p>
+                  <p className="text-sm text-foreground/62 leading-relaxed mb-5">{featured.description}</p>
+                  {featured.blogSlug && (
+                    <Link
+                      to={`/blog/${featured.blogSlug}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                      style={{ color: col }}
+                    >
+                      Read the full story <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  )}
                 </div>
 
                 {/* Right panel */}
@@ -996,7 +1046,16 @@ function EventsSection({ items }: { items: CareerPoint[] }) {
                   <p className="text-xs font-mono text-foreground/38 mb-3 flex items-center gap-1.5">
                     <MapPin className="w-3 h-3" />{item.city} · {item.company}
                   </p>
-                  <p className="text-sm text-foreground/60 leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-foreground/60 leading-relaxed mb-4">{item.description}</p>
+                  {item.blogSlug && (
+                    <Link
+                      to={`/blog/${item.blogSlug}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-opacity hover:opacity-75"
+                      style={{ color: col }}
+                    >
+                      Read the full story <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  )}
                 </div>
               </motion.div>
             );
@@ -1314,18 +1373,79 @@ function ContactSection() {
   );
 }
 
+// ─── Nav page links (add more here when ready) ───────────────────────────────
+
+const NAV_PAGES = [
+  { label: "Blog", to: "/blog", color: "#9b7fc4" },
+  // { label: "Beyond Code", to: "/me", color: "#c4708a" },
+];
+
 // ─── Navigation ────────────────────────────────────────────────────────────────
 
 function Nav({ onNav }: { onNav: (id: string) => void }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 px-6 py-4 flex items-center justify-between"
       style={{ background: "linear-gradient(to bottom, rgba(19,17,29,0.95), rgba(19,17,29,0))" }}>
-      <div className="flex items-center gap-2.5">
-        <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#c4708a" }}>
-          <Globe className="w-3.5 h-3.5 text-white" />
-        </div>
-        <span className="text-sm font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>{profile.name}</span>
+
+      {/* Left side — toggles between logo and page links */}
+      <div className="flex items-center gap-4" style={{ minWidth: 0 }}>
+        <AnimatePresence mode="wait" initial={false}>
+          {!expanded ? (
+            <motion.button
+              key="logo"
+              onClick={() => setExpanded(true)}
+              className="flex items-center gap-2.5 group cursor-pointer"
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -8 }}
+              transition={{ duration: 0.18 }}
+            >
+              <div className="w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+                style={{ backgroundColor: "#c4708a" }}>
+                <Globe className="w-3.5 h-3.5 text-white" />
+              </div>
+              <span className="text-sm font-bold text-foreground/80 group-hover:text-foreground transition-colors"
+                style={{ fontFamily: "'Playfair Display', serif" }}>
+                {profile.name}
+              </span>
+            </motion.button>
+          ) : (
+            <motion.div
+              key="pages"
+              className="flex items-center gap-1"
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -8 }}
+              transition={{ duration: 0.18 }}
+            >
+              {/* Close / back to logo */}
+              <button
+                onClick={() => setExpanded(false)}
+                className="w-7 h-7 rounded-full flex items-center justify-center text-foreground/40 hover:text-foreground/80 hover:bg-white/5 transition-all mr-1"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+
+              {NAV_PAGES.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setExpanded(false)}
+                  className="px-3.5 py-1.5 rounded-full text-sm font-bold transition-all"
+                  style={{ fontFamily: "'Playfair Display', serif", color: item.color, backgroundColor: item.color + "15", border: `1px solid ${item.color}30` }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = item.color + "28")}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = item.color + "15")}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+
       <div className="hidden md:flex items-center gap-6">
         {navLinks.map((id) => (
           <button key={id} onClick={() => onNav(id)}
@@ -1344,11 +1464,28 @@ export default function App() {
   const [selected, setSelected] = useState<GlobeMarker | null>(null);
   const [hovered, setHovered] = useState<GlobeMarker | null>(null);
 
+  // Restore scroll when returning from a blog post; keep position always current in sessionStorage
+  useEffect(() => {
+    const saved = sessionStorage.getItem("home-scroll");
+    sessionStorage.removeItem("home-scroll");
+    if (saved) {
+      const y = parseInt(saved, 10);
+      setTimeout(() => window.scrollTo({ top: y, behavior: "instant" }), 0);
+    }
+
+    const onScroll = () =>
+      sessionStorage.setItem("home-scroll", String(Math.round(window.scrollY)));
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   const jobs = careerPoints.filter((p) => p.type === "job");
   const education = careerPoints.filter((p) => p.type === "education");
-  const certs = careerPoints.filter((p) => p.type === "cert");
+  const certs = careerPoints
+    .filter((p) => p.type === "cert")
+    .sort((a, b) => new Date(b.period).getTime() - new Date(a.period).getTime());
   const events = careerPoints.filter((p) => p.type === "event");
   const volunteers = careerPoints.filter((p) => p.type === "volunteer");
 
@@ -1376,12 +1513,17 @@ export default function App() {
           <p className="text-sm text-foreground/45 leading-relaxed">
             {heroText.taglineLines[0]}<br />{heroText.taglineLines[1]}
           </p>
-          <motion.button onClick={() => scrollTo("about")}
-            className="mt-6 px-5 py-2.5 rounded-full text-sm font-semibold border transition-all"
-            style={{ borderColor: "#c4708a50", color: "#c4708a", backgroundColor: "#c4708a12" }}
-            whileHover={{ backgroundColor: "#c4708a28", scale: 1.03 }}>
-            {heroText.cta}
-          </motion.button>
+          <div className="mt-6">
+            <Link to="/blog">
+              <motion.div
+                className="px-5 py-2.5 rounded-full text-sm font-semibold border transition-all inline-block"
+                style={{ borderColor: "#9b7fc450", color: "#9b7fc4", backgroundColor: "#9b7fc412" }}
+                whileHover={{ backgroundColor: "#9b7fc428", scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}>
+                Read the Blog
+              </motion.div>
+            </Link>
+          </div>
         </motion.div>
 
         {/* Mobile header */}

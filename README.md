@@ -1,6 +1,6 @@
 # Beatriz Santos — Personal Career Website
 
-An interactive, travel-themed personal portfolio built as a production-grade single-page application. Features a real-time 3D globe rendered with WebGL, animated career timelines, Framer Motion scroll animations, and a fully integrated contact form with email delivery.
+An interactive personal portfolio and blog built from scratch. Features a real-time 3D WebGL globe, animated career timelines, a travel & photography showcase, and a full editorial blog system.
 
 ---
 
@@ -31,7 +31,7 @@ An interactive, travel-themed personal portfolio built as a production-grade sin
 ### UI Components & Design System
 | Technology | Usage |
 |---|---|
-| Radix UI (headless) | Accessible primitives — accordion, dialog, dropdown, tabs, tooltip, and more |
+| Radix UI (headless) | Accessible primitives — accordion, dialog, dropdown, tabs, tooltip |
 | shadcn/ui | Component patterns built on Radix UI primitives |
 | Lucide React | Consistent icon library |
 | class-variance-authority + clsx | Type-safe variant composition and conditional class merging |
@@ -41,16 +41,25 @@ An interactive, travel-themed personal portfolio built as a production-grade sin
 | Technology | Usage |
 |---|---|
 | Formspree | Contact form backend — email delivery with no server required |
-| Native Fetch API | Async form submission with loading, success, and error states |
-| HTML5 constraint validation | Client-side email format validation before submission |
+| Cloudinary | Cloud image storage and CDN delivery with automatic format optimization |
 
 ### Developer Experience
 | Technology | Usage |
 |---|---|
 | TypeScript strict mode | Full type safety across all components and data models |
-| ESNext modules | Native ES module output |
 | Path aliases (`@/`) | Clean absolute imports throughout the codebase |
 | Vite HMR | Instant hot module replacement in development |
+
+---
+
+## Routes
+
+| Path | Page | Description |
+|---|---|---|
+| `/` | Portfolio (Home) | Interactive 3D globe, career timeline, projects, skills, contact |
+| `/me` | Beyond Code | Travel adventures, photography gallery, filmmaking |
+| `/blog` | Blog listing | Editorial blog index with featured post, category filters |
+| `/blog/:slug` | Blog post | Full article view with rich content blocks |
 
 ---
 
@@ -59,32 +68,115 @@ An interactive, travel-themed personal portfolio built as a production-grade sin
 ```
 src/
 ├── app/
-│   ├── App.tsx                  # All sections composed in a single-page layout
+│   ├── App.tsx              # Main portfolio page (single-page layout)
+│   ├── PersonalPage.tsx     # Beyond Code page — travel, photography, film
+│   ├── BlogPage.tsx         # Blog listing page
+│   ├── BlogPostPage.tsx     # Individual blog post renderer
 │   └── components/
-│       └── ui/                  # Reusable Radix UI / shadcn-based components
+│       └── ui/              # Reusable Radix UI / shadcn-based components
 ├── content/
-│   ├── career.ts                # All career data — jobs, education, events, projects, skills
-│   └── text.ts                  # All UI copy — hero, about, contact, nav, footer
+│   ├── text.ts              # All UI copy — hero, about, contact, nav
+│   ├── career.ts            # Career data — jobs, education, projects, skills
+│   ├── personal.ts          # Beyond Code data — trips, gallery photos, film
+│   ├── blog.ts              # Blog posts and category metadata
+│   └── cloudinary.ts        # Cloudinary URL helper
 └── styles/
-    ├── globals.css              # CSS custom properties and base resets
-    ├── theme.css                # Design token definitions (colours, spacing, radius)
-    └── tailwind.css             # Tailwind v4 entry point
+    ├── globals.css          # Base resets
+    ├── theme.css            # Design token definitions
+    └── tailwind.css         # Tailwind v4 entry point
 ```
 
-**Data-driven design** — all content (career points, project entries, skills, copy) lives in two TypeScript files under `src/content/`. No content is hardcoded in components. Adding a new career point or project requires editing only the data layer.
-
-**Component model** — the application is a single composed page (`App.tsx`) with clearly separated section components: `HeroSection`, `AboutSection`, `ExperienceSection`, `EducationSection`, `ProjectsSection`, `EventsSection`, `SkillsSection`, `ContactSection`. Each receives only the data slice it needs via typed props.
+**Data-driven design** — all content lives in `src/content/`. No text or image URLs are hardcoded in components.
 
 ---
 
-## Key Features
+## Design System
 
-- **Interactive 3D Globe** — Three.js WebGL globe with a custom raycaster for click-to-focus on career location markers, marker clustering by city, and smooth camera transitions
-- **Animated Career Timelines** — right-side waypoint timeline for experience, alternating center-path timeline for education, both with scroll-triggered Framer Motion animations
-- **Featured Events Card** — split-panel card with a dynamic highlight grid, quote block, and category-coloured badges
-- **Per-project colour palettes** — each project card has its own accent colour applied across the hero gradient, icon glow, and CTA
-- **Contact Form with email delivery** — Formspree integration with async submission, loading state, success confirmation, and error handling; no backend or server required
-- **Fully responsive** — mobile-first layout, responsive typography, touch-friendly interactions
+| Role | Hex | Usage |
+|---|---|---|
+| Background | `#13111d` | Page background |
+| Rose | `#c4708a` | Primary accent, Travel section, Blog nav |
+| Lavender | `#9b7fc4` | Tech category, secondary accent |
+| Teal | `#7fc4c0` | Photography/Filmmaking section |
+| White | `#ffffff` | Text and UI elements |
+
+Blog category colors:
+
+| Category | Hex |
+|---|---|
+| Tech | `#9b7fc4` |
+| Travel | `#c4708a` |
+| Photography | `#7fc4c0` |
+| Life | `#c4a87f` |
+| Work | `#7fc488` |
+| Events | `#c4b87f` |
+
+---
+
+## Cloudinary Image Setup
+
+All images are served from Cloudinary. The helper in [`src/content/cloudinary.ts`](src/content/cloudinary.ts) generates optimized URLs:
+
+```ts
+import { img } from "@/content/cloudinary";
+
+img("my-photo-public-id", 800, 533)
+// → https://res.cloudinary.com/df2qs2fi4/image/upload/w_800,h_533,c_fill,f_auto,q_auto/my-photo-public-id
+```
+
+Cloudinary handles format conversion (WebP/AVIF), compression, and CDN delivery automatically.
+
+**To add a new image:**
+1. Upload the image to your Cloudinary Media Library at [cloudinary.com](https://cloudinary.com)
+2. Note the **Public ID** shown in the Media Library (e.g., `tokyo-golden-hour` or `travel/lisbon-tram` if inside a folder)
+3. Use `img("public-id", width, height)` in any content file
+
+> The **Cloud Name** (`df2qs2fi4`) is the only Cloudinary credential used in the frontend. The API Secret must never be included in client-side code.
+
+---
+
+## Content Management
+
+### Adding a blog post
+
+Edit [`src/content/blog.ts`](src/content/blog.ts) and append to the `POSTS` array:
+
+```ts
+{
+  id: 3,
+  slug: "my-new-post",
+  title: "My New Post",
+  subtitle: "Optional subtitle",
+  date: "2026-07-01",
+  category: "tech",           // tech | travel | photography | life | work | events
+  tags: ["React", "Design"],
+  coverImage: img("my-cover-image", 1280, 720),
+  excerpt: "Short preview text shown in the post card.",
+  readTime: "5 min",
+  featured: true,             // optional — only one post should be featured at a time
+  body: [
+    { type: "p", text: "First paragraph." },
+    { type: "h2", text: "A Section Heading" },
+    { type: "quote", text: "A pull quote." },
+    { type: "img", url: img("my-inline-image", 1280, 720), caption: "Image caption" },
+    { type: "ul", items: ["Item one", "Item two"] },
+  ]
+}
+```
+
+> Only **one** post should have `featured: true`. The featured post appears as the large hero card on the blog listing. All other posts appear in the grid.
+
+Supported `body` block types: `p`, `h2`, `h3`, `quote`, `img`, `ul`
+
+### Adding career data
+
+Edit [`src/content/career.ts`](src/content/career.ts) and add to the relevant array (jobs, education, projects, skills, or events).
+
+### Adding travel stops or photos
+
+Edit [`src/content/personal.ts`](src/content/personal.ts):
+- Add stops inside an existing `TRIPS` entry or create a new trip object
+- Add new gallery photos to `TOP_PHOTOS`
 
 ---
 
@@ -113,30 +205,6 @@ Deployed on **Vercel** via GitHub integration. Every push to `main` triggers an 
 | Build command | `pnpm build` |
 | Output directory | `dist` |
 | Framework preset | Vite |
-
----
-
-## Content Management
-
-All career data is maintained in [`src/content/career.ts`](src/content/career.ts):
-
-```ts
-// Adding a new experience entry
-{
-  id: 16,
-  type: "job",
-  title: "Senior Software Engineer",
-  company: "Acme Corp",
-  city: "London, UK",
-  period: "2025 – Present",
-  lat: 51.5074,
-  lng: -0.1278,
-  description: "...",
-  tags: ["Java", "React", "Kubernetes"],
-}
-```
-
-All UI copy — hero tagline, about text, nav links, contact section — is in [`src/content/text.ts`](src/content/text.ts).
 
 ---
 
