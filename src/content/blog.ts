@@ -463,32 +463,133 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "China brought several lifelong dreams to reality. Walking along the Great Wall of China, one of the Seven Wonders of the World, was a powerful reminder of what human beings can achieve across generations. Visiting Zhangjiajie National Forest Park, the inspiration behind the floating mountains in Avatar, was equally special. As Avatar has always been one of my favourite films, seeing those towering stone pillars rising through the mist felt like stepping directly into the movie itself. China also impressed me with its vibrant cities, spectacular performances, immense cave systems, dramatic viewpoints, and the incredible contrast between ancient traditions and futuristic skylines."
+        "China brought several lifelong dreams to reality. Walking along the Great Wall of China and visiting the Terracotta Army were both unforgettable experiences, not only because of their scale but because of the immense weight of history they carry. Standing in front of these monumental achievements, it was impossible not to feel a deep sense of admiration for the generations that built and preserved them so remarkably well over thousands of years. The level of preservation was extraordinary, allowing a real connection with the past that felt both powerful and humbling."
     },
 
     {
       type: "p",
       text:
-        "Japan offered many of the most personal moments of the trip. Seeing Mount Fuji completely free of clouds is something even many locals never experience, making the moment feel particularly special. Walking through snowy forests to observe the famous snow monkeys bathing in hot springs created one of the most unique wildlife encounters of my life. At the same time, Japan allowed me to embrace my inner child through visits to both Disney parks and Universal Studios, countless claw machines, photo booths, and more shopping than I care to admit. The country balanced natural beauty, tradition, and modern entertainment in a way unlike anywhere else."
+        "Visiting Zhangjiajie National Forest Park, the inspiration behind the floating mountains in Avatar, was especially meaningful since Avatar is my favourite film, which made the experience feel like I was stepping into the movie in real life. The landscapes were surreal, with towering stone pillars rising through mist and dense forest, creating scenes that felt almost unreal. I also visited Tianmen Mountain National Park, where I saw the famous Heaven’s Gate, a massive natural arch at the top of a mountain with a waterfall flowing through it, long believed to be a gateway to heaven. Walking along cliffside pathways suspended thousands of metres above the ground, surrounded by dramatic mountain views, made the experience even more unforgettable."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("chinaWall_zepzr8", 900, 600), caption: "Great Wall of China" },
+        { url: ph("terracotaWarriors_cg554t", 600, 400), caption: "Terracotta Army" },
+        { url: ph("avatar_tdmby6", 1200, 600), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("chinaNature_kruv3q", 600, 400), caption: "Tianmen Mountain National Park" },
+        { url: ph("chinaNature2_hxtxm9", 600, 400), caption: "Heaven’s Gat - Tianmen Mountain National Park" },
+      ],
     },
 
     {
       type: "p",
       text:
-        "South Korea allowed me to experience history firsthand by wearing traditional hanbok clothing while exploring the royal palaces of Seoul. Throughout the trip, I also participated in local workshops, visited countless temples, explored caves large enough to contain entire rivers, and discovered viewpoints that seemed to stretch endlessly across mountains, coastlines, forests, and cities."
+        "At the same time, China’s modern cities were some of the most impressive I have ever seen. Futuristic skylines filled with endless skyscrapers, neon lights, and cutting-edge architecture created a completely different atmosphere from the historical and natural sites. Nighttime in particular was unforgettable, with massive light shows and high-tech displays transforming entire districts into immersive visual experiences. I also watched large-scale performances that blended traditional Chinese culture with extremely modern production techniques, featuring some of the most impressive staging, choreography, and visual effects I have ever seen. These shows felt like world-class productions on an enormous scale, combining cultural storytelling with cutting-edge technology. What stood out most was the contrast between old and new: ancient temples and traditions existing side by side with ultra-modern infrastructure and technology-driven cities. This blend of heritage and innovation was present throughout the country and made China one of the most visually and culturally dynamic places of the entire journey."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("citySunset_hxhssu", 900, 600), caption: "Chongqing city sunset" },
+        { url: ph("xangai_pakffr", 600, 400), caption: "Shanghai skyline" },
+        { url: ph("chinaCity_arnd0b", 1200, 600), caption: "Hongya Cave - Chongqing" },
+        { url: ph("chinaShow_gypxiw", 600, 400), caption: "Emperor Banquet Show - Biejing" },
+        { url: ph("chinaTemple_rmhjx3", 600, 400), caption: "Ciyun Temple - Chongqing" },
+      ],
     },
 
     {
       type: "p",
       text:
-        "The wildlife encounters alone could fill an entire article. Across different countries, I saw countless species of monkeys, elephants, turtles, rays, pandas, deer, dogs, cats, and even became the unexpected leader of a group of ducks in Vietnam. Whether I was drifting through rivers in Tam Coc, navigating basket boats through Vietnamese waterways, riding scooters across Thai islands and Vietnamese countryside, or simply watching local life unfold in remote villages, every day seemed to offer something completely new."
+        "Japan offered many of the most personal moments of the trip. Seeing Mount Fuji completely free of clouds is something even many locals never experience, making the moment feel particularly special. Walking through snowy forests to observe the famous snow monkeys bathing in hot springs created one of the most unique wildlife encounters of my life. I also explored the famous bamboo forests, where towering green stalks surrounded narrow paths and created an atmosphere that felt almost silent and surreal. At the same time, Japan allowed me to embrace my inner child through visits to both Disney parks and Universal Studios, countless claw machines, photo booths, and more shopping than I care to admit. The country balanced natural beauty, tradition, and modern entertainment in a way unlike anywhere else."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("mountFuji_yjxfnb", 900, 600), caption: "Mount Fuji - Japan" },
+        { url: ph("bambu_qof0hg", 600, 400), caption: "Bamboo Forest - Japan" },
+        { url: ph("snowMonkey_fwudtb", 1200, 600), caption: "Snow Monkey - Jigokudani Snow Monkey Park" },
+        { url: ph("disney_eygtqh", 600, 400), caption: "Disneyland - Tokyo" },
+        { url: ph("clawMachine_g6igeu", 600, 400), caption: "Claw Machines - Japan" },
+      ],
     },
 
     {
       type: "p",
       text:
-        "Looking back, what made these experiences so meaningful was not only their beauty, but how they made me feel. Many of them filled me with awe. Others taught me courage, patience, gratitude, or humility. Together, they reminded me how much of the world exists beyond our routines and how rewarding it can be to embrace uncertainty. Long after specific details fade, I know I will remember the feeling of standing somewhere extraordinary and realising just how incredible our planet truly is."
-      },
+        "South Korea, especially Seoul, offered a deeply immersive cultural experience. One of the highlights was wearing traditional hanbok while visiting the royal palaces, which made exploring the city feel like stepping back in time. I spent long days walking through Seoul, discovering viewpoints near ancient walls that revealed endless layers of the city. The atmosphere was a constant contrast between tradition and modern life, with countless cafés serving matcha in every variation imaginable, and street food stalls spread across every corner of the city. Entire markets were filled with rows of small stands, each offering dishes I had never seen before, often completely unfamiliar yet incredibly inviting. The only common thread was the excitement of eating outdoors, surrounded by the energy of the city and its people."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("tradicionalDressing_fs4p6t", 900, 600), caption: "Traditional Hanbok at Gyeongbokgung Palace - Seoul" },
+        { url: ph("gards_qzxntv", 600, 400), caption: "Royal Guard Ceremony - Gyeongbokgung Palace, Seoul" },
+        { url: ph("skylineWall_stgkvr", 1200, 600), caption: "Seoul City Wall with Skyline View" },
+        { url: ph("market2_xroz3k", 600, 400), caption: "Covered Market - Seoul" },
+        { url: ph("market1_guhwka", 600, 400), caption: "Bindaetteok Stall at Gwangjang Market - Seoul" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Throughout the broader journey, nature consistently revealed some of its most impressive forms. From countless viewpoints overlooking mountains, coastlines, forests, and cities, each landscape offered a new perspective on scale and beauty. I also explored several vast and complex cave systems, some so large that entire rivers flowed through them, creating underground worlds that felt almost surreal. Walking through these natural formations, surrounded by silence, water, and rock shaped over millions of years, became some of the most memorable and humbling moments of the entire trip."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("viewpoint3_egcc4b", 900, 600), caption: "Ang Thong Marine Park Viewpoint - Thailand" },
+        { url: ph("viewpoint1_vkreyv", 600, 400), caption: "Flag on a Royal Enfield - Vang Vieng, Laos" },
+        { url: ph("viewpoint4_irorbb", 1200, 600), caption: "Sunset View Over Seoul - South Korea" },
+        { url: ph("cave1_si0cmk", 600, 400), caption: "Exploring a Limestone Cave - Laos" },
+        { url: ph("cave2_p5jt6l", 600, 400), caption: "Inside Phong Nha Cave - Vietnam" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Throughout Southeast Asia, much of the journey unfolded on two wheels, riding motorbikes through a wide variety of landscapes that constantly shifted between chaos and calm. From well-worn coastal roads to remote island tracks in Thailand and endless paths cutting through rice fields in Vietnam and Indonesia, every ride offered a sense of freedom and direct connection to the environment. I also visited several isolated islands where life moved at an entirely different pace, with almost no cars, untouched beaches, and quiet villages that felt deeply authentic and far removed from modern noise. Along the way, I travelled through winding rivers by boat, including the traditional Vietnamese basket boats, which added a unique cultural layer to the experience. These moments were complemented by hands-on workshops in local crafts and professions, where I was able to engage directly with communities and learn from traditional ways of life."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("basketBoats_fz3d1m", 900, 600), caption: "Basket Boats Among Nipa Palms - Hoi An, Vietnam" },
+        { url: ph("remoteIsland_ni2fmi", 600, 400), caption: "Palm-Lined Beach - remote island in Southeast Asia" },
+        { url: ph("riverRide_dmwym2", 600, 400), caption: "Trang An Boat Dock - Ninh Binh, Vietnam" },
+        { url: ph("motobike_ebuz1h", 1200, 600), caption: "Scooter Selfie - Southeast Asia" },
+        { url: ph("workshop_j5wc9b", 600, 400), caption: "Traditional Mat Weaving Workshop - Vietnam" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "The wildlife encounters alone could fill an entire article, as they became one of the most surprising and fulfilling parts of the journey. Across Southeast Asia and beyond, I experienced a wide variety of animals in both wild and semi-wild environments. I saw different species of monkeys in jungles and temples, elephants moving through natural landscapes, and turtles and rays in clear coastal waters. In China, I visited panda reserves, and in Japan I spent time around wild deer that would bow their heads when being fed as a simple gesture of acknowledgment. On remote islands, stray dogs and cats were part of everyday life, moving freely between villages and beaches, blending naturally into their surroundings. One of the more unexpected moments came in Vietnam, where I ended up becoming the ‘leader’ of a group of ducks, casually following them as they moved together through paths and open spaces. These experiences, from larger wildlife sightings to small everyday interactions, offered a quiet reminder of how varied and interconnected life can be when you slow down enough to observe it."
+    },
+
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("deers_hk4qgf", 1200, 600), caption: "Feeding the Deer of Nara - Japan" },
+        { url: ph("monkey_jurh2q", 900, 600), caption: "Monkey in the Jungle - Southeast Asia" },
+        { url: ph("panda_zyjbok", 600, 400), caption: "Giant Panda - China" },
+        { url: ph("elephant_my2sce", 600, 400), caption: "Elephant by the River - Thailand" },
+        { url: ph("duckLeader_jmzloj", 600, 400), caption: "Feeding as Duck Leader - Vietnam" },
+      ],
+    },
+
+    {
+      type: "p",
+      text:
+        "Looking back, what made these experiences so meaningful was not only their beauty, but the contrast and variety that defined the entire journey. From calm, reflective moments in nature to more intense and adventurous experiences, each place offered something different, shaped by its landscapes, wildlife, and rhythm of life. I witnessed how nature changes dramatically from country to country, from dense jungles and volcanic landscapes to quiet islands, rivers, and open coastlines, each with its own ecosystems and animals living in balance with their environment. Beyond nature, I learned a great deal from the people I met along the way — through local traditions, cultural performances, religious practices, and hands-on workshops that offered a deeper understanding of daily life in each place. These experiences often revealed a simpler, more grounded way of living, shaped by history, community, and respect for tradition. Together, they created a journey that moved between stillness and intensity, observation and participation, leaving me with a broader perspective on both the world and the way people choose to live within it."
+    },
 
     { type: "h2", text: "Different views on life" },
 
@@ -1409,6 +1510,13 @@ export const POSTS: BlogPost[] = [
         "It also needed to feel natural on both Android and iOS despite the different design conventions of each platform. I designed the interface myself, constantly balancing familiarity, accessibility, simplicity, and consistency."
     },
 
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("design_ensy42",   600, 400),  caption: "Application Design" },
+      ],
+    },
+    
     {
       type: "p",
       text:
