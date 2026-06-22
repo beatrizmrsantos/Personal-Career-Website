@@ -1533,6 +1533,17 @@ export default function App() {
             Hi, I&apos;m <span style={{ color: "#c4708a" }}>{profile.name}</span>
           </h1>
           <p className="text-sm text-foreground/45 mt-1">{heroText.mobileSubtitle}</p>
+          <div className="mt-4">
+            <Link to="/blog">
+              <motion.div
+                className="px-5 py-2.5 rounded-full text-sm font-semibold border transition-all inline-block"
+                style={{ borderColor: "#9b7fc450", color: "#9b7fc4", backgroundColor: "#9b7fc412" }}
+                whileHover={{ backgroundColor: "#9b7fc428", scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}>
+                Read the Blog
+              </motion.div>
+            </Link>
+          </div>
         </motion.div>
 
         {/* Globe canvas */}

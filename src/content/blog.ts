@@ -321,9 +321,9 @@ export const POSTS: BlogPost[] = [
       type: "gallery",
       photos: [
         { url: ph("jonyTurtle_obcquh", 900, 600), caption: "Snorkelling with turtles" },
-        { url: ph("coral1_yg608e", 600, 400), caption: "Coral Reef - Gili Air" },
-        { url: ph("turtle_ikb5tt", 600, 400), caption: "Turtle" },
-        { url: ph("coral2_bukcue", 1200, 600), caption: "Coral Reef - Gili Air" },
+        { url: ph("coral2_vuapri", 600, 400), caption: "Coral Reef - Gili Air" },
+        { url: ph("turtle_awrlxb", 600, 400), caption: "Turtle" },
+        { url: ph("coral1_jbzm4u", 1200, 600), caption: "Coral Reef - Gili Air" },
         { url: ph("manta_vmixsz", 1200, 600), caption: "Manta Rays - Nusa Penida" },
       ],
     },
