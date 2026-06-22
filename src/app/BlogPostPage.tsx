@@ -57,13 +57,6 @@ function LightboxOverlay({ photos, index, onChange, onClose }: {
       exit={{ opacity: 0 }}
       onClick={onClose}
     >
-      {/* Close */}
-      <button
-        className="absolute top-5 right-5 text-white/50 hover:text-white transition-colors z-10"
-        onClick={onClose}
-      >
-        <X className="w-6 h-6" />
-      </button>
 
       {/* Spinner — shown while image loads */}
       {loading && (
@@ -73,31 +66,41 @@ function LightboxOverlay({ photos, index, onChange, onClose }: {
       )}
 
       {/* Image + arrows */}
-      <div className="relative flex items-center min-w-[60vw] justify-center" onClick={(e) => e.stopPropagation()}>
-        {n > 1 && (
+      <div className="relative flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+        {n > 1 && !loading && (
           <button
-            className="absolute -left-7 w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-10"
+            className="absolute -left-10 w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-10"
             onClick={(e) => { e.stopPropagation(); prev(); }}
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
         )}
 
-        <motion.img
-          key={index}
-          src={toOriginalUrl(photos[index].url)}
-          alt={photos[index].caption}
-          className="max-w-[80vw] max-h-[85vh] object-contain rounded-xl"
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: loading ? 0 : 1, x: 0 }}
-          exit={{ opacity: 0, x: -30 }}
-          transition={{ duration: 0.2 }}
-          onLoad={() => setLoading(false)}
-        />
+        <div className="relative">
+          <motion.img
+            key={index}
+            src={toOriginalUrl(photos[index].url)}
+            alt={photos[index].caption}
+            className="max-w-[80vw] max-h-[85vh] object-contain rounded-xl"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: loading ? 0 : 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.2 }}
+            onLoad={() => setLoading(false)}
+          />
+          {!loading && (
+            <button
+              className="absolute -top-3 -right-9 w-7 h-7 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-20"
+              onClick={onClose}
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
 
-        {n > 1 && (
+        {n > 1 && !loading && (
           <button
-            className="absolute -right-7 w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-10"
+            className="absolute -right-10 w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-10"
             onClick={(e) => { e.stopPropagation(); next(); }}
           >
             <ChevronRight className="w-5 h-5" />
