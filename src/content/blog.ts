@@ -143,7 +143,7 @@ export const POSTS: BlogPost[] = [
   coverImage: ph("plain_gzst5i", 1280, 720),
   excerpt:
     "What started as a six-month trip across Asia became one of the most transformative experiences of my life, changing the way I think about success, happiness, relationships, and the future I want to build.",
-  readTime: "10 min",
+  readTime: "30 min",
   body: [
     {
       type: "p",
