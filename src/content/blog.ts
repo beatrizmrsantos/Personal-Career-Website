@@ -174,10 +174,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("neckVillage_umpbuo", 900, 600), caption: "Long Neck Karen Weaver - Northern Thailand" },
-        { url: ph("floatingVillage_fkvrh0", 600, 400), caption: "Floating Market - Thailand" },
-        { url: ph("musicJapan_jdeyxq", 600, 400), caption: "Bamboo Grove Musician - Japan" },
-        { url: ph("northVietnameDressing_hlhybq", 1200, 600), caption: "Traditional Dress - Northern Vietnam" },
+        { url: ph("neckVillage_umpbuo", 720, 960), caption: "Long Neck Karen Weaver - Northern Thailand" },
+        { url: ph("floatingVillage_fkvrh0", 720, 960), caption: "Floating Market - Thailand" },
+        { url: ph("musicJapan_jdeyxq", 720, 960), caption: "Bamboo Grove Musician - Japan" },
+        { url: ph("northVietnameDressing_hlhybq", 720, 960), caption: "Traditional Dress - Northern Vietnam" },
       ],
     },
 
@@ -204,7 +204,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("durian_cfwijd", 900, 600), caption: "Durian, the 'King of Fruits' of Southeast Asia" },
+        { url: ph("durian_cfwijd", 720, 960), caption: "Durian, the 'King of Fruits' of Southeast Asia" },
       ],
     },
 
@@ -217,9 +217,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("scorpians_qnzsvk", 600, 400), caption: "Insect & Scorpion Skewers - Thailand Night Market" },
-        { url: ph("crocodiles_of8ol7", 600, 400), caption: "Crocodile BBQ Stand - Thailand Night Market" },
-        { url: ph("insetcs_gmu9yh", 600, 400), caption: "Fried Insect Market Stall - Thailand" },
+        { url: ph("scorpians_qnzsvk", 720, 960), caption: "Insect & Scorpion Skewers - Thailand Night Market" },
+        { url: ph("crocodiles_of8ol7", 720, 960), caption: "Crocodile BBQ Stand - Thailand Night Market" },
+        { url: ph("insetcs_gmu9yh", 720, 960), caption: "Fried Insect Market Stall - Thailand" },
       ],
     },
 
@@ -238,9 +238,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("koreanMarket_xcqg99", 600, 400), caption: "Korean Street Food Stall" },
-        { url: ph("spicy_ai7sbb", 600, 400), caption: "Sichuan Spice Market - China" },
-        { url: ph("koreanSpice_urgq3h", 600, 400), caption: "Myeongdong Tteokbokki Street Cart - South Korea" },
+        { url: ph("koreanMarket_xcqg99", 720, 960), caption: "Korean Street Food Stall" },
+        { url: ph("spicy_ai7sbb", 720, 960), caption: "Sichuan Spice Market - China" },
+        { url: ph("koreanSpice_urgq3h", 720, 960), caption: "Myeongdong Tteokbokki Street Cart - South Korea" },
       ],
     },
 
@@ -253,9 +253,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("baliFood_thhs4f", 600, 400), caption: "Indonesian Warung Lunch - Bali" },
-        { url: ph("vietnameErbs_cwfjzu", 600, 400), caption: "Vietnamese Noodle Soup Feast" },
-        { url: ph("vietnameFood_aqjo7o", 600, 400), caption: "Vietnamese Street Lunch" },
+        { url: ph("baliFood_thhs4f", 720, 960), caption: "Indonesian Warung Lunch - Bali" },
+        { url: ph("vietnameErbs_cwfjzu", 720, 960), caption: "Vietnamese Noodle Soup Feast" },
+        { url: ph("vietnameFood_aqjo7o", 720, 960), caption: "Vietnamese Street Lunch" },
       ],
     },
 
@@ -268,11 +268,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("bowls_yirwp7", 600, 400), caption: "Sichuan Noodle Bowls - China" },
-        { url: ph("koreanBarbecue_ahss70", 600, 400), caption: "Korean Barbecue - South Korea" },
-        { url: ph("curry_rcf4zk", 600, 400), caption: "Tonkatsu Curry Rice - Japan" },
-        { url: ph("ramen_wj8bjj", 600, 400), caption: "Tonkotsu Ramen - Japan" },
-        { url: ph("chineseDish_kpxhia", 600, 400), caption: "Chinese Restaurant Set Meal" },
+        { url: ph("bowls_yirwp7", 720, 960), caption: "Sichuan Noodle Bowls - China" },
+        { url: ph("koreanBarbecue_ahss70", 720, 960), caption: "Korean Barbecue - South Korea" },
+        { url: ph("curry_rcf4zk", 720, 960), caption: "Tonkatsu Curry Rice - Japan" },
+        { url: ph("ramen_wj8bjj", 720, 960), caption: "Tonkotsu Ramen - Japan" },
+        { url: ph("chineseDish_kpxhia", 720, 960), caption: "Chinese Restaurant Set Meal" },
       ],
     },
 
@@ -291,9 +291,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("fruit_f6nfsa", 600, 400), caption: "Tropical Fruit Plate & Mango Smoothie" },
-        { url: ph("chineseFruit_jgfitq", 600, 400), caption: "Fruit Vendor - China" },
-        { url: ph("coconut_qoz0du", 600, 400), caption: "Fresh Coconut" },
+        { url: ph("fruit_f6nfsa", 720, 960), caption: "Tropical Fruit Plate & Mango Smoothie" },
+        { url: ph("chineseFruit_jgfitq", 720, 960), caption: "Fruit Vendor - China" },
+        { url: ph("coconut_qoz0du", 720, 960), caption: "Fresh Coconut" },
       ],
     },
 
@@ -320,11 +320,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("jonyTurtle_obcquh", 900, 600), caption: "Snorkelling with turtles" },
-        { url: ph("coral2_vuapri", 600, 400), caption: "Coral Reef - Gili Air" },
-        { url: ph("turtle_awrlxb", 600, 400), caption: "Turtle" },
-        { url: ph("coral1_jbzm4u", 1200, 600), caption: "Coral Reef - Gili Air" },
-        { url: ph("manta_vmixsz", 1200, 600), caption: "Manta Rays - Nusa Penida" },
+        { url: ph("jonyTurtle_obcquh", 720, 960), caption: "Snorkelling with turtles" },
+        { url: ph("coral2_vuapri", 720, 960), caption: "Coral Reef - Gili Air" },
+        { url: ph("turtle_awrlxb", 720, 960), caption: "Turtle" },
+        { url: ph("coral1_jbzm4u", 720, 960), caption: "Coral Reef - Gili Air" },
+        { url: ph("manta_vmixsz", 720, 960), caption: "Manta Rays - Nusa Penida" },
       ],
     },
 
@@ -337,11 +337,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("cascata9_pl1mgy", 1200, 600), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata6_pnsti0", 900, 600), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata5_nmndr9", 600, 400), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata4_szmhh9", 600, 400), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata1_ghub84", 1200, 600), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata9_pl1mgy", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata6_pnsti0", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata5_nmndr9", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata4_szmhh9", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata1_ghub84", 720, 960), caption: "Waterfall - Indonesia" },
       ],
     },
 
@@ -354,11 +354,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mountains_oq6gjn", 1200, 600), caption: "Karst Mountain Valley - Ha Giang, Vietnam" },
-        { url: ph("road_zkkn4m", 900, 600), caption: "Motorbiking the Ha Giang Loop - Vietnam" },
-        { url: ph("village_nskicv", 600, 400), caption: "Mountain Village Pit Stop - Ha Giang, Vietnam" },
-        { url: ph("vietnamiteBoy_gvcvs5", 600, 400), caption: "Young Khèn Player - Vietnam" },
-        { url: ph("drinking_ekvinq", 1200, 600), caption: "Dinner - Vietnam" },
+        { url: ph("mountains_oq6gjn", 720, 960), caption: "Karst Mountain Valley - Ha Giang, Vietnam" },
+        { url: ph("road_zkkn4m", 720, 960), caption: "Motorbiking the Ha Giang Loop - Vietnam" },
+        { url: ph("village_nskicv", 720, 960), caption: "Mountain Village Pit Stop - Ha Giang, Vietnam" },
+        { url: ph("vietnamiteBoy_gvcvs5", 720, 960), caption: "Young Khèn Player - Vietnam" },
+        { url: ph("drinking_ekvinq", 720, 960), caption: "Dinner - Vietnam" },
       ],
     },
 
@@ -371,11 +371,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("barcoLaos_z5lkcx", 600, 400), caption: "Mekong River Cruise - Laos" },
-        { url: ph("paramoturingLaos_vjd7cd", 900, 600), caption: "Paramotoring Over Vang Vieng - Laos" },
-        { url: ph("baloesArQuente_zemncn", 1200, 600), caption: "Hot Air Balloons Over Vang Vieng - Laos" },
-        { url: ph("laosRiver_vccnmk", 600, 400), caption: "Mekong River - Laos" },
-        { url: ph("laosPeople_ngy6t1", 1200, 600), caption: "Local People by the Mekong - Laos" },
+        { url: ph("barcoLaos_z5lkcx", 720, 960), caption: "Mekong River Cruise - Laos" },
+        { url: ph("paramoturingLaos_vjd7cd", 720, 960), caption: "Paramotoring Over Vang Vieng - Laos" },
+        { url: ph("baloesArQuente_zemncn", 720, 960), caption: "Hot Air Balloons Over Vang Vieng - Laos" },
+        { url: ph("laosRiver_vccnmk", 720, 960), caption: "Mekong River - Laos" },
+        { url: ph("laosPeople_ngy6t1", 720, 960), caption: "Local People by the Mekong - Laos" },
       ],
     },
 
@@ -388,9 +388,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("krabi_mbpx2l", 600, 400), caption: "Railay Beach Longtail Boats - Krabi, Thailand" },
-        { url: ph("blueWaters_aiq7sw", 900, 600), caption: "Crystal Waters - Thailand" },
-        { url: ph("Island_dqdu84", 1200, 600), caption: "Koh Tao Coastline - Thailand" },
+        { url: ph("krabi_mbpx2l", 720, 960), caption: "Railay Beach Longtail Boats - Krabi, Thailand" },
+        { url: ph("blueWaters_aiq7sw", 720, 960), caption: "Crystal Waters - Thailand" },
+        { url: ph("Island_dqdu84", 720, 960), caption: "Koh Tao Coastline - Thailand" },
       ],
     },
 
@@ -403,10 +403,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("khaoSok_ltolk8", 600, 400), caption: "Khao Sok National Park - Thailand" },
-        { url: ph("boat_xzfbal", 900, 600), caption: "Cheow Lan Lake - Khao Sok, Thailand" },
-        { url: ph("kaiaque_ffsnn9", 1200, 600), caption: "Kayaking Cheow Lan Lake - Khao Sok, Thailand" },
-        { url: ph("bangalow_jsqv2w", 600, 400), caption: "Floating Bungalow - Khao Sok, Thailand" },
+        { url: ph("khaoSok_ltolk8", 720, 960), caption: "Khao Sok National Park - Thailand" },
+        { url: ph("boat_xzfbal", 720, 960), caption: "Cheow Lan Lake - Khao Sok, Thailand" },
+        { url: ph("kaiaque_ffsnn9", 720, 960), caption: "Kayaking Cheow Lan Lake - Khao Sok, Thailand" },
+        { url: ph("bangalow_jsqv2w", 720, 960), caption: "Floating Bungalow - Khao Sok, Thailand" },
       ],
     },
 
@@ -419,10 +419,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("elephant_cipuzo", 900, 600), caption: "Elephant Sanctuary Encounter - Thailand" },
-        { url: ph("elephants_o5lv3a", 600, 400), caption: "Elephant Family - Thailand" },
-        { url: ph("newYear_rju6tp", 1200, 600), caption: "New Year's Fireworks on the Beach - Thailand" },
-        { url: ph("lantern_kw5ktm", 600, 400), caption: "Releasing a Sky Lantern in New Year's - Thailand" },
+        { url: ph("elephant_cipuzo", 720, 960), caption: "Elephant Sanctuary Encounter - Thailand" },
+        { url: ph("elephants_o5lv3a", 720, 960), caption: "Elephant Family - Thailand" },
+        { url: ph("newYear_rju6tp", 720, 960), caption: "New Year's Fireworks on the Beach - Thailand" },
+        { url: ph("lantern_kw5ktm", 720, 960), caption: "Releasing a Sky Lantern in New Year's - Thailand" },
       ],
     },
 
@@ -435,11 +435,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("AnkorWatSunrise_iweqlp", 900, 600), caption: "Sunrise Silhouette at Angkor Wat - Cambodia" },
-        { url: ph("AnkorWat_vbauyk", 600, 400), caption: "Ta Prohm Temple Towers - Angkor, Cambodia" },
-        { url: ph("ankorWatNature_o75mvs", 1200, 600), caption: "Tree Roots Engulfing Ta Prohm - Cambodia" },
-        { url: ph("floatingVillage_oipmyv", 600, 400), caption: "Stilted Houses on Tonle Sap Floating Village - Cambodia" },
-        { url: ph("riverCamboja_mwklis", 600, 400), caption: "Boat Ride Through the Flooded Forest - Cambodia" },
+        { url: ph("AnkorWatSunrise_iweqlp", 720, 960), caption: "Sunrise Silhouette at Angkor Wat - Cambodia" },
+        { url: ph("AnkorWat_vbauyk", 720, 960), caption: "Ta Prohm Temple Towers - Angkor, Cambodia" },
+        { url: ph("ankorWatNature_o75mvs", 720, 960), caption: "Tree Roots Engulfing Ta Prohm - Cambodia" },
+        { url: ph("floatingVillage_oipmyv", 720, 960), caption: "Stilted Houses on Tonle Sap Floating Village - Cambodia" },
+        { url: ph("riverCamboja_mwklis", 720, 960), caption: "Boat Ride Through the Flooded Forest - Cambodia" },
       ],
     },
 
@@ -452,11 +452,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("vulcanos_isgjfo", 900, 600), caption: "Sunrise Over Mount Bromo's Volcanic Range - Indonesia" },
-        { url: ph("vulcano_oszmqc", 600, 400), caption: "Gazing Over the Crater - Mount Bromo, Indonesia" },
-        { url: ph("vulcanoEruption_z3x2hu", 1200, 600), caption: "Smoking Crater - Mount Bromo, Indonesia" },
-        { url: ph("JeepRide_mx3sra", 600, 400), caption: "Jeep Convoy Across the Sea of Sand - Bromo, Indonesia" },
-        { url: ph("Jeep_o5cr9a", 600, 400), caption: "Jeep Adventure - Mount Bromo Indonesia" },
+        { url: ph("vulcanos_isgjfo", 720, 960), caption: "Sunrise Over Mount Bromo's Volcanic Range - Indonesia" },
+        { url: ph("vulcano_oszmqc", 720, 960), caption: "Gazing Over the Crater - Mount Bromo, Indonesia" },
+        { url: ph("vulcanoEruption_z3x2hu", 720, 960), caption: "Smoking Crater - Mount Bromo, Indonesia" },
+        { url: ph("JeepRide_mx3sra", 720, 960), caption: "Jeep Convoy Across the Sea of Sand - Bromo, Indonesia" },
+        { url: ph("Jeep_o5cr9a", 720, 960), caption: "Jeep Adventure - Mount Bromo Indonesia" },
       ],
     },
 
@@ -475,11 +475,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("chinaWall_zepzr8", 900, 600), caption: "Great Wall of China" },
-        { url: ph("terracotaWarriors_cg554t", 600, 400), caption: "Terracotta Army" },
-        { url: ph("avatar_tdmby6", 1200, 600), caption: "Zhangjiajie National Forest Park" },
-        { url: ph("chinaNature_kruv3q", 600, 400), caption: "Tianmen Mountain National Park" },
-        { url: ph("chinaNature2_hxtxm9", 600, 400), caption: "Heaven’s Gat - Tianmen Mountain National Park" },
+        { url: ph("chinaWall_zepzr8", 720, 960), caption: "Great Wall of China" },
+        { url: ph("terracotaWarriors_cg554t", 720, 960), caption: "Terracotta Army" },
+        { url: ph("avatar_tdmby6", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("chinaNature_kruv3q", 960, 720), caption: "Tianmen Mountain National Park" },
+        { url: ph("chinaNature2_hxtxm9", 720, 960), caption: "Heaven’s Gat - Tianmen Mountain National Park" },
       ],
     },
 
@@ -492,11 +492,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("citySunset_hxhssu", 900, 600), caption: "Chongqing city sunset" },
-        { url: ph("xangai_pakffr", 600, 400), caption: "Shanghai skyline" },
-        { url: ph("chinaCity_arnd0b", 1200, 600), caption: "Hongya Cave - Chongqing" },
-        { url: ph("chinaShow_gypxiw", 600, 400), caption: "Emperor Banquet Show - Biejing" },
-        { url: ph("chinaTemple_rmhjx3", 600, 400), caption: "Ciyun Temple - Chongqing" },
+        { url: ph("citySunset_hxhssu", 720, 960), caption: "Chongqing city sunset" },
+        { url: ph("xangai_pakffr", 720, 960), caption: "Shanghai skyline" },
+        { url: ph("chinaCity_arnd0b", 720, 960), caption: "Hongya Cave - Chongqing" },
+        { url: ph("chinaShow_gypxiw", 720, 960), caption: "Emperor Banquet Show - Biejing" },
+        { url: ph("chinaTemple_rmhjx3", 720, 960), caption: "Ciyun Temple - Chongqing" },
       ],
     },
 
@@ -509,11 +509,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mountFuji_yjxfnb", 900, 600), caption: "Mount Fuji - Japan" },
-        { url: ph("bambu_qof0hg", 600, 400), caption: "Bamboo Forest - Japan" },
-        { url: ph("snowMonkey_fwudtb", 1200, 600), caption: "Snow Monkey - Jigokudani Snow Monkey Park" },
-        { url: ph("disney_eygtqh", 600, 400), caption: "Disneyland - Tokyo" },
-        { url: ph("clawMachine_g6igeu", 600, 400), caption: "Claw Machines - Japan" },
+        { url: ph("mountFuji_yjxfnb", 720, 960), caption: "Mount Fuji - Japan" },
+        { url: ph("bambu_qof0hg", 720, 960), caption: "Bamboo Forest - Japan" },
+        { url: ph("snowMonkey_fwudtb", 720, 960), caption: "Snow Monkey - Jigokudani Snow Monkey Park" },
+        { url: ph("disney_eygtqh", 720, 960), caption: "Disneyland - Tokyo" },
+        { url: ph("clawMachine_g6igeu", 720, 960), caption: "Claw Machines - Japan" },
       ],
     },
 
@@ -526,11 +526,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("tradicionalDressing_fs4p6t", 900, 600), caption: "Traditional Hanbok at Gyeongbokgung Palace - Seoul" },
-        { url: ph("gards_qzxntv", 600, 400), caption: "Royal Guard Ceremony - Gyeongbokgung Palace, Seoul" },
-        { url: ph("skylineWall_stgkvr", 1200, 600), caption: "Seoul City Wall with Skyline View" },
-        { url: ph("market2_xroz3k", 600, 400), caption: "Covered Market - Seoul" },
-        { url: ph("market1_guhwka", 600, 400), caption: "Bindaetteok Stall at Gwangjang Market - Seoul" },
+        { url: ph("tradicionalDressing_fs4p6t", 720, 960), caption: "Traditional Hanbok at Gyeongbokgung Palace - Seoul" },
+        { url: ph("gards_qzxntv", 720, 960), caption: "Royal Guard Ceremony - Gyeongbokgung Palace, Seoul" },
+        { url: ph("skylineWall_stgkvr", 720, 960), caption: "Seoul City Wall with Skyline View" },
+        { url: ph("market2_xroz3k", 720, 960), caption: "Covered Market - Seoul" },
+        { url: ph("market1_guhwka", 720, 960), caption: "Bindaetteok Stall at Gwangjang Market - Seoul" },
       ],
     },
 
@@ -543,11 +543,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("viewpoint3_egcc4b", 900, 600), caption: "Ang Thong Marine Park Viewpoint - Thailand" },
-        { url: ph("viewpoint1_vkreyv", 600, 400), caption: "Flag on a Royal Enfield - Vang Vieng, Laos" },
-        { url: ph("viewpoint4_irorbb", 1200, 600), caption: "Sunset View Over Seoul - South Korea" },
-        { url: ph("cave1_si0cmk", 600, 400), caption: "Exploring a Limestone Cave - Laos" },
-        { url: ph("cave2_p5jt6l", 600, 400), caption: "Inside Phong Nha Cave - Vietnam" },
+        { url: ph("viewpoint3_egcc4b", 720, 960), caption: "Ang Thong Marine Park Viewpoint - Thailand" },
+        { url: ph("viewpoint1_vkreyv", 720, 960), caption: "Flag on a Royal Enfield - Vang Vieng, Laos" },
+        { url: ph("viewpoint4_irorbb", 720, 960), caption: "Sunset View Over Seoul - South Korea" },
+        { url: ph("cave1_si0cmk", 720, 960), caption: "Exploring a Limestone Cave - Laos" },
+        { url: ph("cave2_p5jt6l", 720, 960), caption: "Inside Phong Nha Cave - Vietnam" },
       ],
     },
 
@@ -560,11 +560,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("basketBoats_fz3d1m", 900, 600), caption: "Basket Boats Among Nipa Palms - Hoi An, Vietnam" },
-        { url: ph("remoteIsland_ni2fmi", 600, 400), caption: "Palm-Lined Beach - remote island in Southeast Asia" },
-        { url: ph("riverRide_dmwym2", 600, 400), caption: "Trang An Boat Dock - Ninh Binh, Vietnam" },
-        { url: ph("motobike_ebuz1h", 1200, 600), caption: "Scooter Selfie - Southeast Asia" },
-        { url: ph("workshop_j5wc9b", 600, 400), caption: "Traditional Mat Weaving Workshop - Vietnam" },
+        { url: ph("basketBoats_fz3d1m", 720, 960), caption: "Basket Boats Among Nipa Palms - Hoi An, Vietnam" },
+        { url: ph("remoteIsland_ni2fmi", 720, 960), caption: "Palm-Lined Beach - remote island in Southeast Asia" },
+        { url: ph("riverRide_dmwym2", 720, 960), caption: "Trang An Boat Dock - Ninh Binh, Vietnam" },
+        { url: ph("motobike_ebuz1h", 720, 960), caption: "Scooter Selfie - Southeast Asia" },
+        { url: ph("workshop_j5wc9b", 720, 960), caption: "Traditional Mat Weaving Workshop - Vietnam" },
       ],
     },
 
@@ -577,11 +577,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("deers_hk4qgf", 1200, 600), caption: "Feeding the Deer of Nara - Japan" },
-        { url: ph("monkey_jurh2q", 900, 600), caption: "Monkey in the Jungle - Southeast Asia" },
-        { url: ph("panda_zyjbok", 600, 400), caption: "Giant Panda - China" },
-        { url: ph("elephant_my2sce", 600, 400), caption: "Elephant by the River - Thailand" },
-        { url: ph("duckLeader_jmzloj", 600, 400), caption: "Feeding as Duck Leader - Vietnam" },
+        { url: ph("deers_hk4qgf", 720, 960), caption: "Feeding the Deer of Nara - Japan" },
+        { url: ph("monkey_jurh2q", 720, 960), caption: "Monkey in the Jungle - Southeast Asia" },
+        { url: ph("panda_zyjbok", 720, 960), caption: "Giant Panda - China" },
+        { url: ph("elephant_my2sce", 720, 960), caption: "Elephant by the River - Thailand" },
+        { url: ph("duckLeader_jmzloj", 720, 960), caption: "Feeding as Duck Leader - Vietnam" },
       ],
     },
 
@@ -602,9 +602,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("cambojaVillage_atlp7s",   600, 400),  caption: "Camboja Village" },
-        { url: ph("laosHouse_bqc25s",  900, 600),  caption: "Laos House" },
-        { url: ph("cambojaKids_iglm6s",  600, 400),  caption: "Camboja School" },
+        { url: ph("cambojaVillage_atlp7s",   720, 960),  caption: "Camboja Village" },
+        { url: ph("laosHouse_bqc25s",  720, 960),  caption: "Laos House" },
+        { url: ph("cambojaKids_iglm6s",  720, 960),  caption: "Camboja School" },
       ],
     },
 
@@ -617,10 +617,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("workingLady_bbwl8y",   600, 400),  caption: "Village Road - Laos" },
-        { url: ph("thailandWeaver_pq3vgs",  900, 600),  caption: "Traditional Backstrap Weaving - Northern Thailand" },
-        { url: ph("vietnameKids_mnpsf9",  600, 400),  caption: "Hmong Girls with Flower Baskets - Northern Vietnam" },
-        { url: ph("vietnameWorkerd_fy5moc",  600, 400),  caption: "Street Vendor in Hanoi's Old Quarter" },
+        { url: ph("workingLady_bbwl8y",   720, 960),  caption: "Village Road - Laos" },
+        { url: ph("thailandWeaver_pq3vgs",  720, 960),  caption: "Traditional Backstrap Weaving - Northern Thailand" },
+        { url: ph("vietnameKids_mnpsf9",  720, 960),  caption: "Hmong Girls with Flower Baskets - Northern Vietnam" },
+        { url: ph("vietnameWorkerd_fy5moc",  720, 960),  caption: "Street Vendor in Hanoi's Old Quarter" },
       ],
     },
     
@@ -633,9 +633,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mama_m5djhb",   600, 400),  caption: "Local Vietnamese Grandmother" },
-        { url: ph("cambojaLady_sgakm4",  900, 600),  caption: "Boat Rider - Cambodia" },
-        { url: ph("thailandMan_csadsp",  600, 400),  caption: "Floating Market Vendor - Thailand" },
+        { url: ph("mama_m5djhb",   720, 960),  caption: "Local Vietnamese Grandmother" },
+        { url: ph("cambojaLady_sgakm4",  720, 960),  caption: "Boat Rider - Cambodia" },
+        { url: ph("thailandMan_csadsp",  720, 960),  caption: "Floating Market Vendor - Thailand" },
       ],
     },
 
@@ -650,11 +650,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("monksCamboja_x0criz",   900, 600),  caption: "Monks on the Royal Palace - Cambodia" },
-        { url: ph("templeDourado_blxxei",  600, 400),  caption: "Wat Pho Temple Complex - Thailand" },
-        { url: ph("camboja_pdufsr",  600, 400),  caption: "Ta Prohm Temple - Angkor, Cambodia" },
-        { url: ph("templeThailand_ld9tae",  600, 400),  caption: "Wat Chiang Man - Thailand)" },
-        { url: ph("buda_wutjnz",  600, 400),  caption: "Golden Buddha Shrine - China" },
+        { url: ph("monksCamboja_x0criz",   720, 960),  caption: "Monks on the Royal Palace - Cambodia" },
+        { url: ph("templeDourado_blxxei",  720, 960),  caption: "Wat Pho Temple Complex - Thailand" },
+        { url: ph("camboja_pdufsr",  720, 960),  caption: "Ta Prohm Temple - Angkor, Cambodia" },
+        { url: ph("templeThailand_ld9tae",  720, 960),  caption: "Wat Chiang Man - Thailand)" },
+        { url: ph("buda_wutjnz",  720, 960),  caption: "Golden Buddha Shrine - China" },
       ],
     },
 
@@ -679,9 +679,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("monks_fm5skz",   900, 600),  caption: "Monks in Prayer - Laos" },
-        { url: ph("japanPray_tbsskz",  600, 400),  caption: "Jizo Statues Shrine - Japan" },
-        { url: ph("chinaPray_k2tqif",  600, 400),  caption: " Incense Offering at a Buddhist Temple - China" },
+        { url: ph("monks_fm5skz",   720, 960),  caption: "Monks in Prayer - Laos" },
+        { url: ph("japanPray_tbsskz",  720, 960),  caption: "Jizo Statues Shrine - Japan" },
+        { url: ph("chinaPray_k2tqif",  720, 960),  caption: " Incense Offering at a Buddhist Temple - China" },
       ],
     },
 
@@ -696,7 +696,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mask_l21vs5",    900, 600),  caption: "Chinese woman shielding her face from the sun" },
+        { url: ph("mask_l21vs5",    720, 960),  caption: "Chinese woman shielding her face from the sun" },
       ],
     },
 
@@ -709,8 +709,8 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("makeup_xx9hze",    900, 600),  caption: "Chinese makeup application" },
-        { url: ph("chineseGirls_oust6a",    900, 600),  caption: "Chinese girls wearing traditional clothing" },
+        { url: ph("makeup_xx9hze",    720, 960),  caption: "Chinese makeup application" },
+        { url: ph("chineseGirls_oust6a",    720, 960),  caption: "Chinese girls wearing traditional clothing" },
       ],
     },
 
@@ -749,7 +749,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("backpacking_j1brib",    900, 600),  caption: "Returning home" },
+        { url: ph("backpacking_j1brib", 720, 960),  caption: "Returning home" },
       ],
     },
   ]
@@ -2283,6 +2283,418 @@ export const POSTS: BlogPost[] = [
       type: "quote",
       text:
         "University gave me the foundation. Opensoft taught me how to build real software for real people."
+    }
+  ]
+},
+
+{
+  id: 12,
+  slug: "my-erasmus-in-dresden",
+  title: "My Erasmus in Dresden",
+  subtitle: "Six months of discovering Germany, Europe, and a different way of living",
+  date: "2023-04-11",
+  category: "life",
+  tags: ["Erasmus", "Germany", "Dresden", "Travel", "Culture"],
+  coverImage: ph("Erasmus_y3kpat", 1280, 720),
+  excerpt:
+    "I went to Dresden expecting an Erasmus experience. I came back with a completely different perspective on education, culture, travel, and what I value in everyday life.",
+  readTime: "15 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "When I left Portugal for my Erasmus in Dresden, I knew I was going to experience a different country, study at a different university, and meet people from all over the world. What I didn't expect was how much the experience would change the way I saw everyday life."
+    },
+    {
+      type: "p",
+      text:
+        "I spent the spring and summer in Germany, and somewhere between university lectures, train rides, long walks, lakes, parks, and weekend trips across Europe, Dresden started to feel like home. It was an experience that taught me far more than what I could have learned inside a classroom."
+    },
+
+    { type: "h2", text: "Arriving in Germany" },
+    {
+      type: "p",
+      text:
+        "The first few weeks were a constant exercise in comparison. Coming from Portugal, Germany felt familiar enough to be European, but different enough that I noticed something new almost every day."
+    },
+    {
+      type: "p",
+      text:
+        "The biggest surprise was probably not a particular tradition or cultural difference, but the way everything seemed to work. Organization and efficiency were everywhere. Things happened when they were supposed to happen, systems were carefully planned, and there always seemed to be a process behind everything."
+    },
+    {
+      type: "p",
+      text:
+        "Coming from Portugal, where improvisation is often part of everyday life, arriving somewhere where organization and efficiency were taken so seriously was both surprising and, honestly, refreshing. It was one of those differences that you don't fully appreciate until you experience the opposite."
+    },
+    {
+      type: "quote",
+      text:
+        "Sometimes the biggest culture shock isn't something dramatic. It's realizing how differently everyday life can function."
+    },
+
+    { type: "h2", text: "A Different Way of Learning" },
+    {
+      type: "p",
+      text:
+        "University was one of the areas where I felt the cultural difference most strongly. Studying at TU Dresden was not simply about attending university in another country — the entire learning experience felt different from what I was used to in Portugal."
+    },
+    {
+      type: "p",
+      text:
+        "The classes had a different dynamic, students were expected to work more independently, and the relationship between lectures, individual study, and assessment was not the same. Even the way exams were structured and carried out was different."
+    },
+    {
+      type: "p",
+      text:
+        "At first, adapting to this system was challenging. I had to change the way I studied, manage my time differently, and become much more responsible for my own learning. But that challenge ended up being one of the most valuable parts of the experience."
+    },
+    {
+      type: "p",
+      text:
+        "I learned to be more independent, more disciplined, and more comfortable with figuring things out on my own. It was a different way of learning, and being forced outside the methods I was comfortable with helped me grow considerably — both academically and personally."
+    },
+    {
+      type: "p",
+      text:
+        "Another part of the university experience that felt very different was living in a student dorm. In Portugal, this kind of student housing culture is much less common, so living in a dorm in Dresden was a completely new experience for me. I was surrounded by other students from different countries, and everyday life naturally became a social experience — from sharing common spaces to having spontaneous conversations and getting to know people I would probably never have met otherwise."
+    },
+    {
+      type: "p",
+      text:
+        "It was also interesting to experience the sense of community that came with living among other students. Even simple things like cooking together, spending time in the common areas, or meeting people in the corridors became part of my university experience. It made me feel much more immersed in student life and was one of the things that made my time in Dresden feel so different from university life in Portugal."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("university_ibm6a1", 720, 960), caption: "TU Dresden" },
+        { url: ph("dorm_rzftwk", 720, 960), caption: "Dorm" },
+      ],
+    },
+
+    { type: "h2", text: "Discovering Dresden" },
+    {
+      type: "p",
+      text:
+        "Dresden was probably the perfect city for my Erasmus. It wasn't too big, but it wasn't small either. It had enough movement, students, culture, and things to discover without ever feeling overwhelming."
+    },
+    {
+      type: "p",
+      text:
+        "The city has a beautiful historical center, a strong academic atmosphere, and an identity that combines history, culture, and nature. The Elbe running through the city became one of my favorite parts of Dresden. There was something special about walking along the river, especially during the warmer months, when the city seemed to move outdoors."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("dresden3_q6yunn", 720, 960), caption: "Dresden" },
+        { url: ph("dresden5_c2y5jy", 720, 960), caption: "Dresden" },
+        { url: ph("dresden2_ncva3u", 720, 960), caption: "Dresden" },
+        { url: ph("dresden4_lwcqtv", 720, 960), caption: "Dresden" },
+        { url: ph("dresden1_ubvwrt", 720, 960), caption: "Dresden" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "And then there were the parks. So many parks. One of the things I loved most about Germany was how much outdoor space was integrated into everyday life. Nature never felt far away. Many of the parks also had beautiful lakes where you could rent small boats and spend a peaceful afternoon on the water, which made the whole experience feel even more connected to nature."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("dresden_park3_g0fjou", 720, 960), caption: "Dresden park" },
+        { url: ph("dresden_park1_e9ntw5", 720, 960), caption: "Dresden lake" },
+        { url: ph("dresden_park2_srqk0v", 720, 960), caption: "Boating on one of Dresden’s lakes" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "Dresden also gave me some of my first experiences with things I had never tried before. I went ice skating for the first time and even watched my first ice hockey game. Small experiences like these made the city feel like a place where I was constantly discovering something new."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("iceskating_ri5kfm", 720, 960), caption: "Ice Skating" },
+        { url: ph("hockey_cchwxr", 720, 960), caption: "Ice hockey game" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "One of the easiest ways to explore Dresden was by bicycle. Cycling was simply part of everyday life. Student passes included access to public bicycles, and the city was clearly designed around pedestrians and cyclists rather than cars. There were bike lanes everywhere, and getting around without a car felt completely natural."
+    },
+    {
+      type: "p",
+      text:
+        "The combination of an efficient public transport network and extensive cycling infrastructure also meant there was surprisingly little traffic. I could get almost anywhere easily, whether by tram, train, bicycle, or simply walking. It made the city feel calm and accessible in a way that I wasn't used to."
+    },
+    {
+      type: "p",
+      text:
+        "I spent countless afternoons walking, cycling, exploring, sitting by the river, and simply enjoying the city. Dresden felt picturesque without feeling artificial — a place where history and everyday life existed naturally alongside each other."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("bicycle_mcbygx", 960, 720), caption: "Cycling in Dresden" },
+        { url: ph("public_transportation_dtssmy", 720, 960), caption: "Public Transport – Trains in Dresden" },
+      ],
+    },
+
+    { type: "h2", text: "Food, Traditions, and Culture Shock" },
+    {
+      type: "p",
+      text:
+        "Food was another part of the experience where I constantly noticed the differences between Germany and Portugal. What people eat, when they eat, and even what counts as a proper meal can be surprisingly different."
+    },
+    {
+      type: "p",
+      text:
+        "In Portugal, meals are often an important social moment, and having a proper, substantial meal is part of the routine. In Germany, I noticed that people were much more comfortable having something smaller when they didn't need a full meal. Sandwiches, snacks, and lighter meals were completely normal, which felt quite different from what I was used to."
+    },
+    {
+      type: "p",
+      text:
+        "And then there was the ice cream. Germans seemed to absolutely love it, and I definitely wasn't going to complain about that — ice cream is one of my favorite things in the world. Ice cream shops were everywhere, and having one during a sunny afternoon quickly became part of the summer routine."
+    },
+    {
+      type: "p",
+      text:
+        "There was also an impressive amount of schnitzel to be eaten, and more Milka chocolate than I probably needed, especially considering how cheap it was. Some of the small everyday things I discovered through food ended up becoming part of what made living there so enjoyable."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("food2_rkvysg", 720, 960), caption: "Schnitzel" },
+        { url: ph("food1_rsudgp", 720, 960), caption: "Typical German Food" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "The social culture was probably an even bigger adjustment. Coming from Portugal, a country where people tend to be very social, expressive, spontaneous, and comfortable talking to strangers, Germany initially felt much more reserved. People seemed to value personal space, privacy, punctuality, and clear boundaries much more strongly."
+    },
+    {
+      type: "p",
+      text:
+        "At first, this could feel a little distant. I was used to conversations starting easily, plans being made spontaneously, and social interactions feeling very open. In Germany, people often seemed more deliberate about who they let into their personal space and how they interacted with others."
+    },
+    {
+      type: "p",
+      text:
+        "But the more time I spent there, the more I understood that being reserved didn't necessarily mean being unfriendly. People simply expressed themselves differently. Once you got to know someone, the relationships could be just as genuine — they were simply built in a different way."
+    },
+    {
+      type: "p",
+      text:
+        "In a way, the contrast was something I came to appreciate. The organization, respect for personal space, punctuality, and predictability that initially felt strange eventually became things I found myself enjoying. It made me realize that there isn't necessarily one right way of doing things — there are simply different ways of living."
+    },
+    {
+      type: "p",
+      text:
+        "What surprised me most was how strongly Germans seemed to separate work and personal life. There was a clear sense that work was something you did, not something that defined your entire existence."
+    },
+
+    { type: "h2", text: "Learning to Live, Not Just Work" },
+    {
+      type: "p",
+      text:
+        "The longer I stayed, the more I noticed how much Germany seemed to prioritize quality of life. Exercise, nature, socializing, and spending time outdoors were not treated as luxuries. They were simply part of everyday life."
+    },
+    {
+      type: "p",
+      text:
+        "During the summer, it was completely normal to see people leaving work and heading straight to a park. Groups would have picnics, play volleyball or other team games, sit together by the river, or simply spend the evening outside."
+    },
+    {
+      type: "p",
+      text:
+        "That was one of the biggest lifestyle differences I took away from the experience. People seemed to work to live, rather than live to work."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("picnic_x9kxei", 720, 960), caption: "Picnic in the park" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "And, of course, I had to embrace one of the things Germans seem to love most: hiking. I did some beautiful walks through forests, hills, and natural landscapes around Dresden. Being surrounded by nature became one of my favorite parts of living there."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("hike2_hz1gck", 720, 960), caption: "Bastei Bridge" },
+        { url: ph("hike3_doc6on", 720, 960), caption: "Hicking view" },
+        { url: ph("hike1_g35bho", 720, 960), caption: "Hicking" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "Coming from the Algarve, I'm used to spending summer days at the beach. In Dresden, that looked completely different. Instead of the Atlantic, I found myself swimming in lakes, surrounded by trees and nature — sometimes with nutrias nearby. It was definitely not the summer I was used to, but it became one of my favorite memories."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("lake2_sysogc", 720, 960), caption: "Dresden lake" },
+        { url: ph("lake1_vefwyk", 720, 960), caption: "Dresden lake" }
+      ],
+    },
+
+    { type: "h2", text: "Erasmus Means Exploring" },
+    {
+      type: "p",
+      text:
+        "One of the greatest parts of doing Erasmus in Central Europe was realizing how easy it was to explore an entire continent from one place."
+    },
+    {
+      type: "p",
+      text:
+        "Dresden's location made it an incredible starting point for travelling. Poland, Czechia, Austria, Hungary, the Netherlands, and countless German cities were suddenly within reach."
+    },
+    {
+      type: "p",
+      text:
+        "I visited countless cities in Poland, and one of the things I noticed immediately was how different their atmosphere felt from Germany. The cities were generally busier, people seemed louder and more expressive, and the overall energy felt much closer to Portugal. In a strange way, being in Poland gave me small reminders of home."
+    },
+    {
+      type: "p",
+      text:
+        "But one of the most difficult and meaningful experiences was visiting Auschwitz."
+    },
+    {
+      type: "p",
+      text:
+        "Walking through a place that represents such an enormous amount of human suffering is difficult to put into words. The experience was emotionally heavy and stayed with me long after leaving. It was one of those moments where travelling stopped being about discovering beautiful places and became about confronting history and understanding it in a much more personal way."
+    },
+
+    { type: "h2", text: "Prague, Vienna, Bratislava and Budapest" },
+    {
+      type: "p",
+      text:
+        "Prague felt almost unreal. Its medieval architecture, narrow streets, towers, and atmosphere made the city feel like something out of a fairytale. There was something almost princess-like about walking through the historic center, and the city's atmosphere made it one of those places where simply wandering around felt like an experience in itself."
+    },
+    {
+      type: "p",
+      text:
+      "Vienna was completely different. Grand, elegant, and imposing, it had a royal atmosphere that was impossible to miss. Huge streets, monumental white buildings, palaces, and carefully designed architecture made the city feel incredibly sophisticated and almost larger than life. It was also where I experienced my first opera, at the Vienna State Opera. Sitting inside such a beautiful and historic opera house and watching a performance there felt like a perfect reflection of the city’s elegance and cultural richness."
+    },
+    {
+      type: "p",
+      text:
+        "Bratislava felt smaller and more intimate. It was welcoming, cultural, and easy to explore on foot. After the grandeur of Vienna, its more relaxed atmosphere made it feel particularly cozy."
+    },
+    {
+      type: "p",
+      text:
+        "And then there was Budapest — one of my favorite cities I have ever visited. It had everything I love in a city: beautiful architecture, a lively atmosphere, incredible views, a strong sense of character, and plenty of places to simply wander around and explore."
+    },
+    {
+      type: "p",
+      text:
+        "The Danube, the colorful streets, the impressive buildings, and the famous ruin bars gave Budapest a personality that felt completely unique. It was beautiful, alive, and slightly chaotic in the best possible way. Out of all the cities I visited during Erasmus, Budapest is one I would happily return to without thinking twice."
+    },
+    {
+      type: "img",
+      url: ph("central_europe_trip", 1280, 720),
+      caption: "Prague, Vienna, Bratislava and Budapest"
+    },
+
+    { type: "h2", text: "Exploring Germany by Train" },
+    {
+      type: "p",
+      text:
+        "Living in Germany also gave me the opportunity to explore a huge part of the country using local trains, which were included in my monthly student transport pass."
+    },
+    {
+      type: "p",
+      text:
+        "I travelled across the eastern and southern parts of Germany, visiting cities such as Berlin, Leipzig, Hamburg, Nuremberg, Munich, and many others. Each city had a completely different personality."
+    },
+    {
+      type: "p",
+      text:
+        "Berlin felt huge, creative, and constantly moving. Leipzig had a younger and more alternative atmosphere. Hamburg had its maritime identity and completely different northern character. Nuremberg brought history and medieval architecture, while Munich felt more traditional, polished, and unmistakably Bavarian."
+    },
+    {
+      type: "p",
+      text:
+        "I also discovered medieval markets, traditional festivals, historic town centers, and places that looked like they had been frozen in time. Travelling by train made the country feel much smaller and encouraged me to explore places I probably would never have visited otherwise."
+    },
+
+    { type: "h2", text: "Bavaria and the Alps" },
+    {
+      type: "p",
+      text:
+        "The trip through Bavaria was one of the highlights. The landscape completely changed as I moved south, with mountains, forests, lakes, and small towns surrounded by nature."
+    },
+    {
+      type: "p",
+      text:
+        "One of the most memorable places was Neuschwanstein Castle, the fairytale-like castle that inspired Disney's iconic castle. Seeing it surrounded by the Bavarian landscape made it feel almost unreal."
+    },
+    {
+      type: "img",
+      url: ph("neuschwanstein", 1280, 720),
+      caption: "Neuschwanstein Castle and the Bavarian landscape"
+    },
+    {
+      type: "p",
+      text:
+        "And then there was Innsbruck. Surrounded by the Alps, the city felt completely different from anywhere else I had been during the Erasmus. The combination of mountains, architecture, and nature was breathtaking."
+    },
+
+    { type: "h2", text: "The Netherlands and My First F1 Race" },
+    {
+      type: "p",
+      text:
+        "My Erasmus adventures also took me to the Netherlands, where I visited several cities and experienced a completely different side of Northern Europe."
+    },
+    {
+      type: "p",
+      text:
+        "But one of the most exciting moments was also a first for me: going to a Formula 1 race. Seeing the atmosphere around a Grand Prix in person was completely different from watching it on a screen. The sound, the crowds, the energy, and the feeling of being surrounded by thousands of people who shared the same excitement made it an unforgettable experience."
+    },
+
+    { type: "h2", text: "What Erasmus Changed" },
+    {
+      type: "p",
+      text:
+        "Looking back, I don't think the most important thing I brought home from Erasmus was a list of places I visited. It was the perspective I gained from living somewhere completely different."
+    },
+    {
+      type: "p",
+      text:
+        "I became more independent. I learned how to adapt to unfamiliar systems, communicate with people from different backgrounds, organize my own life, and become comfortable being outside my comfort zone."
+    },
+    {
+      type: "p",
+      text:
+        "I also discovered things about myself that I wouldn't have discovered by staying in the same environment. I realized how much I value nature, how much I enjoy exploring new places, and how important a good balance between work and life is to me."
+    },
+    {
+      type: "quote",
+      text:
+        "Erasmus didn't just give me places to remember. It gave me a different way of seeing the world."
+    },
+
+    { type: "h2", text: "Conclusion" },
+    {
+      type: "p",
+      text:
+        "My time in Dresden started as an academic exchange, but it became much more than that. It was six months of adapting, learning, travelling, getting lost, discovering new cultures, meeting people, and slowly building a life somewhere that was completely unfamiliar at the beginning."
+    },
+    {
+      type: "p",
+      text:
+        "I left Portugal wanting to experience Germany. I left Germany having experienced a small part of Europe."
+    },
+    {
+      type: "p",
+      text:
+        "And somewhere between the trains, the university, the parks, the lakes, the mountains, the cities, and all the unexpected moments in between, I realized that sometimes the best way to learn about yourself is to put yourself somewhere completely new."
     }
   ]
 }
