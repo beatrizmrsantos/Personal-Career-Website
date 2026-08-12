@@ -2814,5 +2814,442 @@ export const POSTS: BlogPost[] = [
         "And somewhere between the trains, the university, the parks, the lakes, the mountains, the cities, and all the unexpected moments in between, I realized that sometimes the best way to learn about yourself is to put yourself somewhere completely new."
     }
   ]
+},
+{
+  id: 13,
+  slug: "my-top-10-experiences-backpacking-asia",
+  title: "My Top 10 Experiences Backpacking Asia",
+  subtitle: "Six months, ten countries, and the moments I will never forget",
+  date: "2026-05-12",
+  category: "travel",
+  tags: ["Backpacking", "Asia", "Travel", "Adventure", "Nature"],
+  coverImage: ph("airballons_vj4uik", 1280, 720),
+  excerpt:
+    "After six months of backpacking across Asia, these are the ten experiences that stayed with me the most — from swimming with manta rays and hiking through remote mountains to standing beneath ancient temples and watching the sunrise over Mount Fuji.",
+  readTime: "20 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Six months, ten countries, countless buses, trains, boats, flights, guesthouses, street food, mountains, temples, beaches, and more memories than I could ever fit into one trip. Backpacking across Asia was one of the biggest adventures of my life, and choosing only ten experiences was much harder than I expected."
+    },
+    {
+      type: "p",
+      text:
+        "Some of these moments were breathtaking because of the landscapes. Others were meaningful because of the people, the history, or simply because they made me feel something I had never felt before. These are the ten experiences that stayed with me the most."
+    },
+
+    { type: "h2", text: "1. Snorkelling in Indonesia" },
+    {
+      type: "p",
+      text:
+        "Snorkelling in Indonesia was probably the closest I have ever felt to being inside a movie. Around the Gili Islands, kilometres of colourful coral reefs stretch just off the coast, meaning that you don't need to dive deep into the ocean to discover an entire underwater world."
+    },
+    {
+      type: "p",
+      text:
+        "There were corals in almost every colour imaginable, countless species of fish, and sea turtles swimming peacefully through the crystal-clear blue water. Floating above that enormous reef, with nothing but the ocean between me and the coral below, felt exactly like being Ariel from The Little Mermaid. I could swim freely through the water while an entire world was moving underneath me."
+    },
+    {
+      type: "p",
+      text:
+        "I also got to snorkel around The Nest, an underwater sculpture installation near Gili Meno. The 48 life-sized human figures are arranged in a circle on the seabed, representing the connection between humanity and the natural world. What made the experience even more special was seeing how the sculptures had slowly become part of the reef itself, with corals growing across them and fish swimming around and between the figures. Seeing a piece of human art being gradually transformed by nature, while floating above it in the middle of the ocean, felt incredibly surreal and beautiful."
+    },
+    {
+      type: "img",
+      url: ph("gili_snorkeling", 1280, 720),
+      caption: "Snorkelling above the coral reefs of the Gili Islands"
+    },
+    {
+      type: "p",
+      text:
+        "Then came Nusa Penida, where I had the chance to swim with manta rays. The experience was completely different. These animals are enormous, graceful, and surprisingly close when they swim past you. We had to swim quite quickly to keep up with them, but seeing them moving through the water right beside us was incredible."
+    },
+    {
+      type: "p",
+      text:
+        "There was something almost unreal about being so close to an animal that looked impossibly large and yet moved through the water so effortlessly. Indonesia's underwater world was one of those places where I kept thinking that I couldn't believe what I was seeing."
+    },
+
+    { type: "h2", text: "2. The Ha Giang Loop, Vietnam" },
+    {
+      type: "p",
+      text:
+        "Four days riding through the mountains of northern Vietnam was one of the most intense and authentic experiences of the entire trip. The Ha Giang Loop starts in Ha Giang and winds through some of the most remote parts of the country, passing through small towns, villages, rice fields, mountains, waterfalls, and even areas close to the Chinese border."
+    },
+    {
+      type: "p",
+      text:
+        "Every turn seemed to reveal another landscape that was more impressive than the previous one. We spent hours behind our motorbike drivers, known as easy riders, climbing enormous mountain roads and looking down at valleys that seemed to go on forever."
+    },
+    {
+      type: "img",
+      url: ph("ha_giang_loop", 1280, 720),
+      caption: "The mountain roads of the Ha Giang Loop"
+    },
+    {
+      type: "p",
+      text:
+        "The experience felt particularly authentic because we stayed in local guesthouses and ate local food at almost every meal. Our easy drivers also became much more than just people driving us around. Spending four days together meant getting to know them, talking to locals, and experiencing a side of Vietnamese culture that would have been difficult to access as a regular tourist."
+    },
+    {
+      type: "p",
+      text:
+        "Our evenings were filled with long dinners, karaoke, and the famous Vietnamese rice wine. It was chaotic, loud, incredibly social, and completely different from anything I was used to."
+    },
+    {
+      type: "p",
+      text:
+        "But the experience also showed me a much harder side of the country. We stopped in small villages where people were living with very little, and we brought rice for families who needed it. I saw children, some as young as five, walking for kilometres through enormous mountains just to get to school."
+    },
+    {
+      type: "p",
+      text:
+        "Seeing that reality was difficult. Most tourists only see the polished version of a country — the cities, the tourist attractions, the places designed to be visited. The Ha Giang Loop showed me what life can look like far away from that filter. It was beautiful, but it was also a reality check that stayed with me."
+    },
+
+    { type: "h2", text: "3. Hot Air Balloon & Paramotoring in Vang Vieng" },
+    {
+      type: "p",
+      text:
+        "Vang Vieng was one of those places where the landscape itself felt impossible. Surrounded by enormous limestone mountains and covered in intense green vegetation, seeing it from above made it even more spectacular."
+    },
+    {
+      type: "p",
+      text:
+        "I went on a hot air balloon flight at sunrise, climbing to around one kilometre above the valley. Watching the sun come up behind the mountains while dozens of hot air balloons slowly filled the sky was one of the most beautiful sights of the entire trip. It genuinely brought tears to my eyes."
+    },
+    {
+      type: "img",
+      url: ph("vang_vieng_balloon", 1280, 720),
+      caption: "Sunrise over Vang Vieng from a hot air balloon"
+    },
+    {
+      type: "p",
+      text:
+        "It was also strangely surreal. I was standing in a basket, completely exposed, with nothing between me and the sky except a huge balloon above my head and a flame keeping it in the air. Being so high up without feeling attached to anything was both peaceful and slightly terrifying."
+    },
+    {
+      type: "p",
+      text:
+        "The landing was a completely different story. There is very little you can control in a hot air balloon, so eventually you simply land wherever the wind decides. It was definitely a more chaotic ending to an otherwise magical experience."
+    },
+    {
+      type: "p",
+      text:
+        "Later, I also went paramotoring over the same valley, this time at sunset. Instead of standing in a basket, I was sitting on a small seat with a motor behind me, flying directly through the mountains and above the river."
+    },
+    {
+      type: "p",
+      text:
+        "It was faster, more adventurous, and much more controlled than the balloon. Seeing the mountains from above while other paramotors and hot air balloons were flying around us made the whole valley look completely surreal."
+    },
+
+    { type: "h2", text: "4. Khao Sok National Park, Thailand" },
+    {
+      type: "p",
+      text:
+        "Spending two days and one night inside Khao Sok National Park was one of the most peaceful experiences of my trip. We stayed in a small bungalow floating on the lake, completely surrounded by nature, with no internet and no phone signal."
+    },
+    {
+      type: "p",
+      text:
+        "Getting there already felt like entering another world. We travelled by boat through the lake, surrounded by enormous cliffs covered in dense vegetation. Once we arrived, there was almost nothing around us for kilometres and kilometres."
+    },
+    {
+      type: "img",
+      url: ph("khao_sok", 1280, 720),
+      caption: "Khao Sok National Park and its floating bungalows"
+    },
+    {
+      type: "p",
+      text:
+        "The silence was incredible. There were no cars, no buildings, no city sounds — just birds, insects, monkeys, and the occasional sound of the water. The sounds of the birds and monkeys echoing through the landscape are something I don't think I will ever forget."
+    },
+    {
+      type: "p",
+      text:
+        "I spent time swimming and kayaking across the enormous lake, surrounded by cliffs and forests. We also went on a sunrise safari to look for wildlife and saw birds, monkeys, and gaurs."
+    },
+    {
+      type: "p",
+      text:
+        "Watching the sun rise and set between the enormous cliffs, with the reflections on the lake and nothing but nature around us, was one of those moments where I felt completely disconnected from everything else."
+    },
+
+    { type: "h2", text: "5. Angkor Archaeological Park, Cambodia" },
+    {
+      type: "p",
+      text:
+        "Angkor Archaeological Park was one of the places that surprised me the most. I knew it was going to be impressive, but I don't think I understood the scale of it until I was standing there."
+    },
+    {
+      type: "p",
+      text:
+        "The Angkor complex covers around 400 square kilometres and contains dozens of temples built over centuries, with Angkor Wat being its most famous monument. The scale, architecture, and engineering of the site are difficult to comprehend even today, let alone when you realize how long ago these structures were created."
+    },
+    {
+      type: "p",
+      text:
+        "I arrived at Angkor Wat before sunrise, when it was still completely dark and we had to use flashlights to see the ground. Then, slowly, the sky turned pink and the silhouette of Angkor Wat began to appear. Watching the temple emerge from the darkness as the sun rose was one of the most special moments of the trip."
+    },
+    {
+      type: "img",
+      url: ph("angkor_wat_sunrise", 1280, 720),
+      caption: "Sunrise at Angkor Wat"
+    },
+    {
+      type: "p",
+      text:
+        "And Angkor Wat is only one part of the entire archaeological park. There are so many temples that visiting everything would take days, if not longer. The complex is so enormous that getting around by tuk-tuk is practically essential."
+    },
+    {
+      type: "p",
+      text:
+        "What made it even more surreal was the way nature has taken over many of the temples. Huge trees and roots grow through ancient stone structures, vegetation covers entire walls, and monkeys walk freely through the ruins."
+    },
+    {
+      type: "p",
+      text:
+        "At times, it genuinely felt like walking through Tomb Raider. Seeing these enormous temples disappearing into the jungle, surrounded by trees that had been growing there for centuries, was unlike anything I had ever seen."
+    },
+
+    { type: "h2", text: "6. Spending Time with Elephants, Thailand" },
+    {
+      type: "p",
+      text:
+        "Spending a day with rescued elephants near Chiang Mai was one of the most fulfilling experiences of the entire trip."
+    },
+    {
+      type: "p",
+      text:
+        "The elephants lived in a rescue sanctuary after being saved from different forms of exploitation across Asia. Instead of watching them perform or being used for rides, we spent the day simply being around them in their natural environment."
+    },
+    {
+      type: "p",
+      text:
+        "We walked through the jungle with them, fed them, and eventually went into the river to bathe them. They would spray water over us while we tried to do the same to them. There were males, females, and even some younger elephants that were incredibly playful and curious."
+    },
+    {
+      type: "img",
+      url: ph("chiang_mai_elephants", 1280, 720),
+      caption: "Spending the day with rescued elephants in Thailand"
+    },
+    {
+      type: "p",
+      text:
+        "There was something incredibly special about interacting with such enormous animals while still being able to see their individual personalities. It felt less like a tourist activity and more like being temporarily invited into their world."
+    },
+
+    { type: "h2", text: "7. Mount Bromo, Indonesia" },
+    {
+      type: "p",
+      text:
+        "Watching the sunrise over Mount Bromo was one of the most dramatic landscapes I saw in Indonesia."
+    },
+    {
+      type: "p",
+      text:
+        "We climbed to a viewpoint before sunrise and waited in the darkness. As the sky slowly turned pink, the mountains began appearing through the mist below us. The volcanoes stood above the clouds, with smoke still rising from their active craters."
+    },
+    {
+      type: "img",
+      url: ph("mount_bromo_sunrise", 1280, 720),
+      caption: "Sunrise over the volcanoes of Mount Bromo"
+    },
+    {
+      type: "p",
+      text:
+        "After sunrise, we drove through the enormous volcanic landscape by jeep, crossing fields of ash and sand before reaching Mount Bromo itself."
+    },
+    {
+      type: "p",
+      text:
+        "We then climbed up towards the active crater. Standing there and looking directly into an enormous volcanic crater with smoke coming out of it was both beautiful and slightly intimidating. It was one of those experiences where the landscape makes you feel very small."
+    },
+
+    { type: "h2", text: "8. The Avatar Mountains, China" },
+    {
+      type: "p",
+      text:
+        "Zhangjiajie National Forest Park was especially meaningful to me because I was finally seeing with my own eyes the floating mountains that inspired one of my favorite movies: Avatar."
+    },
+    {
+      type: "p",
+      text:
+        "Getting there already felt like an adventure. We took a cable car that climbed for a long time, rising roughly a kilometre through the mountains. When I finally reached the top, there was so much fog that I could barely see anything."
+    },
+    {
+      type: "p",
+      text:
+        "Then, almost as quickly as it had arrived, the fog began to clear. Slowly, the mountains appeared."
+    },
+    {
+      type: "img",
+      url: ph("zhangjiajie_avatar", 1280, 720),
+      caption: "The mountains of Zhangjiajie National Forest Park"
+    },
+    {
+      type: "p",
+      text:
+        "Thousands of years of erosion had created enormous vertical pillars covered in incredibly green vegetation. From certain angles, they genuinely looked like they were floating in the clouds."
+    },
+    {
+      type: "p",
+      text:
+        "Walking for kilometres between these mountains was even more impressive. Every time I thought the view couldn't possibly get better, another viewpoint appeared and proved me wrong. The landscape stretched for kilometres in every direction, with mountain after mountain disappearing into the distance."
+    },
+    {
+      type: "p",
+      text:
+        "Seeing a place that had inspired a world I had only ever seen on a screen was incredibly special. For a few hours, it felt like stepping directly into Pandora."
+    },
+
+    { type: "h2", text: "9. The Great Wall of China & the Terracotta Warriors" },
+    {
+      type: "p",
+      text:
+        "Seeing the Great Wall of China was one of those moments where the historical significance of a place is almost impossible to process."
+    },
+    {
+      type: "p",
+      text:
+        "Walking on one of the New Seven Wonders of the World, knowing that sections of the wall date back more than two thousand years, was incredible. The entire structure stretches for more than 20,000 kilometres when all sections and branches are considered — roughly the distance from London to New York."
+    },
+    {
+      type: "p",
+      text:
+        "I spent the day walking along the Mutianyu section, climbing through the mountains and looking at the wall disappearing over one hill after another. Beyond the landscape itself, there was something powerful about thinking about how many people had stood on exactly the same stones throughout thousands of years of history."
+    },
+    {
+      type: "img",
+      url: ph("great_wall_mutianyu", 1280, 720),
+      caption: "Walking along the Great Wall of China at Mutianyu"
+    },
+    {
+      type: "p",
+      text:
+        "And then, unexpectedly, I got to finish the experience by going down the mountain on a toboggan. It was ridiculously fun and surprisingly fast — probably not the way the people who originally built the wall imagined anyone would leave it."
+    },
+    {
+      type: "p",
+      text:
+        "The Terracotta Warriors in Xi'an created a completely different but equally powerful historical feeling. More than 2,000 years ago, the first emperor of China, Qin Shi Huang, ordered the creation of an enormous underground army to accompany him into the afterlife."
+    },
+    {
+      type: "p",
+      text:
+        "More than 8,000 life-sized terracotta figures were created, including soldiers, horses, chariots, and other figures. What makes them even more remarkable is the level of detail: different facial expressions, hairstyles, clothing, ranks, and individual features were carefully created by hand."
+    },
+    {
+      type: "p",
+      text:
+        "The scale is difficult to comprehend. An entire life-sized army was created underground as part of a massive funerary complex designed to recreate the emperor's world after death."
+    },
+    {
+      type: "p",
+      text:
+        "Even more incredible is how recently the warriors were discovered. The main pits were only discovered in 1974, meaning that this enormous army remained underground and largely unknown for more than two thousand years."
+    },
+    {
+      type: "img",
+      url: ph("terracotta_warriors", 1280, 720),
+      caption: "The Terracotta Army in Xi'an"
+    },
+    {
+      type: "p",
+      text:
+        "Standing in front of thousands of these figures, many still incredibly well preserved, felt almost like stepping 2,200 years into the past while somehow still being there in 2026."
+    },
+
+    { type: "h2", text: "10. Mount Fuji & the Waterfalls of Indonesia" },
+    {
+      type: "p",
+      text:
+        "The final place on my list is actually a combination of two very different natural experiences that left me equally amazed: Mount Fuji in Japan and the waterfalls of Indonesia."
+    },
+    {
+      type: "p",
+      text:
+        "I was incredibly lucky to see Mount Fuji on a day with almost perfect visibility. The mountain is often hidden by clouds and humidity, so seeing it completely clear felt like a gift."
+    },
+    {
+      type: "p",
+      text:
+        "I spent the day exploring Fujikawaguchiko, a beautiful town around the Fuji Five Lakes area. Everywhere I went, Mount Fuji seemed to appear in the background — between streets, above houses, behind the lake, and through the trees."
+    },
+    {
+      type: "img",
+      url: ph("mount_fuji_fujikawaguchiko", 1280, 720),
+      caption: "Mount Fuji overlooking Fujikawaguchiko"
+    },
+    {
+      type: "p",
+      text:
+        "I walked through the town, explored its surroundings, and later cycled through the parks near the lake. Seeing Mount Fuji reflected behind the water while cycling through such a peaceful landscape was one of the most beautiful days of the trip."
+    },
+    {
+      type: "p",
+      text:
+        "The mountain itself was also much more impressive than I expected. Its almost perfectly symmetrical shape, enormous scale, dark volcanic colour, and snow-covered summit made it look almost unreal."
+    },
+    {
+      type: "p",
+      text:
+        "Then there were the waterfalls of Indonesia. I saw countless waterfalls across Bali, particularly around Ubud and Munduk, and each one had something different about it. Some were taller, some had multiple cascades, some were surrounded by dense jungle, and others had natural pools where I could actually swim underneath the falling water."
+    },
+    {
+      type: "img",
+      url: ph("indonesia_waterfalls", 1280, 720),
+      caption: "Exploring the waterfalls of Indonesia"
+    },
+    {
+      type: "p",
+      text:
+        "But Madakaripura Waterfall in Java was on another level. Getting there involved a trail through the forest, crossing between rocks and streams and walking through several smaller waterfalls before eventually reaching the enormous valley where the main waterfall appears."
+    },
+    {
+      type: "p",
+      text:
+        "The waterfall is around 120 metres high, with dozens of streams falling down an enormous semicircular rock wall, creating what feels like a giant curtain of water around you."
+    },
+    {
+      type: "p",
+      text:
+        "Even standing away from the main fall was enough to leave me completely soaked. The amount of water falling from such a height made me feel incredibly small. Standing at the bottom, surrounded by the enormous rock walls and water falling from every direction, was one of the strongest feelings of scale I experienced during the entire trip."
+    },
+    {
+      type: "p",
+      text:
+        "And yet, the smaller waterfalls across Bali were no less beautiful. Each one felt completely different from the last, which made exploring them almost like collecting different versions of the same natural wonder."
+    },
+
+    { type: "h2", text: "What Six Months in Asia Taught Me" },
+    {
+      type: "p",
+      text:
+        "Looking back at six months of backpacking, the experiences I remember most are not necessarily the places I expected to love. They are the moments that made me stop, look around, and realize how different the world could be from everything I had known before."
+    },
+    {
+      type: "p",
+      text:
+        "I swam with animals I had only ever seen in documentaries, rode through remote Vietnamese mountains, flew above Laotian valleys, slept in the middle of a rainforest, walked through temples swallowed by jungle, stood next to active volcanoes, explored landscapes that looked fictional, and walked through monuments that had existed for thousands of years."
+    },
+    {
+      type: "p",
+      text:
+        "But beyond the landscapes and adventures, the trip also changed the way I see travel. Some of the most meaningful moments came from seeing how differently people live, especially in places far away from the tourist centers. The beauty of Asia was incredible, but so was the contrast between the lives I saw."
+    },
+    {
+      type: "quote",
+      text:
+        "Six months later, I don't remember every place I visited. I remember how some of them made me feel."
+    },
+    {
+      type: "p",
+      text:
+        "These ten experiences are only a small part of everything I saw during those six months. But if I had to choose the moments that made me feel the most amazed, humbled, excited, or simply grateful to be there, these would be the ones."
+    }
+  ]
 }
 ];
