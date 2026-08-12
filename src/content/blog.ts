@@ -2528,6 +2528,7 @@ export const POSTS: BlogPost[] = [
         { url: ph("hike2_hz1gck", 720, 960), caption: "Bastei Bridge" },
         { url: ph("hike3_doc6on", 720, 960), caption: "Hicking view" },
         { url: ph("hike1_g35bho", 720, 960), caption: "Hicking" },
+        { url: ph("hike4_m1mmaj", 720, 960), caption: "Hicking" },
       ],
     },
     {
@@ -2560,6 +2561,17 @@ export const POSTS: BlogPost[] = [
         "I visited countless cities in Poland, and one of the things I noticed immediately was how different their atmosphere felt from Germany. The cities were generally busier, people seemed louder and more expressive, and the overall energy felt much closer to Portugal. In a strange way, being in Poland gave me small reminders of home."
     },
     {
+      type: "gallery",
+      photos: [
+        { url: ph("poland1_rvuqhc", 720, 960), caption: "Wrocław" },
+        { url: ph("poland6_uhwelu", 720, 960), caption: "Kraków" },
+        { url: ph("poland2_zu6ltl", 720, 960), caption: "Kraków" },
+        { url: ph("poland9_trodoo", 720, 960), caption: "Warsaw" },
+        { url: ph("poland8_pgzuxd", 720, 960), caption: "Warsaw" },
+        { url: ph("poland7_n6cpkq", 720, 960), caption: "Kraków" },
+      ],
+    },
+    {
       type: "p",
       text:
         "But one of the most difficult and meaningful experiences was visiting Auschwitz."
@@ -2569,6 +2581,14 @@ export const POSTS: BlogPost[] = [
       text:
         "Walking through a place that represents such an enormous amount of human suffering is difficult to put into words. The experience was emotionally heavy and stayed with me long after leaving. It was one of those moments where travelling stopped being about discovering beautiful places and became about confronting history and understanding it in a much more personal way."
     },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("poland3_lo4ck9", 720, 960), caption: "Auschwitz" },
+        { url: ph("poland4_u0rdzc", 720, 960), caption: "Auschwitz" },
+        { url: ph("poland5_zdeogy", 720, 960), caption: "Auschwitz" }
+      ],
+    },
 
     { type: "h2", text: "Prague, Vienna, Bratislava and Budapest" },
     {
@@ -2577,14 +2597,40 @@ export const POSTS: BlogPost[] = [
         "Prague felt almost unreal. Its medieval architecture, narrow streets, towers, and atmosphere made the city feel like something out of a fairytale. There was something almost princess-like about walking through the historic center, and the city's atmosphere made it one of those places where simply wandering around felt like an experience in itself."
     },
     {
+      type: "gallery",
+      photos: [
+        { url: ph("prague3_rx5n06", 720, 960), caption: "Auschwitz" },
+        { url: ph("prague2_wyclti", 720, 960), caption: "Auschwitz" },
+        { url: ph("prague1_taondn", 720, 960), caption: "Auschwitz" },
+        { url: ph("prague4_sasszw", 720, 960), caption: "Auschwitz" }
+      ],
+    },
+    {
       type: "p",
       text:
       "Vienna was completely different. Grand, elegant, and imposing, it had a royal atmosphere that was impossible to miss. Huge streets, monumental white buildings, palaces, and carefully designed architecture made the city feel incredibly sophisticated and almost larger than life. It was also where I experienced my first opera, at the Vienna State Opera. Sitting inside such a beautiful and historic opera house and watching a performance there felt like a perfect reflection of the city’s elegance and cultural richness."
     },
     {
+      type: "gallery",
+      photos: [
+        { url: ph("viena3_x945hp", 720, 960), caption: "Vienna" },
+        { url: ph("viena4_fuv7bn", 720, 960), caption: "Vienna State Opera" },
+        { url: ph("viena2_hrdshi", 720, 960), caption: "Vienna State Opera" },
+        { url: ph("viena1_ay3udk", 720, 960), caption: "Vienna" }
+      ],
+    },
+    {
       type: "p",
       text:
         "Bratislava felt smaller and more intimate. It was welcoming, cultural, and easy to explore on foot. After the grandeur of Vienna, its more relaxed atmosphere made it feel particularly cozy."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("bratislavia2_kzpayu", 720, 960), caption: "Bratislava" },
+        { url: ph("bratislavia1_leaxhx", 720, 960), caption: "Bratislava" },
+        { url: ph("bratislavia3_zlm1u6", 720, 960), caption: "Bratislava" }
+      ],
     },
     {
       type: "p",
@@ -2597,9 +2643,14 @@ export const POSTS: BlogPost[] = [
         "The Danube, the colorful streets, the impressive buildings, and the famous ruin bars gave Budapest a personality that felt completely unique. It was beautiful, alive, and slightly chaotic in the best possible way. Out of all the cities I visited during Erasmus, Budapest is one I would happily return to without thinking twice."
     },
     {
-      type: "img",
-      url: ph("central_europe_trip", 1280, 720),
-      caption: "Prague, Vienna, Bratislava and Budapest"
+      type: "gallery",
+      photos: [
+        { url: ph("budapeste2_xgxyq6", 960, 720), caption: "Hungarian Parliament Building - Budapest" },
+        { url: ph("budapeste5_aqk2ow", 720, 960), caption: "Budapest" },
+        { url: ph("budapeste1_zxim0f", 720, 960), caption: "Budapest" },
+        { url: ph("budapeste3_hhhlly", 960, 720), caption: "Budapest" },
+        { url: ph("budapeste4_croiok", 720, 960), caption: "Ruin bars - Budapest" }
+      ],
     },
 
     { type: "h2", text: "Exploring Germany by Train" },
@@ -2619,9 +2670,29 @@ export const POSTS: BlogPost[] = [
         "Berlin felt huge, creative, and constantly moving. Leipzig had a younger and more alternative atmosphere. Hamburg had its maritime identity and completely different northern character. Nuremberg brought history and medieval architecture, while Munich felt more traditional, polished, and unmistakably Bavarian."
     },
     {
+      type: "gallery",
+      photos: [
+        { url: ph("germany6_g29f7y", 720, 960), caption: "Bamberg" },
+        { url: ph("germany5_rpoyys", 720, 960), caption: "Nuremberga" },
+        { url: ph("germany4_wyuubl", 720, 960), caption: "Nuremberga" },
+        { url: ph("germany2_isbqu8", 720, 960), caption: "Hamburg" },
+        { url: ph("germany7_gls7nx", 960, 720), caption: "Berlin" }
+      ],
+    },
+    {
       type: "p",
       text:
         "I also discovered medieval markets, traditional festivals, historic town centers, and places that looked like they had been frozen in time. Travelling by train made the country feel much smaller and encouraged me to explore places I probably would never have visited otherwise."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("germany8_np28or", 720, 960), caption: "Medieval Market - German" },
+        { url: ph("germany11_fo9b4y", 720, 960), caption: "German" },
+        { url: ph("germany10_sjjt4t", 720, 960), caption: "German" },
+        { url: ph("germany1_sv1oet", 720, 960), caption: "German" },
+        { url: ph("germany12_b331mu", 960, 720), caption: "German Train" }
+      ],
     },
 
     { type: "h2", text: "Bavaria and the Alps" },
@@ -2636,16 +2707,28 @@ export const POSTS: BlogPost[] = [
         "One of the most memorable places was Neuschwanstein Castle, the fairytale-like castle that inspired Disney's iconic castle. Seeing it surrounded by the Bavarian landscape made it feel almost unreal."
     },
     {
-      type: "img",
-      url: ph("neuschwanstein", 1280, 720),
-      caption: "Neuschwanstein Castle and the Bavarian landscape"
+      type: "gallery",
+      photos: [
+        { url: ph("germany7_kramw6", 720, 960), caption: "Neuschwanstein Castle" },
+        { url: ph("germany8_e9ufgy", 720, 960), caption: "Hohenschwangau Castle" },
+        { url: ph("germany10_gq5hvg", 720, 960), caption: "Panoramic view" },
+        { url: ph("germany9_ny9gaq", 720, 960), caption: "Alpsee Lake" }
+      ],
     },
     {
       type: "p",
       text:
         "And then there was Innsbruck. Surrounded by the Alps, the city felt completely different from anywhere else I had been during the Erasmus. The combination of mountains, architecture, and nature was breathtaking."
     },
-
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("austria3_xajeti", 720, 960), caption: "Innsbruck" },
+        { url: ph("austria5_n68xun", 720, 960), caption: "Innsbruck" },
+        { url: ph("austria6_fu1wto", 720, 960), caption: "Innsbruck" },
+        { url: ph("austria1_dyymtt", 720, 960), caption: "Innsbruck" }
+      ],
+    },
     { type: "h2", text: "The Netherlands and My First F1 Race" },
     {
       type: "p",
@@ -2655,7 +2738,41 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
+        "I visited in spring, which made the experience even more special. I got to see endless fields of poppies in full bloom, stretching for kilometres in every direction and filled with vibrant colours. Being able to simply walk through the fields, surrounded by flowers as far as I could see, was one of those simple but unforgettable moments."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("flowers_hl1biy", 720, 960), caption: "Poppies field" },
+        { url: ph("holand2_solvrt", 720, 960), caption: "Leiden - Netherlands" },
+        { url: ph("holand4_cun5ei", 720, 960), caption: "Amsterdam - Netherlands" },
+        { url: ph("holand1_trj5ji", 720, 960), caption: "Stroopwafel" },
+        { url: ph("holand3_fio6no", 720, 960), caption: "Amsterdam - Netherland" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "I was also there on King's Day, which turned out to be one of my favourite experiences in the Netherlands. The energy was incredible, with street parties everywhere and almost everyone dressed in orange. People were celebrating, drinking beer, and filling the beautiful canals on boats, turning the whole country into one huge celebration. Seeing the canals packed with people, music, and orange everywhere was such a unique atmosphere and one of the things I enjoyed most about my time there."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("kingsday2_miv1pi", 720, 960), caption: "King's Day - Leiden, Netherlands" },
+        { url: ph("kingsday1_rxjhvl", 720, 960), caption: "King's Day - Leiden, Netherlands" }
+      ],
+    },
+    {
+      type: "p",
+      text:
         "But one of the most exciting moments was also a first for me: going to a Formula 1 race. Seeing the atmosphere around a Grand Prix in person was completely different from watching it on a screen. The sound, the crowds, the energy, and the feeling of being surrounded by thousands of people who shared the same excitement made it an unforgettable experience."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("f1_2_i8gurt", 720, 960), caption: "F1 Race - Netherlands" },
+        { url: ph("f1_tibwpu", 720, 960), caption: "F1 Race - Netherlands" }
+      ],
     },
 
     { type: "h2", text: "What Erasmus Changed" },
