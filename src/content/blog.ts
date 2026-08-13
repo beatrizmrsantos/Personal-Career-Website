@@ -2856,11 +2856,6 @@ export const POSTS: BlogPost[] = [
         "I also got to snorkel around The Nest, an underwater sculpture installation near Gili Meno. The 48 life-sized human figures are arranged in a circle on the seabed, representing the connection between humanity and the natural world. What made the experience even more special was seeing how the sculptures had slowly become part of the reef itself, with corals growing across them and fish swimming around and between the figures. Seeing a piece of human art being gradually transformed by nature, while floating above it in the middle of the ocean, felt incredibly surreal and beautiful."
     },
     {
-      type: "img",
-      url: ph("gili_snorkeling", 1280, 720),
-      caption: "Snorkelling above the coral reefs of the Gili Islands"
-    },
-    {
       type: "p",
       text:
         "Then came Nusa Penida, where I had the chance to swim with manta rays. The experience was completely different. These animals are enormous, graceful, and surprisingly close when they swim past you. We had to swim quite quickly to keep up with them, but seeing them moving through the water right beside us was incredible."
@@ -2869,6 +2864,16 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "There was something almost unreal about being so close to an animal that looked impossibly large and yet moved through the water so effortlessly. Indonesia's underwater world was one of those places where I kept thinking that I couldn't believe what I was seeing."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("jonyTurtle_obcquh", 720, 960), caption: "Swimming with turtles — Gili Islands" },
+        { url: ph("turtle_awrlxb", 720, 960), caption: "Turtle — Gili Islands" },
+        { url: ph("coral2_vuapri", 720, 960), caption: "Corals — Gili Islands" },
+        { url: ph("underwaterstatues_mvymtn", 720, 960), caption: "The Nest — Gili Islands" },
+        { url: ph("manta_vmixsz", 720, 960), caption: "Manta Ray - Nusa Penida" },
+      ],
     },
 
     { type: "h2", text: "2. The Ha Giang Loop, Vietnam" },
@@ -2881,11 +2886,6 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "Every turn seemed to reveal another landscape that was more impressive than the previous one. We spent hours behind our motorbike drivers, known as easy riders, climbing enormous mountain roads and looking down at valleys that seemed to go on forever."
-    },
-    {
-      type: "img",
-      url: ph("ha_giang_loop", 1280, 720),
-      caption: "The mountain roads of the Ha Giang Loop"
     },
     {
       type: "p",
@@ -2907,6 +2907,16 @@ export const POSTS: BlogPost[] = [
       text:
         "Seeing that reality was difficult. Most tourists only see the polished version of a country — the cities, the tourist attractions, the places designed to be visited. The Ha Giang Loop showed me what life can look like far away from that filter. It was beautiful, but it was also a reality check that stayed with me."
     },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("mehagiangloop_livxln", 720, 960), caption: "Ha Gaing Loop" },
+        { url: ph("motos_wjyxb5", 720, 960), caption: "Ha Gaing Loop group" },
+        { url: ph("road_zkkn4m", 720, 960), caption: "Ha Gaing Loop" },
+        { url: ph("village_nskicv", 720, 960), caption: "Ha Gaing Loop village" },
+        { url: ph("drinking_ekvinq", 720, 960), caption: "Ha Gaing Loop dinner" },
+      ],
+    },
 
     { type: "h2", text: "3. Hot Air Balloon & Paramotoring in Vang Vieng" },
     {
@@ -2918,11 +2928,6 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "I went on a hot air balloon flight at sunrise, climbing to around one kilometre above the valley. Watching the sun come up behind the mountains while dozens of hot air balloons slowly filled the sky was one of the most beautiful sights of the entire trip. It genuinely brought tears to my eyes."
-    },
-    {
-      type: "img",
-      url: ph("vang_vieng_balloon", 1280, 720),
-      caption: "Sunrise over Vang Vieng from a hot air balloon"
     },
     {
       type: "p",
@@ -2944,6 +2949,16 @@ export const POSTS: BlogPost[] = [
       text:
         "It was faster, more adventurous, and much more controlled than the balloon. Seeing the mountains from above while other paramotors and hot air balloons were flying around us made the whole valley look completely surreal."
     },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("paramoturingLaos_vjd7cd", 720, 960), caption: "Paramotoring - Vang Vieng" },
+        { url: ph("paramotoringview_s6obn8", 720, 960), caption: "Paramotoring view - Vang Vieng" },
+        { url: ph("baloesArQuente_zemncn", 720, 960), caption: "Hot Air Balloon view- Vang Vieng" },
+        { url: ph("airballons_vj4uik", 960, 720), caption: "Hot Air Balloon view- Vang Vieng" },
+        { url: ph("eubalaoarquente_lucqvt", 720, 960), caption: "Hot Air Balloon - Vang Vieng" },
+      ],
+    },
 
     { type: "h2", text: "4. Khao Sok National Park, Thailand" },
     {
@@ -2955,11 +2970,6 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "Getting there already felt like entering another world. We travelled by boat through the lake, surrounded by enormous cliffs covered in dense vegetation. Once we arrived, there was almost nothing around us for kilometres and kilometres."
-    },
-    {
-      type: "img",
-      url: ph("khao_sok", 1280, 720),
-      caption: "Khao Sok National Park and its floating bungalows"
     },
     {
       type: "p",
@@ -2975,6 +2985,16 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "Watching the sun rise and set between the enormous cliffs, with the reflections on the lake and nothing but nature around us, was one of those moments where I felt completely disconnected from everything else."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("khaoSok_ltolk8", 720, 960), caption: "Khao Sok National Park" },
+        { url: ph("boat_xzfbal", 720, 960), caption: "Khao Sok National Park" },
+        { url: ph("kaiaque_ffsnn9", 720, 960), caption: "Kayaking in Khao Sok National Park" },
+        { url: ph("khaoSokSwiming_gixkyp", 720, 960), caption: "Swimming in Khao Sok National Park" },
+        { url: ph("bangalow_jsqv2w", 720, 960), caption: "Water bungalow in Khao Sok National Park" },
+      ],
     },
 
     { type: "h2", text: "5. Angkor Archaeological Park, Cambodia" },
@@ -2994,11 +3014,6 @@ export const POSTS: BlogPost[] = [
         "I arrived at Angkor Wat before sunrise, when it was still completely dark and we had to use flashlights to see the ground. Then, slowly, the sky turned pink and the silhouette of Angkor Wat began to appear. Watching the temple emerge from the darkness as the sun rose was one of the most special moments of the trip."
     },
     {
-      type: "img",
-      url: ph("angkor_wat_sunrise", 1280, 720),
-      caption: "Sunrise at Angkor Wat"
-    },
-    {
       type: "p",
       text:
         "And Angkor Wat is only one part of the entire archaeological park. There are so many temples that visiting everything would take days, if not longer. The complex is so enormous that getting around by tuk-tuk is practically essential."
@@ -3013,8 +3028,18 @@ export const POSTS: BlogPost[] = [
       text:
         "At times, it genuinely felt like walking through Tomb Raider. Seeing these enormous temples disappearing into the jungle, surrounded by trees that had been growing there for centuries, was unlike anything I had ever seen."
     },
+    {
+      type: "gallery",
+      photos: [
+         { url: ph("AnkorWat_vbauyk", 720, 960), caption: "Angkor Archaeological Park" },
+        { url: ph("ankorwatnature_lxyecs", 720, 960), caption: "Angkor Archaeological Park" },
+        { url: ph("ankorwatjony_o9ucin", 720, 960), caption: "Angkor Archaeological Park" },
+        { url: ph("ankorwatmonkey_qdum6v", 720, 960), caption: "Monkey in Angkor Archaeological Park" },
+        { url: ph("AnkorWatSunrise_iweqlp", 720, 960), caption: "Angkor Wat sunrise" },
+      ],
+    },
 
-    { type: "h2", text: "6. Spending Time with Elephants, Thailand" },
+    { type: "h2", text: "6. Spending Time with rescued Elephants, Thailand" },
     {
       type: "p",
       text:
@@ -3028,17 +3053,22 @@ export const POSTS: BlogPost[] = [
     {
       type: "p",
       text:
-        "We walked through the jungle with them, fed them, and eventually went into the river to bathe them. They would spray water over us while we tried to do the same to them. There were males, females, and even some younger elephants that were incredibly playful and curious."
-    },
-    {
-      type: "img",
-      url: ph("chiang_mai_elephants", 1280, 720),
-      caption: "Spending the day with rescued elephants in Thailand"
+        "We walked through the jungle with them, fed them, and eventually went into the river to bathe them. They would spray water over us while we tried to do the same to them. Sometimes, we would come across entire elephant families, with males, females, and younger elephants staying close together. The younger ones were especially playful and curious."
     },
     {
       type: "p",
       text:
         "There was something incredibly special about interacting with such enormous animals while still being able to see their individual personalities. It felt less like a tourist activity and more like being temporarily invited into their world."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("elephant_cipuzo", 720, 960), caption: "Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephants_o5lv3a", 720, 960), caption: "Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephantstreking2_opfffv", 720, 960), caption: "Trekking at an Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephantstreking_jgmajz", 720, 960), caption: "Trekking at an Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephant_my2sce", 720, 960), caption: "Elephant Sanctuary — Chiang Mai" },
+      ],
     },
 
     { type: "h2", text: "7. Mount Bromo, Indonesia" },
@@ -3053,11 +3083,6 @@ export const POSTS: BlogPost[] = [
         "We climbed to a viewpoint before sunrise and waited in the darkness. As the sky slowly turned pink, the mountains began appearing through the mist below us. The volcanoes stood above the clouds, with smoke still rising from their active craters."
     },
     {
-      type: "img",
-      url: ph("mount_bromo_sunrise", 1280, 720),
-      caption: "Sunrise over the volcanoes of Mount Bromo"
-    },
-    {
       type: "p",
       text:
         "After sunrise, we drove through the enormous volcanic landscape by jeep, crossing fields of ash and sand before reaching Mount Bromo itself."
@@ -3066,6 +3091,16 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "We then climbed up towards the active crater. Standing there and looking directly into an enormous volcanic crater with smoke coming out of it was both beautiful and slightly intimidating. It was one of those experiences where the landscape makes you feel very small."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("vulcanos_isgjfo", 720, 960), caption: "Mount Bromo sunrise view" },
+        { url: ph("vulcaoview_lvgwgy", 720, 960), caption: "Mount Bromo crater" },
+        { url: ph("vulcanoEruption_z3x2hu", 720, 960), caption: "Mount Bromo active crater" },
+        { url: ph("Jeep_o5cr9a", 720, 960), caption: "Mount Bromo jeep" },
+        { url: ph("JeepRide_mx3sra", 720, 960), caption: "Mount Bromo jeep ride" },
+      ],
     },
 
     { type: "h2", text: "8. The Avatar Mountains, China" },
@@ -3085,11 +3120,6 @@ export const POSTS: BlogPost[] = [
         "Then, almost as quickly as it had arrived, the fog began to clear. Slowly, the mountains appeared."
     },
     {
-      type: "img",
-      url: ph("zhangjiajie_avatar", 1280, 720),
-      caption: "The mountains of Zhangjiajie National Forest Park"
-    },
-    {
       type: "p",
       text:
         "Thousands of years of erosion had created enormous vertical pillars covered in incredibly green vegetation. From certain angles, they genuinely looked like they were floating in the clouds."
@@ -3103,6 +3133,16 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "Seeing a place that had inspired a world I had only ever seen on a screen was incredibly special. For a few hours, it felt like stepping directly into Pandora."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("avatar_tdmby6", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("avatar6_u8xgqo", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("avatar4_jw1pq9", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("avatar5_mhdonk", 960, 720), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("monkey_jurh2q", 720, 960), caption: "Zhangjiajie National Forest Parka" },
+      ],
     },
 
     { type: "h2", text: "9. The Great Wall of China & the Terracotta Warriors" },
@@ -3122,14 +3162,17 @@ export const POSTS: BlogPost[] = [
         "I spent the day walking along the Mutianyu section, climbing through the mountains and looking at the wall disappearing over one hill after another. Beyond the landscape itself, there was something powerful about thinking about how many people had stood on exactly the same stones throughout thousands of years of history."
     },
     {
-      type: "img",
-      url: ph("great_wall_mutianyu", 1280, 720),
-      caption: "Walking along the Great Wall of China at Mutianyu"
-    },
-    {
       type: "p",
       text:
         "And then, unexpectedly, I got to finish the experience by going down the mountain on a toboggan. It was ridiculously fun and surprisingly fast — probably not the way the people who originally built the wall imagined anyone would leave it."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("wallofchina2_sbwrtn", 720, 960), caption: "Great Wall of China" },
+        { url: ph("wallofchina3_nv44wj", 720, 960), caption: "Great Wall of China" },
+        { url: ph("toboggan_ocygy5", 720, 960), caption: "Toboggan ride - Great Wall of China" }
+      ],
     },
     {
       type: "p",
@@ -3152,14 +3195,17 @@ export const POSTS: BlogPost[] = [
         "Even more incredible is how recently the warriors were discovered. The main pits were only discovered in 1974, meaning that this enormous army remained underground and largely unknown for more than two thousand years."
     },
     {
-      type: "img",
-      url: ph("terracotta_warriors", 1280, 720),
-      caption: "The Terracotta Army in Xi'an"
-    },
-    {
       type: "p",
       text:
         "Standing in front of thousands of these figures, many still incredibly well preserved, felt almost like stepping 2,200 years into the past while somehow still being there in 2026."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("terracotaWarriors_cg554t", 720, 960), caption: "Terracotta Warriors" },
+        { url: ph("terracota4_gbhjqm", 720, 960), caption: "Terracotta Warriors" },
+        { url: ph("terracota3_fznlpr", 720, 960), caption: "Terracotta Warriors" },
+      ],
     },
 
     { type: "h2", text: "10. Mount Fuji & the Waterfalls of Indonesia" },
@@ -3179,11 +3225,6 @@ export const POSTS: BlogPost[] = [
         "I spent the day exploring Fujikawaguchiko, a beautiful town around the Fuji Five Lakes area. Everywhere I went, Mount Fuji seemed to appear in the background — between streets, above houses, behind the lake, and through the trees."
     },
     {
-      type: "img",
-      url: ph("mount_fuji_fujikawaguchiko", 1280, 720),
-      caption: "Mount Fuji overlooking Fujikawaguchiko"
-    },
-    {
       type: "p",
       text:
         "I walked through the town, explored its surroundings, and later cycled through the parks near the lake. Seeing Mount Fuji reflected behind the water while cycling through such a peaceful landscape was one of the most beautiful days of the trip."
@@ -3194,19 +3235,24 @@ export const POSTS: BlogPost[] = [
         "The mountain itself was also much more impressive than I expected. Its almost perfectly symmetrical shape, enormous scale, dark volcanic colour, and snow-covered summit made it look almost unreal."
     },
     {
+      type: "gallery",
+      photos: [
+        { url: ph("mountFuji_yjxfnb", 720, 960), caption: "Mount Fuji" },
+        { url: ph("mountfuji5_ub8htt", 720, 960), caption: "Mount Fuji" },
+        { url: ph("mountfuji4_nu40mc", 720, 960), caption: "Mount Fuji" },
+        { url: ph("mountfuji6_evy2ib", 720, 960), caption: "Fujikawaguchikos" },
+        { url: ph("mountfuji3_elvqg4", 720, 960), caption: "Mount Fujia" },
+      ],
+    },
+    {
       type: "p",
       text:
         "Then there were the waterfalls of Indonesia. I saw countless waterfalls across Bali, particularly around Ubud and Munduk, and each one had something different about it. Some were taller, some had multiple cascades, some were surrounded by dense jungle, and others had natural pools where I could actually swim underneath the falling water."
     },
     {
-      type: "img",
-      url: ph("indonesia_waterfalls", 1280, 720),
-      caption: "Exploring the waterfalls of Indonesia"
-    },
-    {
       type: "p",
       text:
-        "But Madakaripura Waterfall in Java was on another level. Getting there involved a trail through the forest, crossing between rocks and streams and walking through several smaller waterfalls before eventually reaching the enormous valley where the main waterfall appears."
+        "But Tumpak Sewu Waterfall in Java was on another level. Getting there involved a trail through the forest, crossing between rocks and streams and walking through several smaller waterfalls before eventually reaching the enormous valley where the main waterfall appears."
     },
     {
       type: "p",
@@ -3222,6 +3268,16 @@ export const POSTS: BlogPost[] = [
       type: "p",
       text:
         "And yet, the smaller waterfalls across Bali were no less beautiful. Each one felt completely different from the last, which made exploring them almost like collecting different versions of the same natural wonder."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("cascata6_pnsti0", 720, 960), caption: "Tumpak Sewu Waterfall - Java" },
+        { url: ph("cascata9_pl1mgy", 720, 960), caption: "Tumpak Sewu Waterfall - Java" },
+        { url: ph("cascata5_nmndr9", 720, 960), caption: "Waterfall - Bali" },
+        { url: ph("cascata4_szmhh9", 720, 960), caption: "Waterfall - Bali" },
+        { url: ph("cascata1_ghub84", 720, 960), caption: "Waterfall - Bali" },
+      ],
     },
 
     { type: "h2", text: "What Six Months in Asia Taught Me" },
