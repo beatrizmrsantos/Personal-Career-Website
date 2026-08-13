@@ -2285,5 +2285,1027 @@ export const POSTS: BlogPost[] = [
         "University gave me the foundation. Opensoft taught me how to build real software for real people."
     }
   ]
+},
+
+{
+  id: 12,
+  slug: "my-erasmus-in-dresden",
+  title: "My Erasmus in Dresden",
+  subtitle: "Six months of discovering Germany, Europe, and a different way of living",
+  date: "2023-04-11",
+  category: "life",
+  tags: ["Erasmus", "Germany", "Dresden", "Travel", "Culture"],
+  coverImage: ph("Erasmus_y3kpat", 1280, 720),
+  excerpt:
+    "I went to Dresden expecting an Erasmus experience. I came back with a completely different perspective on education, culture, travel, and what I value in everyday life.",
+  readTime: "15 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "When I left Portugal for my Erasmus in Dresden, I knew I was going to experience a different country, study at a different university, and meet people from all over the world. What I didn't expect was how much the experience would change the way I saw everyday life."
+    },
+    {
+      type: "p",
+      text:
+        "I spent the spring and summer in Germany, and somewhere between university lectures, train rides, long walks, lakes, parks, and weekend trips across Europe, Dresden started to feel like home. It was an experience that taught me far more than what I could have learned inside a classroom."
+    },
+
+    { type: "h2", text: "Arriving in Germany" },
+    {
+      type: "p",
+      text:
+        "The first few weeks were a constant exercise in comparison. Coming from Portugal, Germany felt familiar enough to be European, but different enough that I noticed something new almost every day."
+    },
+    {
+      type: "p",
+      text:
+        "The biggest surprise was probably not a particular tradition or cultural difference, but the way everything seemed to work. Organization and efficiency were everywhere. Things happened when they were supposed to happen, systems were carefully planned, and there always seemed to be a process behind everything."
+    },
+    {
+      type: "p",
+      text:
+        "Coming from Portugal, where improvisation is often part of everyday life, arriving somewhere where organization and efficiency were taken so seriously was both surprising and, honestly, refreshing. It was one of those differences that you don't fully appreciate until you experience the opposite."
+    },
+    {
+      type: "quote",
+      text:
+        "Sometimes the biggest culture shock isn't something dramatic. It's realizing how differently everyday life can function."
+    },
+
+    { type: "h2", text: "A Different Way of Learning" },
+    {
+      type: "p",
+      text:
+        "University was one of the areas where I felt the cultural difference most strongly. Studying at TU Dresden was not simply about attending university in another country — the entire learning experience felt different from what I was used to in Portugal."
+    },
+    {
+      type: "p",
+      text:
+        "The classes had a different dynamic, students were expected to work more independently, and the relationship between lectures, individual study, and assessment was not the same. Even the way exams were structured and carried out was different."
+    },
+    {
+      type: "p",
+      text:
+        "At first, adapting to this system was challenging. I had to change the way I studied, manage my time differently, and become much more responsible for my own learning. But that challenge ended up being one of the most valuable parts of the experience."
+    },
+    {
+      type: "p",
+      text:
+        "I learned to be more independent, more disciplined, and more comfortable with figuring things out on my own. It was a different way of learning, and being forced outside the methods I was comfortable with helped me grow considerably — both academically and personally."
+    },
+    {
+      type: "p",
+      text:
+        "Another part of the university experience that felt very different was living in a student dorm. In Portugal, this kind of student housing culture is much less common, so living in a dorm in Dresden was a completely new experience for me. I was surrounded by other students from different countries, and everyday life naturally became a social experience — from sharing common spaces to having spontaneous conversations and getting to know people I would probably never have met otherwise."
+    },
+    {
+      type: "p",
+      text:
+        "It was also interesting to experience the sense of community that came with living among other students. Even simple things like cooking together, spending time in the common areas, or meeting people in the corridors became part of my university experience. It made me feel much more immersed in student life and was one of the things that made my time in Dresden feel so different from university life in Portugal."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("university_ibm6a1", 720, 960), caption: "TU Dresden" },
+        { url: ph("dorm_rzftwk", 720, 960), caption: "Dorm" },
+      ],
+    },
+
+    { type: "h2", text: "Discovering Dresden" },
+    {
+      type: "p",
+      text:
+        "Dresden was probably the perfect city for my Erasmus. It wasn't too big, but it wasn't small either. It had enough movement, students, culture, and things to discover without ever feeling overwhelming."
+    },
+    {
+      type: "p",
+      text:
+        "The city has a beautiful historical center, a strong academic atmosphere, and an identity that combines history, culture, and nature. The Elbe running through the city became one of my favorite parts of Dresden. There was something special about walking along the river, especially during the warmer months, when the city seemed to move outdoors."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("dresden3_q6yunn", 720, 960), caption: "Dresden" },
+        { url: ph("dresden5_c2y5jy", 720, 960), caption: "Dresden" },
+        { url: ph("dresden2_ncva3u", 720, 960), caption: "Dresden" },
+        { url: ph("dresden4_lwcqtv", 720, 960), caption: "Dresden" },
+        { url: ph("dresden1_ubvwrt", 720, 960), caption: "Dresden" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "And then there were the parks. So many parks. One of the things I loved most about Germany was how much outdoor space was integrated into everyday life. Nature never felt far away. Many of the parks also had beautiful lakes where you could rent small boats and spend a peaceful afternoon on the water, which made the whole experience feel even more connected to nature."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("dresden_park3_g0fjou", 720, 960), caption: "Dresden park" },
+        { url: ph("dresden_park1_e9ntw5", 720, 960), caption: "Dresden lake" },
+        { url: ph("dresden_park2_srqk0v", 720, 960), caption: "Boating on one of Dresden’s lakes" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "Dresden also gave me some of my first experiences with things I had never tried before. I went ice skating for the first time and even watched my first ice hockey game. Small experiences like these made the city feel like a place where I was constantly discovering something new."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("iceskating_ri5kfm", 720, 960), caption: "Ice Skating" },
+        { url: ph("hockey_cchwxr", 720, 960), caption: "Ice hockey game" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "One of the easiest ways to explore Dresden was by bicycle. Cycling was simply part of everyday life. Student passes included access to public bicycles, and the city was clearly designed around pedestrians and cyclists rather than cars. There were bike lanes everywhere, and getting around without a car felt completely natural."
+    },
+    {
+      type: "p",
+      text:
+        "The combination of an efficient public transport network and extensive cycling infrastructure also meant there was surprisingly little traffic. I could get almost anywhere easily, whether by tram, train, bicycle, or simply walking. It made the city feel calm and accessible in a way that I wasn't used to."
+    },
+    {
+      type: "p",
+      text:
+        "I spent countless afternoons walking, cycling, exploring, sitting by the river, and simply enjoying the city. Dresden felt picturesque without feeling artificial — a place where history and everyday life existed naturally alongside each other."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("bicycle_mcbygx", 960, 720), caption: "Cycling in Dresden" },
+        { url: ph("public_transportation_dtssmy", 720, 960), caption: "Public Transport – Trains in Dresden" },
+      ],
+    },
+
+    { type: "h2", text: "Food, Traditions, and Culture Shock" },
+    {
+      type: "p",
+      text:
+        "Food was another part of the experience where I constantly noticed the differences between Germany and Portugal. What people eat, when they eat, and even what counts as a proper meal can be surprisingly different."
+    },
+    {
+      type: "p",
+      text:
+        "In Portugal, meals are often an important social moment, and having a proper, substantial meal is part of the routine. In Germany, I noticed that people were much more comfortable having something smaller when they didn't need a full meal. Sandwiches, snacks, and lighter meals were completely normal, which felt quite different from what I was used to."
+    },
+    {
+      type: "p",
+      text:
+        "And then there was the ice cream. Germans seemed to absolutely love it, and I definitely wasn't going to complain about that — ice cream is one of my favorite things in the world. Ice cream shops were everywhere, and having one during a sunny afternoon quickly became part of the summer routine."
+    },
+    {
+      type: "p",
+      text:
+        "There was also an impressive amount of schnitzel to be eaten, and more Milka chocolate than I probably needed, especially considering how cheap it was. Some of the small everyday things I discovered through food ended up becoming part of what made living there so enjoyable."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("food2_rkvysg", 720, 960), caption: "Schnitzel" },
+        { url: ph("food1_rsudgp", 720, 960), caption: "Typical German Food" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "The social culture was probably an even bigger adjustment. Coming from Portugal, a country where people tend to be very social, expressive, spontaneous, and comfortable talking to strangers, Germany initially felt much more reserved. People seemed to value personal space, privacy, punctuality, and clear boundaries much more strongly."
+    },
+    {
+      type: "p",
+      text:
+        "At first, this could feel a little distant. I was used to conversations starting easily, plans being made spontaneously, and social interactions feeling very open. In Germany, people often seemed more deliberate about who they let into their personal space and how they interacted with others."
+    },
+    {
+      type: "p",
+      text:
+        "But the more time I spent there, the more I understood that being reserved didn't necessarily mean being unfriendly. People simply expressed themselves differently. Once you got to know someone, the relationships could be just as genuine — they were simply built in a different way."
+    },
+    {
+      type: "p",
+      text:
+        "In a way, the contrast was something I came to appreciate. The organization, respect for personal space, punctuality, and predictability that initially felt strange eventually became things I found myself enjoying. It made me realize that there isn't necessarily one right way of doing things — there are simply different ways of living."
+    },
+    {
+      type: "p",
+      text:
+        "What surprised me most was how strongly Germans seemed to separate work and personal life. There was a clear sense that work was something you did, not something that defined your entire existence."
+    },
+
+    { type: "h2", text: "Learning to Live, Not Just Work" },
+    {
+      type: "p",
+      text:
+        "The longer I stayed, the more I noticed how much Germany seemed to prioritize quality of life. Exercise, nature, socializing, and spending time outdoors were not treated as luxuries. They were simply part of everyday life."
+    },
+    {
+      type: "p",
+      text:
+        "During the summer, it was completely normal to see people leaving work and heading straight to a park. Groups would have picnics, play volleyball or other team games, sit together by the river, or simply spend the evening outside."
+    },
+    {
+      type: "p",
+      text:
+        "That was one of the biggest lifestyle differences I took away from the experience. People seemed to work to live, rather than live to work."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("picnic_x9kxei", 720, 960), caption: "Picnic in the park" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "And, of course, I had to embrace one of the things Germans seem to love most: hiking. I did some beautiful walks through forests, hills, and natural landscapes around Dresden. Being surrounded by nature became one of my favorite parts of living there."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("hike2_hz1gck", 720, 960), caption: "Bastei Bridge" },
+        { url: ph("hike3_doc6on", 720, 960), caption: "Hicking view" },
+        { url: ph("hike1_g35bho", 720, 960), caption: "Hicking" },
+        { url: ph("hike4_m1mmaj", 720, 960), caption: "Hicking" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "Coming from the Algarve, I'm used to spending summer days at the beach. In Dresden, that looked completely different. Instead of the Atlantic, I found myself swimming in lakes, surrounded by trees and nature — sometimes with nutrias nearby. It was definitely not the summer I was used to, but it became one of my favorite memories."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("lake2_sysogc", 720, 960), caption: "Dresden lake" },
+        { url: ph("lake1_vefwyk", 720, 960), caption: "Dresden lake" }
+      ],
+    },
+
+    { type: "h2", text: "Erasmus Means Exploring" },
+    {
+      type: "p",
+      text:
+        "One of the greatest parts of doing Erasmus in Central Europe was realizing how easy it was to explore an entire continent from one place."
+    },
+    {
+      type: "p",
+      text:
+        "Dresden's location made it an incredible starting point for travelling. Poland, Czechia, Austria, Hungary, the Netherlands, and countless German cities were suddenly within reach."
+    },
+    {
+      type: "p",
+      text:
+        "I visited countless cities in Poland, and one of the things I noticed immediately was how different their atmosphere felt from Germany. The cities were generally busier, people seemed louder and more expressive, and the overall energy felt much closer to Portugal. In a strange way, being in Poland gave me small reminders of home."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("poland1_rvuqhc", 720, 960), caption: "Wrocław" },
+        { url: ph("poland6_uhwelu", 720, 960), caption: "Kraków" },
+        { url: ph("poland2_zu6ltl", 720, 960), caption: "Kraków" },
+        { url: ph("poland9_trodoo", 720, 960), caption: "Warsaw" },
+        { url: ph("poland8_pgzuxd", 720, 960), caption: "Warsaw" },
+        { url: ph("poland7_n6cpkq", 720, 960), caption: "Kraków" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "But one of the most difficult and meaningful experiences was visiting Auschwitz."
+    },
+    {
+      type: "p",
+      text:
+        "Walking through a place that represents such an enormous amount of human suffering is difficult to put into words. The experience was emotionally heavy and stayed with me long after leaving. It was one of those moments where travelling stopped being about discovering beautiful places and became about confronting history and understanding it in a much more personal way."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("poland3_lo4ck9", 720, 960), caption: "Auschwitz" },
+        { url: ph("poland4_u0rdzc", 720, 960), caption: "Auschwitz" },
+        { url: ph("poland5_zdeogy", 720, 960), caption: "Auschwitz" }
+      ],
+    },
+
+    { type: "h2", text: "Prague, Vienna, Bratislava and Budapest" },
+    {
+      type: "p",
+      text:
+        "Prague felt almost unreal. Its medieval architecture, narrow streets, towers, and atmosphere made the city feel like something out of a fairytale. There was something almost princess-like about walking through the historic center, and the city's atmosphere made it one of those places where simply wandering around felt like an experience in itself."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("prague3_rx5n06", 720, 960), caption: "Auschwitz" },
+        { url: ph("prague2_wyclti", 720, 960), caption: "Auschwitz" },
+        { url: ph("prague1_taondn", 720, 960), caption: "Auschwitz" },
+        { url: ph("prague4_sasszw", 720, 960), caption: "Auschwitz" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+      "Vienna was completely different. Grand, elegant, and imposing, it had a royal atmosphere that was impossible to miss. Huge streets, monumental white buildings, palaces, and carefully designed architecture made the city feel incredibly sophisticated and almost larger than life. It was also where I experienced my first opera, at the Vienna State Opera. Sitting inside such a beautiful and historic opera house and watching a performance there felt like a perfect reflection of the city’s elegance and cultural richness."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("viena3_x945hp", 720, 960), caption: "Vienna" },
+        { url: ph("viena4_fuv7bn", 720, 960), caption: "Vienna State Opera" },
+        { url: ph("viena2_hrdshi", 720, 960), caption: "Vienna State Opera" },
+        { url: ph("viena1_ay3udk", 720, 960), caption: "Vienna" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "Bratislava felt smaller and more intimate. It was welcoming, cultural, and easy to explore on foot. After the grandeur of Vienna, its more relaxed atmosphere made it feel particularly cozy."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("bratislavia2_kzpayu", 720, 960), caption: "Bratislava" },
+        { url: ph("bratislavia1_leaxhx", 720, 960), caption: "Bratislava" },
+        { url: ph("bratislavia3_zlm1u6", 720, 960), caption: "Bratislava" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "And then there was Budapest — one of my favorite cities I have ever visited. It had everything I love in a city: beautiful architecture, a lively atmosphere, incredible views, a strong sense of character, and plenty of places to simply wander around and explore."
+    },
+    {
+      type: "p",
+      text:
+        "The Danube, the colorful streets, the impressive buildings, and the famous ruin bars gave Budapest a personality that felt completely unique. It was beautiful, alive, and slightly chaotic in the best possible way. Out of all the cities I visited during Erasmus, Budapest is one I would happily return to without thinking twice."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("budapeste2_xgxyq6", 960, 720), caption: "Hungarian Parliament Building - Budapest" },
+        { url: ph("budapeste5_aqk2ow", 720, 960), caption: "Budapest" },
+        { url: ph("budapeste1_zxim0f", 720, 960), caption: "Budapest" },
+        { url: ph("budapeste3_hhhlly", 960, 720), caption: "Budapest" },
+        { url: ph("budapeste4_croiok", 720, 960), caption: "Ruin bars - Budapest" }
+      ],
+    },
+
+    { type: "h2", text: "Exploring Germany by Train" },
+    {
+      type: "p",
+      text:
+        "Living in Germany also gave me the opportunity to explore a huge part of the country using local trains, which were included in my monthly student transport pass."
+    },
+    {
+      type: "p",
+      text:
+        "I travelled across the eastern and southern parts of Germany, visiting cities such as Berlin, Leipzig, Hamburg, Nuremberg, Munich, and many others. Each city had a completely different personality."
+    },
+    {
+      type: "p",
+      text:
+        "Berlin felt huge, creative, and constantly moving. Leipzig had a younger and more alternative atmosphere. Hamburg had its maritime identity and completely different northern character. Nuremberg brought history and medieval architecture, while Munich felt more traditional, polished, and unmistakably Bavarian."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("germany6_g29f7y", 720, 960), caption: "Bamberg" },
+        { url: ph("germany5_rpoyys", 720, 960), caption: "Nuremberga" },
+        { url: ph("germany4_wyuubl", 720, 960), caption: "Nuremberga" },
+        { url: ph("germany2_isbqu8", 720, 960), caption: "Hamburg" },
+        { url: ph("germany7_gls7nx", 960, 720), caption: "Berlin" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "I also discovered medieval markets, traditional festivals, historic town centers, and places that looked like they had been frozen in time. Travelling by train made the country feel much smaller and encouraged me to explore places I probably would never have visited otherwise."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("germany8_np28or", 720, 960), caption: "Medieval Market - German" },
+        { url: ph("germany11_fo9b4y", 720, 960), caption: "German" },
+        { url: ph("germany10_sjjt4t", 720, 960), caption: "German" },
+        { url: ph("germany1_sv1oet", 720, 960), caption: "German" },
+        { url: ph("germany12_b331mu", 960, 720), caption: "German Train" }
+      ],
+    },
+
+    { type: "h2", text: "Bavaria and the Alps" },
+    {
+      type: "p",
+      text:
+        "The trip through Bavaria was one of the highlights. The landscape completely changed as I moved south, with mountains, forests, lakes, and small towns surrounded by nature."
+    },
+    {
+      type: "p",
+      text:
+        "One of the most memorable places was Neuschwanstein Castle, the fairytale-like castle that inspired Disney's iconic castle. Seeing it surrounded by the Bavarian landscape made it feel almost unreal."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("germany7_kramw6", 720, 960), caption: "Neuschwanstein Castle" },
+        { url: ph("germany8_e9ufgy", 720, 960), caption: "Hohenschwangau Castle" },
+        { url: ph("germany10_gq5hvg", 720, 960), caption: "Panoramic view" },
+        { url: ph("germany9_ny9gaq", 720, 960), caption: "Alpsee Lake" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "And then there was Innsbruck. Surrounded by the Alps, the city felt completely different from anywhere else I had been during the Erasmus. The combination of mountains, architecture, and nature was breathtaking."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("austria3_xajeti", 720, 960), caption: "Innsbruck" },
+        { url: ph("austria5_n68xun", 720, 960), caption: "Innsbruck" },
+        { url: ph("austria6_fu1wto", 720, 960), caption: "Innsbruck" },
+        { url: ph("austria1_dyymtt", 720, 960), caption: "Innsbruck" }
+      ],
+    },
+    { type: "h2", text: "The Netherlands and My First F1 Race" },
+    {
+      type: "p",
+      text:
+        "My Erasmus adventures also took me to the Netherlands, where I visited several cities and experienced a completely different side of Northern Europe."
+    },
+    {
+      type: "p",
+      text:
+        "I visited in spring, which made the experience even more special. I got to see endless fields of poppies in full bloom, stretching for kilometres in every direction and filled with vibrant colours. Being able to simply walk through the fields, surrounded by flowers as far as I could see, was one of those simple but unforgettable moments."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("flowers_hl1biy", 720, 960), caption: "Poppies field" },
+        { url: ph("holand2_solvrt", 720, 960), caption: "Leiden - Netherlands" },
+        { url: ph("holand4_cun5ei", 720, 960), caption: "Amsterdam - Netherlands" },
+        { url: ph("holand1_trj5ji", 720, 960), caption: "Stroopwafel" },
+        { url: ph("holand3_fio6no", 720, 960), caption: "Amsterdam - Netherland" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "I was also there on King's Day, which turned out to be one of my favourite experiences in the Netherlands. The energy was incredible, with street parties everywhere and almost everyone dressed in orange. People were celebrating, drinking beer, and filling the beautiful canals on boats, turning the whole country into one huge celebration. Seeing the canals packed with people, music, and orange everywhere was such a unique atmosphere and one of the things I enjoyed most about my time there."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("kingsday2_miv1pi", 720, 960), caption: "King's Day - Leiden, Netherlands" },
+        { url: ph("kingsday1_rxjhvl", 720, 960), caption: "King's Day - Leiden, Netherlands" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "But one of the most exciting moments was also a first for me: going to a Formula 1 race. Seeing the atmosphere around a Grand Prix in person was completely different from watching it on a screen. The sound, the crowds, the energy, and the feeling of being surrounded by thousands of people who shared the same excitement made it an unforgettable experience."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("f1_2_i8gurt", 720, 960), caption: "F1 Race - Netherlands" },
+        { url: ph("f1_tibwpu", 720, 960), caption: "F1 Race - Netherlands" }
+      ],
+    },
+
+    { type: "h2", text: "What Erasmus Changed" },
+    {
+      type: "p",
+      text:
+        "Looking back, I don't think the most important thing I brought home from Erasmus was a list of places I visited. It was the perspective I gained from living somewhere completely different."
+    },
+    {
+      type: "p",
+      text:
+        "I became more independent. I learned how to adapt to unfamiliar systems, communicate with people from different backgrounds, organize my own life, and become comfortable being outside my comfort zone."
+    },
+    {
+      type: "p",
+      text:
+        "I also discovered things about myself that I wouldn't have discovered by staying in the same environment. I realized how much I value nature, how much I enjoy exploring new places, and how important a good balance between work and life is to me."
+    },
+    {
+      type: "quote",
+      text:
+        "Erasmus didn't just give me places to remember. It gave me a different way of seeing the world."
+    },
+
+    { type: "h2", text: "Conclusion" },
+    {
+      type: "p",
+      text:
+        "My time in Dresden started as an academic exchange, but it became much more than that. It was six months of adapting, learning, travelling, getting lost, discovering new cultures, meeting people, and slowly building a life somewhere that was completely unfamiliar at the beginning."
+    },
+    {
+      type: "p",
+      text:
+        "I left Portugal wanting to experience Germany. I left Germany having experienced a small part of Europe."
+    },
+    {
+      type: "p",
+      text:
+        "And somewhere between the trains, the university, the parks, the lakes, the mountains, the cities, and all the unexpected moments in between, I realized that sometimes the best way to learn about yourself is to put yourself somewhere completely new."
+    }
+  ]
+},
+{
+  id: 13,
+  slug: "my-top-10-experiences-backpacking-asia",
+  title: "My Top 10 Experiences Backpacking Asia",
+  subtitle: "Six months, ten countries, and the moments I will never forget",
+  date: "2026-05-12",
+  category: "travel",
+  tags: ["Backpacking", "Asia", "Travel", "Adventure", "Nature"],
+  coverImage: ph("airballons_vj4uik", 1280, 720),
+  excerpt:
+    "After six months of backpacking across Asia, these are the ten experiences that stayed with me the most — from swimming with manta rays and hiking through remote mountains to standing beneath ancient temples and watching the sunrise over Mount Fuji.",
+  readTime: "20 min",
+  body: [
+    {
+      type: "p",
+      text:
+        "Six months, ten countries, countless buses, trains, boats, flights, guesthouses, street food, mountains, temples, beaches, and more memories than I could ever fit into one trip. Backpacking across Asia was one of the biggest adventures of my life, and choosing only ten experiences was much harder than I expected."
+    },
+    {
+      type: "p",
+      text:
+        "Some of these moments were breathtaking because of the landscapes. Others were meaningful because of the people, the history, or simply because they made me feel something I had never felt before. These are the ten experiences that stayed with me the most."
+    },
+
+    { type: "h2", text: "1. Snorkelling in Indonesia" },
+    {
+      type: "p",
+      text:
+        "Snorkelling in Indonesia was probably the closest I have ever felt to being inside a movie. Around the Gili Islands, kilometres of colourful coral reefs stretch just off the coast, meaning that you don't need to dive deep into the ocean to discover an entire underwater world."
+    },
+    {
+      type: "p",
+      text:
+        "There were corals in almost every colour imaginable, countless species of fish, and sea turtles swimming peacefully through the crystal-clear blue water. Floating above that enormous reef, with nothing but the ocean between me and the coral below, felt exactly like being Ariel from The Little Mermaid. I could swim freely through the water while an entire world was moving underneath me."
+    },
+    {
+      type: "p",
+      text:
+        "I also got to snorkel around The Nest, an underwater sculpture installation near Gili Meno. The 48 life-sized human figures are arranged in a circle on the seabed, representing the connection between humanity and the natural world. What made the experience even more special was seeing how the sculptures had slowly become part of the reef itself, with corals growing across them and fish swimming around and between the figures. Seeing a piece of human art being gradually transformed by nature, while floating above it in the middle of the ocean, felt incredibly surreal and beautiful."
+    },
+    {
+      type: "p",
+      text:
+        "Then came Nusa Penida, where I had the chance to swim with manta rays. The experience was completely different. These animals are enormous, graceful, and surprisingly close when they swim past you. We had to swim quite quickly to keep up with them, but seeing them moving through the water right beside us was incredible."
+    },
+    {
+      type: "p",
+      text:
+        "There was something almost unreal about being so close to an animal that looked impossibly large and yet moved through the water so effortlessly. Indonesia's underwater world was one of those places where I kept thinking that I couldn't believe what I was seeing."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("jonyTurtle_obcquh", 720, 960), caption: "Swimming with turtles — Gili Islands" },
+        { url: ph("turtle_awrlxb", 720, 960), caption: "Turtle — Gili Islands" },
+        { url: ph("coral2_vuapri", 720, 960), caption: "Corals — Gili Islands" },
+        { url: ph("underwaterstatues_mvymtn", 720, 960), caption: "The Nest — Gili Islands" },
+        { url: ph("manta_vmixsz", 720, 960), caption: "Manta Ray - Nusa Penida" },
+      ],
+    },
+
+    { type: "h2", text: "2. The Ha Giang Loop, Vietnam" },
+    {
+      type: "p",
+      text:
+        "Four days riding through the mountains of northern Vietnam was one of the most intense and authentic experiences of the entire trip. The Ha Giang Loop starts in Ha Giang and winds through some of the most remote parts of the country, passing through small towns, villages, rice fields, mountains, waterfalls, and even areas close to the Chinese border."
+    },
+    {
+      type: "p",
+      text:
+        "Every turn seemed to reveal another landscape that was more impressive than the previous one. We spent hours behind our motorbike drivers, known as easy riders, climbing enormous mountain roads and looking down at valleys that seemed to go on forever."
+    },
+    {
+      type: "p",
+      text:
+        "The experience felt particularly authentic because we stayed in local guesthouses and ate local food at almost every meal. Our easy drivers also became much more than just people driving us around. Spending four days together meant getting to know them, talking to locals, and experiencing a side of Vietnamese culture that would have been difficult to access as a regular tourist."
+    },
+    {
+      type: "p",
+      text:
+        "Our evenings were filled with long dinners, karaoke, and the famous Vietnamese rice wine. It was chaotic, loud, incredibly social, and completely different from anything I was used to."
+    },
+    {
+      type: "p",
+      text:
+        "But the experience also showed me a much harder side of the country. We stopped in small villages where people were living with very little, and we brought rice for families who needed it. I saw children, some as young as five, walking for kilometres through enormous mountains just to get to school."
+    },
+    {
+      type: "p",
+      text:
+        "Seeing that reality was difficult. Most tourists only see the polished version of a country — the cities, the tourist attractions, the places designed to be visited. The Ha Giang Loop showed me what life can look like far away from that filter. It was beautiful, but it was also a reality check that stayed with me."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("mehagiangloop_livxln", 720, 960), caption: "Ha Gaing Loop" },
+        { url: ph("motos_wjyxb5", 720, 960), caption: "Ha Gaing Loop group" },
+        { url: ph("road_zkkn4m", 720, 960), caption: "Ha Gaing Loop" },
+        { url: ph("village_nskicv", 720, 960), caption: "Ha Gaing Loop village" },
+        { url: ph("drinking_ekvinq", 720, 960), caption: "Ha Gaing Loop dinner" },
+      ],
+    },
+
+    { type: "h2", text: "3. Hot Air Balloon & Paramotoring in Vang Vieng" },
+    {
+      type: "p",
+      text:
+        "Vang Vieng was one of those places where the landscape itself felt impossible. Surrounded by enormous limestone mountains and covered in intense green vegetation, seeing it from above made it even more spectacular."
+    },
+    {
+      type: "p",
+      text:
+        "I went on a hot air balloon flight at sunrise, climbing to around one kilometre above the valley. Watching the sun come up behind the mountains while dozens of hot air balloons slowly filled the sky was one of the most beautiful sights of the entire trip. It genuinely brought tears to my eyes."
+    },
+    {
+      type: "p",
+      text:
+        "It was also strangely surreal. I was standing in a basket, completely exposed, with nothing between me and the sky except a huge balloon above my head and a flame keeping it in the air. Being so high up without feeling attached to anything was both peaceful and slightly terrifying."
+    },
+    {
+      type: "p",
+      text:
+        "The landing was a completely different story. There is very little you can control in a hot air balloon, so eventually you simply land wherever the wind decides. It was definitely a more chaotic ending to an otherwise magical experience."
+    },
+    {
+      type: "p",
+      text:
+        "Later, I also went paramotoring over the same valley, this time at sunset. Instead of standing in a basket, I was sitting on a small seat with a motor behind me, flying directly through the mountains and above the river."
+    },
+    {
+      type: "p",
+      text:
+        "It was faster, more adventurous, and much more controlled than the balloon. Seeing the mountains from above while other paramotors and hot air balloons were flying around us made the whole valley look completely surreal."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("paramoturingLaos_vjd7cd", 720, 960), caption: "Paramotoring - Vang Vieng" },
+        { url: ph("paramotoringview_s6obn8", 720, 960), caption: "Paramotoring view - Vang Vieng" },
+        { url: ph("baloesArQuente_zemncn", 720, 960), caption: "Hot Air Balloon view- Vang Vieng" },
+        { url: ph("airballons_vj4uik", 960, 720), caption: "Hot Air Balloon view- Vang Vieng" },
+        { url: ph("eubalaoarquente_lucqvt", 720, 960), caption: "Hot Air Balloon - Vang Vieng" },
+      ],
+    },
+
+    { type: "h2", text: "4. Khao Sok National Park, Thailand" },
+    {
+      type: "p",
+      text:
+        "Spending two days and one night inside Khao Sok National Park was one of the most peaceful experiences of my trip. We stayed in a small bungalow floating on the lake, completely surrounded by nature, with no internet and no phone signal."
+    },
+    {
+      type: "p",
+      text:
+        "Getting there already felt like entering another world. We travelled by boat through the lake, surrounded by enormous cliffs covered in dense vegetation. Once we arrived, there was almost nothing around us for kilometres and kilometres."
+    },
+    {
+      type: "p",
+      text:
+        "The silence was incredible. There were no cars, no buildings, no city sounds — just birds, insects, monkeys, and the occasional sound of the water. The sounds of the birds and monkeys echoing through the landscape are something I don't think I will ever forget."
+    },
+    {
+      type: "p",
+      text:
+        "I spent time swimming and kayaking across the enormous lake, surrounded by cliffs and forests. We also went on a sunrise safari to look for wildlife and saw birds, monkeys, and gaurs."
+    },
+    {
+      type: "p",
+      text:
+        "Watching the sun rise and set between the enormous cliffs, with the reflections on the lake and nothing but nature around us, was one of those moments where I felt completely disconnected from everything else."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("khaoSok_ltolk8", 720, 960), caption: "Khao Sok National Park" },
+        { url: ph("boat_xzfbal", 720, 960), caption: "Khao Sok National Park" },
+        { url: ph("kaiaque_ffsnn9", 720, 960), caption: "Kayaking in Khao Sok National Park" },
+        { url: ph("khaoSokSwiming_gixkyp", 720, 960), caption: "Swimming in Khao Sok National Park" },
+        { url: ph("bangalow_jsqv2w", 720, 960), caption: "Water bungalow in Khao Sok National Park" },
+      ],
+    },
+
+    { type: "h2", text: "5. Angkor Archaeological Park, Cambodia" },
+    {
+      type: "p",
+      text:
+        "Angkor Archaeological Park was one of the places that surprised me the most. I knew it was going to be impressive, but I don't think I understood the scale of it until I was standing there."
+    },
+    {
+      type: "p",
+      text:
+        "The Angkor complex covers around 400 square kilometres and contains dozens of temples built over centuries, with Angkor Wat being its most famous monument. The scale, architecture, and engineering of the site are difficult to comprehend even today, let alone when you realize how long ago these structures were created."
+    },
+    {
+      type: "p",
+      text:
+        "I arrived at Angkor Wat before sunrise, when it was still completely dark and we had to use flashlights to see the ground. Then, slowly, the sky turned pink and the silhouette of Angkor Wat began to appear. Watching the temple emerge from the darkness as the sun rose was one of the most special moments of the trip."
+    },
+    {
+      type: "p",
+      text:
+        "And Angkor Wat is only one part of the entire archaeological park. There are so many temples that visiting everything would take days, if not longer. The complex is so enormous that getting around by tuk-tuk is practically essential."
+    },
+    {
+      type: "p",
+      text:
+        "What made it even more surreal was the way nature has taken over many of the temples. Huge trees and roots grow through ancient stone structures, vegetation covers entire walls, and monkeys walk freely through the ruins."
+    },
+    {
+      type: "p",
+      text:
+        "At times, it genuinely felt like walking through Tomb Raider. Seeing these enormous temples disappearing into the jungle, surrounded by trees that had been growing there for centuries, was unlike anything I had ever seen."
+    },
+    {
+      type: "gallery",
+      photos: [
+         { url: ph("AnkorWat_vbauyk", 720, 960), caption: "Angkor Archaeological Park" },
+        { url: ph("ankorwatnature_lxyecs", 720, 960), caption: "Angkor Archaeological Park" },
+        { url: ph("ankorwatjony_o9ucin", 720, 960), caption: "Angkor Archaeological Park" },
+        { url: ph("ankorwatmonkey_qdum6v", 720, 960), caption: "Monkey in Angkor Archaeological Park" },
+        { url: ph("AnkorWatSunrise_iweqlp", 720, 960), caption: "Angkor Wat sunrise" },
+      ],
+    },
+
+    { type: "h2", text: "6. Spending Time with rescued Elephants, Thailand" },
+    {
+      type: "p",
+      text:
+        "Spending a day with rescued elephants near Chiang Mai was one of the most fulfilling experiences of the entire trip."
+    },
+    {
+      type: "p",
+      text:
+        "The elephants lived in a rescue sanctuary after being saved from different forms of exploitation across Asia. Instead of watching them perform or being used for rides, we spent the day simply being around them in their natural environment."
+    },
+    {
+      type: "p",
+      text:
+        "We walked through the jungle with them, fed them, and eventually went into the river to bathe them. They would spray water over us while we tried to do the same to them. Sometimes, we would come across entire elephant families, with males, females, and younger elephants staying close together. The younger ones were especially playful and curious."
+    },
+    {
+      type: "p",
+      text:
+        "There was something incredibly special about interacting with such enormous animals while still being able to see their individual personalities. It felt less like a tourist activity and more like being temporarily invited into their world."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("elephant_cipuzo", 720, 960), caption: "Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephants_o5lv3a", 720, 960), caption: "Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephantstreking2_opfffv", 720, 960), caption: "Trekking at an Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephantstreking_jgmajz", 720, 960), caption: "Trekking at an Elephant Sanctuary — Chiang Mai" },
+        { url: ph("elephant_my2sce", 720, 960), caption: "Elephant Sanctuary — Chiang Mai" },
+      ],
+    },
+
+    { type: "h2", text: "7. Mount Bromo, Indonesia" },
+    {
+      type: "p",
+      text:
+        "Watching the sunrise over Mount Bromo was one of the most dramatic landscapes I saw in Indonesia."
+    },
+    {
+      type: "p",
+      text:
+        "We climbed to a viewpoint before sunrise and waited in the darkness. As the sky slowly turned pink, the mountains began appearing through the mist below us. The volcanoes stood above the clouds, with smoke still rising from their active craters."
+    },
+    {
+      type: "p",
+      text:
+        "After sunrise, we drove through the enormous volcanic landscape by jeep, crossing fields of ash and sand before reaching Mount Bromo itself."
+    },
+    {
+      type: "p",
+      text:
+        "We then climbed up towards the active crater. Standing there and looking directly into an enormous volcanic crater with smoke coming out of it was both beautiful and slightly intimidating. It was one of those experiences where the landscape makes you feel very small."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("vulcanos_isgjfo", 720, 960), caption: "Mount Bromo sunrise view" },
+        { url: ph("vulcaoview_lvgwgy", 720, 960), caption: "Mount Bromo crater" },
+        { url: ph("vulcanoEruption_z3x2hu", 720, 960), caption: "Mount Bromo active crater" },
+        { url: ph("Jeep_o5cr9a", 720, 960), caption: "Mount Bromo jeep" },
+        { url: ph("JeepRide_mx3sra", 720, 960), caption: "Mount Bromo jeep ride" },
+      ],
+    },
+
+    { type: "h2", text: "8. The Avatar Mountains, China" },
+    {
+      type: "p",
+      text:
+        "Zhangjiajie National Forest Park was especially meaningful to me because I was finally seeing with my own eyes the floating mountains that inspired one of my favorite movies: Avatar."
+    },
+    {
+      type: "p",
+      text:
+        "Getting there already felt like an adventure. We took a cable car that climbed for a long time, rising roughly a kilometre through the mountains. When I finally reached the top, there was so much fog that I could barely see anything."
+    },
+    {
+      type: "p",
+      text:
+        "Then, almost as quickly as it had arrived, the fog began to clear. Slowly, the mountains appeared."
+    },
+    {
+      type: "p",
+      text:
+        "Thousands of years of erosion had created enormous vertical pillars covered in incredibly green vegetation. From certain angles, they genuinely looked like they were floating in the clouds."
+    },
+    {
+      type: "p",
+      text:
+        "Walking for kilometres between these mountains was even more impressive. Every time I thought the view couldn't possibly get better, another viewpoint appeared and proved me wrong. The landscape stretched for kilometres in every direction, with mountain after mountain disappearing into the distance."
+    },
+    {
+      type: "p",
+      text:
+        "Seeing a place that had inspired a world I had only ever seen on a screen was incredibly special. For a few hours, it felt like stepping directly into Pandora."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("avatar_tdmby6", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("avatar6_u8xgqo", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("avatar4_jw1pq9", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("avatar5_mhdonk", 960, 720), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("monkey_jurh2q", 720, 960), caption: "Zhangjiajie National Forest Parka" },
+      ],
+    },
+
+    { type: "h2", text: "9. The Great Wall of China & the Terracotta Warriors" },
+    {
+      type: "p",
+      text:
+        "Seeing the Great Wall of China was one of those moments where the historical significance of a place is almost impossible to process."
+    },
+    {
+      type: "p",
+      text:
+        "Walking on one of the New Seven Wonders of the World, knowing that sections of the wall date back more than two thousand years, was incredible. The entire structure stretches for more than 20,000 kilometres when all sections and branches are considered — roughly the distance from London to New York."
+    },
+    {
+      type: "p",
+      text:
+        "I spent the day walking along the Mutianyu section, climbing through the mountains and looking at the wall disappearing over one hill after another. Beyond the landscape itself, there was something powerful about thinking about how many people had stood on exactly the same stones throughout thousands of years of history."
+    },
+    {
+      type: "p",
+      text:
+        "And then, unexpectedly, I got to finish the experience by going down the mountain on a toboggan. It was ridiculously fun and surprisingly fast — probably not the way the people who originally built the wall imagined anyone would leave it."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("wallofchina2_sbwrtn", 720, 960), caption: "Great Wall of China" },
+        { url: ph("wallofchina3_nv44wj", 720, 960), caption: "Great Wall of China" },
+        { url: ph("toboggan_ocygy5", 720, 960), caption: "Toboggan ride - Great Wall of China" }
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "The Terracotta Warriors in Xi'an created a completely different but equally powerful historical feeling. More than 2,000 years ago, the first emperor of China, Qin Shi Huang, ordered the creation of an enormous underground army to accompany him into the afterlife."
+    },
+    {
+      type: "p",
+      text:
+        "More than 8,000 life-sized terracotta figures were created, including soldiers, horses, chariots, and other figures. What makes them even more remarkable is the level of detail: different facial expressions, hairstyles, clothing, ranks, and individual features were carefully created by hand."
+    },
+    {
+      type: "p",
+      text:
+        "The scale is difficult to comprehend. An entire life-sized army was created underground as part of a massive funerary complex designed to recreate the emperor's world after death."
+    },
+    {
+      type: "p",
+      text:
+        "Even more incredible is how recently the warriors were discovered. The main pits were only discovered in 1974, meaning that this enormous army remained underground and largely unknown for more than two thousand years."
+    },
+    {
+      type: "p",
+      text:
+        "Standing in front of thousands of these figures, many still incredibly well preserved, felt almost like stepping 2,200 years into the past while somehow still being there in 2026."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("terracotaWarriors_cg554t", 720, 960), caption: "Terracotta Warriors" },
+        { url: ph("terracota4_gbhjqm", 720, 960), caption: "Terracotta Warriors" },
+        { url: ph("terracota3_fznlpr", 720, 960), caption: "Terracotta Warriors" },
+      ],
+    },
+
+    { type: "h2", text: "10. Mount Fuji & the Waterfalls of Indonesia" },
+    {
+      type: "p",
+      text:
+        "The final place on my list is actually a combination of two very different natural experiences that left me equally amazed: Mount Fuji in Japan and the waterfalls of Indonesia."
+    },
+    {
+      type: "p",
+      text:
+        "I was incredibly lucky to see Mount Fuji on a day with almost perfect visibility. The mountain is often hidden by clouds and humidity, so seeing it completely clear felt like a gift."
+    },
+    {
+      type: "p",
+      text:
+        "I spent the day exploring Fujikawaguchiko, a beautiful town around the Fuji Five Lakes area. Everywhere I went, Mount Fuji seemed to appear in the background — between streets, above houses, behind the lake, and through the trees."
+    },
+    {
+      type: "p",
+      text:
+        "I walked through the town, explored its surroundings, and later cycled through the parks near the lake. Seeing Mount Fuji reflected behind the water while cycling through such a peaceful landscape was one of the most beautiful days of the trip."
+    },
+    {
+      type: "p",
+      text:
+        "The mountain itself was also much more impressive than I expected. Its almost perfectly symmetrical shape, enormous scale, dark volcanic colour, and snow-covered summit made it look almost unreal."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("mountFuji_yjxfnb", 720, 960), caption: "Mount Fuji" },
+        { url: ph("mountfuji5_ub8htt", 720, 960), caption: "Mount Fuji" },
+        { url: ph("mountfuji4_nu40mc", 720, 960), caption: "Mount Fuji" },
+        { url: ph("mountfuji6_evy2ib", 720, 960), caption: "Fujikawaguchikos" },
+        { url: ph("mountfuji3_elvqg4", 720, 960), caption: "Mount Fujia" },
+      ],
+    },
+    {
+      type: "p",
+      text:
+        "Then there were the waterfalls of Indonesia. I saw countless waterfalls across Bali, particularly around Ubud and Munduk, and each one had something different about it. Some were taller, some had multiple cascades, some were surrounded by dense jungle, and others had natural pools where I could actually swim underneath the falling water."
+    },
+    {
+      type: "p",
+      text:
+        "But Tumpak Sewu Waterfall in Java was on another level. Getting there involved a trail through the forest, crossing between rocks and streams and walking through several smaller waterfalls before eventually reaching the enormous valley where the main waterfall appears."
+    },
+    {
+      type: "p",
+      text:
+        "The waterfall is around 120 metres high, with dozens of streams falling down an enormous semicircular rock wall, creating what feels like a giant curtain of water around you."
+    },
+    {
+      type: "p",
+      text:
+        "Even standing away from the main fall was enough to leave me completely soaked. The amount of water falling from such a height made me feel incredibly small. Standing at the bottom, surrounded by the enormous rock walls and water falling from every direction, was one of the strongest feelings of scale I experienced during the entire trip."
+    },
+    {
+      type: "p",
+      text:
+        "And yet, the smaller waterfalls across Bali were no less beautiful. Each one felt completely different from the last, which made exploring them almost like collecting different versions of the same natural wonder."
+    },
+    {
+      type: "gallery",
+      photos: [
+        { url: ph("cascata6_pnsti0", 720, 960), caption: "Tumpak Sewu Waterfall - Java" },
+        { url: ph("cascata9_pl1mgy", 720, 960), caption: "Tumpak Sewu Waterfall - Java" },
+        { url: ph("cascata5_nmndr9", 720, 960), caption: "Waterfall - Bali" },
+        { url: ph("cascata4_szmhh9", 720, 960), caption: "Waterfall - Bali" },
+        { url: ph("cascata1_ghub84", 720, 960), caption: "Waterfall - Bali" },
+      ],
+    },
+
+    { type: "h2", text: "What Six Months in Asia Taught Me" },
+    {
+      type: "p",
+      text:
+        "Looking back at six months of backpacking, the experiences I remember most are not necessarily the places I expected to love. They are the moments that made me stop, look around, and realize how different the world could be from everything I had known before."
+    },
+    {
+      type: "p",
+      text:
+        "I swam with animals I had only ever seen in documentaries, rode through remote Vietnamese mountains, flew above Laotian valleys, slept in the middle of a rainforest, walked through temples swallowed by jungle, stood next to active volcanoes, explored landscapes that looked fictional, and walked through monuments that had existed for thousands of years."
+    },
+    {
+      type: "p",
+      text:
+        "But beyond the landscapes and adventures, the trip also changed the way I see travel. Some of the most meaningful moments came from seeing how differently people live, especially in places far away from the tourist centers. The beauty of Asia was incredible, but so was the contrast between the lives I saw."
+    },
+    {
+      type: "quote",
+      text:
+        "Six months later, I don't remember every place I visited. I remember how some of them made me feel."
+    },
+    {
+      type: "p",
+      text:
+        "These ten experiences are only a small part of everything I saw during those six months. But if I had to choose the moments that made me feel the most amazed, humbled, excited, or simply grateful to be there, these would be the ones."
+    }
+  ]
 }
 ];
