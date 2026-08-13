@@ -174,10 +174,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("neckVillage_umpbuo", 900, 600), caption: "Long Neck Karen Weaver - Northern Thailand" },
-        { url: ph("floatingVillage_fkvrh0", 600, 400), caption: "Floating Market - Thailand" },
-        { url: ph("musicJapan_jdeyxq", 600, 400), caption: "Bamboo Grove Musician - Japan" },
-        { url: ph("northVietnameDressing_hlhybq", 1200, 600), caption: "Traditional Dress - Northern Vietnam" },
+        { url: ph("neckVillage_umpbuo", 720, 960), caption: "Long Neck Karen Weaver - Northern Thailand" },
+        { url: ph("floatingVillage_fkvrh0", 720, 960), caption: "Floating Market - Thailand" },
+        { url: ph("musicJapan_jdeyxq", 720, 960), caption: "Bamboo Grove Musician - Japan" },
+        { url: ph("northVietnameDressing_hlhybq", 720, 960), caption: "Traditional Dress - Northern Vietnam" },
       ],
     },
 
@@ -204,7 +204,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("durian_cfwijd", 900, 600), caption: "Durian, the 'King of Fruits' of Southeast Asia" },
+        { url: ph("durian_cfwijd", 720, 960), caption: "Durian, the 'King of Fruits' of Southeast Asia" },
       ],
     },
 
@@ -217,9 +217,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("scorpians_qnzsvk", 600, 400), caption: "Insect & Scorpion Skewers - Thailand Night Market" },
-        { url: ph("crocodiles_of8ol7", 600, 400), caption: "Crocodile BBQ Stand - Thailand Night Market" },
-        { url: ph("insetcs_gmu9yh", 600, 400), caption: "Fried Insect Market Stall - Thailand" },
+        { url: ph("scorpians_qnzsvk", 720, 960), caption: "Insect & Scorpion Skewers - Thailand Night Market" },
+        { url: ph("crocodiles_of8ol7", 720, 960), caption: "Crocodile BBQ Stand - Thailand Night Market" },
+        { url: ph("insetcs_gmu9yh", 720, 960), caption: "Fried Insect Market Stall - Thailand" },
       ],
     },
 
@@ -238,9 +238,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("koreanMarket_xcqg99", 600, 400), caption: "Korean Street Food Stall" },
-        { url: ph("spicy_ai7sbb", 600, 400), caption: "Sichuan Spice Market - China" },
-        { url: ph("koreanSpice_urgq3h", 600, 400), caption: "Myeongdong Tteokbokki Street Cart - South Korea" },
+        { url: ph("koreanMarket_xcqg99", 720, 960), caption: "Korean Street Food Stall" },
+        { url: ph("spicy_ai7sbb", 720, 960), caption: "Sichuan Spice Market - China" },
+        { url: ph("koreanSpice_urgq3h", 720, 960), caption: "Myeongdong Tteokbokki Street Cart - South Korea" },
       ],
     },
 
@@ -253,9 +253,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("baliFood_thhs4f", 600, 400), caption: "Indonesian Warung Lunch - Bali" },
-        { url: ph("vietnameErbs_cwfjzu", 600, 400), caption: "Vietnamese Noodle Soup Feast" },
-        { url: ph("vietnameFood_aqjo7o", 600, 400), caption: "Vietnamese Street Lunch" },
+        { url: ph("baliFood_thhs4f", 720, 960), caption: "Indonesian Warung Lunch - Bali" },
+        { url: ph("vietnameErbs_cwfjzu", 720, 960), caption: "Vietnamese Noodle Soup Feast" },
+        { url: ph("vietnameFood_aqjo7o", 720, 960), caption: "Vietnamese Street Lunch" },
       ],
     },
 
@@ -268,11 +268,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("bowls_yirwp7", 600, 400), caption: "Sichuan Noodle Bowls - China" },
-        { url: ph("koreanBarbecue_ahss70", 600, 400), caption: "Korean Barbecue - South Korea" },
-        { url: ph("curry_rcf4zk", 600, 400), caption: "Tonkatsu Curry Rice - Japan" },
-        { url: ph("ramen_wj8bjj", 600, 400), caption: "Tonkotsu Ramen - Japan" },
-        { url: ph("chineseDish_kpxhia", 600, 400), caption: "Chinese Restaurant Set Meal" },
+        { url: ph("bowls_yirwp7", 720, 960), caption: "Sichuan Noodle Bowls - China" },
+        { url: ph("koreanBarbecue_ahss70", 720, 960), caption: "Korean Barbecue - South Korea" },
+        { url: ph("curry_rcf4zk", 720, 960), caption: "Tonkatsu Curry Rice - Japan" },
+        { url: ph("ramen_wj8bjj", 720, 960), caption: "Tonkotsu Ramen - Japan" },
+        { url: ph("chineseDish_kpxhia", 720, 960), caption: "Chinese Restaurant Set Meal" },
       ],
     },
 
@@ -291,9 +291,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("fruit_f6nfsa", 600, 400), caption: "Tropical Fruit Plate & Mango Smoothie" },
-        { url: ph("chineseFruit_jgfitq", 600, 400), caption: "Fruit Vendor - China" },
-        { url: ph("coconut_qoz0du", 600, 400), caption: "Fresh Coconut" },
+        { url: ph("fruit_f6nfsa", 720, 960), caption: "Tropical Fruit Plate & Mango Smoothie" },
+        { url: ph("chineseFruit_jgfitq", 720, 960), caption: "Fruit Vendor - China" },
+        { url: ph("coconut_qoz0du", 720, 960), caption: "Fresh Coconut" },
       ],
     },
 
@@ -320,11 +320,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("jonyTurtle_obcquh", 900, 600), caption: "Snorkelling with turtles" },
-        { url: ph("coral2_vuapri", 600, 400), caption: "Coral Reef - Gili Air" },
-        { url: ph("turtle_awrlxb", 600, 400), caption: "Turtle" },
-        { url: ph("coral1_jbzm4u", 1200, 600), caption: "Coral Reef - Gili Air" },
-        { url: ph("manta_vmixsz", 1200, 600), caption: "Manta Rays - Nusa Penida" },
+        { url: ph("jonyTurtle_obcquh", 720, 960), caption: "Snorkelling with turtles" },
+        { url: ph("coral2_vuapri", 720, 960), caption: "Coral Reef - Gili Air" },
+        { url: ph("turtle_awrlxb", 720, 960), caption: "Turtle" },
+        { url: ph("coral1_jbzm4u", 720, 960), caption: "Coral Reef - Gili Air" },
+        { url: ph("manta_vmixsz", 720, 960), caption: "Manta Rays - Nusa Penida" },
       ],
     },
 
@@ -337,11 +337,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("cascata9_pl1mgy", 1200, 600), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata6_pnsti0", 900, 600), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata5_nmndr9", 600, 400), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata4_szmhh9", 600, 400), caption: "Waterfall - Indonesia" },
-        { url: ph("cascata1_ghub84", 1200, 600), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata9_pl1mgy", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata6_pnsti0", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata5_nmndr9", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata4_szmhh9", 720, 960), caption: "Waterfall - Indonesia" },
+        { url: ph("cascata1_ghub84", 720, 960), caption: "Waterfall - Indonesia" },
       ],
     },
 
@@ -354,11 +354,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mountains_oq6gjn", 1200, 600), caption: "Karst Mountain Valley - Ha Giang, Vietnam" },
-        { url: ph("road_zkkn4m", 900, 600), caption: "Motorbiking the Ha Giang Loop - Vietnam" },
-        { url: ph("village_nskicv", 600, 400), caption: "Mountain Village Pit Stop - Ha Giang, Vietnam" },
-        { url: ph("vietnamiteBoy_gvcvs5", 600, 400), caption: "Young Khèn Player - Vietnam" },
-        { url: ph("drinking_ekvinq", 1200, 600), caption: "Dinner - Vietnam" },
+        { url: ph("mountains_oq6gjn", 720, 960), caption: "Karst Mountain Valley - Ha Giang, Vietnam" },
+        { url: ph("road_zkkn4m", 720, 960), caption: "Motorbiking the Ha Giang Loop - Vietnam" },
+        { url: ph("village_nskicv", 720, 960), caption: "Mountain Village Pit Stop - Ha Giang, Vietnam" },
+        { url: ph("vietnamiteBoy_gvcvs5", 720, 960), caption: "Young Khèn Player - Vietnam" },
+        { url: ph("drinking_ekvinq", 720, 960), caption: "Dinner - Vietnam" },
       ],
     },
 
@@ -371,11 +371,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("barcoLaos_z5lkcx", 600, 400), caption: "Mekong River Cruise - Laos" },
-        { url: ph("paramoturingLaos_vjd7cd", 900, 600), caption: "Paramotoring Over Vang Vieng - Laos" },
-        { url: ph("baloesArQuente_zemncn", 1200, 600), caption: "Hot Air Balloons Over Vang Vieng - Laos" },
-        { url: ph("laosRiver_vccnmk", 600, 400), caption: "Mekong River - Laos" },
-        { url: ph("laosPeople_ngy6t1", 1200, 600), caption: "Local People by the Mekong - Laos" },
+        { url: ph("barcoLaos_z5lkcx", 720, 960), caption: "Mekong River Cruise - Laos" },
+        { url: ph("paramoturingLaos_vjd7cd", 720, 960), caption: "Paramotoring Over Vang Vieng - Laos" },
+        { url: ph("baloesArQuente_zemncn", 720, 960), caption: "Hot Air Balloons Over Vang Vieng - Laos" },
+        { url: ph("laosRiver_vccnmk", 720, 960), caption: "Mekong River - Laos" },
+        { url: ph("laosPeople_ngy6t1", 720, 960), caption: "Local People by the Mekong - Laos" },
       ],
     },
 
@@ -388,9 +388,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("krabi_mbpx2l", 600, 400), caption: "Railay Beach Longtail Boats - Krabi, Thailand" },
-        { url: ph("blueWaters_aiq7sw", 900, 600), caption: "Crystal Waters - Thailand" },
-        { url: ph("Island_dqdu84", 1200, 600), caption: "Koh Tao Coastline - Thailand" },
+        { url: ph("krabi_mbpx2l", 720, 960), caption: "Railay Beach Longtail Boats - Krabi, Thailand" },
+        { url: ph("blueWaters_aiq7sw", 720, 960), caption: "Crystal Waters - Thailand" },
+        { url: ph("Island_dqdu84", 720, 960), caption: "Koh Tao Coastline - Thailand" },
       ],
     },
 
@@ -403,10 +403,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("khaoSok_ltolk8", 600, 400), caption: "Khao Sok National Park - Thailand" },
-        { url: ph("boat_xzfbal", 900, 600), caption: "Cheow Lan Lake - Khao Sok, Thailand" },
-        { url: ph("kaiaque_ffsnn9", 1200, 600), caption: "Kayaking Cheow Lan Lake - Khao Sok, Thailand" },
-        { url: ph("bangalow_jsqv2w", 600, 400), caption: "Floating Bungalow - Khao Sok, Thailand" },
+        { url: ph("khaoSok_ltolk8", 720, 960), caption: "Khao Sok National Park - Thailand" },
+        { url: ph("boat_xzfbal", 720, 960), caption: "Cheow Lan Lake - Khao Sok, Thailand" },
+        { url: ph("kaiaque_ffsnn9", 720, 960), caption: "Kayaking Cheow Lan Lake - Khao Sok, Thailand" },
+        { url: ph("bangalow_jsqv2w", 720, 960), caption: "Floating Bungalow - Khao Sok, Thailand" },
       ],
     },
 
@@ -419,10 +419,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("elephant_cipuzo", 900, 600), caption: "Elephant Sanctuary Encounter - Thailand" },
-        { url: ph("elephants_o5lv3a", 600, 400), caption: "Elephant Family - Thailand" },
-        { url: ph("newYear_rju6tp", 1200, 600), caption: "New Year's Fireworks on the Beach - Thailand" },
-        { url: ph("lantern_kw5ktm", 600, 400), caption: "Releasing a Sky Lantern in New Year's - Thailand" },
+        { url: ph("elephant_cipuzo", 720, 960), caption: "Elephant Sanctuary Encounter - Thailand" },
+        { url: ph("elephants_o5lv3a", 720, 960), caption: "Elephant Family - Thailand" },
+        { url: ph("newYear_rju6tp", 720, 960), caption: "New Year's Fireworks on the Beach - Thailand" },
+        { url: ph("lantern_kw5ktm", 720, 960), caption: "Releasing a Sky Lantern in New Year's - Thailand" },
       ],
     },
 
@@ -435,11 +435,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("AnkorWatSunrise_iweqlp", 900, 600), caption: "Sunrise Silhouette at Angkor Wat - Cambodia" },
-        { url: ph("AnkorWat_vbauyk", 600, 400), caption: "Ta Prohm Temple Towers - Angkor, Cambodia" },
-        { url: ph("ankorWatNature_o75mvs", 1200, 600), caption: "Tree Roots Engulfing Ta Prohm - Cambodia" },
-        { url: ph("floatingVillage_oipmyv", 600, 400), caption: "Stilted Houses on Tonle Sap Floating Village - Cambodia" },
-        { url: ph("riverCamboja_mwklis", 600, 400), caption: "Boat Ride Through the Flooded Forest - Cambodia" },
+        { url: ph("AnkorWatSunrise_iweqlp", 720, 960), caption: "Sunrise Silhouette at Angkor Wat - Cambodia" },
+        { url: ph("AnkorWat_vbauyk", 720, 960), caption: "Ta Prohm Temple Towers - Angkor, Cambodia" },
+        { url: ph("ankorWatNature_o75mvs", 720, 960), caption: "Tree Roots Engulfing Ta Prohm - Cambodia" },
+        { url: ph("floatingVillage_oipmyv", 720, 960), caption: "Stilted Houses on Tonle Sap Floating Village - Cambodia" },
+        { url: ph("riverCamboja_mwklis", 720, 960), caption: "Boat Ride Through the Flooded Forest - Cambodia" },
       ],
     },
 
@@ -452,11 +452,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("vulcanos_isgjfo", 900, 600), caption: "Sunrise Over Mount Bromo's Volcanic Range - Indonesia" },
-        { url: ph("vulcano_oszmqc", 600, 400), caption: "Gazing Over the Crater - Mount Bromo, Indonesia" },
-        { url: ph("vulcanoEruption_z3x2hu", 1200, 600), caption: "Smoking Crater - Mount Bromo, Indonesia" },
-        { url: ph("JeepRide_mx3sra", 600, 400), caption: "Jeep Convoy Across the Sea of Sand - Bromo, Indonesia" },
-        { url: ph("Jeep_o5cr9a", 600, 400), caption: "Jeep Adventure - Mount Bromo Indonesia" },
+        { url: ph("vulcanos_isgjfo", 720, 960), caption: "Sunrise Over Mount Bromo's Volcanic Range - Indonesia" },
+        { url: ph("vulcano_oszmqc", 720, 960), caption: "Gazing Over the Crater - Mount Bromo, Indonesia" },
+        { url: ph("vulcanoEruption_z3x2hu", 720, 960), caption: "Smoking Crater - Mount Bromo, Indonesia" },
+        { url: ph("JeepRide_mx3sra", 720, 960), caption: "Jeep Convoy Across the Sea of Sand - Bromo, Indonesia" },
+        { url: ph("Jeep_o5cr9a", 720, 960), caption: "Jeep Adventure - Mount Bromo Indonesia" },
       ],
     },
 
@@ -475,11 +475,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("chinaWall_zepzr8", 900, 600), caption: "Great Wall of China" },
-        { url: ph("terracotaWarriors_cg554t", 600, 400), caption: "Terracotta Army" },
-        { url: ph("avatar_tdmby6", 1200, 600), caption: "Zhangjiajie National Forest Park" },
-        { url: ph("chinaNature_kruv3q", 600, 400), caption: "Tianmen Mountain National Park" },
-        { url: ph("chinaNature2_hxtxm9", 600, 400), caption: "Heaven’s Gat - Tianmen Mountain National Park" },
+        { url: ph("chinaWall_zepzr8", 720, 960), caption: "Great Wall of China" },
+        { url: ph("terracotaWarriors_cg554t", 720, 960), caption: "Terracotta Army" },
+        { url: ph("avatar_tdmby6", 720, 960), caption: "Zhangjiajie National Forest Park" },
+        { url: ph("chinaNature_kruv3q", 960, 720), caption: "Tianmen Mountain National Park" },
+        { url: ph("chinaNature2_hxtxm9", 720, 960), caption: "Heaven’s Gat - Tianmen Mountain National Park" },
       ],
     },
 
@@ -492,11 +492,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("citySunset_hxhssu", 900, 600), caption: "Chongqing city sunset" },
-        { url: ph("xangai_pakffr", 600, 400), caption: "Shanghai skyline" },
-        { url: ph("chinaCity_arnd0b", 1200, 600), caption: "Hongya Cave - Chongqing" },
-        { url: ph("chinaShow_gypxiw", 600, 400), caption: "Emperor Banquet Show - Biejing" },
-        { url: ph("chinaTemple_rmhjx3", 600, 400), caption: "Ciyun Temple - Chongqing" },
+        { url: ph("citySunset_hxhssu", 720, 960), caption: "Chongqing city sunset" },
+        { url: ph("xangai_pakffr", 720, 960), caption: "Shanghai skyline" },
+        { url: ph("chinaCity_arnd0b", 720, 960), caption: "Hongya Cave - Chongqing" },
+        { url: ph("chinaShow_gypxiw", 720, 960), caption: "Emperor Banquet Show - Biejing" },
+        { url: ph("chinaTemple_rmhjx3", 720, 960), caption: "Ciyun Temple - Chongqing" },
       ],
     },
 
@@ -509,11 +509,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mountFuji_yjxfnb", 900, 600), caption: "Mount Fuji - Japan" },
-        { url: ph("bambu_qof0hg", 600, 400), caption: "Bamboo Forest - Japan" },
-        { url: ph("snowMonkey_fwudtb", 1200, 600), caption: "Snow Monkey - Jigokudani Snow Monkey Park" },
-        { url: ph("disney_eygtqh", 600, 400), caption: "Disneyland - Tokyo" },
-        { url: ph("clawMachine_g6igeu", 600, 400), caption: "Claw Machines - Japan" },
+        { url: ph("mountFuji_yjxfnb", 720, 960), caption: "Mount Fuji - Japan" },
+        { url: ph("bambu_qof0hg", 720, 960), caption: "Bamboo Forest - Japan" },
+        { url: ph("snowMonkey_fwudtb", 720, 960), caption: "Snow Monkey - Jigokudani Snow Monkey Park" },
+        { url: ph("disney_eygtqh", 720, 960), caption: "Disneyland - Tokyo" },
+        { url: ph("clawMachine_g6igeu", 720, 960), caption: "Claw Machines - Japan" },
       ],
     },
 
@@ -526,11 +526,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("tradicionalDressing_fs4p6t", 900, 600), caption: "Traditional Hanbok at Gyeongbokgung Palace - Seoul" },
-        { url: ph("gards_qzxntv", 600, 400), caption: "Royal Guard Ceremony - Gyeongbokgung Palace, Seoul" },
-        { url: ph("skylineWall_stgkvr", 1200, 600), caption: "Seoul City Wall with Skyline View" },
-        { url: ph("market2_xroz3k", 600, 400), caption: "Covered Market - Seoul" },
-        { url: ph("market1_guhwka", 600, 400), caption: "Bindaetteok Stall at Gwangjang Market - Seoul" },
+        { url: ph("tradicionalDressing_fs4p6t", 720, 960), caption: "Traditional Hanbok at Gyeongbokgung Palace - Seoul" },
+        { url: ph("gards_qzxntv", 720, 960), caption: "Royal Guard Ceremony - Gyeongbokgung Palace, Seoul" },
+        { url: ph("skylineWall_stgkvr", 720, 960), caption: "Seoul City Wall with Skyline View" },
+        { url: ph("market2_xroz3k", 720, 960), caption: "Covered Market - Seoul" },
+        { url: ph("market1_guhwka", 720, 960), caption: "Bindaetteok Stall at Gwangjang Market - Seoul" },
       ],
     },
 
@@ -543,11 +543,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("viewpoint3_egcc4b", 900, 600), caption: "Ang Thong Marine Park Viewpoint - Thailand" },
-        { url: ph("viewpoint1_vkreyv", 600, 400), caption: "Flag on a Royal Enfield - Vang Vieng, Laos" },
-        { url: ph("viewpoint4_irorbb", 1200, 600), caption: "Sunset View Over Seoul - South Korea" },
-        { url: ph("cave1_si0cmk", 600, 400), caption: "Exploring a Limestone Cave - Laos" },
-        { url: ph("cave2_p5jt6l", 600, 400), caption: "Inside Phong Nha Cave - Vietnam" },
+        { url: ph("viewpoint3_egcc4b", 720, 960), caption: "Ang Thong Marine Park Viewpoint - Thailand" },
+        { url: ph("viewpoint1_vkreyv", 720, 960), caption: "Flag on a Royal Enfield - Vang Vieng, Laos" },
+        { url: ph("viewpoint4_irorbb", 720, 960), caption: "Sunset View Over Seoul - South Korea" },
+        { url: ph("cave1_si0cmk", 720, 960), caption: "Exploring a Limestone Cave - Laos" },
+        { url: ph("cave2_p5jt6l", 720, 960), caption: "Inside Phong Nha Cave - Vietnam" },
       ],
     },
 
@@ -560,11 +560,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("basketBoats_fz3d1m", 900, 600), caption: "Basket Boats Among Nipa Palms - Hoi An, Vietnam" },
-        { url: ph("remoteIsland_ni2fmi", 600, 400), caption: "Palm-Lined Beach - remote island in Southeast Asia" },
-        { url: ph("riverRide_dmwym2", 600, 400), caption: "Trang An Boat Dock - Ninh Binh, Vietnam" },
-        { url: ph("motobike_ebuz1h", 1200, 600), caption: "Scooter Selfie - Southeast Asia" },
-        { url: ph("workshop_j5wc9b", 600, 400), caption: "Traditional Mat Weaving Workshop - Vietnam" },
+        { url: ph("basketBoats_fz3d1m", 720, 960), caption: "Basket Boats Among Nipa Palms - Hoi An, Vietnam" },
+        { url: ph("remoteIsland_ni2fmi", 720, 960), caption: "Palm-Lined Beach - remote island in Southeast Asia" },
+        { url: ph("riverRide_dmwym2", 720, 960), caption: "Trang An Boat Dock - Ninh Binh, Vietnam" },
+        { url: ph("motobike_ebuz1h", 720, 960), caption: "Scooter Selfie - Southeast Asia" },
+        { url: ph("workshop_j5wc9b", 720, 960), caption: "Traditional Mat Weaving Workshop - Vietnam" },
       ],
     },
 
@@ -577,11 +577,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("deers_hk4qgf", 1200, 600), caption: "Feeding the Deer of Nara - Japan" },
-        { url: ph("monkey_jurh2q", 900, 600), caption: "Monkey in the Jungle - Southeast Asia" },
-        { url: ph("panda_zyjbok", 600, 400), caption: "Giant Panda - China" },
-        { url: ph("elephant_my2sce", 600, 400), caption: "Elephant by the River - Thailand" },
-        { url: ph("duckLeader_jmzloj", 600, 400), caption: "Feeding as Duck Leader - Vietnam" },
+        { url: ph("deers_hk4qgf", 720, 960), caption: "Feeding the Deer of Nara - Japan" },
+        { url: ph("monkey_jurh2q", 720, 960), caption: "Monkey in the Jungle - Southeast Asia" },
+        { url: ph("panda_zyjbok", 720, 960), caption: "Giant Panda - China" },
+        { url: ph("elephant_my2sce", 720, 960), caption: "Elephant by the River - Thailand" },
+        { url: ph("duckLeader_jmzloj", 720, 960), caption: "Feeding as Duck Leader - Vietnam" },
       ],
     },
 
@@ -602,9 +602,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("cambojaVillage_atlp7s",   600, 400),  caption: "Camboja Village" },
-        { url: ph("laosHouse_bqc25s",  900, 600),  caption: "Laos House" },
-        { url: ph("cambojaKids_iglm6s",  600, 400),  caption: "Camboja School" },
+        { url: ph("cambojaVillage_atlp7s",   720, 960),  caption: "Camboja Village" },
+        { url: ph("laosHouse_bqc25s",  720, 960),  caption: "Laos House" },
+        { url: ph("cambojaKids_iglm6s",  720, 960),  caption: "Camboja School" },
       ],
     },
 
@@ -617,10 +617,10 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("workingLady_bbwl8y",   600, 400),  caption: "Village Road - Laos" },
-        { url: ph("thailandWeaver_pq3vgs",  900, 600),  caption: "Traditional Backstrap Weaving - Northern Thailand" },
-        { url: ph("vietnameKids_mnpsf9",  600, 400),  caption: "Hmong Girls with Flower Baskets - Northern Vietnam" },
-        { url: ph("vietnameWorkerd_fy5moc",  600, 400),  caption: "Street Vendor in Hanoi's Old Quarter" },
+        { url: ph("workingLady_bbwl8y",   720, 960),  caption: "Village Road - Laos" },
+        { url: ph("thailandWeaver_pq3vgs",  720, 960),  caption: "Traditional Backstrap Weaving - Northern Thailand" },
+        { url: ph("vietnameKids_mnpsf9",  720, 960),  caption: "Hmong Girls with Flower Baskets - Northern Vietnam" },
+        { url: ph("vietnameWorkerd_fy5moc",  720, 960),  caption: "Street Vendor in Hanoi's Old Quarter" },
       ],
     },
     
@@ -633,9 +633,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mama_m5djhb",   600, 400),  caption: "Local Vietnamese Grandmother" },
-        { url: ph("cambojaLady_sgakm4",  900, 600),  caption: "Boat Rider - Cambodia" },
-        { url: ph("thailandMan_csadsp",  600, 400),  caption: "Floating Market Vendor - Thailand" },
+        { url: ph("mama_m5djhb",   720, 960),  caption: "Local Vietnamese Grandmother" },
+        { url: ph("cambojaLady_sgakm4",  720, 960),  caption: "Boat Rider - Cambodia" },
+        { url: ph("thailandMan_csadsp",  720, 960),  caption: "Floating Market Vendor - Thailand" },
       ],
     },
 
@@ -650,11 +650,11 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("monksCamboja_x0criz",   900, 600),  caption: "Monks on the Royal Palace - Cambodia" },
-        { url: ph("templeDourado_blxxei",  600, 400),  caption: "Wat Pho Temple Complex - Thailand" },
-        { url: ph("camboja_pdufsr",  600, 400),  caption: "Ta Prohm Temple - Angkor, Cambodia" },
-        { url: ph("templeThailand_ld9tae",  600, 400),  caption: "Wat Chiang Man - Thailand)" },
-        { url: ph("buda_wutjnz",  600, 400),  caption: "Golden Buddha Shrine - China" },
+        { url: ph("monksCamboja_x0criz",   720, 960),  caption: "Monks on the Royal Palace - Cambodia" },
+        { url: ph("templeDourado_blxxei",  720, 960),  caption: "Wat Pho Temple Complex - Thailand" },
+        { url: ph("camboja_pdufsr",  720, 960),  caption: "Ta Prohm Temple - Angkor, Cambodia" },
+        { url: ph("templeThailand_ld9tae",  720, 960),  caption: "Wat Chiang Man - Thailand)" },
+        { url: ph("buda_wutjnz",  720, 960),  caption: "Golden Buddha Shrine - China" },
       ],
     },
 
@@ -679,9 +679,9 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("monks_fm5skz",   900, 600),  caption: "Monks in Prayer - Laos" },
-        { url: ph("japanPray_tbsskz",  600, 400),  caption: "Jizo Statues Shrine - Japan" },
-        { url: ph("chinaPray_k2tqif",  600, 400),  caption: " Incense Offering at a Buddhist Temple - China" },
+        { url: ph("monks_fm5skz",   720, 960),  caption: "Monks in Prayer - Laos" },
+        { url: ph("japanPray_tbsskz",  720, 960),  caption: "Jizo Statues Shrine - Japan" },
+        { url: ph("chinaPray_k2tqif",  720, 960),  caption: " Incense Offering at a Buddhist Temple - China" },
       ],
     },
 
@@ -696,7 +696,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("mask_l21vs5",    900, 600),  caption: "Chinese woman shielding her face from the sun" },
+        { url: ph("mask_l21vs5",    720, 960),  caption: "Chinese woman shielding her face from the sun" },
       ],
     },
 
@@ -709,8 +709,8 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("makeup_xx9hze",    900, 600),  caption: "Chinese makeup application" },
-        { url: ph("chineseGirls_oust6a",    900, 600),  caption: "Chinese girls wearing traditional clothing" },
+        { url: ph("makeup_xx9hze",    720, 960),  caption: "Chinese makeup application" },
+        { url: ph("chineseGirls_oust6a",    720, 960),  caption: "Chinese girls wearing traditional clothing" },
       ],
     },
 
@@ -749,7 +749,7 @@ export const POSTS: BlogPost[] = [
     {
       type: "gallery",
       photos: [
-        { url: ph("backpacking_j1brib",    900, 600),  caption: "Returning home" },
+        { url: ph("backpacking_j1brib", 720, 960),  caption: "Returning home" },
       ],
     },
   ]
@@ -2285,5 +2285,5 @@ export const POSTS: BlogPost[] = [
         "University gave me the foundation. Opensoft taught me how to build real software for real people."
     }
   ]
-  }
+}
 ];
