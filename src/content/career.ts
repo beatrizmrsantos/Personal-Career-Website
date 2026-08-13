@@ -277,6 +277,7 @@ export const careerPoints: CareerPoint[] = [
       "International exchange program focused on computer science. Strengthened adaptability and technical foundations in an international academic environment.",
     tags: ["Computer Science", "International", "Systems"],
     gpa: "17/20",
+    blogSlug: "my-erasmus-in-dresden",
   },
   {
     id: 13,
